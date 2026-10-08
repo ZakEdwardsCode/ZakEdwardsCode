@@ -1,0 +1,767 @@
+{
+  "_note": "Ranked by hookScore (0–100). Re-rank with `npm run topics`; scan official feeds for new news with `npm run news`. Every fact cites a source id in [brackets].",
+  "researchedOn": "2026-10-08",
+  "scoring": {
+    "weights": {
+      "urgency": 0.25,
+      "curiosity": 0.25,
+      "specificity": 0.2,
+      "reach": 0.2,
+      "plasmoFit": 0.1
+    },
+    "scale": "each 1–5; hookScore = weighted mean × 20"
+  },
+  "topics": [
+    {
+      "id": "grade-7-maths-percent",
+      "title": "You might only need ~68% for a 7 in GCSE maths",
+      "hook": "You don't need 90% for a 7. Here's the real number.",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 3,
+        "curiosity": 5,
+        "specificity": 5,
+        "reach": 5,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "AQA GCSE Maths Higher (8300) June 2025: grade 7 = 164/240 (68%), grade 9 = 219/240 [cognito-aqa-maths]"
+      ],
+      "sources": [
+        {
+          "id": "cognito-aqa-maths",
+          "accessed": "2026-10-08",
+          "publisher": "Cognito (citing AQA)",
+          "title": "GCSE Maths AQA grade boundaries",
+          "url": "https://cognito.org/grade-boundaries/gcse/maths/aqa"
+        }
+      ],
+      "needsVerification": "Check the official AQA June 2026 boundary document before posting; boundaries change every series.",
+      "expired": false,
+      "hookScore": 88
+    },
+    {
+      "id": "rereading-isnt-revision",
+      "title": "Why rereading your notes isn't revision",
+      "hook": "Rereading your notes isn't revision",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "post",
+      "post": "posts/03-rereading-isnt-revision.json",
+      "scores": {
+        "urgency": 3,
+        "curiosity": 5,
+        "specificity": 4,
+        "reach": 5,
+        "plasmoFit": 5
+      },
+      "facts": [
+        "Rereading was the most-reported study strategy in a US university survey [karpicke-2009]",
+        "Rereading rated low utility [dunlosky-2013]",
+        "Testers retained more after a week; restudiers felt more confident [roediger-2006]"
+      ],
+      "sources": [
+        {
+          "id": "karpicke-2009",
+          "accessed": "2026-10-08",
+          "publisher": "Memory / WUSTL",
+          "title": "Metacognitive strategies in student learning (Karpicke, Butler & Roediger, 2009)",
+          "url": "https://bpb-us-e2.wpmucdn.com/sites.wustl.edu/dist/8/805/files/2026/06/Karpicke-et-al.-2009-Metacognitive-strategies-in-student-learning-Do-students-practise-retrieval-when-they-study-on-thei.pdf"
+        },
+        {
+          "id": "dunlosky-2013",
+          "accessed": "2026-10-08",
+          "publisher": "Association for Psychological Science",
+          "title": "Which study strategies make the grade? (Dunlosky et al., 2013)",
+          "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html"
+        },
+        {
+          "id": "roediger-2006",
+          "accessed": "2026-10-08",
+          "publisher": "Association for Psychological Science",
+          "title": "Test-Enhanced Learning (Roediger & Karpicke, 2006)",
+          "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning"
+        }
+      ],
+      "expired": false,
+      "hookScore": 86
+    },
+    {
+      "id": "oxbridge-medicine-deadline-15-oct",
+      "title": "Oxbridge & medicine: UCAS closes 15 Oct, 6pm",
+      "hook": "7 days left: your Oxbridge/medicine final checklist",
+      "kind": "news",
+      "audience": [
+        "A-level"
+      ],
+      "status": "post",
+      "post": "posts/05-oxbridge-medicine-deadline.json",
+      "scores": {
+        "urgency": 5,
+        "curiosity": 4,
+        "specificity": 5,
+        "reach": 3,
+        "plasmoFit": 3
+      },
+      "facts": [
+        "Oxford, Cambridge and most medicine/dentistry/vet courses for 2027 entry: UCAS deadline 18:00 UK time, 15 Oct 2026 [ucas-oct-2026]",
+        "Oxford 2025 cycle: 23,329 applications, 3,891 offers; 87.2% of admitted students had A*AA or better [oxford-admissions-2026]"
+      ],
+      "sources": [
+        {
+          "id": "ucas-oct-2026",
+          "accessed": "2026-10-08",
+          "publisher": "UCAS",
+          "title": "2027 entry deadline for Oxford, Cambridge and most courses in medicine",
+          "url": "https://www.ucas.com/events/2027-entry-deadline-for-the-universities-of-oxford-and-cambridge-and-most-courses-in-medicine-475536"
+        },
+        {
+          "id": "oxford-admissions-2026",
+          "accessed": "2026-10-08",
+          "publisher": "University of Oxford",
+          "title": "Undergraduate Admissions Report 2026",
+          "url": "https://assets-oxweb.admin.ox.ac.uk/2026-07/Undergraduate%20Admissions%20Report%202026_0.pdf"
+        }
+      ],
+      "expires": "2026-10-15",
+      "whyStrongestNews": "Hard deadline 7 days away, affects the most motivated A-level students, numbers are official and fresh (Oxford report published Jul 2026).",
+      "expired": false,
+      "hookScore": 83
+    },
+    {
+      "id": "six-weeks-until-mocks",
+      "title": "6 weeks until mocks – your weekly plan",
+      "hook": "6 weeks until mocks: the week-by-week plan",
+      "kind": "seasonal",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "post",
+      "post": "posts/02-six-weeks-until-mocks.json",
+      "scores": {
+        "urgency": 4,
+        "curiosity": 3,
+        "specificity": 5,
+        "reach": 5,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "Testing beats restudying on delayed tests [roediger-2006]",
+        "Spacing improves retention [cepeda-2008]",
+        "Teens 13–18: 8–10 hours sleep [aasm-2016]"
+      ],
+      "sources": [
+        {
+          "id": "roediger-2006",
+          "accessed": "2026-10-08",
+          "publisher": "Association for Psychological Science",
+          "title": "Test-Enhanced Learning (Roediger & Karpicke, 2006)",
+          "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning"
+        },
+        {
+          "id": "cepeda-2008",
+          "accessed": "2026-10-08",
+          "publisher": "PubMed",
+          "title": "Spacing effects in learning: a temporal ridgeline of optimal retention (Cepeda et al., 2008)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19076480/"
+        },
+        {
+          "id": "aasm-2016",
+          "accessed": "2026-10-08",
+          "publisher": "Journal of Clinical Sleep Medicine",
+          "title": "Recommended amount of sleep for pediatric populations (AASM, 2016)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308"
+        }
+      ],
+      "note": "Mock dates vary by school (typically Nov–Jan); post avoids naming a date.",
+      "expired": false,
+      "hookScore": 83
+    },
+    {
+      "id": "gcse-7-plus-2026",
+      "title": "Only 22% of GCSE grades were a 7 or above",
+      "hook": "22% of GCSE grades were 7+ in 2026. Here's how to be in it.",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 3,
+        "curiosity": 4,
+        "specificity": 5,
+        "reach": 5,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "22.0% of GCSE grades were 7/A or above in 2026 (21.9% in 2025), UK, provisional [jcq-gcse-2026]"
+      ],
+      "sources": [
+        {
+          "id": "jcq-gcse-2026",
+          "accessed": "2026-10-08",
+          "publisher": "JCQ",
+          "title": "GCSE (Level 1/2) results summer 2026 – press notice (provisional)",
+          "url": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/08/JCQ-2026-Level-1_2-Press-Notice.pdf"
+        }
+      ],
+      "expired": false,
+      "hookScore": 83
+    },
+    {
+      "id": "exams-start-countdown-2027",
+      "title": "Summer 2027 exams start 10 May",
+      "hook": "Exams start 10 May 2027. That's 30 weeks away.",
+      "kind": "seasonal",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 4,
+        "curiosity": 3,
+        "specificity": 5,
+        "reach": 5,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "Summer 2027 common timetable reported to start Monday 10 May 2027 [cognito-2027-dates]"
+      ],
+      "sources": [
+        {
+          "id": "cognito-2027-dates",
+          "accessed": "2026-10-08",
+          "publisher": "Cognito",
+          "title": "When do GCSE exams start in 2027?",
+          "url": "https://cognito.org/blog/when-do-gcse-exams-start-2027"
+        }
+      ],
+      "needsVerification": "Confirm against JCQ key dates before posting; one source listed 5 May.",
+      "expired": false,
+      "hookScore": 83
+    },
+    {
+      "id": "how-to-get-astar-astar-astar",
+      "title": "How to get A*A*A*",
+      "hook": "How to get A*A*A* (only 9.6% of A-level grades were A* in 2026)",
+      "kind": "evergreen",
+      "audience": [
+        "A-level"
+      ],
+      "status": "post",
+      "post": "posts/01-how-to-get-astar-astar-astar.json",
+      "scores": {
+        "urgency": 3,
+        "curiosity": 5,
+        "specificity": 4,
+        "reach": 4,
+        "plasmoFit": 5
+      },
+      "facts": [
+        "9.6% of A level results were A* in 2026 (provisional, UK) [jcq-alevel-2026]",
+        "Practice testing and distributed practice rated high utility [dunlosky-2013]"
+      ],
+      "sources": [
+        {
+          "id": "jcq-alevel-2026",
+          "accessed": "2026-10-08",
+          "publisher": "JCQ",
+          "title": "GCE A level results summer 2026 – press notice (provisional)",
+          "url": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/08/L3-Press-notice-2026.pdf"
+        },
+        {
+          "id": "dunlosky-2013",
+          "accessed": "2026-10-08",
+          "publisher": "Association for Psychological Science",
+          "title": "Which study strategies make the grade? (Dunlosky et al., 2013)",
+          "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html"
+        },
+        {
+          "id": "cepeda-2008",
+          "accessed": "2026-10-08",
+          "publisher": "PubMed",
+          "title": "Spacing effects in learning: a temporal ridgeline of optimal retention (Cepeda et al., 2008)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19076480/"
+        },
+        {
+          "id": "rohrer-taylor-2007",
+          "accessed": "2026-10-08",
+          "publisher": "M. S. Glessmer (summary of Rohrer & Taylor, 2007)",
+          "title": "Why you should shuffle practice problems rather than blocking them",
+          "url": "https://mirjamglessmer.com/2015/12/08/why-you-should-shuffle-practice-problems-rather-than-blocking-them/"
+        }
+      ],
+      "expired": false,
+      "hookScore": 82
+    },
+    {
+      "id": "formula-sheets-2027",
+      "title": "Formula sheets are staying for 2027",
+      "hook": "GCSE maths & physics: you still get a formula sheet in 2027",
+      "kind": "news",
+      "audience": [
+        "GCSE"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 4,
+        "curiosity": 4,
+        "specificity": 5,
+        "reach": 4,
+        "plasmoFit": 3
+      },
+      "facts": [
+        "2027 GCSE maths formulae and physics equations sheets will be provided; content same as 2026 [aqa-formulae-2027]",
+        "Ofqual decision covers 2025, 2026, 2027 [govuk-formulae]"
+      ],
+      "sources": [
+        {
+          "id": "aqa-formulae-2027",
+          "accessed": "2026-10-08",
+          "publisher": "AQA",
+          "title": "GCSE Maths and GCSE Sciences formulae and equation sheets for 2027 and 2028 onwards",
+          "url": "https://www.aqa.org.uk/news/gcse-maths-sciences-formulae-equation-sheets-2027-28"
+        },
+        {
+          "id": "govuk-formulae",
+          "accessed": "2026-10-08",
+          "publisher": "GOV.UK / Ofqual",
+          "title": "Decisions on changes to the assessment of maths, physics and combined science GCSEs in 2025, 2026 and 2027",
+          "url": "https://www.gov.uk/government/consultations/proposed-changes-to-the-assessment-of-mathematics-physics-and-combined-science-gcses-in-2025-2026-and-2027/outcome/decisions-on-changes-to-the-assessment-of-mathematics-physics-and-combined-science-gcses-in-2025-2026-and-2027"
+        }
+      ],
+      "expired": false,
+      "hookScore": 82
+    },
+    {
+      "id": "what-grade-9-students-do",
+      "title": "What a grade 9 student does differently",
+      "hook": "What grade 9 students do that you don't",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 5,
+        "specificity": 3,
+        "reach": 5,
+        "plasmoFit": 5
+      },
+      "facts": [
+        "Only habits backed by research: practice testing + spacing (high utility) [dunlosky-2013]; mixing topics [rohrer-taylor-2007]"
+      ],
+      "sources": [
+        {
+          "id": "dunlosky-2013",
+          "accessed": "2026-10-08",
+          "publisher": "Association for Psychological Science",
+          "title": "Which study strategies make the grade? (Dunlosky et al., 2013)",
+          "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html"
+        },
+        {
+          "id": "rohrer-taylor-2007",
+          "accessed": "2026-10-08",
+          "publisher": "M. S. Glessmer (summary of Rohrer & Taylor, 2007)",
+          "title": "Why you should shuffle practice problems rather than blocking them",
+          "url": "https://mirjamglessmer.com/2015/12/08/why-you-should-shuffle-practice-problems-rather-than-blocking-them/"
+        }
+      ],
+      "note": "Do not invent claims about what real grade 9 students do; frame as research-backed habits.",
+      "expired": false,
+      "hookScore": 77
+    },
+    {
+      "id": "smart-glasses-malpractice",
+      "title": "Smart glasses won't save you",
+      "hook": "Ofqual is watching smart glasses. Don't be the case study.",
+      "kind": "news",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 3,
+        "curiosity": 5,
+        "specificity": 4,
+        "reach": 4,
+        "plasmoFit": 2
+      },
+      "facts": [
+        "Phones/smart devices were 44.3% of malpractice cases (2,225) in summer 2025; Ofqual warned about smart glasses and earpieces in June 2026 [pt-ofqual-cheating]"
+      ],
+      "sources": [
+        {
+          "id": "pt-ofqual-cheating",
+          "accessed": "2026-10-08",
+          "publisher": "PublicTechnology",
+          "title": "Exams watchdog warns over high-tech cheating (5 Jun 2026)",
+          "url": "https://www.publictechnology.net/2026/06/05/education-and-skills/exams-watchdog-warns-over-high-tech-cheating/"
+        }
+      ],
+      "expired": false,
+      "hookScore": 76
+    },
+    {
+      "id": "highlighting-low-utility",
+      "title": "Highlighting is rated low utility too",
+      "hook": "Your highlighters are lying to you",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 5,
+        "specificity": 3,
+        "reach": 5,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "Highlighting, rereading and summarisation rated low utility [dunlosky-2013]"
+      ],
+      "sources": [
+        {
+          "id": "dunlosky-2013",
+          "accessed": "2026-10-08",
+          "publisher": "Association for Psychological Science",
+          "title": "Which study strategies make the grade? (Dunlosky et al., 2013)",
+          "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html"
+        }
+      ],
+      "expired": false,
+      "hookScore": 75
+    },
+    {
+      "id": "blurting-method",
+      "title": "The blurting method, explained",
+      "hook": "Blurting: the ugliest, most effective revision method",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 4,
+        "specificity": 4,
+        "reach": 5,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "Retrieval practice beat restudying on 2-day and 1-week tests [roediger-2006]"
+      ],
+      "sources": [
+        {
+          "id": "roediger-2006",
+          "accessed": "2026-10-08",
+          "publisher": "Association for Psychological Science",
+          "title": "Test-Enhanced Learning (Roediger & Karpicke, 2006)",
+          "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning"
+        }
+      ],
+      "expired": false,
+      "hookScore": 74
+    },
+    {
+      "id": "a-level-2026-results",
+      "title": "28.5% of A-level grades were A or A*",
+      "hook": "28.5% of A-level grades were A/A* in 2026. Here's the gap.",
+      "kind": "evergreen",
+      "audience": [
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 4,
+        "specificity": 5,
+        "reach": 4,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "A*–A 28.5% (28.3% in 2025); A* 9.6%; entries 906,425 [jcq-alevel-2026]"
+      ],
+      "sources": [
+        {
+          "id": "jcq-alevel-2026",
+          "accessed": "2026-10-08",
+          "publisher": "JCQ",
+          "title": "GCE A level results summer 2026 – press notice (provisional)",
+          "url": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/08/L3-Press-notice-2026.pdf"
+        }
+      ],
+      "expired": false,
+      "hookScore": 74
+    },
+    {
+      "id": "oxford-competitive-courses",
+      "title": "Oxford's most competitive courses",
+      "hook": "18.8 applicants per place: Oxford's toughest courses",
+      "kind": "evergreen",
+      "audience": [
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 5,
+        "specificity": 5,
+        "reach": 3,
+        "plasmoFit": 3
+      },
+      "facts": [
+        "2023–25 applicants per place: Economics & Management 18.8, Computer Science 14.8, Law 10.0, Medicine 9.4 [oxford-admissions-2026]"
+      ],
+      "sources": [
+        {
+          "id": "oxford-admissions-2026",
+          "accessed": "2026-10-08",
+          "publisher": "University of Oxford",
+          "title": "Undergraduate Admissions Report 2026",
+          "url": "https://assets-oxweb.admin.ox.ac.uk/2026-07/Undergraduate%20Admissions%20Report%202026_0.pdf"
+        }
+      ],
+      "expired": false,
+      "hookScore": 73
+    },
+    {
+      "id": "which-cham-are-you",
+      "title": "Which Cham are you this week?",
+      "hook": "Which Cham are you this week? (comment your number)",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "post",
+      "post": "posts/04-which-cham-are-you.json",
+      "scores": {
+        "urgency": 2,
+        "curiosity": 4,
+        "specificity": 3,
+        "reach": 5,
+        "plasmoFit": 5
+      },
+      "facts": [
+        "Teens 13–18: 8–10 hours sleep [aasm-2016]"
+      ],
+      "sources": [
+        {
+          "id": "aasm-2016",
+          "accessed": "2026-10-08",
+          "publisher": "Journal of Clinical Sleep Medicine",
+          "title": "Recommended amount of sleep for pediatric populations (AASM, 2016)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308"
+        }
+      ],
+      "note": "Engagement/comment bait; mood names are placeholders until brand.json is updated.",
+      "expired": false,
+      "hookScore": 72
+    },
+    {
+      "id": "ucas-january-deadline",
+      "title": "UCAS main deadline: 13 Jan 2027",
+      "hook": "Not Oxbridge? Your UCAS deadline is 13 January.",
+      "kind": "seasonal",
+      "audience": [
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 3,
+        "curiosity": 3,
+        "specificity": 5,
+        "reach": 4,
+        "plasmoFit": 3
+      },
+      "facts": [
+        "Most other undergraduate courses: 18:00, 13 January 2027 [ucas-oct-2026]"
+      ],
+      "sources": [
+        {
+          "id": "ucas-oct-2026",
+          "accessed": "2026-10-08",
+          "publisher": "UCAS",
+          "title": "2027 entry deadline for Oxford, Cambridge and most courses in medicine",
+          "url": "https://www.ucas.com/events/2027-entry-deadline-for-the-universities-of-oxford-and-cambridge-and-most-courses-in-medicine-475536"
+        }
+      ],
+      "publishFrom": "2026-12-01",
+      "expired": false,
+      "hookScore": 72
+    },
+    {
+      "id": "shorter-gcse-exams",
+      "title": "GCSE exams are getting shorter (eventually)",
+      "hook": "GCSEs are being cut by up to 3 hours. Not for you though.",
+      "kind": "news",
+      "audience": [
+        "GCSE"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 5,
+        "specificity": 4,
+        "reach": 4,
+        "plasmoFit": 2
+      },
+      "facts": [
+        "Curriculum & Assessment Review (Nov 2025) recommended cutting GCSE exam volume by at least 10%; government committed to ~2.5–3 hours less per student [irishnews-car][parentkind-car]"
+      ],
+      "sources": [
+        {
+          "id": "irishnews-car",
+          "accessed": "2026-10-08",
+          "publisher": "The Irish News (PA)",
+          "title": "Government announces plan to cut GCSE exam time by up to three hours",
+          "url": "https://www.irishnews.com/news/uk/government-announces-plan-to-cut-gcse-exam-time-by-up-to-three-hours-LDSI6ZJIFNMB3NHFQT35OKLRFI/"
+        },
+        {
+          "id": "parentkind-car",
+          "accessed": "2026-10-08",
+          "publisher": "Parentkind",
+          "title": "The Curriculum and Assessment Review: what this means for your child",
+          "url": "https://www.parentkind.org.uk/about-us/news-and-blogs/blog/the-curriculum-and-assessment-review-what-this-means-for-your-child"
+        }
+      ],
+      "note": "Make clear it does not affect current Year 10/11 students.",
+      "expired": false,
+      "hookScore": 71
+    },
+    {
+      "id": "spacing-sweet-spot",
+      "title": "When should you re-revise a topic?",
+      "hook": "The science of when to re-revise (it's not the night before)",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 4,
+        "specificity": 4,
+        "reach": 4,
+        "plasmoFit": 4
+      },
+      "facts": [
+        "Optimal gap ≈20–40% of a 1-week test delay, ≈5–10% of a 1-year delay [cepeda-2008]"
+      ],
+      "sources": [
+        {
+          "id": "cepeda-2008",
+          "accessed": "2026-10-08",
+          "publisher": "PubMed",
+          "title": "Spacing effects in learning: a temporal ridgeline of optimal retention (Cepeda et al., 2008)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19076480/"
+        }
+      ],
+      "expired": false,
+      "hookScore": 70
+    },
+    {
+      "id": "sleep-is-revision",
+      "title": "Sleep is revision",
+      "hook": "All-nighters are a revision technique. A bad one.",
+      "kind": "evergreen",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 4,
+        "specificity": 4,
+        "reach": 5,
+        "plasmoFit": 2
+      },
+      "facts": [
+        "AASM: 13–18 year olds should sleep 8–10 hours [aasm-2016]"
+      ],
+      "sources": [
+        {
+          "id": "aasm-2016",
+          "accessed": "2026-10-08",
+          "publisher": "Journal of Clinical Sleep Medicine",
+          "title": "Recommended amount of sleep for pediatric populations (AASM, 2016)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308"
+        }
+      ],
+      "expired": false,
+      "hookScore": 70
+    },
+    {
+      "id": "on-screen-exams",
+      "title": "On-screen GCSEs could arrive by 2030",
+      "hook": "Typed GCSEs are coming. Slowly.",
+      "kind": "news",
+      "audience": [
+        "GCSE",
+        "A-level"
+      ],
+      "status": "idea",
+      "post": null,
+      "scores": {
+        "urgency": 2,
+        "curiosity": 4,
+        "specificity": 4,
+        "reach": 3,
+        "plasmoFit": 3
+      },
+      "facts": [
+        "Ofqual consulted Dec 2025–Mar 2026 on regulating on-screen exams; boards could introduce up to 2 on-screen specs each; possibly by 2030 [govuk-onscreen][feweek-onscreen]"
+      ],
+      "sources": [
+        {
+          "id": "govuk-onscreen",
+          "accessed": "2026-10-08",
+          "publisher": "GOV.UK / Ofqual",
+          "title": "Ofqual launches consultation to protect standards in on-screen exams",
+          "url": "https://www.gov.uk/government/news/ofqual-launches-consultation-to-protect-standards-in-on-screen-exams"
+        },
+        {
+          "id": "feweek-onscreen",
+          "accessed": "2026-10-08",
+          "publisher": "FE Week",
+          "title": "Ofqual: on-screen exams could be introduced by 2030",
+          "url": "https://feweek.co.uk/ofqual-on-screen-exams-could-be-introduced-by-2030/"
+        }
+      ],
+      "expired": false,
+      "hookScore": 64
+    }
+  ],
+  "rankedOn": "2026-10-08"
+}

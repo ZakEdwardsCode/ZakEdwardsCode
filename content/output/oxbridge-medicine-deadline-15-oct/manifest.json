@@ -1,0 +1,59 @@
+{
+  "id": "oxbridge-medicine-deadline-15-oct",
+  "title": "Oxbridge & medicine: UCAS deadline 15 October 2026",
+  "renderedAt": "2026-10-08T14:08:24.395Z",
+  "slides": [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "06.png",
+    "07.png",
+    "08.png"
+  ],
+  "video": "cover.mp4",
+  "draft": true,
+  "draftReasons": [
+    "screenshot missing: screenshots/subject-picker.png (placeholder used)"
+  ],
+  "warnings": [],
+  "sources": [
+    {
+      "id": "ucas-oct-2026",
+      "publisher": "UCAS",
+      "short": "UCAS",
+      "title": "2027 entry deadline for the universities of Oxford and Cambridge and most courses in medicine",
+      "url": "https://www.ucas.com/events/2027-entry-deadline-for-the-universities-of-oxford-and-cambridge-and-most-courses-in-medicine-475536",
+      "accessed": "2026-10-08",
+      "claim": "Applications for 2027 entry to Oxford, Cambridge and most medicine, veterinary medicine/science and dentistry courses must reach UCAS by 18:00 UK time on 15 October 2026. Most other courses: 18:00 on 13 January 2027."
+    },
+    {
+      "id": "immerse-deadline",
+      "publisher": "Immerse Education",
+      "short": "Immerse Education",
+      "title": "When Is The UCAS Application Deadline? Preparing Students For 2027 Entry",
+      "url": "https://www.immerse.education/resources-university-preparation/when-is-the-ucas-application",
+      "accessed": "2026-10-08",
+      "claim": "Schools set earlier internal deadlines; the school must check the application, attach the reference and predicted grades, and send it before 18:00."
+    },
+    {
+      "id": "oxford-admissions-2026",
+      "publisher": "University of Oxford",
+      "short": "Univ. of Oxford Admissions Report 2026",
+      "title": "Undergraduate Admissions Report 2026 (Table 1.1)",
+      "url": "https://assets-oxweb.admin.ox.ac.uk/2026-07/Undergraduate%20Admissions%20Report%202026_0.pdf",
+      "accessed": "2026-10-08",
+      "claim": "2025 cycle: 23,329 applications, 3,891 offers, 3,302 admitted (offer rate 16.7%). 87.2% of admitted students were awarded A*AA or better at A-level."
+    },
+    {
+      "id": "plasmo-profile",
+      "publisher": "Plasmo (founder's GitHub profile)",
+      "short": "plasmo.uk",
+      "title": "Plasmo – past papers, marked by AI",
+      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "accessed": "2026-10-08",
+      "claim": "Real GCSE, A-level, AP, SAT and ACT papers marked straight away with written feedback."
+    }
+  ]
+}

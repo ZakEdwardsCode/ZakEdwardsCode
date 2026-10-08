@@ -1,0 +1,78 @@
+{
+  "id": "how-to-get-astar-astar-astar",
+  "title": "How to get A*A*A*",
+  "renderedAt": "2026-10-08T14:03:48.428Z",
+  "slides": [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "06.png",
+    "07.png",
+    "08.png"
+  ],
+  "video": "cover.mp4",
+  "draft": true,
+  "draftReasons": [
+    "screenshot missing: screenshots/dashboard-progress.png (placeholder used)",
+    "screenshot missing: screenshots/ai-feedback.png (placeholder used)"
+  ],
+  "warnings": [],
+  "sources": [
+    {
+      "id": "jcq-alevel-2026",
+      "publisher": "JCQ",
+      "short": "JCQ, Aug 2026 (provisional)",
+      "title": "GCE A level results summer 2026 – press notice",
+      "url": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/08/L3-Press-notice-2026.pdf",
+      "accessed": "2026-10-08",
+      "claim": "9.6% of A level results were awarded A* in 2026 (9.4% in 2025). UK-wide, provisional."
+    },
+    {
+      "id": "dunlosky-2013",
+      "publisher": "Association for Psychological Science",
+      "short": "Dunlosky et al., 2013",
+      "title": "Improving Students' Learning With Effective Learning Techniques (Psychological Science in the Public Interest 14(1), 4–58) – press summary",
+      "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html",
+      "accessed": "2026-10-08",
+      "claim": "Of 10 techniques reviewed, practice testing and distributed practice received the highest (high) utility rating; rereading, highlighting and summarisation were rated low utility."
+    },
+    {
+      "id": "cepeda-2008",
+      "publisher": "Psychological Science (PubMed)",
+      "short": "Cepeda et al., 2008",
+      "title": "Spacing effects in learning: a temporal ridgeline of optimal retention",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19076480/",
+      "accessed": "2026-10-08",
+      "claim": "With 1,350+ participants, the gap between study sessions affected retention; the optimal gap grew with how long you need to remember (about 20–40% of a 1-week delay, 5–10% of a 1-year delay)."
+    },
+    {
+      "id": "rohrer-taylor-2007",
+      "publisher": "Instructional Science (summary by M. S. Glessmer)",
+      "short": "Rohrer & Taylor, 2007",
+      "title": "The shuffling of mathematics practice problems boosts learning (Instructional Science 35, 481–498) – summary",
+      "url": "https://mirjamglessmer.com/2015/12/08/why-you-should-shuffle-practice-problems-rather-than-blocking-them/",
+      "accessed": "2026-10-08",
+      "claim": "Blocked practice scored higher during practice, but on a later test covering all topics, students who mixed problems clearly outperformed those who blocked."
+    },
+    {
+      "id": "taylor-rohrer-2010",
+      "publisher": "University of South Florida",
+      "short": "Taylor & Rohrer, 2010",
+      "title": "The Effect of Interleaving Practice",
+      "url": "https://digitalcommons.usf.edu/psy_facpub/1760/",
+      "accessed": "2026-10-08",
+      "claim": "Interleaved (mixed) practice improved later test performance compared with blocked practice."
+    },
+    {
+      "id": "plasmo-profile",
+      "publisher": "Plasmo (founder's GitHub profile)",
+      "short": "plasmo.uk",
+      "title": "Plasmo – past papers, marked by AI",
+      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "accessed": "2026-10-08",
+      "claim": "Real GCSE, A-level, AP, SAT and ACT papers that students answer online and get marked straight away, with written feedback on every answer."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "_note": "Selectors are best guesses: plasmo.uk was not reachable from the machine that wrote this. Run `npm run screenshots -- --headed` once, adjust any step that fails (debug captures land in screenshots/_debug/), then re-run.",
+  "baseUrl": "https://plasmo.uk",
+  "viewport": { "width": 390, "height": 844 },
+  "deviceScaleFactor": 3,
+  "maxAiMarks": 5,
+  "login": {
+    "path": "/login",
+    "email": "input[type=email], input[name=email]",
+    "password": "input[type=password]",
+    "submit": "button[type=submit]",
+    "successUrlNot": "login"
+  },
+  "maskSelectors": ["[data-testid=user-email]", "[data-private]"],
+  "shots": [
+    { "name": "homepage.png", "loggedIn": false, "steps": [{ "goto": "/" }, { "wait": 1500 }] },
+    { "name": "subject-picker.png", "steps": [{ "goto": "/" }, { "clickText": "Subjects", "optional": true }, { "clickText": "Start", "optional": true }, { "wait": 1500 }] },
+    { "name": "mock-ocr-gcse-cs-paper1.png", "steps": [{ "clickText": "OCR" }, { "clickText": "Computer Science" }, { "clickText": "Paper 1" }, { "wait": 2000 }] },
+    { "name": "answering-question.png", "steps": [
+      { "fill": { "selector": "textarea", "value": "Primary storage is directly accessible by the CPU and holds data and instructions currently in use; secondary storage is non-volatile and keeps data when the power is off." } },
+      { "wait": 800 }
+    ] },
+    { "name": "ai-feedback.png", "steps": [{ "submitForMarking": "text=/^(Mark|Submit)( answer)?$/i" }, { "waitFor": "text=/mark(s)?/i", "timeout": 60000 }, { "wait": 2000 }] },
+    { "name": "cham-moods.png", "steps": [{ "goto": "/dashboard" }, { "wait": 1500 }] },
+    { "name": "mock-countdown.png", "steps": [{ "goto": "/dashboard" }, { "clickText": "Countdown", "optional": true }, { "wait": 1500 }] },
+    { "name": "dashboard-progress.png", "steps": [{ "goto": "/dashboard" }, { "clickText": "Progress", "optional": true }, { "wait": 1500 }] }
+  ]
+}

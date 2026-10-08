@@ -1,0 +1,136 @@
+{
+  "id": "oxbridge-medicine-deadline-15-oct",
+  "order": 5,
+  "title": "Oxbridge & medicine: UCAS deadline 15 October 2026",
+  "type": "news",
+  "newsDate": "2026-10-08",
+  "expires": "2026-10-15",
+  "caption": "Applying to Oxford, Cambridge, medicine, dentistry or vet for 2027? UCAS closes 15 Oct at 6pm UK time. Check your school's internal deadline TODAY. Good luck 🍀",
+  "hashtags": [
+    "ucas",
+    "oxbridge",
+    "oxford",
+    "cambridge",
+    "medicine",
+    "alevels",
+    "personalstatement",
+    "plasmo"
+  ],
+  "video": {
+    "headline": "UCAS Oxbridge deadline: {7 days}"
+  },
+  "slides": [
+    {
+      "layout": "hook",
+      "kicker": "Deadline",
+      "headline": "Oxbridge & medicine: UCAS closes {15 Oct, 6pm}",
+      "sub": "That's 7 days from today. Your final checklist.",
+      "size": 112,
+      "sources": [
+        "ucas-oct-2026"
+      ],
+      "hero": {
+        "type": "number",
+        "text": "7"
+      }
+    },
+    {
+      "layout": "tip",
+      "n": 1,
+      "headline": "Who it's {for}",
+      "body": "Any Oxford or Cambridge course, plus most medicine, dentistry and vet courses, for 2027 entry.",
+      "sources": [
+        "ucas-oct-2026"
+      ]
+    },
+    {
+      "layout": "tip",
+      "n": 2,
+      "headline": "Your school's deadline is {earlier}",
+      "body": "They need time to add your reference and predicted grades. Check the internal date today.",
+      "sources": [
+        "immerse-deadline"
+      ]
+    },
+    {
+      "layout": "tip",
+      "stat": "1 in 6",
+      "headline": "Oxford applications {got an offer}",
+      "body": "23,329 applications, 3,891 offers in 2025.",
+      "sources": [
+        "oxford-admissions-2026"
+      ]
+    },
+    {
+      "layout": "tip",
+      "stat": "87.2%",
+      "headline": "of Oxford admits had {A*AA or better}",
+      "body": "Grades still matter after you apply. Keep revising.",
+      "sources": [
+        "oxford-admissions-2026"
+      ]
+    },
+    {
+      "layout": "tip",
+      "n": 3,
+      "headline": "Not Oxbridge or medicine?",
+      "body": "Most other courses close {13 January 2027, 6pm}. Check each course's deadline on UCAS.",
+      "sources": [
+        "ucas-oct-2026"
+      ]
+    },
+    {
+      "layout": "plasmo",
+      "headline": "Predicted grades {to hit?}",
+      "body": "Practise real A-level past papers on Plasmo, marked straight away with written feedback.",
+      "screenshot": "subject-picker.png",
+      "sources": [
+        "plasmo-profile"
+      ]
+    },
+    {
+      "layout": "cta",
+      "headline": "Save + share",
+      "body": "+ {100 free marks} at plasmo.uk",
+      "small": "Tag the friend applying this week."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ucas-oct-2026",
+      "publisher": "UCAS",
+      "short": "UCAS",
+      "title": "2027 entry deadline for the universities of Oxford and Cambridge and most courses in medicine",
+      "url": "https://www.ucas.com/events/2027-entry-deadline-for-the-universities-of-oxford-and-cambridge-and-most-courses-in-medicine-475536",
+      "accessed": "2026-10-08",
+      "claim": "Applications for 2027 entry to Oxford, Cambridge and most medicine, veterinary medicine/science and dentistry courses must reach UCAS by 18:00 UK time on 15 October 2026. Most other courses: 18:00 on 13 January 2027."
+    },
+    {
+      "id": "immerse-deadline",
+      "publisher": "Immerse Education",
+      "short": "Immerse Education",
+      "title": "When Is The UCAS Application Deadline? Preparing Students For 2027 Entry",
+      "url": "https://www.immerse.education/resources-university-preparation/when-is-the-ucas-application",
+      "accessed": "2026-10-08",
+      "claim": "Schools set earlier internal deadlines; the school must check the application, attach the reference and predicted grades, and send it before 18:00."
+    },
+    {
+      "id": "oxford-admissions-2026",
+      "publisher": "University of Oxford",
+      "short": "Univ. of Oxford Admissions Report 2026",
+      "title": "Undergraduate Admissions Report 2026 (Table 1.1)",
+      "url": "https://assets-oxweb.admin.ox.ac.uk/2026-07/Undergraduate%20Admissions%20Report%202026_0.pdf",
+      "accessed": "2026-10-08",
+      "claim": "2025 cycle: 23,329 applications, 3,891 offers, 3,302 admitted (offer rate 16.7%). 87.2% of admitted students were awarded A*AA or better at A-level."
+    },
+    {
+      "id": "plasmo-profile",
+      "publisher": "Plasmo (founder's GitHub profile)",
+      "short": "plasmo.uk",
+      "title": "Plasmo – past papers, marked by AI",
+      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "accessed": "2026-10-08",
+      "claim": "Real GCSE, A-level, AP, SAT and ACT papers marked straight away with written feedback."
+    }
+  ]
+}

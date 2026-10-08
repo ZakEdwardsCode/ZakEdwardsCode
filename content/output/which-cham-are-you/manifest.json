@@ -1,0 +1,41 @@
+{
+  "id": "which-cham-are-you",
+  "title": "Which Cham are you this week?",
+  "renderedAt": "2026-10-08T14:07:28.962Z",
+  "slides": [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "06.png",
+    "07.png",
+    "08.png"
+  ],
+  "video": "cover.mp4",
+  "draft": true,
+  "draftReasons": [
+    "screenshot missing: screenshots/cham-moods.png (placeholder used)"
+  ],
+  "warnings": [],
+  "sources": [
+    {
+      "id": "aasm-2016",
+      "publisher": "Journal of Clinical Sleep Medicine (PMC)",
+      "short": "AASM consensus, 2016",
+      "title": "Recommended Amount of Sleep for Pediatric Populations: AASM consensus statement",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308",
+      "accessed": "2026-10-08",
+      "claim": "Teenagers 13–18 years should sleep 8 to 10 hours per 24 hours on a regular basis."
+    },
+    {
+      "id": "plasmo-profile",
+      "publisher": "Plasmo (founder's GitHub profile)",
+      "short": "plasmo.uk",
+      "title": "Plasmo – past papers, marked by AI",
+      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "accessed": "2026-10-08",
+      "claim": "Real past papers answered online and marked straight away. (Cham: confirm from the app screenshot.)"
+    }
+  ]
+}

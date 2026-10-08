@@ -1,0 +1,5 @@
+node_modules/
+output/_cache/
+output/*/_html/
+output/*/_hero-*.png
+.env

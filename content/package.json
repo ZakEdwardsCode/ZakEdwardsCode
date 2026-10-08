@@ -1,0 +1,19 @@
+{
+  "name": "plasmo-carousels",
+  "private": true,
+  "type": "module",
+  "description": "Topic research -> app screenshots -> 3D-hero carousels + TikTok cover videos for Plasmo",
+  "scripts": {
+    "topics": "node pipeline/research.mjs",
+    "news": "node pipeline/research.mjs --scan",
+    "screenshots": "node pipeline/screenshots.mjs",
+    "validate": "node pipeline/validate.mjs",
+    "build": "node pipeline/render.mjs",
+    "build:fast": "node pipeline/render.mjs --no-video",
+    "all": "npm run topics && npm run validate && npm run build"
+  },
+  "dependencies": {
+    "playwright": "^1.56.1"
+  },
+  "engines": { "node": ">=20" }
+}

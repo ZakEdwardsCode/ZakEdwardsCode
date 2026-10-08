@@ -1,0 +1,103 @@
+{
+  "id": "which-cham-are-you",
+  "order": 4,
+  "title": "Which Cham are you this week?",
+  "type": "quiz",
+  "caption": "Be honest. Which Cham are you this week? Comment your number 👇 (we've all been 3)",
+  "hashtags": [
+    "studytok",
+    "revision",
+    "gcse",
+    "alevels",
+    "relatable",
+    "plasmo"
+  ],
+  "video": {
+    "headline": "Which {Cham} are you this week?"
+  },
+  "_note": "Moods come from brand.json chamMoods (currently PLACEHOLDERS). Rename to match the moods in the app before posting.",
+  "slides": [
+    {
+      "layout": "hook",
+      "kicker": "Be honest",
+      "headline": "Which {Cham} are you this week?",
+      "sub": "Swipe, pick one, comment your number.",
+      "hero": {
+        "type": "cham",
+        "mood": "default"
+      }
+    },
+    {
+      "layout": "mood",
+      "mood": "locked-in",
+      "kicker": "1. Locked-in Cham",
+      "headline": "Phone in another room. {Three papers done.}",
+      "body": "Protect the streak: same time, same place tomorrow."
+    },
+    {
+      "layout": "mood",
+      "mood": "panicking",
+      "kicker": "2. Panicking Cham",
+      "headline": "Mocks soon. {Zero papers done.}",
+      "body": "Pick one topic. 25 minutes. Test yourself. Repeat."
+    },
+    {
+      "layout": "mood",
+      "mood": "procrastinating",
+      "kicker": "3. Procrastinating Cham",
+      "headline": "Colour-coded timetable. {Started nothing.}",
+      "body": "Do one 10-minute task right now. Starting is the hard bit."
+    },
+    {
+      "layout": "mood",
+      "mood": "burnt-out",
+      "kicker": "4. Burnt-out Cham",
+      "headline": "Revised all day. {Remembers nothing.}",
+      "body": "Shorter sessions, real breaks. Teens need 8–10 hours' sleep.",
+      "sources": [
+        "aasm-2016"
+      ]
+    },
+    {
+      "layout": "mood",
+      "mood": "smug",
+      "kicker": "5. Smug Cham",
+      "headline": "One good mock. {Stopped revising.}",
+      "body": "Try a paper you haven't seen. Find your next lost mark."
+    },
+    {
+      "layout": "plasmo",
+      "headline": "Find {Cham} in Plasmo",
+      "body": "Cham hangs out while you answer real past papers with instant AI marking.",
+      "screenshot": "cham-moods.png",
+      "sources": [
+        "plasmo-profile"
+      ]
+    },
+    {
+      "layout": "cta",
+      "headline": "Comment your Cham",
+      "body": "Save this + {100 free marks} at plasmo.uk"
+    }
+  ],
+  "sources": [
+    {
+      "id": "aasm-2016",
+      "publisher": "Journal of Clinical Sleep Medicine (PMC)",
+      "short": "AASM consensus, 2016",
+      "title": "Recommended Amount of Sleep for Pediatric Populations: AASM consensus statement",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308",
+      "accessed": "2026-10-08",
+      "claim": "Teenagers 13–18 years should sleep 8 to 10 hours per 24 hours on a regular basis."
+    },
+    {
+      "id": "plasmo-profile",
+      "publisher": "Plasmo (founder's GitHub profile)",
+      "short": "plasmo.uk",
+      "title": "Plasmo – past papers, marked by AI",
+      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "accessed": "2026-10-08",
+      "claim": "Real past papers answered online and marked straight away. (Cham: confirm from the app screenshot.)"
+    }
+  ]
+}

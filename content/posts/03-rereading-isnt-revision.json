@@ -1,0 +1,120 @@
+{
+  "id": "rereading-isnt-revision",
+  "order": 3,
+  "title": "Why rereading your notes isn't revision",
+  "type": "myth",
+  "caption": "Rereading feels productive. It mostly isn't. Here's what to do instead (and why your brain lies to you about it) 🧠",
+  "hashtags": [
+    "revision",
+    "gcse",
+    "alevels",
+    "studytips",
+    "activerecall",
+    "studytok",
+    "plasmo"
+  ],
+  "slides": [
+    {
+      "layout": "hook",
+      "kicker": "Uncomfortable truth",
+      "headline": "Rereading your notes {isn't revision}",
+      "sub": "It feels productive. The research disagrees.",
+      "hero": {
+        "type": "phone",
+        "screenshot": "answering-question.png"
+      }
+    },
+    {
+      "layout": "tip",
+      "n": 1,
+      "headline": "Everyone {does it}",
+      "body": "In a survey of US university students, rereading notes or textbooks was the most-reported study strategy.",
+      "sources": [
+        "karpicke-2009"
+      ]
+    },
+    {
+      "layout": "tip",
+      "n": 2,
+      "headline": "Rated {low utility}",
+      "body": "A review of 10 study techniques rated rereading “low utility”. Practice testing was rated high.",
+      "sources": [
+        "dunlosky-2013"
+      ]
+    },
+    {
+      "layout": "tip",
+      "n": 3,
+      "headline": "Why it {fools you}",
+      "body": "In one study, rereaders felt more confident. But students who tested themselves remembered more a week later.",
+      "sources": [
+        "roediger-2006"
+      ]
+    },
+    {
+      "layout": "tip",
+      "n": 4,
+      "headline": "Do this instead: {blurt}",
+      "body": "Close the book. Write everything you remember. Then check what you missed. The gaps are your revision."
+    },
+    {
+      "layout": "tip",
+      "n": 5,
+      "headline": "Questions, {not pages}",
+      "body": "Turn every heading into a question and answer it from memory. Better still: real past-paper questions."
+    },
+    {
+      "layout": "plasmo",
+      "headline": "Test yourself on {real questions}",
+      "body": "Answer real past-paper questions on Plasmo and get written feedback on every answer.",
+      "screenshot": "answering-question.png",
+      "sources": [
+        "plasmo-profile"
+      ]
+    },
+    {
+      "layout": "cta",
+      "headline": "Save this",
+      "body": "+ {100 free marks} at plasmo.uk",
+      "small": "Send it to the friend still highlighting everything."
+    }
+  ],
+  "sources": [
+    {
+      "id": "karpicke-2009",
+      "publisher": "Memory (Washington University in St. Louis)",
+      "short": "Karpicke, Butler & Roediger, 2009",
+      "title": "Metacognitive strategies in student learning: Do students practise retrieval when they study on their own? (Memory 17(4), 471–479)",
+      "url": "https://bpb-us-e2.wpmucdn.com/sites.wustl.edu/dist/8/805/files/2026/06/Karpicke-et-al.-2009-Metacognitive-strategies-in-student-learning-Do-students-practise-retrieval-when-they-study-on-thei.pdf",
+      "accessed": "2026-10-08",
+      "claim": "On an open-ended survey, college students most frequently reported rereading notes or textbook; self-testing ranked low."
+    },
+    {
+      "id": "dunlosky-2013",
+      "publisher": "Association for Psychological Science",
+      "short": "Dunlosky et al., 2013",
+      "title": "Improving Students' Learning With Effective Learning Techniques – press summary",
+      "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html",
+      "accessed": "2026-10-08",
+      "claim": "Rereading received a low utility rating; practice testing and distributed practice received high utility."
+    },
+    {
+      "id": "roediger-2006",
+      "publisher": "Association for Psychological Science",
+      "short": "Roediger & Karpicke, 2006",
+      "title": "Test-Enhanced Learning – APS Observer summary",
+      "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning",
+      "accessed": "2026-10-08",
+      "claim": "Repeated studying increased students' confidence, but prior testing produced substantially greater retention on 2-day and 1-week delayed tests."
+    },
+    {
+      "id": "plasmo-profile",
+      "publisher": "Plasmo (founder's GitHub profile)",
+      "short": "plasmo.uk",
+      "title": "Plasmo – past papers, marked by AI",
+      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "accessed": "2026-10-08",
+      "claim": "Real past papers answered online and marked straight away, with written feedback on every answer."
+    }
+  ]
+}
