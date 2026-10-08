@@ -1,12 +1,12 @@
 # Plasmo carousel pipeline
 
-Turns researched topics into 1080×1350 TikTok/Instagram carousels (plus a 1080×1920 cover MP4) for [plasmo.uk](https://plasmo.uk).
+Turns researched topics into Instagram (1080×1350) and TikTok (1080×1920) carousels, plus a cover MP4, for [plasmo.uk](https://plasmo.uk).
 
 ```
 topics.json            ranked topic ideas, every fact tagged with a source
 posts/*.json           one file per carousel  ← add posts here, no code changes
-screenshots/*.png      real app screenshots (captured by script)
-brand/brand.json       colours, fonts, logo, Cham moods  ← PLACEHOLDERS, swap for real brand
+screenshots/*.png      real app screenshots (cropped from app captures, or captured by script)
+brand/brand.json       colours, fonts, wordmark and Cham, sampled from the real app
 assets/cham.glb        optional 3D Cham (used on covers automatically if present)
 output/<post-id>/      ig/01-08.png (4:5), tiktok/01-08.png (9:16), cover.mp4,
                        caption-ig.txt, caption-tiktok.txt, manifest.json
