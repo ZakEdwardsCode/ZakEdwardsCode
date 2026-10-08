@@ -1,17 +1,29 @@
 {
   "id": "revision-this-or-that",
   "title": "Revision: this or that?",
-  "renderedAt": "2026-10-08T15:17:38.231Z",
-  "slides": [
-    "01.png",
-    "02.png",
-    "03.png",
-    "04.png",
-    "05.png",
-    "06.png",
-    "07.png",
-    "08.png"
-  ],
+  "renderedAt": "2026-10-08T15:46:21.908Z",
+  "slides": {
+    "ig": [
+      "ig/01.png",
+      "ig/02.png",
+      "ig/03.png",
+      "ig/04.png",
+      "ig/05.png",
+      "ig/06.png",
+      "ig/07.png",
+      "ig/08.png"
+    ],
+    "tiktok": [
+      "tiktok/01.png",
+      "tiktok/02.png",
+      "tiktok/03.png",
+      "tiktok/04.png",
+      "tiktok/05.png",
+      "tiktok/06.png",
+      "tiktok/07.png",
+      "tiktok/08.png"
+    ]
+  },
   "video": "cover.mp4",
   "draft": false,
   "draftReasons": [],

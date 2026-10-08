@@ -12,7 +12,11 @@ for (const f of fs.readdirSync(DIRS.posts).filter((x) => x.endsWith('.json')).so
   let post;
   try { post = JSON.parse(fs.readFileSync(path.join(DIRS.posts, f), 'utf8')); }
   catch (e) { console.error(`✗ ${f}: invalid JSON (${e.message})`); bad++; continue; }
-  const { errors, warnings } = validatePost(post, { brand });
+  if (post.disabled) { console.log(`- ${f} (disabled)`); continue; }
+  const tiktok = { ...post, slides: post.slides.map((s, i) => ({ ...s, ...(post.tiktok?.slides?.[i] || {}) })) };
+  const a = validatePost(post, { brand }), b = validatePost(tiktok, { brand });
+  const errors = [...new Set([...a.errors, ...b.errors.map((e) => 'tiktok ' + e)])];
+  const warnings = [...new Set([...a.warnings, ...b.warnings.map((w) => 'tiktok ' + w)])].filter((w) => !w.startsWith('tiktok no "plasmo"'));
   console.log(`${errors.length ? '✗' : '✓'} ${f}`);
   warnings.forEach((w) => console.log(`   ! ${w}`));
   errors.forEach((e) => console.log(`   ✗ ${e}`));

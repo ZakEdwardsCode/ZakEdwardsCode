@@ -23,8 +23,8 @@
         "jcq-alevel-2026"
       ],
       "hero": {
-        "type": "phone",
-        "screenshot": "dashboard-progress.png"
+        "type": "panel",
+        "screenshot": "subject-picker.png"
       }
     },
     {
@@ -70,17 +70,18 @@
     },
     {
       "layout": "plasmo",
-      "headline": "Get every answer {marked}",
-      "body": "Answer real past papers on Plasmo. AI marks them straight away, with written feedback on every answer.",
-      "screenshot": "ai-feedback.png",
+      "headline": "Answer. Tap {Mark}. Get feedback.",
+      "body": "Real past-paper questions, marked instantly. Your first marked answer unlocks a predicted grade.",
+      "screenshot": "question-mark.png",
       "sources": [
-        "plasmo-profile"
-      ]
+        "plasmo-app"
+      ],
+      "kicker": "Inside Plasmo"
     },
     {
       "layout": "cta",
-      "headline": "Save this",
-      "body": "+ {100 free marks} at plasmo.uk"
+      "headline": "Save this for revision season",
+      "body": "100 free marks at plasmo.uk"
     }
   ],
   "sources": [
@@ -130,13 +131,25 @@
       "claim": "Interleaved (mixed) practice improved later test performance compared with blocked practice."
     },
     {
-      "id": "plasmo-profile",
-      "publisher": "Plasmo (founder's GitHub profile)",
-      "short": "plasmo.uk",
-      "title": "Plasmo – past papers, marked by AI",
-      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "id": "plasmo-app",
+      "publisher": "Plasmo app",
+      "short": "Plasmo app",
+      "title": "Plasmo app screens (subject picker, mock exams, question view), captured Oct 2026",
+      "url": "https://plasmo.uk",
       "accessed": "2026-10-08",
-      "claim": "Real GCSE, A-level, AP, SAT and ACT papers that students answer online and get marked straight away, with written feedback on every answer."
+      "claim": "In-app copy: 'Answer, tap Mark, get your mark and feedback instantly'; 'Mark your first answer to unlock your predicted grade. It sharpens with every answer.'; mock exams by board (AQA, Edexcel, OCR); next-exam countdown; A-level subject picker."
     }
-  ]
+  ],
+  "tiktok": {
+    "slides": {
+      "0": {
+        "kicker": "a-level",
+        "headline": "how to actually get {A*A*A*}",
+        "sub": "(no, rereading your notes doesn't count)"
+      }
+    },
+    "caption": "how to get A*A*A* at a-level: 5 revision habits backed by research. save this before mocks. #alevels #alevelrevision #revisiontips #studytok #plasmo",
+    "hashtags": [],
+    "sound": "Pick a trending sound from TikTok's Commercial Music Library (business accounts can only use that library)."
+  }
 }

@@ -15,7 +15,7 @@
   "video": {
     "headline": "Which {Cham} are you this week?"
   },
-  "_note": "Moods come from brand.json chamMoods (currently PLACEHOLDERS). Rename to match the moods in the app before posting.",
+  "_note": "Disabled: the real Cham moods are not known yet. Fill brand.json chamMoods from the app, update the mood slides, then remove \"disabled\".",
   "slides": [
     {
       "layout": "hook",
@@ -99,5 +99,6 @@
       "accessed": "2026-10-08",
       "claim": "Real past papers answered online and marked straight away. (Cham: confirm from the app screenshot.)"
     }
-  ]
+  ],
+  "disabled": true
 }

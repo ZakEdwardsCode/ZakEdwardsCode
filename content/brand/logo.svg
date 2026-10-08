@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" fill="currentColor">
-  <!-- PLACEHOLDER wordmark. Replace with the real Plasmo logo. Keep fill="currentColor" so the renderer can tint it.
-       This file is inlined into slides, so <text> uses the slide's loaded brand fonts. -->
-  <circle cx="34" cy="40" r="24"/>
-  <circle cx="42" cy="32" r="7" fill="#C8FF3D"/>
-  <text x="70" y="56" font-family="Plasmo Heading, Inter Display, Inter, sans-serif" font-weight="800" font-size="50" letter-spacing="-1.5">plasmo</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 84">
+  <!-- Plasmo wordmark: "Plas" in currentColor, "mo" in the cyan gradient used on the app's landing screen. -->
+  <defs><linearGradient id="pmo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FE3F2"/><stop offset="1" stop-color="#1F9EBE"/></linearGradient></defs>
+  <text x="0" y="68" font-family="Plasmo Display, Inter Display, Inter, sans-serif" font-weight="900" font-size="84" letter-spacing="-4"><tspan fill="currentColor">Plas</tspan><tspan fill="url(#pmo)">mo</tspan></text>
 </svg>

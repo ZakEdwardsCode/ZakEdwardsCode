@@ -20,8 +20,8 @@
       "headline": "Rereading your notes {isn't revision}",
       "sub": "It feels productive. The research disagrees.",
       "hero": {
-        "type": "phone",
-        "screenshot": "answering-question.png"
+        "type": "panel",
+        "screenshot": "question-mark.png"
       }
     },
     {
@@ -66,17 +66,17 @@
     {
       "layout": "plasmo",
       "headline": "Test yourself on {real questions}",
-      "body": "Answer real past-paper questions on Plasmo and get written feedback on every answer.",
-      "screenshot": "answering-question.png",
+      "body": "Pick a paper, answer from memory, tap Mark. Feedback lands instantly.",
+      "screenshot": "gcse-maths-mocks.png",
       "sources": [
-        "plasmo-profile"
-      ]
+        "plasmo-app"
+      ],
+      "kicker": "Inside Plasmo"
     },
     {
       "layout": "cta",
-      "headline": "Save this",
-      "body": "+ {100 free marks} at plasmo.uk",
-      "small": "Send it to the friend still highlighting everything."
+      "headline": "Send this to the friend still highlighting everything",
+      "body": "100 free marks at plasmo.uk"
     }
   ],
   "sources": [
@@ -108,13 +108,25 @@
       "claim": "Repeated studying increased students' confidence, but prior testing produced substantially greater retention on 2-day and 1-week delayed tests."
     },
     {
-      "id": "plasmo-profile",
-      "publisher": "Plasmo (founder's GitHub profile)",
-      "short": "plasmo.uk",
-      "title": "Plasmo – past papers, marked by AI",
-      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "id": "plasmo-app",
+      "publisher": "Plasmo app",
+      "short": "Plasmo app",
+      "title": "Plasmo app screens (subject picker, mock exams, question view), captured Oct 2026",
+      "url": "https://plasmo.uk",
       "accessed": "2026-10-08",
-      "claim": "Real past papers answered online and marked straight away, with written feedback on every answer."
+      "claim": "In-app copy: 'Answer, tap Mark, get your mark and feedback instantly'; 'Mark your first answer to unlock your predicted grade. It sharpens with every answer.'; mock exams by board (AQA, Edexcel, OCR); next-exam countdown; A-level subject picker."
     }
-  ]
+  ],
+  "tiktok": {
+    "slides": {
+      "0": {
+        "kicker": "study tips",
+        "headline": "stop rereading your notes. {seriously.}",
+        "sub": "here's what the research says to do instead"
+      }
+    },
+    "caption": "why rereading your notes isn't revision (and what to do instead). active recall > rereading. #revisiontips #activerecall #gcse #alevels #plasmo",
+    "hashtags": [],
+    "sound": "Pick a trending sound from TikTok's Commercial Music Library (business accounts can only use that library)."
+  }
 }

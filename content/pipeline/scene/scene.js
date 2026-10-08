@@ -102,6 +102,27 @@ async function buildPhone() {
   return { group: g, height: H, shadowW: 1.5, shadowY: -H / 2 - 0.16 };
 }
 
+// Landscape "app window" for desktop screenshots: thin dark bezel, screenshot face, tilted.
+async function buildPanel() {
+  const tex = await loadTexture(cfg.screenshotUrl);
+  const aspect = tex.image.height / tex.image.width;
+  const SW = 2.3, SH = SW * aspect, B = 0.05, D = 0.06;
+  const g = new THREE.Group();
+  const frame = new THREE.Mesh(
+    new RoundedBoxGeometry(SW + B * 2, SH + B * 2, D, 6, 0.06),
+    new THREE.MeshPhysicalMaterial({ color: cfg.colors.frame || '#0d1b22', metalness: 0.5, roughness: 0.35, clearcoat: 1, clearcoatRoughness: 0.2 }),
+  );
+  g.add(frame);
+  const screen = new THREE.Mesh(
+    planarUVs(new THREE.ShapeGeometry(roundedRectShape(SW, SH, 0.035), 10), SW, SH),
+    new THREE.MeshBasicMaterial({ map: tex, toneMapped: false }),
+  );
+  screen.position.z = D / 2 + 0.002;
+  g.add(screen);
+  Object.assign(base, { rx: -0.12, ry: -0.36, rz: 0.03, y: 0.05 });
+  return { group: g, height: SH * 1.05, shadowW: SW * 1.2, shadowY: -SH / 2 - 0.22 };
+}
+
 async function buildNumber() {
   const loader = new TTFLoader();
   // CFF-flavoured .otf outlines wind the opposite way to TrueType; without this, counters (6, 8, 0) fill in
@@ -200,7 +221,7 @@ window.setupScene = async (config) => {
   const rim = new THREE.DirectionalLight(cfg.colors.rim || cfg.colors.primary, 2.4); rim.position.set(-4, 2.5, -3); scene.add(rim);
   scene.add(new THREE.HemisphereLight('#ffffff', '#c9c2e8', 0.5));
 
-  const builders = { phone: buildPhone, number: buildNumber, cham3d: buildCham3d, cham2d: buildCham2d };
+  const builders = { phone: buildPhone, panel: buildPanel, number: buildNumber, cham3d: buildCham3d, cham2d: buildCham2d };
   const built = await builders[cfg.kind]();
   hero = built.group;
   scene.add(hero);

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Renders every post in /content/posts (or the ids given) to
-//   /content/output/<post-id>/{01.png..08.png, cover.mp4, caption.txt, manifest.json}
+//   /content/output/<post-id>/ig/01.png..      Instagram 4:5 carousel
+//   /content/output/<post-id>/tiktok/01.png..  TikTok 9:16 photo-mode carousel (uses the post's "tiktok" overrides)
+//   /content/output/<post-id>/{cover.mp4, caption-ig.txt, caption-tiktok.txt, manifest.json}
 //
 //   node pipeline/render.mjs                      all posts
 //   node pipeline/render.mjs how-to-get-astar     one post
@@ -12,7 +14,7 @@ import { chromium } from 'playwright';
 import { DIRS, p } from './lib/paths.mjs';
 import { startServer } from './lib/server.mjs';
 import { loadBrand, moodOf, fontFaceCss } from './lib/brand.mjs';
-import { slideHtml, placeholderScreenshotHtml, rich, SLIDE_W, SLIDE_H } from './lib/slides.mjs';
+import { slideHtml, placeholderScreenshotHtml, rich, FORMATS } from './lib/slides.mjs';
 import { validatePost } from './lib/validate.mjs';
 import { chamSvg } from './lib/cham.mjs';
 
@@ -29,6 +31,7 @@ function loadPosts() {
   return fs.readdirSync(DIRS.posts)
     .filter((f) => f.endsWith('.json'))
     .map((f) => ({ file: f, ...JSON.parse(fs.readFileSync(path.join(DIRS.posts, f), 'utf8')) }))
+    .filter((post) => !post.disabled || only.includes(post.id))
     .filter((post) => !only.length || only.includes(post.id) || only.includes(post.file.replace(/\.json$/, '')))
     .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 }
@@ -75,8 +78,8 @@ async function chamMarkup(ctx, moodKey) {
 async function sceneConfig(ctx, hero) {
   const c = ctx.brand.colors;
   const cfg = { colors: { primary: c.primary, primaryDeep: c.primaryDeep, rim: c.primary } };
-  if (hero.type === 'phone') {
-    Object.assign(cfg, { kind: 'phone', screenshotUrl: await screenshotFor(ctx, hero.screenshot) });
+  if (hero.type === 'phone' || hero.type === 'panel') {
+    Object.assign(cfg, { kind: hero.type, screenshotUrl: await screenshotFor(ctx, hero.screenshot) });
   } else if (hero.type === 'number') {
     Object.assign(cfg, { kind: 'number', text: hero.text, fontUrl: `/brand/${ctx.brand.fonts.number3d}` });
   } else if (hero.type === 'cham') {
@@ -103,27 +106,27 @@ async function openScene(ctx, cfg, { width, height, scale = 1 }) {
 
 async function renderHero(ctx, hero, outFile) {
   const cfg = await sceneConfig(ctx, hero);
-  const page = await openScene(ctx, { ...cfg, fill: hero.fill ?? (hero.type === 'phone' ? 1.2 : 1.0) }, { width: 2160, height: 1400 });
+  const page = await openScene(ctx, { ...cfg, fill: hero.fill ?? (hero.type === 'phone' ? 1.2 : hero.type === 'panel' ? 1.25 : 1.0) }, { width: 2160, height: 1400 });
   await page.screenshot({ path: outFile, omitBackground: true });
   await page.close();
 }
 
 async function renderVideo(ctx, post, hero, outFile) {
   const { brand } = ctx;
-  const hook = post.slides[0];
+  const hook = slidesFor(post, 'tiktok')[0];
   const seconds = post.video?.seconds ?? 7;
   const cfg = await sceneConfig(ctx, hero);
   const overlayCss = `${fontFaceCss(brand)}
     #overlay{font-family:'${brand.fonts.body.family}';color:#fff}
     .ov-top{position:absolute;left:96px;right:96px;top:230px}
-    .ov-k{display:inline-block;font:800 34px '${brand.fonts.heading.family}';letter-spacing:.12em;text-transform:uppercase;padding:16px 28px;border-radius:999px;background:${brand.colors.accent};color:${brand.colors.ink}}
+    .ov-k{display:inline-block;font:800 34px '${brand.fonts.heading.family}';letter-spacing:.12em;text-transform:uppercase;padding:16px 28px;border-radius:999px;color:${brand.colors.accent};letter-spacing:.26em}
     .ov-h{font:900 ${post.video?.headlineSize || 124}px/0.95 '${brand.fonts.display.family}';letter-spacing:-.035em;margin-top:36px}
-    .ov-h .hl{color:${brand.colors.accent}}
+    .ov-h .hl{background:linear-gradient(135deg,#B5ECF7,${brand.colors.accent} 45%,${brand.colors.primary});-webkit-background-clip:text;background-clip:text;color:transparent}
     .ov-logo{position:absolute;left:0;right:0;bottom:200px;display:flex;justify-content:center;height:62px;color:#fff;opacity:.9}
     .ov-logo svg{height:100%;width:auto}`;
   const overlayHtml = `<div class="ov-top">${hook.kicker ? `<div class="ov-k">${rich(hook.kicker)}</div>` : ''}<div class="ov-h">${rich(post.video?.headline || hook.headline)}</div></div><div class="ov-logo">${brand.logoSvg}</div>`;
-  const background = `radial-gradient(90% 55% at 50% 72%, ${brand.colors.primary} 0%, ${brand.colors.primaryDeep} 40%, ${brand.colors.ink} 85%)`;
-  const page = await openScene(ctx, { ...cfg, overlayHtml, overlayCss, background, fill: 0.55, shiftY: 0.14, sway: hero.type === 'phone' ? 0.42 : 0.5 }, { width: VIDEO.w, height: VIDEO.h });
+  const background = `radial-gradient(90% 55% at 50% 70%, ${brand.colors.dark3} 0%, ${brand.colors.dark} 45%, ${brand.colors.dark2} 90%)`;
+  const page = await openScene(ctx, { ...cfg, overlayHtml, overlayCss, background, fill: hero.type === 'panel' ? 0.4 : 0.55, shiftY: 0.14, sway: hero.type === 'phone' || hero.type === 'panel' ? 0.42 : 0.5 }, { width: VIDEO.w, height: VIDEO.h });
 
   const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(VIDEO.fps), '-c:v', 'mjpeg', '-i', '-',
     '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', '-preset', 'medium', '-movflags', '+faststart', outFile]);
@@ -146,8 +149,10 @@ function footnote(post, slide) {
   return 'Source: ' + [...new Set(srcs.map((s) => s.short || s.publisher))].join('; ');
 }
 
-function caption(post) {
-  const lines = [post.caption || post.title, '', (post.hashtags || []).map((h) => `#${h.replace(/^#/, '')}`).join(' ')];
+function caption(post, platform) {
+  const tt = platform === 'tiktok' ? post.tiktok || {} : {};
+  const lines = [tt.caption || post.caption || post.title, '', (tt.hashtags || post.hashtags || []).map((h) => `#${h.replace(/^#/, '')}`).join(' ')];
+  if (tt.sound) lines.push('', `Sound: ${tt.sound}`);
   if (post.sources?.length) {
     lines.push('', 'Sources:');
     for (const s of post.sources) lines.push(`- ${s.publisher}: ${s.title} ${s.url}`);
@@ -155,9 +160,16 @@ function caption(post) {
   return lines.join('\n') + '\n';
 }
 
+// TikTok variant: per-slide overrides from post.tiktok.slides (keyed by slide index, 0-based)
+function slidesFor(post, format) {
+  const over = format === 'tiktok' ? post.tiktok?.slides || {} : {};
+  return post.slides.map((s, i) => ({ ...s, ...(over[i] || {}) }));
+}
+
 async function renderPost(ctx, post) {
   const t0 = Date.now();
   const { errors, warnings } = validatePost(post, { brand: ctx.brand });
+  errors.push(...validatePost({ ...post, slides: slidesFor(post, 'tiktok') }, { brand: ctx.brand }).errors.map((e) => 'tiktok ' + e));
   warnings.forEach((w) => console.warn(`  ! ${w}`));
   if (errors.length) {
     errors.forEach((e) => console.error(`  ✗ ${e}`));
@@ -170,27 +182,41 @@ async function renderPost(ctx, post) {
 
   const n = post.slides.length;
   const hookHero = post.slides[0].hero;
-  const files = [];
-  for (const [i, s] of post.slides.entries()) {
-    const slide = { ...s, _footnote: footnote(post, s) };
-    const sctx = { i, n };
-    if (s.hero) {
-      const heroFile = path.join(outDir, `_hero-${i + 1}.png`);
-      await renderHero(ctx, s.hero, heroFile);
-      sctx.heroUrl = rel(heroFile);
-    }
-    if (s.screenshot) sctx.screenshotUrl = await screenshotFor(ctx, s.screenshot);
-    if (s.layout === 'mood') { sctx.mood = moodOf(ctx.brand, s.mood); sctx.chamMarkup = await chamMarkup(ctx, s.mood); }
+  const chamFile = path.join(DIRS.brand, ctx.brand.cham?.image || 'cham.png');
+  const chamUrl = fs.existsSync(chamFile) ? rel(chamFile) : null;
+  const files = {};
+  const heroes = {};
+  for (const format of Object.keys(FORMATS)) {
+    const F = FORMATS[format];
+    const fmtDir = path.join(outDir, format);
+    fs.mkdirSync(fmtDir, { recursive: true });
+    await ctx.slidePage.setViewportSize({ width: F.w, height: F.h });
+    files[format] = [];
+    for (const [i, s] of slidesFor(post, format).entries()) {
+      const slide = { ...s, _footnote: footnote(post, s) };
+      const sctx = { i, n, format, chamUrl };
+      if (s.hero) {
+        const key = JSON.stringify(s.hero);
+        if (!heroes[key]) {
+          heroes[key] = path.join(outDir, `_hero-${i + 1}.png`);
+          await renderHero(ctx, s.hero, heroes[key]);
+        }
+        sctx.heroUrl = rel(heroes[key]);
+      }
+      if (s.screenshot) sctx.screenshotUrl = await screenshotFor(ctx, s.screenshot);
+      if (s.layout === 'mood') sctx.mood = moodOf(ctx.brand, s.mood);
 
-    const htmlFile = path.join(outDir, '_html', `slide-${String(i + 1).padStart(2, '0')}.html`);
-    fs.writeFileSync(htmlFile, slideHtml(ctx.brand, slide, sctx));
-    const page = ctx.slidePage;
-    await page.goto(ctx.base + rel(htmlFile), { waitUntil: 'load' });
-    await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map((im) => im.decode().catch(() => {}))); window.__fit(); });
-    if (await page.evaluate(() => document.body.dataset.overflow === '1')) warnings.push(`slide ${i + 1}: text still overflows after shrinking`);
-    const png = path.join(outDir, `${String(i + 1).padStart(2, '0')}.png`);
-    await page.screenshot({ path: png });
-    files.push(path.basename(png));
+      const num = String(i + 1).padStart(2, '0');
+      const htmlFile = path.join(outDir, '_html', `${format}-${num}.html`);
+      fs.writeFileSync(htmlFile, slideHtml(ctx.brand, slide, sctx));
+      const page = ctx.slidePage;
+      await page.goto(ctx.base + rel(htmlFile), { waitUntil: 'load' });
+      await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map((im) => im.decode().catch(() => {}))); window.__fit(); });
+      if (await page.evaluate(() => document.body.dataset.overflow === '1')) warnings.push(`${format} slide ${i + 1}: text still overflows after shrinking`);
+      const png = path.join(fmtDir, `${num}.png`);
+      await page.screenshot({ path: png });
+      files[format].push(`${format}/${num}.png`);
+    }
   }
 
   let video = null;
@@ -199,12 +225,13 @@ async function renderPost(ctx, post) {
     await renderVideo(ctx, post, hookHero, path.join(outDir, video));
   }
 
-  fs.writeFileSync(path.join(outDir, 'caption.txt'), caption(post));
+  fs.writeFileSync(path.join(outDir, 'caption-ig.txt'), caption(post, 'ig'));
+  fs.writeFileSync(path.join(outDir, 'caption-tiktok.txt'), caption(post, 'tiktok'));
   fs.writeFileSync(path.join(outDir, 'manifest.json'), JSON.stringify({
     id: post.id, title: post.title, renderedAt: new Date().toISOString(), slides: files, video,
     draft: ctx.draft.size > 0, draftReasons: [...ctx.draft], warnings, sources: post.sources,
   }, null, 2));
-  console.log(`  ✓ ${post.id}: ${files.length} slides${video ? ' + cover.mp4' : ''} in ${((Date.now() - t0) / 1000).toFixed(1)}s${ctx.draft.size ? '  [DRAFT: ' + [...ctx.draft].join('; ') + ']' : ''}`);
+  console.log(`  ✓ ${post.id}: ${files.ig.length} IG + ${files.tiktok.length} TikTok slides${video ? ' + cover.mp4' : ''} in ${((Date.now() - t0) / 1000).toFixed(1)}s${ctx.draft.size ? '  [DRAFT: ' + [...ctx.draft].join('; ') + ']' : ''}`);
   return true;
 }
 
@@ -216,7 +243,7 @@ async function main() {
   const server = await startServer();
   const browser = await chromium.launch();
   const glBrowser = await chromium.launch({ args: GL_ARGS });
-  const slidePage = await browser.newPage({ viewport: { width: SLIDE_W, height: SLIDE_H }, deviceScaleFactor: 1 });
+  const slidePage = await browser.newPage({ viewport: { width: FORMATS.ig.w, height: FORMATS.ig.h }, deviceScaleFactor: 1 });
   const ctx = { brand, base: server.base, browser, glBrowser, slidePage };
   let failed = 0;
   try {

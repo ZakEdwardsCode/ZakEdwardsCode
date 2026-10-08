@@ -5,33 +5,131 @@
   "type": "engagement",
   "platform": "instagram",
   "caption": "Revision: this or that? 👀 Comment your 5 letters BEFORE you swipe to the answers (e.g. ABBAB). No cheating. Then tag the friend who'd get 0/5 😭",
-  "hashtags": ["revision", "gcse", "alevels", "studygram", "thisorthat", "studytips", "revisiontips", "plasmo"],
-  "video": { "headline": "Revision: {this or that?}" },
+  "hashtags": [
+    "revision",
+    "gcse",
+    "alevels",
+    "studygram",
+    "thisorthat",
+    "studytips",
+    "revisiontips",
+    "plasmo"
+  ],
+  "video": {
+    "headline": "Revision: {this or that?}"
+  },
   "slides": [
     {
       "layout": "hook",
       "kicker": "Comment your answers",
       "headline": "Revision: {this or that?}",
       "sub": "Pick A or B on each slide. Comment your 5 letters, then check the research answers.",
-      "hero": { "type": "number", "text": "A/B" }
+      "hero": {
+        "type": "number",
+        "text": "A/B"
+      }
     },
-    { "layout": "choice", "kicker": "1 of 5", "optionA": "Blurting from memory", "optionB": "Rereading your notes" },
-    { "layout": "choice", "kicker": "2 of 5", "optionA": "Cramming the night before", "optionB": "Little and often" },
-    { "layout": "choice", "kicker": "3 of 5", "optionA": "Mixing up topics", "optionB": "20 questions on one topic" },
-    { "layout": "choice", "kicker": "4 of 5", "optionA": "One big all-nighter", "optionB": "8–10 hours' sleep", "sources": ["aasm-2016"] },
-    { "layout": "choice", "kicker": "5 of 5", "optionA": "Highlighting the textbook", "optionB": "A timed past paper" },
     {
-      "layout": "tip", "kicker": "The research answers", "stat": "ABABB",
+      "layout": "choice",
+      "kicker": "1 of 5",
+      "optionA": "Blurting from memory",
+      "optionB": "Rereading your notes"
+    },
+    {
+      "layout": "choice",
+      "kicker": "2 of 5",
+      "optionA": "Cramming the night before",
+      "optionB": "Little and often"
+    },
+    {
+      "layout": "choice",
+      "kicker": "3 of 5",
+      "optionA": "Mixing up topics",
+      "optionB": "20 questions on one topic"
+    },
+    {
+      "layout": "choice",
+      "kicker": "4 of 5",
+      "optionA": "One big all-nighter",
+      "optionB": "8–10 hours' sleep",
+      "sources": [
+        "aasm-2016"
+      ]
+    },
+    {
+      "layout": "choice",
+      "kicker": "5 of 5",
+      "optionA": "Highlighting the textbook",
+      "optionB": "A timed past paper"
+    },
+    {
+      "layout": "tip",
+      "kicker": "The research answers",
+      "stat": "ABABB",
       "headline": "How many did {you} get?",
       "body": "Testing, spacing, mixing and sleep beat rereading, cramming, blocking and highlighting.",
-      "sources": ["dunlosky-2013", "roediger-2006", "rohrer-taylor-2007", "aasm-2016"]
+      "sources": [
+        "dunlosky-2013",
+        "roediger-2006",
+        "rohrer-taylor-2007",
+        "aasm-2016"
+      ]
     },
-    { "layout": "cta", "headline": "Comment your score", "body": "Save this + {100 free marks} at plasmo.uk", "small": "Tag the friend who'd get 0/5." }
+    {
+      "layout": "cta",
+      "headline": "Comment your score",
+      "body": "100 free marks at plasmo.uk",
+      "small": "Tag the friend who'd get 0/5."
+    }
   ],
   "sources": [
-    { "id": "dunlosky-2013", "publisher": "Association for Psychological Science", "short": "Dunlosky et al., 2013", "title": "Improving Students' Learning With Effective Learning Techniques – press summary", "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html", "accessed": "2026-10-08", "claim": "Practice testing and distributed practice rated high utility; rereading, highlighting and summarisation rated low utility." },
-    { "id": "roediger-2006", "publisher": "Association for Psychological Science", "short": "Roediger & Karpicke, 2006", "title": "Test-Enhanced Learning – APS Observer summary", "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning", "accessed": "2026-10-08", "claim": "Testing produced substantially greater retention than restudying on 2-day and 1-week delayed tests." },
-    { "id": "rohrer-taylor-2007", "publisher": "Instructional Science (summary by M. S. Glessmer)", "short": "Rohrer & Taylor, 2007", "title": "The shuffling of mathematics practice problems boosts learning – summary", "url": "https://mirjamglessmer.com/2015/12/08/why-you-should-shuffle-practice-problems-rather-than-blocking-them/", "accessed": "2026-10-08", "claim": "Students who mixed problem types outperformed blocked practice on a later test." },
-    { "id": "aasm-2016", "publisher": "Journal of Clinical Sleep Medicine (PMC)", "short": "AASM consensus, 2016", "title": "Recommended Amount of Sleep for Pediatric Populations", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308", "accessed": "2026-10-08", "claim": "Teenagers 13–18 should sleep 8 to 10 hours per 24 hours." }
-  ]
+    {
+      "id": "dunlosky-2013",
+      "publisher": "Association for Psychological Science",
+      "short": "Dunlosky et al., 2013",
+      "title": "Improving Students' Learning With Effective Learning Techniques – press summary",
+      "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html",
+      "accessed": "2026-10-08",
+      "claim": "Practice testing and distributed practice rated high utility; rereading, highlighting and summarisation rated low utility."
+    },
+    {
+      "id": "roediger-2006",
+      "publisher": "Association for Psychological Science",
+      "short": "Roediger & Karpicke, 2006",
+      "title": "Test-Enhanced Learning – APS Observer summary",
+      "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning",
+      "accessed": "2026-10-08",
+      "claim": "Testing produced substantially greater retention than restudying on 2-day and 1-week delayed tests."
+    },
+    {
+      "id": "rohrer-taylor-2007",
+      "publisher": "Instructional Science (summary by M. S. Glessmer)",
+      "short": "Rohrer & Taylor, 2007",
+      "title": "The shuffling of mathematics practice problems boosts learning – summary",
+      "url": "https://mirjamglessmer.com/2015/12/08/why-you-should-shuffle-practice-problems-rather-than-blocking-them/",
+      "accessed": "2026-10-08",
+      "claim": "Students who mixed problem types outperformed blocked practice on a later test."
+    },
+    {
+      "id": "aasm-2016",
+      "publisher": "Journal of Clinical Sleep Medicine (PMC)",
+      "short": "AASM consensus, 2016",
+      "title": "Recommended Amount of Sleep for Pediatric Populations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308",
+      "accessed": "2026-10-08",
+      "claim": "Teenagers 13–18 should sleep 8 to 10 hours per 24 hours."
+    }
+  ],
+  "tiktok": {
+    "slides": {
+      "0": {
+        "kicker": "be honest",
+        "headline": "revision: {this or that?}",
+        "sub": "comment your 5 letters BEFORE you swipe"
+      }
+    },
+    "caption": "revision this or that 👀 comment your 5 letters before you swipe to the answers. no cheating. #thisorthat #revision #gcse #alevels #plasmo",
+    "hashtags": [],
+    "sound": "Pick a trending sound from TikTok's Commercial Music Library (business accounts can only use that library)."
+  }
 }

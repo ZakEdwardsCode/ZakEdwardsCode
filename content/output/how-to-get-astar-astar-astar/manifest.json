@@ -1,23 +1,32 @@
 {
   "id": "how-to-get-astar-astar-astar",
   "title": "How to get A*A*A*",
-  "renderedAt": "2026-10-08T14:03:48.428Z",
-  "slides": [
-    "01.png",
-    "02.png",
-    "03.png",
-    "04.png",
-    "05.png",
-    "06.png",
-    "07.png",
-    "08.png"
-  ],
+  "renderedAt": "2026-10-08T15:47:50.384Z",
+  "slides": {
+    "ig": [
+      "ig/01.png",
+      "ig/02.png",
+      "ig/03.png",
+      "ig/04.png",
+      "ig/05.png",
+      "ig/06.png",
+      "ig/07.png",
+      "ig/08.png"
+    ],
+    "tiktok": [
+      "tiktok/01.png",
+      "tiktok/02.png",
+      "tiktok/03.png",
+      "tiktok/04.png",
+      "tiktok/05.png",
+      "tiktok/06.png",
+      "tiktok/07.png",
+      "tiktok/08.png"
+    ]
+  },
   "video": "cover.mp4",
-  "draft": true,
-  "draftReasons": [
-    "screenshot missing: screenshots/dashboard-progress.png (placeholder used)",
-    "screenshot missing: screenshots/ai-feedback.png (placeholder used)"
-  ],
+  "draft": false,
+  "draftReasons": [],
   "warnings": [],
   "sources": [
     {
@@ -66,13 +75,13 @@
       "claim": "Interleaved (mixed) practice improved later test performance compared with blocked practice."
     },
     {
-      "id": "plasmo-profile",
-      "publisher": "Plasmo (founder's GitHub profile)",
-      "short": "plasmo.uk",
-      "title": "Plasmo – past papers, marked by AI",
-      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "id": "plasmo-app",
+      "publisher": "Plasmo app",
+      "short": "Plasmo app",
+      "title": "Plasmo app screens (subject picker, mock exams, question view), captured Oct 2026",
+      "url": "https://plasmo.uk",
       "accessed": "2026-10-08",
-      "claim": "Real GCSE, A-level, AP, SAT and ACT papers that students answer online and get marked straight away, with written feedback on every answer."
+      "claim": "In-app copy: 'Answer, tap Mark, get your mark and feedback instantly'; 'Mark your first answer to unlock your predicted grade. It sharpens with every answer.'; mock exams by board (AQA, Edexcel, OCR); next-exam countdown; A-level subject picker."
     }
   ]
 }

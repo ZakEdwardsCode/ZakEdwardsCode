@@ -1,37 +1,40 @@
 {
-  "_note": "PLACEHOLDER BRAND. No Plasmo brand assets were found in this repo and plasmo.uk was unreachable from the build machine. Replace colours, fonts, logo and chamMoods with the real values from the Plasmo codebase, then re-run `npm run build`. Everything downstream reads from this file.",
+  "_note": "Plasmo brand, sampled from real app screenshots (Oct 2026). Swap in exact values from the Plasmo codebase if they differ.",
   "name": "Plasmo",
   "url": "plasmo.uk",
   "colors": {
-    "ink": "#120E24",
-    "paper": "#F7F5FF",
-    "primary": "#6B3BFF",
-    "primaryDeep": "#3A1C9E",
-    "accent": "#C8FF3D",
-    "pink": "#FF4FA3",
-    "muted": "#6E6A86",
-    "line": "#E3DEF7"
+    "ink": "#0E1A20",
+    "paper": "#E5E5E5",
+    "card": "#FFFFFF",
+    "primary": "#1F9EBE",
+    "primaryDeep": "#1F5B6C",
+    "teal": "#1F869E",
+    "accent": "#5EC6E0",
+    "dark": "#123441",
+    "dark2": "#0B222C",
+    "dark3": "#13495C",
+    "chip": "#E1F1F6",
+    "orange": "#E8892B",
+    "green": "#3FA57A",
+    "muted": "#5E6B72",
+    "line": "#D6DADC"
   },
   "fonts": {
     "display": { "family": "Plasmo Display", "file": "fonts/InterDisplay-Black.otf", "weight": 900 },
     "heading": { "family": "Plasmo Heading", "file": "fonts/InterDisplay-ExtraBold.otf", "weight": 800 },
     "body": { "family": "Plasmo Body", "file": "fonts/Inter-Medium.otf", "weight": 500 },
     "bodyBold": { "family": "Plasmo Body", "file": "fonts/Inter-Bold.otf", "weight": 700 },
+    "bodySemi": { "family": "Plasmo Body", "file": "fonts/Inter-SemiBold.otf", "weight": 600 },
     "number3d": "fonts/InterDisplay-Black.otf"
   },
   "logo": "logo.svg",
   "cham": {
-    "_note": "2D Cham is drawn from pipeline/lib/cham.mjs (a placeholder chameleon). If you drop a real Cham PNG/SVG at brand/cham.png or brand/cham.svg it is used instead (mood colours are then applied as a tint/glow, not a recolour). A 3D model at assets/cham.glb is used on cover slides automatically.",
-    "image": null,
+    "_note": "brand/cham.png is cut out of a 110px app screenshot, so keep it small. Drop a high-res transparent PNG at the same path to upgrade every slide. assets/cham.glb is used on covers if present.",
+    "image": "cham.png",
     "glbMaterialName": null
   },
   "chamMoods": {
-    "_note": "PLACEHOLDER moods. Rename/recolour to match the moods in the app.",
-    "locked-in": { "label": "Locked-in Cham", "body": "#2EC4B6", "belly": "#C8FF3D", "face": "focused" },
-    "panicking": { "label": "Panicking Cham", "body": "#FF6B3D", "belly": "#FFD23D", "face": "worried" },
-    "procrastinating": { "label": "Procrastinating Cham", "body": "#FFC83D", "belly": "#FFF1B8", "face": "sleepy" },
-    "burnt-out": { "label": "Burnt-out Cham", "body": "#8A93B5", "belly": "#D7DBEA", "face": "tired" },
-    "smug": { "label": "Smug Cham", "body": "#9B5BFF", "belly": "#E2D2FF", "face": "smug" },
-    "default": { "label": "Cham", "body": "#3DDC84", "belly": "#C8FF3D", "face": "happy" }
+    "_note": "Real Cham moods not known yet. The Cham-moods post is disabled until these are filled in from the app.",
+    "default": { "label": "Cham", "body": "#8FB8D8", "belly": "#C9DDEB", "face": "happy" }
   }
 }

@@ -8,7 +8,8 @@ posts/*.json           one file per carousel  ← add posts here, no code change
 screenshots/*.png      real app screenshots (captured by script)
 brand/brand.json       colours, fonts, logo, Cham moods  ← PLACEHOLDERS, swap for real brand
 assets/cham.glb        optional 3D Cham (used on covers automatically if present)
-output/<post-id>/      01.png … 08.png, cover.mp4, caption.txt (with sources), manifest.json
+output/<post-id>/      ig/01-08.png (4:5), tiktok/01-08.png (9:16), cover.mp4,
+                       caption-ig.txt, caption-tiktok.txt, manifest.json
 pipeline/              the scripts
 ```
 
@@ -48,6 +49,20 @@ Copy any file in `posts/`. Rules (enforced by `npm run validate`):
 - No guarantees, promised outcomes, invented quotes or student stories. The validator blocks "guarantee", "promise", "will get/pass…" and similar.
 - Put a 3D hero on the hook slide with `"hero"`: `{ "type": "phone", "screenshot": "x.png" }`, `{ "type": "number", "text": "6" }` or `{ "type": "cham", "mood": "smug" }`. One hero per slide; everything else stays flat.
 - News posts can set `"expires"`, and the validator then warns once the date has passed.
+
+## TikTok versions
+
+Every post renders twice. The TikTok version is 1080×1920 and keeps text out of TikTok's UI: nothing important in the top ~300px (the For You header) or the bottom ~470px and right ~140px (caption and buttons). Add a `"tiktok"` block to a post to change the TikTok copy without touching the Instagram one:
+
+```json
+"tiktok": {
+  "slides": { "0": { "kicker": "be honest", "headline": "revision: {this or that?}", "sub": "comment your 5 letters BEFORE you swipe" } },
+  "caption": "keyword-first caption, because people search TikTok like Google",
+  "sound": "which sound to pick"
+}
+```
+
+House style for TikTok: lowercase, conversational hooks ("pov:", "stop doing X"), a white caption-bubble subline, keyword-led captions with 3–5 hashtags, and a comment prompt. Business accounts can only use sounds from TikTok's Commercial Music Library.
 
 ## Screenshot safety
 

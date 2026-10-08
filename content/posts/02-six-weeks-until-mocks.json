@@ -74,17 +74,18 @@
     },
     {
       "layout": "plasmo",
-      "headline": "Your countdown, {sorted}",
-      "body": "Plasmo counts down to your mocks and marks your past-paper answers as you go.",
-      "screenshot": "mock-countdown.png",
+      "headline": "A countdown to your {next exam}",
+      "body": "Pick your board, start a mock, tap Mark. Your predicted grade sharpens with every answer.",
+      "screenshot": "gcse-maths-mocks.png",
       "sources": [
-        "plasmo-profile"
-      ]
+        "plasmo-app"
+      ],
+      "kicker": "Inside Plasmo"
     },
     {
       "layout": "cta",
       "headline": "Save the plan",
-      "body": "+ {100 free marks} at plasmo.uk"
+      "body": "100 free marks at plasmo.uk"
     }
   ],
   "sources": [
@@ -125,13 +126,25 @@
       "claim": "Teenagers 13–18 years should sleep 8 to 10 hours per 24 hours on a regular basis."
     },
     {
-      "id": "plasmo-profile",
-      "publisher": "Plasmo (founder's GitHub profile)",
-      "short": "plasmo.uk",
-      "title": "Plasmo – past papers, marked by AI",
-      "url": "https://github.com/ZakEdwardsCode/ZakEdwardsCode",
+      "id": "plasmo-app",
+      "publisher": "Plasmo app",
+      "short": "Plasmo app",
+      "title": "Plasmo app screens (subject picker, mock exams, question view), captured Oct 2026",
+      "url": "https://plasmo.uk",
       "accessed": "2026-10-08",
-      "claim": "Past papers answered online and marked straight away. (Mock countdown feature: confirm from the app screenshot.)"
+      "claim": "In-app copy: 'Answer, tap Mark, get your mark and feedback instantly'; 'Mark your first answer to unlock your predicted grade. It sharpens with every answer.'; mock exams by board (AQA, Edexcel, OCR); next-exam countdown; A-level subject picker."
     }
-  ]
+  ],
+  "tiktok": {
+    "slides": {
+      "0": {
+        "kicker": "mock season",
+        "headline": "pov: mocks are in {6 weeks}",
+        "sub": "and you haven't started. here's the plan"
+      }
+    },
+    "caption": "6 week revision plan for mocks (gcse + a-level). screenshot it and stick it on your wall. week 1 starts today. #mocks #gcse #revisionplan #studytok #plasmo",
+    "hashtags": [],
+    "sound": "Pick a trending sound from TikTok's Commercial Music Library (business accounts can only use that library)."
+  }
 }

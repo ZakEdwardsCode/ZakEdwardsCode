@@ -1,188 +1,195 @@
-// HTML/CSS templates for 1080x1350 carousel slides.
+// HTML/CSS templates for carousel slides, styled after the Plasmo app
+// (dark teal hero screens, light grey pages with white cards, teal accents).
+// Two formats: Instagram 4:5 and TikTok 9:16 (with TikTok's UI safe zones).
 import { fontFaceCss } from './brand.mjs';
 
-export const SLIDE_W = 1080;
-export const SLIDE_H = 1350;
+export const FORMATS = {
+  ig: { w: 1080, h: 1350, top: 140, bottom: 150, left: 96, right: 96, counter: true },
+  tiktok: { w: 1080, h: 1920, top: 300, bottom: 470, left: 80, right: 140, counter: false },
+};
+// kept for older callers
+export const SLIDE_W = FORMATS.ig.w;
+export const SLIDE_H = FORMATS.ig.h;
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // {word} -> highlighted span, \n -> line break
 export const rich = (s = '') => esc(s).replace(/\{(.+?)\}/g, '<span class="hl">$1</span>').replace(/\n/g, '<br>');
 
-function css(brand) {
+function css(brand, F) {
   const c = brand.colors;
+  const f = brand.fonts;
   return `
 ${fontFaceCss(brand)}
-:root{--ink:${c.ink};--paper:${c.paper};--primary:${c.primary};--deep:${c.primaryDeep};--accent:${c.accent};--pink:${c.pink};--muted:${c.muted};--line:${c.line};--m:96px}
+:root{--ink:${c.ink};--paper:${c.paper};--card:${c.card};--primary:${c.primary};--deep:${c.primaryDeep};--teal:${c.teal};--accent:${c.accent};
+--dark:${c.dark};--dark2:${c.dark2};--dark3:${c.dark3};--chip:${c.chip};--orange:${c.orange};--green:${c.green};--muted:${c.muted};--line:${c.line};
+--top:${F.top}px;--bottom:${F.bottom}px;--left:${F.left}px;--right:${F.right}px}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:${SLIDE_W}px;height:${SLIDE_H}px;overflow:hidden}
-body{font-family:'${brand.fonts.body.family}',sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
-.slide{position:relative;width:100%;height:100%;overflow:hidden;padding:var(--m)}
-.h-display{font-family:'${brand.fonts.display.family}';font-weight:900;letter-spacing:-0.035em;line-height:0.95}
-.h-heading{font-family:'${brand.fonts.heading.family}';font-weight:800;letter-spacing:-0.025em;line-height:1.02}
-.body{font-size:46px;line-height:1.32;font-weight:500;color:var(--muted)}
-.body b{font-weight:700;color:var(--ink)}
-.hl{color:var(--primary)}
-.dark .hl{color:var(--accent)}
-.kicker{display:inline-block;font-family:'${brand.fonts.heading.family}';font-weight:800;font-size:28px;letter-spacing:0.12em;text-transform:uppercase;padding:14px 24px;border-radius:999px;background:var(--primary);color:#fff}
-.dark .kicker{background:var(--accent);color:var(--ink)}
+html,body{width:${F.w}px;height:${F.h}px;overflow:hidden}
+body{font-family:'${f.body.family}',sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+.slide{position:relative;width:100%;height:100%;overflow:hidden}
+.h-display{font-family:'${f.display.family}';font-weight:900;letter-spacing:-0.04em;line-height:0.95}
+.h-heading{font-family:'${f.heading.family}';font-weight:800;letter-spacing:-0.03em;line-height:1.04}
+.body{font-size:44px;line-height:1.34;font-weight:500;color:var(--muted)}
+.hl{color:var(--teal)}
+.dark .hl{background:linear-gradient(135deg,#B5ECF7 0%,${c.accent} 45%,${c.primary} 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kicker{font-family:'${f.bodyBold.family}';font-weight:700;font-size:28px;letter-spacing:0.26em;text-transform:uppercase;color:var(--teal)}
+.dark .kicker{color:var(--accent)}
+.dark{background:radial-gradient(120% 70% at 80% 0%, var(--dark3) 0%, var(--dark) 45%, var(--dark2) 100%);color:#fff}
+.dark .body{color:#C3D6DD}
+/* content box inside the safe zone; [data-fit] shrinks headings until it fits */
+.fit{position:absolute;left:var(--left);right:var(--right);top:var(--top);bottom:var(--bottom);display:flex;flex-direction:column;justify-content:flex-start}
+.fit:not(.top)>:first-child{margin-top:auto}.fit:not(.top):not(.end)>:last-child{margin-bottom:auto}
 /* chrome */
-.counter{position:absolute;top:56px;right:var(--m);font-family:'${brand.fonts.heading.family}';font-weight:800;font-size:26px;letter-spacing:0.06em;opacity:.45}
-.wm{position:absolute;bottom:52px;right:var(--m);height:40px;opacity:.16;color:var(--ink)}
+.counter{position:absolute;top:60px;right:var(--left);font-family:'${f.bodyBold.family}';font-weight:700;font-size:24px;letter-spacing:.14em;color:var(--muted)}
+.dark .counter{color:#7FA3B0}
+.wm{position:absolute;height:44px;color:var(--ink);opacity:.5;${F.counter ? 'bottom:56px;right:var(--left)' : 'top:190px;left:var(--left)'}}
 .wm svg{height:100%;width:auto;display:block}
-.dark .wm{color:#fff;opacity:.22}
-.foot{position:absolute;bottom:58px;left:var(--m);right:360px;font-size:22px;line-height:1.3;color:var(--muted);opacity:.85}
-.dark .foot{color:#cfc9ea}
-.dark{background:var(--ink);color:#fff}
-.dark .body{color:#d8d3ee}
-/* fit box: headline shrinks until content fits */
-.fit{position:absolute;left:var(--m);right:var(--m);top:150px}
+.dark .wm{color:#fff;opacity:.7}
+.foot{position:absolute;left:var(--left);right:${F.counter ? '320px' : 'var(--right)'};${F.counter ? 'bottom:62px' : `bottom:${F.bottom - 60}px`};font-size:21px;line-height:1.3;color:var(--muted)}
+.dark .foot{color:#86A7B3}
+/* TikTok-native caption bubble (white box, dark text) */
+.bubble{display:inline;background:#fff;color:#111;font-family:'${f.bodyBold.family}';font-weight:700;font-size:46px;line-height:1.55;padding:6px 18px;border-radius:14px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 `;
 }
 
-function chrome(brand, slide, i, n, dark = false) {
+function chrome(brand, slide, ctx) {
+  const F = ctx.F;
   const foot = slide._footnote ? `<div class="foot">${esc(slide._footnote)}</div>` : '';
-  return `<div class="counter">${i + 1}/${n}</div><div class="wm">${brand.logoSvg}</div>${foot}`;
+  const counter = F.counter ? `<div class="counter">${ctx.i + 1} / ${ctx.n}</div>` : '';
+  const wm = ctx.i === 0 || slide.layout === 'cta' ? '' : `<div class="wm">${brand.logoSvg}</div>`;
+  return `${counter}${wm}${foot}`;
 }
 
-// Hook / cover slide. heroUrl: transparent PNG of the 3D (or 2D) hero.
+// Cover. heroUrl: transparent PNG of the 3D hero.
 function hook(brand, s, ctx) {
+  const F = ctx.F;
+  const tt = ctx.format === 'tiktok';
+  const heroH = tt ? 780 : 600;
+  const heroBottom = tt ? F.bottom - 150 : 40;
+  const textBottom = ctx.heroUrl ? heroBottom + heroH + 10 : F.bottom;
   return `
 <div class="slide dark hook">
   <div class="glow"></div>
-  <div class="fit" data-fit style="bottom:${ctx.heroUrl ? 790 : 220}px">
+  ${ctx.chamUrl && !tt ? `<img class="cham" src="${ctx.chamUrl}">` : ''}
+  <div class="fit end" data-fit style="bottom:${textBottom}px;gap:26px;top:${tt ? 250 : 190}px">
     ${s.kicker ? `<div class="kicker">${rich(s.kicker)}</div>` : ''}
-    <h1 class="h-display" data-shrink style="font-size:${s.size || 132}px;margin-top:34px">${rich(s.headline)}</h1>
-    ${s.sub ? `<p class="body" style="margin-top:30px;font-size:42px">${rich(s.sub)}</p>` : ''}
+    <h1 class="h-display" data-shrink style="font-size:${s.size || (tt ? 132 : 124)}px">${rich(s.headline)}</h1>
+    ${s.sub ? (tt ? `<p style="margin-top:8px"><span class="bubble">${rich(s.sub)}</span></p>` : `<p class="body" style="font-size:40px">${rich(s.sub)}</p>`) : ''}
   </div>
-  ${ctx.heroUrl ? `<img class="hero" src="${ctx.heroUrl}">` : ''}
-  ${chrome(brand, s, ctx.i, ctx.n, true)}
+  ${ctx.heroUrl ? `<img class="hero" src="${ctx.heroUrl}" style="bottom:${heroBottom}px;height:${heroH}px">` : ''}
+  ${chrome(brand, s, ctx)}
 </div>
 <style>
-.hook .glow{position:absolute;width:1300px;height:1300px;left:-110px;bottom:-760px;border-radius:50%;background:radial-gradient(circle, ${brand.colors.primary}cc 0%, ${brand.colors.primary}33 42%, transparent 70%)}
-.hook .hero{position:absolute;left:0;right:0;bottom:50px;width:1080px;height:700px;object-fit:contain}
+.hook .glow{position:absolute;width:1400px;height:1400px;left:-160px;bottom:-820px;border-radius:50%;background:radial-gradient(circle, ${brand.colors.primary}88 0%, ${brand.colors.primary}22 40%, transparent 68%)}
+.hook .hero{position:absolute;left:0;right:0;width:${F.w}px;object-fit:contain}
+.hook .cham{position:absolute;left:var(--left);top:${tt ? 170 : 70}px;height:${tt ? 120 : 104}px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.45))}
 </style>`;
 }
 
 function tip(brand, s, ctx) {
-  const big = s.stat
-    ? `<div class="stat h-display">${rich(s.stat)}</div>`
-    : `<div class="num h-display">${String(s.n ?? ctx.i).padStart(2, '0')}</div>`;
+  const big = s.stat ? `<div class="stat h-display">${rich(s.stat)}</div>` : '';
+  const chip = s.stat ? '' : `<span class="chip">${esc(s.chip ?? String(s.n ?? ctx.i))}</span>`;
   return `
 <div class="slide tip">
-  <div class="fit" data-fit style="bottom:170px;display:flex;flex-direction:column;justify-content:center;padding-bottom:60px">
-    ${s.kicker ? `<div class="kicker">${rich(s.kicker)}</div>` : ''}
-    ${big}
-    <h2 class="h-heading" data-shrink style="font-size:${s.size || 104}px;margin-top:26px">${rich(s.headline)}</h2>
-    ${s.body ? `<p class="body" style="margin-top:38px;font-size:50px">${rich(s.body)}</p>` : ''}
+  <div class="fit" data-fit>
+    <div class="card">
+      <div class="row">${chip}${s.kicker ? `<span class="kicker">${rich(s.kicker)}</span>` : ''}${s.tag ? `<span class="tag">${esc(s.tag)}</span>` : ''}</div>
+      ${big}
+      <h2 class="h-heading" data-shrink style="font-size:${s.size || (ctx.format === 'tiktok' ? 132 : 104)}px">${rich(s.headline)}</h2>
+      ${s.body ? `<p class="body" style="font-size:${ctx.format === 'tiktok' ? 60 : 50}px">${rich(s.body)}</p>` : ''}
+    </div>
   </div>
-  <div class="bar"></div>
-  ${chrome(brand, s, ctx.i, ctx.n)}
+  ${chrome(brand, s, ctx)}
 </div>
 <style>
-.tip .kicker{align-self:flex-start}
-.tip .num{font-size:220px;color:transparent;-webkit-text-stroke:5px var(--primary);margin-top:18px;line-height:1}
-.tip .stat{font-size:${s.statSize || 170}px;color:var(--primary);margin-top:22px;line-height:1}
-.tip .bar{position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(var(--primary),var(--pink))}
+.tip .card{background:var(--card);border-radius:44px;padding:72px 64px;display:flex;flex-direction:column;gap:36px;box-shadow:0 30px 60px -36px rgba(14,26,32,.35);border:1px solid var(--line)}
+.tip .row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.tip .chip{font-family:'${brand.fonts.bodyBold.family}';font-weight:700;font-size:40px;color:var(--teal);background:var(--chip);border-radius:14px;padding:8px 18px}
+.tip .tag{margin-left:auto;font-family:'${brand.fonts.bodyBold.family}';font-weight:700;font-size:28px;color:var(--muted)}
+.tip .stat{font-size:${s.statSize || 168}px;color:var(--primary);line-height:1}
 </style>`;
 }
 
 function plasmo(brand, s, ctx) {
+  const tt = ctx.format === 'tiktok';
   return `
 <div class="slide plasmo">
-  <div class="copy">
-    <div class="kicker">${rich(s.kicker || 'Where Plasmo fits')}</div>
-    <h2 class="h-heading" data-shrink style="font-size:${s.size || 74}px;margin-top:30px">${rich(s.headline)}</h2>
-    ${s.body ? `<p class="body" style="margin-top:28px;font-size:38px">${rich(s.body)}</p>` : ''}
+  <div class="fit top" data-fit style="gap:24px">
+    <div class="kicker">${rich(s.kicker || 'Inside Plasmo')}</div>
+    <h2 class="h-heading" data-shrink style="font-size:${s.size || (tt ? 84 : 76)}px">${rich(s.headline)}</h2>
+    ${s.body ? `<p class="body" style="font-size:${tt ? 42 : 38}px">${rich(s.body)}</p>` : ''}
+    <div class="shot"><img src="${ctx.screenshotUrl}" style="object-position:${s.focus || 'top'}"></div>
   </div>
-  <div class="phone"><img src="${ctx.screenshotUrl}"><div class="island"></div></div>
-  ${chrome(brand, s, ctx.i, ctx.n)}
+  ${chrome(brand, s, ctx)}
 </div>
 <style>
-.plasmo{background:linear-gradient(160deg,var(--paper) 0%,#ece6ff 100%)}
-.plasmo .copy{position:absolute;left:var(--m);top:150px;width:470px;bottom:170px;overflow:hidden}
-.plasmo .phone{position:absolute;right:76px;top:120px;width:420px;height:910px;border-radius:64px;background:#1c1830;padding:14px;box-shadow:0 50px 90px -30px rgba(40,20,110,.45),0 18px 30px -12px rgba(18,14,36,.35)}
-.plasmo .phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:52px;display:block;background:#fff}
-.plasmo .island{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:110px;height:32px;border-radius:20px;background:#000}
+.plasmo .shot{flex:1;min-height:${tt ? 760 : 420}px;margin-top:16px;border-radius:30px;overflow:hidden;background:#E5E5E5;box-shadow:0 40px 80px -40px rgba(14,26,32,.55),0 0 0 1px var(--line)}
+.plasmo .shot img{width:100%;height:100%;object-fit:${s.fit || 'contain'};display:block}
+</style>`;
+}
+
+function choice(brand, s, ctx) {
+  const opt = (letter, text, cls) => `<div class="opt ${cls}"><div class="letter">${letter}</div><div class="otext h-heading">${rich(text)}</div></div>`;
+  return `
+<div class="slide choice">
+  <div class="fit" data-fit style="gap:30px">
+    ${s.kicker ? `<div class="kicker">${rich(s.kicker)}</div>` : ''}
+    ${s.headline ? `<h2 class="h-heading" data-shrink style="font-size:${s.size || 64}px">${rich(s.headline)}</h2>` : ''}
+    ${opt('A', s.optionA, 'a')}
+    <div class="or">or</div>
+    ${opt('B', s.optionB, 'b')}
+  </div>
+  ${chrome(brand, s, ctx)}
+</div>
+<style>
+.choice .opt{display:flex;align-items:center;gap:36px;padding:44px 44px;border-radius:32px;border:3px solid}
+.choice .opt.a{background:#0F1A1F;color:#fff;border-color:var(--primary);box-shadow:0 0 0 6px ${brand.colors.primary}22}
+.choice .opt.b{background:#1A120A;color:#fff;border-color:var(--orange);box-shadow:0 0 0 6px ${brand.colors.orange}22}
+.choice .letter{flex:none;width:112px;height:112px;border-radius:28px;display:flex;align-items:center;justify-content:center;font:900 64px '${brand.fonts.display.family}';background:#ffffff14;border:2px solid #ffffff22}
+.choice .opt.a .letter{color:var(--accent)}.choice .opt.b .letter{color:var(--orange)}
+.choice .otext{font-size:${ctx.format === 'tiktok' ? 72 : 62}px}
+.choice .or{text-align:center;font:700 30px '${brand.fonts.bodyBold.family}';letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
 </style>`;
 }
 
 function cta(brand, s, ctx) {
+  const tt = ctx.format === 'tiktok';
   return `
 <div class="slide dark cta">
-  <div class="fit" data-fit style="bottom:200px;display:flex;flex-direction:column;justify-content:center">
-    <svg class="bm" viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4.5L5 21V4a1 1 0 0 1 1-1z" fill="currentColor"/></svg>
-    <h2 class="h-display" data-shrink style="font-size:${s.size || 128}px;margin-top:40px">${rich(s.headline || 'Save this')}</h2>
-    <p class="h-heading" style="font-size:60px;margin-top:36px;color:#fff">${rich(s.body || '+ *100 free marks* at plasmo.uk')}</p>
-    ${s.small ? `<p class="body" style="margin-top:28px;font-size:36px">${rich(s.small)}</p>` : ''}
+  <div class="fit" data-fit style="align-items:center;text-align:center;gap:30px">
+    ${ctx.chamUrl ? `<img class="cham" src="${ctx.chamUrl}">` : ''}
+    <div class="kicker">${rich(s.kicker || 'GCSE & A-Level exam prep')}</div>
+    <div class="logo">${brand.logoSvg}</div>
+    <h2 class="h-heading" data-shrink style="font-size:${s.size || (tt ? 76 : 68)}px;max-width:860px">${rich(s.headline || 'Save this for later')}</h2>
+    <div class="btn">${rich(s.body || '100 free marks at plasmo.uk')} →</div>
+    ${s.small ? `<p class="body" style="font-size:34px">${rich(s.small)}</p>` : ''}
   </div>
-  <div class="logo">${brand.logoSvg}</div>
-  ${chrome(brand, s, ctx.i, ctx.n, true)}
+  ${chrome(brand, s, ctx)}
 </div>
 <style>
-.cta{background:radial-gradient(120% 90% at 85% 0%, var(--primary) 0%, var(--deep) 45%, var(--ink) 100%)}
-.cta .bm{width:120px;height:120px;color:var(--accent)}
-.cta .logo{position:absolute;left:var(--m);bottom:150px;height:64px;color:#fff}
+.cta .cham{height:${tt ? 230 : 190}px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.5))}
+.cta .logo{height:${tt ? 150 : 128}px;color:#fff}
 .cta .logo svg{height:100%;width:auto}
-.cta .wm{display:none}
+.cta .btn{font:800 46px '${brand.fonts.heading.family}';background:var(--primary);color:#fff;padding:30px 54px;border-radius:24px;box-shadow:0 24px 40px -20px ${brand.colors.primary}}
+.cta .btn .hl{background:none;color:#fff;-webkit-text-fill-color:#fff}
 </style>`;
 }
 
 function mood(brand, s, ctx) {
-  const m = ctx.mood;
-  return `
-<div class="slide mood">
-  <div class="tint"></div>
-  <div class="fit" data-fit style="bottom:600px">
-    <div class="kicker" style="background:${m.body};color:var(--ink)">${rich(s.kicker || m.label)}</div>
-    <h2 class="h-heading" data-shrink style="font-size:${s.size || 84}px;margin-top:28px">${rich(s.headline)}</h2>
-    ${s.body ? `<p class="body" style="margin-top:26px;font-size:42px">${rich(s.body)}</p>` : ''}
-  </div>
-  <div class="cham">${ctx.chamMarkup}</div>
-  ${chrome(brand, s, ctx.i, ctx.n)}
-</div>
-<style>
-.mood .tint{position:absolute;inset:0;background:radial-gradient(90% 60% at 70% 85%, ${m.body}55 0%, ${m.belly}22 45%, transparent 75%)}
-.mood .cham{position:absolute;right:60px;bottom:120px;width:640px;height:520px;filter:drop-shadow(0 40px 34px rgba(18,14,36,.28)) drop-shadow(0 10px 10px rgba(18,14,36,.18))}
-.mood .cham svg,.mood .cham img{width:100%;height:100%;object-fit:contain}
-</style>`;
-}
-
-// "This or that" poll slide: a question and two lettered options.
-function choice(brand, s, ctx) {
-  const opt = (letter, text, cls) => `<div class="opt ${cls}"><div class="letter h-display">${letter}</div><div class="otext h-heading">${rich(text)}</div></div>`;
-  return `
-<div class="slide choice">
-  <div class="fit" data-fit style="bottom:170px;display:flex;flex-direction:column;justify-content:center;gap:34px;padding-bottom:40px">
-    ${s.kicker ? `<div class="kicker" style="align-self:flex-start">${rich(s.kicker)}</div>` : ''}
-    ${s.headline ? `<h2 class="h-heading" data-shrink style="font-size:${s.size || 64}px">${rich(s.headline)}</h2>` : ''}
-    ${opt('A', s.optionA, 'a')}
-    <div class="or h-heading">or</div>
-    ${opt('B', s.optionB, 'b')}
-  </div>
-  ${chrome(brand, s, ctx.i, ctx.n)}
-</div>
-<style>
-.choice .opt{display:flex;align-items:center;gap:40px;padding:44px 48px;border-radius:44px;background:#fff;box-shadow:0 24px 50px -24px rgba(40,20,110,.35);border:4px solid var(--line)}
-.choice .opt.b{background:var(--ink);color:#fff;border-color:var(--ink)}
-.choice .letter{flex:none;width:130px;height:130px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:84px;background:var(--primary);color:#fff;padding-bottom:6px}
-.choice .opt.b .letter{background:var(--accent);color:var(--ink)}
-.choice .otext{font-size:64px}
-.choice .or{text-align:center;font-size:36px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-</style>`;
+  return tip(brand, { ...s, kicker: s.kicker || ctx.mood?.label }, ctx);
 }
 
 const LAYOUTS = { hook, tip, plasmo, cta, mood, choice };
 
-// Shrinks every [data-shrink] heading until its [data-fit] box stops overflowing.
 const FIT_SCRIPT = `
 <script>
 window.__fit = () => {
-  for (const box of document.querySelectorAll('[data-fit], .plasmo .copy')) {
+  for (const box of document.querySelectorAll('[data-fit]')) {
     const heads = [...box.querySelectorAll('[data-shrink]')];
     let guard = 80;
     while (box.scrollHeight > box.clientHeight + 1 && guard--) {
       for (const h of heads) h.style.fontSize = (parseFloat(getComputedStyle(h).fontSize) * 0.96) + 'px';
-      for (const b of box.querySelectorAll('.body')) b.style.fontSize = Math.max(30, parseFloat(getComputedStyle(b).fontSize) * 0.98) + 'px';
+      for (const b of box.querySelectorAll('.body')) b.style.fontSize = Math.max(28, parseFloat(getComputedStyle(b).fontSize) * 0.98) + 'px';
     }
     if (box.scrollHeight > box.clientHeight + 1) document.body.dataset.overflow = '1';
   }
@@ -192,7 +199,8 @@ window.__fit = () => {
 export function slideHtml(brand, slide, ctx) {
   const layout = LAYOUTS[slide.layout];
   if (!layout) throw new Error(`Unknown layout "${slide.layout}"`);
-  return `<!doctype html><html><head><meta charset="utf-8"><style>${css(brand)}</style></head>
+  ctx.F = FORMATS[ctx.format || 'ig'];
+  return `<!doctype html><html><head><meta charset="utf-8"><style>${css(brand, ctx.F)}</style></head>
 <body>${layout(brand, slide, ctx)}${FIT_SCRIPT}</body></html>`;
 }
 
