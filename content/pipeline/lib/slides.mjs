@@ -147,7 +147,31 @@ function mood(brand, s, ctx) {
 </style>`;
 }
 
-const LAYOUTS = { hook, tip, plasmo, cta, mood };
+// "This or that" poll slide: a question and two lettered options.
+function choice(brand, s, ctx) {
+  const opt = (letter, text, cls) => `<div class="opt ${cls}"><div class="letter h-display">${letter}</div><div class="otext h-heading">${rich(text)}</div></div>`;
+  return `
+<div class="slide choice">
+  <div class="fit" data-fit style="bottom:170px;display:flex;flex-direction:column;justify-content:center;gap:34px;padding-bottom:40px">
+    ${s.kicker ? `<div class="kicker" style="align-self:flex-start">${rich(s.kicker)}</div>` : ''}
+    ${s.headline ? `<h2 class="h-heading" data-shrink style="font-size:${s.size || 64}px">${rich(s.headline)}</h2>` : ''}
+    ${opt('A', s.optionA, 'a')}
+    <div class="or h-heading">or</div>
+    ${opt('B', s.optionB, 'b')}
+  </div>
+  ${chrome(brand, s, ctx.i, ctx.n)}
+</div>
+<style>
+.choice .opt{display:flex;align-items:center;gap:40px;padding:44px 48px;border-radius:44px;background:#fff;box-shadow:0 24px 50px -24px rgba(40,20,110,.35);border:4px solid var(--line)}
+.choice .opt.b{background:var(--ink);color:#fff;border-color:var(--ink)}
+.choice .letter{flex:none;width:130px;height:130px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:84px;background:var(--primary);color:#fff;padding-bottom:6px}
+.choice .opt.b .letter{background:var(--accent);color:var(--ink)}
+.choice .otext{font-size:64px}
+.choice .or{text-align:center;font-size:36px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+</style>`;
+}
+
+const LAYOUTS = { hook, tip, plasmo, cta, mood, choice };
 
 // Shrinks every [data-shrink] heading until its [data-fit] box stops overflowing.
 const FIT_SCRIPT = `

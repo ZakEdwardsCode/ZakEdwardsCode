@@ -1,6 +1,6 @@
 // Content rules for a post JSON. Returns { errors, warnings }.
-const LAYOUTS = ['hook', 'tip', 'plasmo', 'cta', 'mood'];
-const TEXT_FIELDS = ['kicker', 'headline', 'sub', 'body', 'stat', 'small'];
+const LAYOUTS = ['hook', 'tip', 'plasmo', 'cta', 'mood', 'choice'];
+const TEXT_FIELDS = ['kicker', 'headline', 'sub', 'body', 'stat', 'small', 'optionA', 'optionB'];
 
 // Never imply Plasmo guarantees grades or offers; no fabricated testimonials.
 const BANNED = [
@@ -48,6 +48,7 @@ export function validatePost(post, { brand } = {}) {
       errors.push(`${where(i)}: looks factual ("${text.match(FACTY)[0]}") but cites no source (add sources[] or noSourceNeeded:true with a reason)`);
     }
     if (s.layout === 'plasmo' && !s.screenshot) errors.push(`${where(i)}: plasmo slide needs a screenshot`);
+    if (s.layout === 'choice' && !(s.optionA && s.optionB)) errors.push(`${where(i)}: choice slide needs optionA and optionB`);
     if (s.layout === 'mood' && brand && !brand.chamMoods[s.mood]) errors.push(`${where(i)}: unknown mood "${s.mood}" (see brand.json chamMoods)`);
     if (s.hero && s.layout !== 'hook') warnings.push(`${where(i)}: 3D heroes are designed for the hook slide`);
   });
