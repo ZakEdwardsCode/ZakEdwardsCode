@@ -11,7 +11,7 @@ for ((s=0; s<TOTAL; s+=CHUNK)); do
   f=$(printf "$OUT/part_%02d.mp4" $i)
   if [ ! -s "$f" ]; then
     for try in 1 2; do
-      npx remotion render src/index.ts PlasmoVideo "$f.tmp.mp4" --frames=$s-$e --codec=h264 --crf=16 \
+      npx remotion render src/index.ts PlasmoVideo "$f.tmp.mp4" --frames=$s-$e --codec=h264 --crf=12 \
         --audio-codec=aac --audio-bitrate=320k --concurrency=3 \
         --offthreadvideo-cache-size-in-bytes=1500000000 --log=error > "$OUT/part_$i.log" 2>&1 \
         && mv "$f.tmp.mp4" "$f" && break

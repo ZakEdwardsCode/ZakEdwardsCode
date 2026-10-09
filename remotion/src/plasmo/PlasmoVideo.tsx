@@ -77,6 +77,7 @@ const ClipView: React.FC<{ clip: Clip; edit: Edit }> = ({ clip, edit }) => {
             src={staticFile("media/screen.mp4")}
             startFrom={Math.round(screenIn * fps)}
             playbackRate={clip.rate}
+            toneMapped={false}
             muted
             style={{
               position: "absolute",
@@ -107,6 +108,7 @@ const ClipView: React.FC<{ clip: Clip; edit: Edit }> = ({ clip, edit }) => {
           src={staticFile("media/head.mp4")}
           startFrom={Math.round(clip.in * fps)}
           playbackRate={clip.rate}
+          toneMapped={false}
           muted={ff}
           volume={ff ? 0 : volume}
           style={{
