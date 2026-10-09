@@ -37,6 +37,7 @@ export type ShortEdit = {
   clips: ShortClip[];
   words: Word[];
   sfx: { t: number; name: string; vol?: number }[];
+  music?: string;
 };
 
 export type Platform = "tiktok" | "reels" | "shorts";
@@ -514,12 +515,8 @@ export const ShortVideo: React.FC<{ edit: ShortEdit; platform: Platform }> = ({ 
       <Sequence from={Math.round(edit.talk * fps)}>
         <Cta text={edit.cta} platform={platform} />
       </Sequence>
-      {/* start where the drums come in (bar 9 of the track) so a short gets the groove straight away */}
-      <Audio
-        src={staticFile("music/lofi.wav")}
-        startFrom={Math.round(8 * (240 / 84) * fps)}
-        volume={(f) => (f / fps >= edit.talk ? 0.2 : 0.06)}
-      />
+      {/* score written for this short: tension under the problem, lift when Plasmo appears */}
+      <Audio src={staticFile(edit.music ?? "music/lofi.wav")} volume={(f) => (f / fps >= edit.talk ? 0.22 : 0.075)} />
       {edit.sfx.map((s, i) => (
         <Sequence key={i} from={Math.max(0, Math.round(s.t * fps))} durationInFrames={Math.round(1.6 * fps)}>
           <Audio src={staticFile(`sfx/${s.name}.wav`)} volume={s.vol ?? 0.35} />

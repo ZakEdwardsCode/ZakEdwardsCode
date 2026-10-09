@@ -374,7 +374,7 @@ export const PlasmoVideo: React.FC<{ edit: Edit }> = ({ edit }) => {
       <ProgressBar duration={edit.duration} />
 
       <Audio
-        src={staticFile("music/lofi.wav")}
+        src={staticFile(edit.music ?? "music/lofi.wav")}
         volume={(f) => musicVolume(edit, f / fps)}
       />
 

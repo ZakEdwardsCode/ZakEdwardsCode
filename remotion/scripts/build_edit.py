@@ -4,6 +4,7 @@ All times written below are on the talking-head (camera) timeline, in seconds.
 """
 import json
 import re
+import sys
 import numpy as np
 import scipy.io.wavfile as wf
 
@@ -40,6 +41,12 @@ for w in words:
         if v:
             w["se"] = max(w["s"], v[0] - 0.06)
             w["ee"] = min(w["e"], v[1] + 0.1)
+
+# Forced-alignment times (align.py): exact word positions for cuts and captions.
+# Which words are kept is still decided on Whisper's times above, so the edit choices don't shift.
+_aligned = json.load(open("/home/user/work/proxy/words_aligned.json"))
+for w, al in zip(words, _aligned):
+    w["se"], w["ee"] = al["s"], al["e"]
 
 # ---------- the edit: spans (with layout switches), drops, fast-forwards ----------
 # (start, end) of material to keep.
@@ -137,45 +144,53 @@ while changed:
         if changed:
             break
 
-GAP = 0.25
-PAD_IN, PAD_OUT = 0.05, 0.09
+# Whisper decides WHAT is kept; the audio decides WHERE each cut lands (see audiocut.py).
+sys.path.insert(0, "/home/user/work/scripts")
+from audiocut import SpeechMap
+
+SM = SpeechMap("/home/user/work/proxy/head16k.wav")
+GROUP_GAP = 1.5  # contiguous kept words stay one group; real pauses are trimmed from the audio below
 
 
-def neighbour_bounds(w_first, w_last):
-    """Never let padding reach into a word we are not keeping."""
-    i0, i1 = w_first["i"], w_last["i"]
-    lo = words[i0 - 1]["ee"] + 0.02 if i0 > 0 else 0
-    hi = words[i1 + 1]["se"] - 0.02 if i1 + 1 < len(words) else 1e9
+def bounds(g):
+    """How far a cut may reach without taking in a word we are not keeping."""
+    i0, i1 = g[0]["i"], g[-1]["i"]
+    if i0 > 0:
+        p = words[i0 - 1]
+        lo = min(g[0]["se"] - 0.05, max((p["se"] + p["ee"]) / 2, p["ee"] - 0.25))
+    else:
+        lo = 0.0
+    if i1 + 1 < len(words):
+        n = words[i1 + 1]
+        hi = max(g[-1]["ee"] + 0.05, min((n["se"] + n["ee"]) / 2, n["se"] + 0.25))
+    else:
+        hi = 1e9
     return lo, hi
 
 
-# Group kept words into clips: break on gaps, removed words, or layout changes.
 groups = []
 for w in kept:
     if groups:
-        g = groups[-1]
-        prev = g[-1]
-        contiguous = w["i"] == prev["i"] + 1
-        if contiguous and w["se"] - prev["ee"] <= GAP and layout_at(w["se"]) == layout_at(prev["se"]):
-            g.append(w)
+        prev = groups[-1][-1]
+        if w["i"] == prev["i"] + 1 and w["se"] - prev["ee"] <= GROUP_GAP and layout_at(w["se"]) == layout_at(prev["se"]):
+            groups[-1].append(w)
             continue
     groups.append([w])
 
 clips = []
 for gi, g in enumerate(groups):
-    lo, hi = neighbour_bounds(g[0], g[-1])
-    a = max(g[0]["se"] - PAD_IN, lo)
-    b = min(g[-1]["ee"] + PAD_OUT, hi)
-    # Seamless split where only the layout changed between two adjacent words.
-    if gi > 0:
-        p = groups[gi - 1][-1]
-        if p["i"] + 1 == g[0]["i"] and g[0]["se"] - p["ee"] <= GAP:
-            a = (p["ee"] + g[0]["se"]) / 2
-    if gi + 1 < len(groups):
-        n = groups[gi + 1][0]
-        if g[-1]["i"] + 1 == n["i"] and n["se"] - g[-1]["ee"] <= GAP:
-            b = (g[-1]["ee"] + n["se"]) / 2
-    clips.append({"in": round(a, 3), "out": round(b, 3), "layout": layout_at(g[0]["se"]), "rate": 1, "words": g})
+    lo, hi = bounds(g)
+    prev_g = groups[gi - 1] if gi > 0 else None
+    next_g = groups[gi + 1] if gi + 1 < len(groups) else None
+    # A layout change between two adjacent words keeps the audio continuous: cut at the quietest point.
+    seam_in = prev_g and prev_g[-1]["i"] + 1 == g[0]["i"] and g[0]["se"] - prev_g[-1]["ee"] <= GROUP_GAP
+    seam_out = next_g and g[-1]["i"] + 1 == next_g[0]["i"] and next_g[0]["se"] - g[-1]["ee"] <= GROUP_GAP
+    a = SM._dip((prev_g[-1]["ee"] + g[0]["se"]) / 2) if seam_in else SM.snap_in(g[0]["se"], lo)
+    b = SM._dip((g[-1]["ee"] + next_g[0]["se"]) / 2) if seam_out else SM.snap_out(g[-1]["ee"], hi)
+    pieces = SM.trim_silences(a, b) if b > a else []
+    for x, y in pieces:
+        ws = [w for w in g if x - 0.05 <= (w["se"] + w["ee"]) / 2 <= y + 0.05]
+        clips.append({"in": round(x, 3), "out": round(y, 3), "layout": layout_at(g[0]["se"]), "rate": 1, "words": ws})
 
 for a, b, r in FASTFORWARD:
     clips.append({"in": a, "out": b, "layout": "pip", "rate": r, "words": []})

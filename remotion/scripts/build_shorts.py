@@ -31,6 +31,12 @@ for w in words:
             w["se"] = max(w["s"], (fa + idx[0]) / 100 - 0.06)
             w["ee"] = min(w["e"], (fa + idx[-1]) / 100 + 0.1)
 
+# Forced-alignment times (align.py): exact word positions for cuts and captions.
+# Which words are kept is still decided on Whisper's times above, so the edit choices don't shift.
+_aligned = json.load(open("/home/user/work/proxy/words_aligned.json"))
+for w, al in zip(words, _aligned):
+    w["se"], w["ee"] = al["s"], al["e"]
+
 faces = json.load(open("/home/user/work/proxy/faces.json"))
 
 
@@ -97,7 +103,11 @@ SHORTS = [
     },
 ]
 
-GAP, PAD_IN, PAD_OUT = 0.25, 0.05, 0.09
+import sys
+sys.path.insert(0, "/home/user/work/scripts")
+from audiocut import SpeechMap
+
+SM = SpeechMap("/home/user/work/proxy/head16k.wav")
 
 
 def build(spec):
@@ -106,21 +116,20 @@ def build(spec):
         ws = [w for w in words if a <= (w["s"] + w["e"]) / 2 <= b
               and not any(x <= (w["s"] + w["e"]) / 2 <= y for x, y in spec["drops"])
               and not re.fullmatch(r"(um|uh|erm)[,.]?", w["w"].lower())]
-        groups = []
-        for w in ws:
-            if groups and w["i"] == groups[-1][-1]["i"] + 1 and w["se"] - groups[-1][-1]["ee"] <= GAP:
-                groups[-1].append(w)
-            else:
-                groups.append([w])
-        for g in groups:
-            i0, i1 = g[0]["i"], g[-1]["i"]
-            lo = words[i0 - 1]["ee"] + 0.02 if i0 > 0 else 0
-            hi = words[i1 + 1]["se"] - 0.02 if i1 + 1 < len(words) else 1e9
-            cin = round(max(g[0]["se"] - PAD_IN, lo) * FPS) / FPS
-            cout = round(min(g[-1]["ee"] + PAD_OUT, hi) * FPS) / FPS
-            mid = (cin + cout) / 2
+        if not ws:
+            continue
+        i0, i1 = ws[0]["i"], ws[-1]["i"]
+        p = words[i0 - 1] if i0 > 0 else None
+        n = words[i1 + 1] if i1 + 1 < len(words) else None
+        lo = min(ws[0]["se"] - 0.05, max((p["se"] + p["ee"]) / 2, p["ee"] - 0.25)) if p else 0.0
+        hi = max(ws[-1]["ee"] + 0.05, min((n["se"] + n["ee"]) / 2, n["se"] + 0.25)) if n else 1e9
+        # Cut where the voice actually starts and stops, and squeeze out pauses inside the span.
+        cin0, cout0 = SM.snap_in(ws[0]["se"], lo), SM.snap_out(ws[-1]["ee"], hi)
+        for x, y in SM.trim_silences(cin0, cout0):
+            cin, cout = round(x * FPS) / FPS, round(y * FPS) / FPS
+            g = [w for w in ws if x - 0.05 <= (w["se"] + w["ee"]) / 2 <= y + 0.05]
             clips.append({"in": cin, "out": cout, "at": round(t, 4), "top": top,
-                          "faceCx": round(face_cx(mid))})
+                          "faceCx": round(face_cx((cin + cout) / 2))})
             for w in g:
                 s = t + max(w["se"], cin) - cin
                 e = t + min(w["ee"], cout) - cin

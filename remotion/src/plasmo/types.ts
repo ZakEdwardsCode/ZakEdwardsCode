@@ -43,4 +43,6 @@ export type Edit = {
   faceCx: number[];
   /** Output-time intervals where Zak is speaking; music ducks under them. */
   speech: [number, number][];
+  /** Narrative score for this video (scripts/score.py), relative to public/. */
+  music?: string;
 };
