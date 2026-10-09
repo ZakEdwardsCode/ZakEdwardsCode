@@ -3,6 +3,7 @@ import { HelloWorld } from "./HelloWorld";
 import { PlasmoVideo } from "./plasmo/PlasmoVideo";
 import { Thumbnail } from "./plasmo/Thumbnail";
 import { PLATFORM, ShortVideo, type Platform, type ShortEdit } from "./plasmo/ShortVideo";
+import { CreatorShort } from "./plasmo/CreatorShort";
 import shorts from "./plasmo/shorts.json";
 import type { Edit } from "./plasmo/types";
 import edit from "./plasmo/edit.json";
@@ -36,6 +37,20 @@ export const RemotionRoot: React.FC = () => {
             id={`${sh.id}-${platform}`}
             component={ShortVideo}
             durationInFrames={Math.ceil((sh.talk + PLATFORM[platform].ctaSeconds) * sh.fps)}
+            fps={sh.fps}
+            width={1080}
+            height={1920}
+            defaultProps={{ edit: sh, platform }}
+          />
+        )),
+      )}
+      {(shorts as unknown as ShortEdit[]).flatMap((sh) =>
+        (["tiktok", "reels", "shorts"] as Platform[]).map((platform) => (
+          <Composition
+            key={`${sh.id}-native-${platform}`}
+            id={`${sh.id}-native-${platform}`}
+            component={CreatorShort}
+            durationInFrames={Math.ceil((sh.talk + 0.5) * sh.fps)}
             fps={sh.fps}
             width={1080}
             height={1920}

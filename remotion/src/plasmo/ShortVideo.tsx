@@ -24,7 +24,7 @@ type Crop = { x: number; y: number; w: number; h: number };
 type Top =
   | { kind: "screen"; crop: Crop }
   | { kind: "gfx"; icon: string; title: string; paper?: boolean; cross?: boolean; accent?: boolean };
-type ShortClip = { in: number; out: number; at: number; top: Top; faceCx: number };
+type ShortClip = { in: number; out: number; at: number; top: Top; faceCx: number; vert?: string };
 type Word = { w: string; s: number; e: number };
 export type ShortEdit = {
   id: string;
