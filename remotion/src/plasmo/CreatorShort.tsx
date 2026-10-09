@@ -9,7 +9,9 @@ import type { Platform, ShortEdit } from "./ShortVideo";
 const W = 1080;
 const H = 1920;
 const TOP_H = 840; // split screen: screen recording on top, face (native res) below
-const FULL_SCALE = H / 1080; // full-screen face: camera scaled to fill 1920 tall
+const FULL_SCALE = 1.15; // talking-head shots: only a light zoom so Zak isn't huge in frame
+const FULL_TOP = 300; // the zoomed-out frame sits here, plain dark background around it
+const FULL_H = Math.round(1080 * FULL_SCALE);
 
 type Clip = ShortEdit["clips"][number];
 
@@ -31,7 +33,7 @@ const FaceVideo: React.FC<{ clip: Clip; full: boolean; index: number }> = ({ cli
   const { fps } = useVideoConfig();
   const frames = Math.round((clip.out - clip.in) * fps);
   const volume = (f: number) => Math.max(0, Math.min(1, f / 2, (frames - f) / 2));
-  if (full && clip.vert) {
+  if (full && clip.vert && FULL_SCALE > 1.5) { // only for full-bleed framing
     // Pre-cut 1080x1920 clip (scripts/make_vertical.py): played 1:1, no browser scaling.
     return (
       <div style={{ position: "absolute", left: 0, top: 0, width: W, height: H, overflow: "hidden", background: "#000" }}>
@@ -40,11 +42,11 @@ const FaceVideo: React.FC<{ clip: Clip; full: boolean; index: number }> = ({ cli
     );
   }
   const s = full ? FULL_SCALE : 1;
-  const boxH = full ? H : H - TOP_H;
+  const boxH = full ? FULL_H : H - TOP_H;
   const left = Math.max(W - 1920 * s, Math.min(0, W / 2 - clip.faceCx * s));
-  const punch = full && index % 2 === 1 ? 1.05 : 1; // light jump-cut punch-in, like a phone edit
+  const punch = 1;
   return (
-    <div style={{ position: "absolute", left: 0, top: full ? 0 : TOP_H, width: W, height: boxH, overflow: "hidden", background: "#000" }}>
+    <div style={{ position: "absolute", left: 0, top: full ? FULL_TOP : TOP_H, width: W, height: boxH, overflow: "hidden", background: "#000" }}>
       <div style={{ position: "absolute", left, top: 0, width: 1920 * s, height: 1080 * s, transform: `scale(${punch})`, transformOrigin: `${clip.faceCx * s}px ${380 * s}px` }}>
         <OffthreadVideo
           src={staticFile("media/head.mp4")}
@@ -158,11 +160,11 @@ export const CreatorShort: React.FC<{ edit: ShortEdit; platform: Platform }> = (
   const cur = edit.clips.find((c) => t >= c.at && t < c.at + (c.out - c.in)) ?? edit.clips[edit.clips.length - 1];
   const split = isSplit(cur);
   // Text never sits on the face: below the chin in full-screen, on the screen panel in split.
-  const textTop = split ? 180 : 1250;
-  const captionTop = split ? TOP_H - 130 : 1400;
+  const textTop = split ? 180 : FULL_TOP + 820;
+  const captionTop = split ? TOP_H - 130 : FULL_TOP + 1100;
   const outroFrom = Math.max(0, edit.talk - 2.6);
   return (
-    <AbsoluteFill style={{ background: "#000" }}>
+    <AbsoluteFill style={{ background: "#161a1d" }}>
       {edit.clips.map((c, i) => (
         <Sequence key={i} from={Math.round(c.at * fps)} durationInFrames={Math.max(1, Math.round((c.out - c.in) * fps))} premountFor={15}>
           {isSplit(c) ? <ScreenPanel clip={c} screenOffset={edit.screenOffset} /> : null}
