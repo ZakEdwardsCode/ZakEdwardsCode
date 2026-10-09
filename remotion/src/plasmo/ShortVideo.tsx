@@ -39,6 +39,18 @@ export type ShortEdit = {
   sfx: { t: number; name: string; vol?: number }[];
 };
 
+export type Platform = "tiktok" | "reels" | "shorts";
+
+/** What each platform rewards, and where its own UI sits on top of the video. */
+export const PLATFORM: Record<Platform, { ctaSeconds: number; hookTop: number; markTop: number }> = {
+  // TikTok: For You tabs across the top ~160px; instant hook; comments drive reach.
+  tiktok: { ctaSeconds: 2.4, hookTop: 170, markTop: 170 },
+  // Reels: profile header at the top; the grid shows only the centre 4:5 (y 285-1635); saves/shares drive reach.
+  reels: { ctaSeconds: 3, hookTop: 288, markTop: 300 },
+  // Shorts: light top bar; end screen points to the long-form video.
+  shorts: { ctaSeconds: 3, hookTop: 90, markTop: 40 },
+};
+
 const T = { red: "#FF2E3D", redDeep: "#7A0B1E", yellow: "#FFE14D", green: "#22E07A", blue: "#14C8FF" };
 
 const Icon: React.FC<{ name: string; size: number; color: string; stroke?: number }> = ({ name, size, color, stroke = 2.4 }) => {
@@ -295,14 +307,60 @@ const Captions: React.FC<{ words: Word[] }> = ({ words }) => {
   );
 };
 
-const Hook: React.FC<{ lines: string[] }> = ({ lines }) => {
+const TikTokHook: React.FC<{ lines: string[]; top: number }> = ({ lines, top }) => {
+  // TikTok's own text-tool look: white rounded stickers, black text, on screen from frame 0.
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const out = interpolate(frame, [2.4 * fps, 2.8 * fps], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", left: 40, right: 180, top, zIndex: 30, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, opacity: out }}>
+      {lines.map((l, i) => (
+        <div
+          key={i}
+          style={{
+            fontFamily,
+            fontWeight: 800,
+            fontSize: 66,
+            lineHeight: 1.1,
+            color: "#000",
+            background: "#fff",
+            borderRadius: 18,
+            padding: "8px 22px",
+            whiteSpace: "nowrap",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
+          }}
+        >
+          {l.charAt(0) + l.slice(1).toLowerCase()}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const ReelsHook: React.FC<{ lines: string[]; top: number }> = ({ lines, top }) => {
+  // Reels: polished and calm, inside the 4:5 grid crop.
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const a = spring({ frame, fps, config: { damping: 20, stiffness: 120 } });
+  const out = interpolate(frame, [2.6 * fps, 3 * fps], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", left: 60, right: 60, top, zIndex: 30, textAlign: "center", opacity: a * out, transform: `translateY(${interpolate(a, [0, 1], [30, 0])}px)` }}>
+      <div style={{ display: "inline-block", background: "rgba(11,16,51,0.82)", borderRadius: 28, padding: "14px 30px", border: `3px solid ${T.yellow}` }}>
+        <div style={{ fontFamily, fontWeight: 800, fontSize: 46, color: C.white, textTransform: "uppercase", letterSpacing: -1, lineHeight: 1.05 }}>{lines[0]}</div>
+        <div style={{ fontFamily, fontWeight: 900, fontSize: 54, color: T.yellow, textTransform: "uppercase", letterSpacing: -1, lineHeight: 1.05 }}>{lines[1]}</div>
+      </div>
+    </div>
+  );
+};
+
+const Hook: React.FC<{ lines: string[]; top?: number }> = ({ lines, top = 70 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const a = spring({ frame, fps, config: { damping: 11, stiffness: 200 } });
   const b = spring({ frame: frame - 5, fps, config: { damping: 11, stiffness: 200 } });
   const out = interpolate(frame, [2.6 * fps, 3 * fps], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <div style={{ position: "absolute", left: 40, right: 40, top: 70, zIndex: 30, textAlign: "center", opacity: out, fontFamily, fontWeight: 900, textTransform: "uppercase", letterSpacing: -2, lineHeight: 0.95 }}>
+    <div style={{ position: "absolute", left: 40, right: 40, top, zIndex: 30, textAlign: "center", opacity: out, fontFamily, fontWeight: 900, textTransform: "uppercase", letterSpacing: -2, lineHeight: 0.95 }}>
       <div style={{ fontSize: 70, whiteSpace: "nowrap", color: C.white, WebkitTextStroke: `14px ${C.ink}`, paintOrder: "stroke fill", transform: `scale(${interpolate(a, [0, 1], [1.6, 1])})`, opacity: a }}>
         {lines[0]}
       </div>
@@ -326,7 +384,13 @@ const Hook: React.FC<{ lines: string[] }> = ({ lines }) => {
   );
 };
 
-const Cta: React.FC<{ text: string }> = ({ text }) => {
+const CTA_ACTION: Record<Platform, { icon: string; label: string }> = {
+  tiktok: { icon: "MessageCircle", label: "Comment your subject" },
+  reels: { icon: "Bookmark", label: "Save this for your mocks" },
+  shorts: { icon: "SquarePlay", label: "Full video on my channel" },
+};
+
+const Cta: React.FC<{ text: string; platform: Platform }> = ({ text, platform }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const k = spring({ frame, fps, config: { damping: 14, stiffness: 150 } });
@@ -369,29 +433,35 @@ const Cta: React.FC<{ text: string }> = ({ text }) => {
       <div
         style={{
           fontWeight: 900,
-          fontSize: 54,
+          fontSize: 50,
           color: C.ink,
           background: C.white,
           borderRadius: 999,
-          padding: "20px 50px",
+          padding: "20px 44px",
           border: `7px solid ${C.ink}`,
           textTransform: "uppercase",
           transform: `scale(${btn})`,
           boxShadow: "0 18px 40px rgba(0,0,0,0.4)",
         }}
       >
-        Free · GCSE & A-level
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 18 }}>
+          <Icon name={CTA_ACTION[platform].icon} size={56} color={C.ink} stroke={2.8} />
+          {CTA_ACTION[platform].label}
+        </span>
+      </div>
+      <div style={{ fontWeight: 800, fontSize: 40, color: C.white, opacity: btn, textTransform: "uppercase", letterSpacing: 2 }}>
+        {platform === "reels" ? "Link in bio · free for GCSE & A-level" : "Free for GCSE & A-level"}
       </div>
     </AbsoluteFill>
   );
 };
 
-const Watermark: React.FC = () => (
+const Watermark: React.FC<{ top: number }> = ({ top }) => (
   <div
     style={{
       position: "absolute",
       left: 36,
-      top: 36,
+      top,
       zIndex: 25,
       fontFamily,
       fontWeight: 900,
@@ -407,7 +477,8 @@ const Watermark: React.FC = () => (
   </div>
 );
 
-export const ShortVideo: React.FC<{ edit: ShortEdit }> = ({ edit }) => {
+export const ShortVideo: React.FC<{ edit: ShortEdit; platform: Platform }> = ({ edit, platform }) => {
+  const P = PLATFORM[platform];
   const { fps } = useVideoConfig();
   const frame = useCurrentFrame();
   const t = frame / fps;
@@ -430,12 +501,18 @@ export const ShortVideo: React.FC<{ edit: ShortEdit }> = ({ edit }) => {
       {/* glowing seam between panels */}
       <div style={{ position: "absolute", left: 0, top: TOP_H - 4, width: SW, height: 8, background: T.yellow, boxShadow: `0 0 24px ${T.yellow}`, zIndex: 10 }} />
       <Captions words={edit.words} />
-      {t > 3 ? <Watermark /> : null}
+      {t > 3 ? <Watermark top={P.markTop} /> : null}
       <Sequence durationInFrames={Math.round(3 * fps)}>
-        <Hook lines={edit.hook} />
+        {platform === "tiktok" ? (
+          <TikTokHook lines={edit.hook} top={P.hookTop} />
+        ) : platform === "reels" ? (
+          <ReelsHook lines={edit.hook} top={P.hookTop} />
+        ) : (
+          <Hook lines={edit.hook} top={P.hookTop} />
+        )}
       </Sequence>
       <Sequence from={Math.round(edit.talk * fps)}>
-        <Cta text={edit.cta} />
+        <Cta text={edit.cta} platform={platform} />
       </Sequence>
       {/* start where the drums come in (bar 9 of the track) so a short gets the groove straight away */}
       <Audio
