@@ -61,7 +61,7 @@ const Shot: React.FC<{ src: string; x: number; y: number; w: number; r: number }
   </div>
 );
 
-export const ReelCover: React.FC<CoverProps> = ({ n, lines, visual, caption }) => (
+export const ReelCover: React.FC<CoverProps> = ({ lines, visual, caption }) => (
   <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 46%, ${C.navyMid} 0%, ${C.navy} 58%, #0A0F33 100%)`, overflow: "hidden" }}>
     {/* faint exam-paper ruling: the series' texture */}
     <AbsoluteFill
@@ -71,11 +71,10 @@ export const ReelCover: React.FC<CoverProps> = ({ n, lines, visual, caption }) =
       }}
     />
 
-    {/* series tag with the Plasmo mascot */}
+    {/* brand tag: the Plasmo mascot */}
     <div style={{ position: "absolute", left: 60, top: SAFE_TOP, display: "flex", alignItems: "center", gap: 18, fontFamily, fontWeight: 900, fontSize: 40, letterSpacing: 2, color: C.sky }}>
       <Img src={staticFile("cover_mascot.png")} style={{ width: 72, height: 66, borderRadius: 16, objectFit: "cover" }} />
       PLASMO
-      <span style={{ color: T.ink, background: C.sky, borderRadius: 10, padding: "2px 14px" }}>{String(n).padStart(2, "0")}</span>
     </div>
 
     {/* headline */}
