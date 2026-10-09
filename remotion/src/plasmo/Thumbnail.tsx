@@ -165,12 +165,12 @@ export const Thumbnail: React.FC = () => {
         src={staticFile("thumb_zak.png")}
         style={{
           position: "absolute",
-          left: 470,
-          bottom: -40,
+          left: 580,
+          bottom: -60,
           height: 800,
           zIndex: 5,
           filter:
-            "brightness(1.06) contrast(1.14) saturate(1.18) drop-shadow(6px 0 0 #fff) drop-shadow(-6px 0 0 #fff) drop-shadow(0 -6px 0 #fff) drop-shadow(0 0 30px rgba(255,225,77,0.45)) drop-shadow(0 20px 40px rgba(0,0,0,0.55))",
+            "brightness(1.03) contrast(1.06) saturate(1.08) drop-shadow(6px 0 0 #fff) drop-shadow(-6px 0 0 #fff) drop-shadow(0 -6px 0 #fff) drop-shadow(0 0 30px rgba(255,225,77,0.45)) drop-shadow(0 20px 40px rgba(0,0,0,0.55))",
         }}
       />
 
