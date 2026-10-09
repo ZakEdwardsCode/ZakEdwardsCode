@@ -3,6 +3,7 @@
 All times written below are on the talking-head (camera) timeline, in seconds.
 """
 import json
+import re
 import numpy as np
 import scipy.io.wavfile as wf
 
@@ -43,14 +44,15 @@ for w in words:
 # ---------- the edit: spans (with layout switches), drops, fast-forwards ----------
 # (start, end) of material to keep.
 SPANS = [
-    (26.2, 32.6), (35.4, 139.3), (140.0, 186.5), (204.6, 222.5), (229.0, 306.97), (364.4, 396.7),
+    (26.2, 32.6), (35.4, 139.3), (140.0, 144.85), (204.6, 222.5), (229.0, 306.97), (364.4, 396.7),
     (427.8, 434.4), (437.9, 439.3), (488.4, 498.4), (503.0, 504.5),
-    (600.1, 621.2), (622.2, 718.3), (719.1, 752.1), (753.1, 802.1), (810.3, 835.4),
+    (600.1, 621.2), (622.2, 718.3), (719.1, 752.1), (753.1, 758.7), (770.3, 776.95),
     (871.6, 967.7), (972.0, 982.6), (994.5, 996.5), (998.4, 999.2),
 ]
 # Fumbles, repeats and first takes to remove inside the spans (keep the last take).
 DROPS = [
     (50.5, 53.62),    # "you do the" (repeat)
+    (117.45, 117.89), # "it's" restart -> "utilizing it, it could be"
     (55.3, 56.9),     # "about you"
     (95.8, 98.87),    # "instead of," (first take)
     (299.8, 304.05),  # "and the reason why this is better." (abandoned)
@@ -73,10 +75,12 @@ DROPS = [
     (818.1, 824.2),   # "you could literally, you could get to the top, if you,"
     (831.75, 833.0),  # "you don't need to be a pro version," (first take)
     (973.15, 974.13), # "you know"
+    (230.75, 233.6),  # "I am getting the foundation on it very very soon" (roadmap promo)
+    (259.65, 262.75), # "I am going to add more papers to it in the future and" (roadmap promo)
     (977.9, 981.05),  # "PPP or triple P method"
 ]
 # Silent stretches where the screen still shows something worth seeing -> fast-forward.
-FASTFORWARD = [(312.8, 364.2, 8), (440.4, 488.3, 8), (504.6, 599.9, 12)]
+FASTFORWARD = [(312.8, 364.2, 12), (440.4, 488.3, 12), (504.6, 599.9, 20)]
 
 # Layout schedule: (headTime, layout). "pip" = screen recording + head in the corner.
 LAYOUT = [
@@ -101,8 +105,40 @@ def dropped(w):
 
 kept = [w for w in words if any(a <= (w["s"] + w["e"]) / 2 <= b for a, b in SPANS) and not dropped(w)]
 
-GAP = 0.45
-PAD_IN, PAD_OUT = 0.07, 0.12
+
+def norm(w):
+    return re.sub(r"[^a-z0-9']", "", w["w"].lower())
+
+
+# Fillers: "um", "uh", and a comma-ended "you know," that's just a verbal tic.
+FILLERS = {"um", "uh", "uhm", "erm", "er"}
+fill = set()
+for k, w in enumerate(kept):
+    if norm(w) in FILLERS:
+        fill.add(w["i"])
+    if k > 0 and norm(kept[k - 1]) == "you" and w["w"].lower().startswith("know,") and kept[k - 1]["i"] == w["i"] - 1:
+        fill.update({kept[k - 1]["i"], w["i"]})
+kept = [w for w in kept if w["i"] not in fill]
+
+# Stutters / restarts: when a 1-3 word phrase is said twice in a row, keep the last take.
+KEEP_DOUBLES = {"very", "really", "dot", "paper", "no"}
+changed = True
+while changed:
+    changed = False
+    toks = [norm(w) for w in kept]
+    for n in (3, 2, 1):
+        for k in range(len(kept) - 2 * n + 1):
+            a, b = toks[k:k + n], toks[k + n:k + 2 * n]
+            contiguous = all(kept[k + j + 1]["i"] == kept[k + j]["i"] + 1 for j in range(2 * n - 1))
+            if a == b and contiguous and not (n == 1 and a[0] in KEEP_DOUBLES):
+                del kept[k:k + n]
+                changed = True
+                break
+        if changed:
+            break
+
+GAP = 0.25
+PAD_IN, PAD_OUT = 0.05, 0.09
 
 
 def neighbour_bounds(w_first, w_last):
@@ -251,35 +287,34 @@ def place(t, d, width, height, top):
 
 
 # ---------- graphics ----------
-CALLOUTS = [  # (headTime, seconds, icon, title, sub)
-    (44.1, 4.0, "Printer", "Print. Wait. Forget.", "the old past paper method"),
-    (77.0, 4.2, "Hourglass", "Weeks to mark", "feedback arrives too late"),
-    (110.4, 4.5, "Brain", "Active feedback", "one of the best ways to learn"),
-    (123.0, 3.6, "TrendingUp", "Compound it", "the fastest way to improve"),
-    (156.0, 3.8, "Layers", "Every A-level", "+ GCSEs + US qualifications"),
-    (167.9, 3.8, "Sparkles", "IGCSE AI", "the only international paper"),
-    (205.3, 3.8, "GraduationCap", "Core GCSEs", "maths · science · english"),
-    (270.0, 4.5, "Scale", "Exam-style papers", "no exam-board copyright issues"),
-    (296.5, 3.4, "Target", "Topic-specific", "every question maps to a topic"),
-    (428.0, 3.6, "Mic", "Voice answers", "speak instead of type"),
-    (633.2, 3.6, "CircleCheck", "Full marks", "marked in ~10 seconds"),
-    (661.2, 4.0, "ClipboardCheck", "Mark scheme", "see where every mark comes from"),
-    (676.0, 4.0, "Scale", "Appeal a mark", "AI rechecks your answer"),
-    (701.5, 4.0, "Bot", "AI gets smarter", "every appeal trains it"),
-    (736.6, 3.6, "LifeBuoy", "Stuck? Get a clue", "hints when you need them"),
-    (759.0, 4.0, "Trophy", "The Plasmo League", "124 students and counting"),
-    (783.4, 4.5, "Gift", "100 marks free", "resets, no pro needed"),
-    (877.8, 4.0, "Target", "Find weak topics", "before the November mocks"),
-    (896.9, 3.6, "ChartColumn", "Stats & insights", "more coming soon"),
-    (926.2, 4.0, "MessageSquareText", "Tell me what to build", "comments or DMs"),
-    (952.0, 4.2, "TriangleAlert", "Paper is outdated", "slow · no feedback · no stats"),
+CALLOUTS = [  # (headTime, seconds, icon, title, sub) - lead with the pain
+    (44.1, 3.2, "Printer", "Print the stack", "trees, ink, hours"),
+    (57.0, 3.0, "CalendarClock", "Hand it in next week", "the feedback clock starts"),
+    (62.4, 3.6, "BrainCircuit", "Already forgotten", "what you wrote, how it felt"),
+    (79.6, 3.2, "Hourglass", "Weeks to mark", "by then it's too late"),
+    (81.3, 3.6, "Frown", "Guilt on both sides", "teachers marking after hours"),
+    (110.4, 4.0, "Brain", "Feedback is how you learn", "and paper delays it"),
+    (123.0, 3.6, "TrendingUp", "Fast feedback compounds", "slow feedback doesn't"),
+    (270.0, 4.0, "Scale", "Exam-style papers", "no copyright issues"),
+    (296.5, 3.0, "Target", "Topic-specific", "every question maps to a topic"),
+    (633.2, 3.6, "Zap", "Feedback in seconds", "not weeks"),
+    (661.2, 3.6, "ClipboardCheck", "See where marks come from", "the mark scheme, per answer"),
+    (676.0, 3.6, "MessageCircleQuestion", "Disagree? Appeal it", "the AI rechecks"),
+    (736.6, 3.2, "LifeBuoy", "Stuck? Get a clue", "not the answer"),
+    (877.8, 3.6, "Target", "Know your weak topics", "before the mocks"),
+    (926.2, 3.6, "MessageSquareText", "What do students need?", "tell me in the comments"),
+    (952.0, 3.0, "TriangleAlert", "Paper is outdated", "here's why"),
+    (955.4, 2.4, "FileX", "So much paper", ""),
+    (959.2, 1.8, "Timer", "Takes so long", ""),
+    (960.2, 2.6, "Ban", "No active feedback", ""),
+    (964.5, 2.6, "ChartColumn", "No stats", "you can't see your gaps"),
 ]
 CHAPTERS = [  # (headTime, seconds, kicker, title)
     (26.2, 3.6, "The new, smarter way", "PAST PAPERS\nARE OUTDATED"),
-    (137.5, 3.2, "So I built", "PLASMO"),
-    (622.2, 3.0, "Instant AI marking", "HIT MARK"),
-    (753.2, 3.0, "Stay motivated", "LEADERBOARD"),
-    (994.5, 4.0, "Zak Edwards · CEO & founder", "PLASMO.UK"),
+    (41.4, 2.6, "Here's what happens", "THE PROBLEM"),
+    (137.5, 3.0, "So I built", "PLASMO"),
+    (622.2, 3.0, "Instant feedback", "HIT MARK"),
+    (994.5, 4.0, "Thanks for watching", "ZAK EDWARDS"),
 ]
 
 callouts = []
@@ -290,6 +325,12 @@ for h, d, i, ti, su in CALLOUTS:
     if lay == "full":
         c.update(place(t, d, 600, 230, 140))
     callouts.append(c)
+
+# Never stack two callouts: each one ends just before the next begins.
+callouts.sort(key=lambda c: c["t"])
+for a, b in zip(callouts, callouts[1:]):
+    if a["t"] + a["d"] > b["t"] - 0.1:
+        a["d"] = round(max(1.0, b["t"] - 0.1 - a["t"]), 3)
 
 chapters = []
 for h, d, k, ti in CHAPTERS:
