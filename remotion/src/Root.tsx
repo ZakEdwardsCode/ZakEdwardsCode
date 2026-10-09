@@ -4,6 +4,7 @@ import { PlasmoVideo } from "./plasmo/PlasmoVideo";
 import { Thumbnail } from "./plasmo/Thumbnail";
 import { PLATFORM, ShortVideo, type Platform, type ShortEdit } from "./plasmo/ShortVideo";
 import { CreatorShort } from "./plasmo/CreatorShort";
+import { COVERS, ReelCover } from "./plasmo/ReelCover";
 import shorts from "./plasmo/shorts.json";
 import type { Edit } from "./plasmo/types";
 import edit from "./plasmo/edit.json";
@@ -58,6 +59,9 @@ export const RemotionRoot: React.FC = () => {
           />
         )),
       )}
+      {COVERS.map((c) => (
+        <Still key={c.n} id={`ReelCover${c.n}`} component={ReelCover} width={1080} height={1920} defaultProps={c} />
+      ))}
       <Still id="Thumbnail" component={Thumbnail} width={1920} height={1080} />
     </>
   );
