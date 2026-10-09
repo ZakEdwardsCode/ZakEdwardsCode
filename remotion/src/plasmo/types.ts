@@ -15,7 +15,10 @@ export type Word = { w: string; s: number; e: number };
 
 export type Sfx = { t: number; name: string; vol?: number };
 
-export type Callout = {
+/** Face-safe placement, set for overlays shown over the full-screen talking head. */
+type Placement = { layout: Layout; x?: number; y?: number; w?: number };
+
+export type Callout = Placement & {
   t: number;
   d: number;
   icon: string;
@@ -23,7 +26,7 @@ export type Callout = {
   sub?: string;
 };
 
-export type Chapter = { t: number; d: number; kicker: string; title: string };
+export type Chapter = Placement & { t: number; d: number; kicker: string; title: string };
 
 export type Edit = {
   fps: number;
@@ -35,4 +38,9 @@ export type Edit = {
   sfx: Sfx[];
   callouts: Callout[];
   chapters: Chapter[];
+  /** Smoothed face-centre x (1920-wide frame), sampled faceHz times per head-second. */
+  faceHz: number;
+  faceCx: number[];
+  /** Output-time intervals where Zak is speaking; music ducks under them. */
+  speech: [number, number][];
 };

@@ -190,6 +190,66 @@ for c in clips:
             continue
         out_words.append({"w": fix(w["w"]), "s": round(s, 3), "e": round(e, 3)})
 
+# ---------- face tracking ----------
+faces = json.load(open("/home/user/work/proxy/faces.json"))
+FACE_HZ = 4
+
+
+def face_at(h):
+    """Face box (x0, y0, x1, y1) in 1920x1080 at head-time h, nearest detected sample."""
+    i = int(round(h * FACE_HZ))
+    for d in range(0, 12):
+        for j in (i - d, i + d):
+            if 0 <= j < len(faces) and "x" in faces[j]:
+                f = faces[j]
+                return (f["x"], f["y"], f["x"] + f["w"], f["y"] + f["h"])
+    return (540, 50, 1200, 650)
+
+
+def out_to_head(t):
+    for c in clips:
+        d = (c["out"] - c["in"]) / c["rate"]
+        if c["at"] <= t < c["at"] + d:
+            return c["in"] + (t - c["at"]) * c["rate"], c["layout"]
+    return None, None
+
+
+def face_union(t, d):
+    """Union of face boxes on screen (full-screen layout only) during output [t, t+d]."""
+    box = None
+    k = t
+    while k <= t + d:
+        h, lay = out_to_head(k)
+        if h is not None and lay == "full":
+            b = face_at(h)
+            box = b if box is None else (min(box[0], b[0]), min(box[1], b[1]), max(box[2], b[2]), max(box[3], b[3]))
+        k += 0.25
+    return box
+
+
+MARGIN = 50
+
+
+def place(t, d, width, height, top):
+    """Pick a spot for a card in full-screen layout that never touches the face."""
+    box = face_union(t, d)
+    if box is None:
+        return {"x": 1920 - 60 - width, "y": top, "w": width}
+    fx0, fx1 = box[0] - MARGIN, box[2] + MARGIN
+    right_x = 1920 - 60 - width
+    if right_x >= fx1:
+        return {"x": right_x, "y": top, "w": width}
+    if 60 + width <= fx0:
+        return {"x": 60, "y": top, "w": width}
+    # Not enough room at full width: shrink the card into whichever side is wider.
+    right_room, left_room = 1920 - 60 - fx1, fx0 - 60
+    if right_room >= left_room:
+        w = int(max(420, right_room))
+        return {"x": 1920 - 60 - w, "y": top, "w": w}
+    w = int(max(420, left_room))
+    return {"x": 60, "y": top, "w": w}
+
+
 # ---------- graphics ----------
 CALLOUTS = [  # (headTime, seconds, icon, title, sub)
     (44.1, 4.0, "Printer", "Print. Wait. Forget.", "the old past paper method"),
@@ -222,8 +282,25 @@ CHAPTERS = [  # (headTime, seconds, kicker, title)
     (994.5, 4.0, "Zak Edwards · CEO & founder", "PLASMO.UK"),
 ]
 
-callouts = [{"t": round(to_out(h), 3), "d": d, "icon": i, "title": ti, "sub": su} for h, d, i, ti, su in CALLOUTS]
-chapters = [{"t": round(to_out(h), 3), "d": d, "kicker": k, "title": ti} for h, d, k, ti in CHAPTERS]
+callouts = []
+for h, d, i, ti, su in CALLOUTS:
+    t = round(to_out(h), 3)
+    lay = out_to_head(t + 0.1)[1]
+    c = {"t": t, "d": d, "icon": i, "title": ti, "sub": su, "layout": lay}
+    if lay == "full":
+        c.update(place(t, d, 600, 230, 140))
+    callouts.append(c)
+
+chapters = []
+for h, d, k, ti in CHAPTERS:
+    t = round(to_out(h), 3)
+    lay = out_to_head(t + 0.6)[1]
+    if lay == "pip":
+        t += 0.6  # let the head finish shrinking into the corner first
+    c = {"t": round(t, 3), "d": d, "kicker": k, "title": ti, "layout": lay}
+    if lay == "full":
+        c.update(place(t, d, 640, 300, 120))
+    chapters.append(c)
 
 # ---------- sound design ----------
 sfx = []
@@ -257,6 +334,23 @@ sfx.sort(key=lambda s: s["t"])
 for s in sfx:
     s["t"] = round(max(0, s["t"]), 3)
 
+# Smoothed face centre (x) for framing the corner window.
+raw = np.array([f["x"] + f["w"] / 2 if "x" in f else np.nan for f in faces], float)
+idx = np.arange(len(raw))
+ok = ~np.isnan(raw)
+raw = np.interp(idx, idx[ok], raw[ok])
+kern = np.ones(9) / 9
+face_cx = [int(v) for v in np.convolve(np.pad(raw, 4, mode="edge"), kern, mode="valid")]
+
+# Merged speech intervals on the output timeline (music ducks under these).
+speech = []
+for w in out_words:
+    if speech and w["s"] - speech[-1][1] < 0.8:
+        speech[-1][1] = w["e"]
+    else:
+        speech.append([w["s"], w["e"]])
+speech = [[round(a, 2), round(b, 2)] for a, b in speech]
+
 edit = {
     "fps": FPS,
     "duration": DURATION,
@@ -266,6 +360,9 @@ edit = {
     "sfx": sfx,
     "callouts": callouts,
     "chapters": chapters,
+    "faceHz": FACE_HZ,
+    "faceCx": face_cx,
+    "speech": speech,
 }
 json.dump(edit, open(OUT, "w"), indent=1)
 print(f"clips={len(clips)} words={len(out_words)} sfx={len(sfx)} duration={DURATION:.1f}s ({DURATION/60:.1f} min)")

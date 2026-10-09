@@ -26,6 +26,15 @@ const IconByName: React.FC<{ name: string; size: number; color: string; stroke?:
   return <I size={size} color={color} strokeWidth={stroke} />;
 };
 
+/** objectPosition x% that keeps the face centred inside the corner window. */
+const pipFaceX = (edit: Edit, headT: number) => {
+  const i = Math.max(0, Math.min(edit.faceCx.length - 1, Math.round(headT * edit.faceHz)));
+  const scaled = (PIP.h / H) * W; // width of the cover-scaled frame inside the PiP box
+  const overflow = scaled - PIP.w;
+  const pct = ((edit.faceCx[i] * (PIP.h / H) - PIP.w / 2) / overflow) * 100;
+  return Math.max(0, Math.min(100, pct));
+};
+
 /** One edited clip: the talking head plus the screen recording in sync. */
 const ClipView: React.FC<{ clip: Clip; edit: Edit }> = ({ clip, edit }) => {
   const frame = useCurrentFrame();
@@ -104,7 +113,7 @@ const ClipView: React.FC<{ clip: Clip; edit: Edit }> = ({ clip, edit }) => {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: `${lerp(50, 40, p)}% ${lerp(50, 30, p)}%`,
+            objectPosition: `${lerp(50, pipFaceX(edit, clip.in + (frame / fps) * clip.rate), p)}% 50%`,
           }}
         />
       </div>
@@ -147,7 +156,7 @@ const FastForwardBadge: React.FC<{ rate: number }> = ({ rate }) => {
   );
 };
 
-const CalloutCard: React.FC<{ c: Callout; pip: number }> = ({ c, pip }) => {
+const CalloutCard: React.FC<{ c: Callout }> = ({ c }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const dur = Math.round(c.d * fps);
@@ -155,16 +164,20 @@ const CalloutCard: React.FC<{ c: Callout; pip: number }> = ({ c, pip }) => {
   const outS = interpolate(frame, [dur - 10, dur], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const k = inS * outS;
   const iconK = spring({ frame: frame - 4, fps, config: { damping: 8, stiffness: 200 } });
-  // Right side when full screen (face sits left of centre); stacked above the corner head in corner mode.
-  const x = pip > 0.5 ? W - PIP.margin - 620 : W - 120 - 620;
-  const y = pip > 0.5 ? H - PIP.margin - PIP.h - 24 - 236 : 150;
+  // Full screen: the face-safe spot chosen from face tracking. Corner mode: stacked above the corner head.
+  const inCorner = c.layout === "pip" || c.x === undefined;
+  const width = inCorner ? 620 : (c.w ?? 600);
+  const x = inCorner ? W - PIP.margin - 620 : (c.x as number);
+  const y = inCorner ? H - PIP.margin - PIP.h - 24 - 236 : (c.y ?? 140);
+  const fromLeft = !inCorner && x < W / 2;
   return (
     <div
       style={{
         position: "absolute",
         left: x,
         top: y,
-        width: 620,
+        width,
+        boxSizing: "border-box",
         padding: "30px 34px",
         borderRadius: 26,
         background: "rgba(20,27,77,0.92)",
@@ -174,7 +187,7 @@ const CalloutCard: React.FC<{ c: Callout; pip: number }> = ({ c, pip }) => {
         gap: 26,
         alignItems: "center",
         opacity: k,
-        transform: `translateX(${interpolate(inS, [0, 1], [80, 0])}px) scale(${lerp(0.92, 1, k)})`,
+        transform: `translateX(${interpolate(inS, [0, 1], [fromLeft ? -80 : 80, 0])}px) scale(${lerp(0.92, 1, k)})`,
       }}
     >
       <div
@@ -220,20 +233,40 @@ const ChapterTitle: React.FC<{ c: Chapter; big?: boolean }> = ({ c, big }) => {
   const k1 = spring({ frame, fps, config: { damping: 14, stiffness: 140 } });
   const k2 = spring({ frame: frame - 6, fps, config: { damping: 14, stiffness: 140 } });
   const out = interpolate(frame, [dur - 12, dur], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const size = big ? 118 : 92;
+  const full = c.layout === "full" && c.x !== undefined;
+  const size = full ? (big ? 80 : 76) : 92;
+  const alignRight = full && (c.x as number) > W / 2;
+  // Anchor to the outer edge so a long title grows toward the middle, never off-screen.
+  const box: React.CSSProperties = full
+    ? alignRight
+      ? { right: W - (c.x as number) - (c.w as number), top: c.y, textAlign: "right" }
+      : { left: c.x, top: c.y, textAlign: "left" }
+    : { left: 96, top: 80 };
   return (
-    <div style={{ position: "absolute", left: 96, top: big ? 300 : 80, opacity: out }}>
+    <div
+      style={{
+        position: "absolute",
+        ...box,
+        opacity: out,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: alignRight ? "flex-end" : "flex-start",
+      }}
+    >
       <div
         style={{
           fontFamily,
           fontWeight: 700,
           fontStyle: "italic",
-          fontSize: big ? 44 : 36,
+          fontSize: big ? 38 : 34,
           color: C.sky,
-          textShadow: "0 4px 16px rgba(0,0,0,0.6)",
+          display: "inline-block",
+          padding: "6px 16px",
+          borderRadius: 10,
+          background: "rgba(20,27,77,0.88)",
           opacity: k1,
           transform: `translateY(${interpolate(k1, [0, 1], [20, 0])}px)`,
-          marginBottom: 14,
+          marginBottom: 12,
         }}
       >
         {c.kicker}
@@ -243,7 +276,7 @@ const ChapterTitle: React.FC<{ c: Chapter; big?: boolean }> = ({ c, big }) => {
           display: "inline-block",
           background: C.sky,
           padding: big ? "10px 26px 4px" : "8px 22px 2px",
-          clipPath: `inset(0 ${100 - k2 * 100}% 0 0)`,
+          clipPath: alignRight ? `inset(0 0 0 ${100 - k2 * 100}%)` : `inset(0 ${100 - k2 * 100}% 0 0)`,
           boxShadow: "0 20px 50px rgba(0,0,0,0.45)",
         }}
       >
@@ -257,6 +290,7 @@ const ChapterTitle: React.FC<{ c: Chapter; big?: boolean }> = ({ c, big }) => {
             color: C.navy,
             letterSpacing: -2,
             whiteSpace: "pre",
+            textAlign: alignRight ? "right" : "left",
           }}
         >
           {c.title}
@@ -264,6 +298,20 @@ const ChapterTitle: React.FC<{ c: Chapter; big?: boolean }> = ({ c, big }) => {
       </div>
     </div>
   );
+};
+
+/** Background music: sits well under the voice, swells a little when nobody is talking. */
+const musicVolume = (edit: Edit, t: number) => {
+  const UNDER = 0.07;
+  const OPEN = 0.17;
+  const RAMP = 0.5;
+  let dist = Infinity;
+  for (const [a, b] of edit.speech) {
+    if (t >= a && t <= b) return UNDER;
+    dist = Math.min(dist, Math.abs(t - a), Math.abs(t - b));
+  }
+  const k = Math.min(1, dist / RAMP);
+  return UNDER + (OPEN - UNDER) * k;
 };
 
 const ProgressBar: React.FC<{ duration: number }> = ({ duration }) => {
@@ -316,12 +364,17 @@ export const PlasmoVideo: React.FC<{ edit: Edit }> = ({ edit }) => {
 
       {edit.callouts.map((c, i) => (
         <Sequence key={`co${i}`} from={Math.round(c.t * fps)} durationInFrames={Math.round(c.d * fps)}>
-          <CalloutCard c={c} pip={pipAt(c.t)} />
+          <CalloutCard c={c} />
         </Sequence>
       ))}
 
       <Captions words={edit.words} pip={pipAt} />
       <ProgressBar duration={edit.duration} />
+
+      <Audio
+        src={staticFile("music/lofi.wav")}
+        volume={(f) => musicVolume(edit, f / fps)}
+      />
 
       {edit.sfx.map((s, i) => (
         <Sequence key={`sfx${i}`} from={Math.max(0, Math.round(s.t * fps))} durationInFrames={Math.round(1.6 * fps)}>

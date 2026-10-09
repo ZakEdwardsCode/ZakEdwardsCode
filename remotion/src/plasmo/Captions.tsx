@@ -99,7 +99,7 @@ export const Captions: React.FC<{ words: Word[]; pip: (t: number) => number }> =
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "0 0.4em",
+          gap: "0 0.3em",
         }}
       >
         {page.words.map((w, i) => {
@@ -119,7 +119,9 @@ export const Captions: React.FC<{ words: Word[]; pip: (t: number) => number }> =
                 paintOrder: "stroke fill",
                 textShadow: "0 6px 18px rgba(0,0,0,0.55)",
                 display: "inline-block",
-                transform: `scale(${1 + 0.12 * k}) translateY(${-6 * k}px)`,
+                // Scaled words get matching side padding so they never touch their neighbours.
+                padding: `0 ${0.12 * k}em`,
+                transform: `scale(${1 + 0.1 * k}) translateY(${-6 * k}px)`,
               }}
             >
               {clean(w.w)}
