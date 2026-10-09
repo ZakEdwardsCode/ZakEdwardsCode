@@ -6,24 +6,24 @@
 <title>AI Video Editing Workflow</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a1325;
-    --bg-2: #0e1a30;
-    --card: #0f1c33;
-    --line: rgba(196, 210, 235, 0.16);
-    --line-strong: rgba(196, 210, 235, 0.28);
-    --text: #eef1f7;
-    --muted: #8796b0;
-    --coral: #ff7a5c;
-    --coral-soft: rgba(255, 122, 92, 0.14);
+    --bg-center: #1e2766;
+    --bg-edge: #141a48;
+    --card: #1f2867;
+    --card-line: rgba(130, 160, 255, 0.38);
+    --text: #c9d5ff;
+    --sky: #6db5f5;
+    --cyan: #7fd3f2;
+    --ink: #13194a;
+    --coral: #f2666a;
     --serif: "Instrument Serif", Georgia, serif;
     --sans: "Inter", system-ui, sans-serif;
     --mono: "JetBrains Mono", ui-monospace, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: var(--bg); color: var(--text); }
+  html, body { background: var(--bg-edge); color: var(--text); }
   body {
     min-height: 100vh;
     display: flex;
@@ -38,87 +38,68 @@
     position: absolute; top: 0; left: 0;
     width: 1600px; height: 900px;
     transform-origin: 0 0;
-    background:
-      radial-gradient(900px 500px at 50% 34%, rgba(255,122,92,0.07), transparent 70%),
-      radial-gradient(rgba(196,210,235,0.07) 1px, transparent 1px) 0 0 / 32px 32px,
-      linear-gradient(180deg, var(--bg-2), var(--bg));
+    background: radial-gradient(ellipse 60% 65% at 50% 48%, var(--bg-center), var(--bg-edge));
     overflow: hidden;
     font-family: var(--sans);
   }
 
-  .label {
+  .mono {
     font-family: var(--mono);
-    font-size: 13px;
-    letter-spacing: 0.14em;
+    font-size: 11px;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: var(--text);
   }
 
-  header { position: absolute; left: 84px; top: 64px; right: 84px; display: flex; justify-content: space-between; align-items: flex-end; }
-  header .label { color: var(--coral); margin-bottom: 14px; }
-  h1 {
+  header { position: absolute; left: 96px; top: 52px; }
+  header .kicker {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 34px;
+    line-height: 1.1;
+    color: var(--sky);
+    margin-bottom: 10px;
+  }
+  header h1 {
+    display: inline-block;
     font-family: var(--serif);
     font-weight: 400;
-    font-size: 68px;
+    font-size: 64px;
     line-height: 1;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    background: var(--sky);
+    padding: 6px 18px 4px;
   }
-  h1 em { font-style: italic; color: var(--coral); }
-  header .meta { text-align: right; line-height: 1.8; }
 
   svg.wires { position: absolute; inset: 0; pointer-events: none; }
 
-  .node {
+  .card {
     position: absolute;
-    border: 1px solid var(--line-strong);
-    border-radius: 14px;
+    top: 604px;
+    width: 260px; height: 96px;
     background: var(--card);
-    padding: 22px 22px 24px;
+    border: 1px solid var(--card-line);
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 20px 0 22px;
   }
-  .card { top: 520px; width: 248px; height: 220px; display: flex; flex-direction: column; }
-  .card .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: auto; }
-  .num {
-    font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em;
-    color: var(--coral);
-    border: 1px solid rgba(255,122,92,0.45);
-    border-radius: 999px;
-    padding: 4px 9px;
-  }
-  .icon {
-    width: 48px; height: 48px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    display: grid; place-items: center;
-  }
-  .icon svg { width: 26px; height: 26px; stroke: var(--coral); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .card h2 { font-family: var(--sans); font-weight: 600; font-size: 22px; letter-spacing: -0.01em; margin-bottom: 10px; }
-  .card .label { font-size: 12px; }
-
-  .card.loop { border-color: rgba(255,122,92,0.5); }
-  .card.loop .icon { border-color: rgba(255,122,92,0.45); background: var(--coral-soft); }
+  .card > svg { flex: none; width: 24px; height: 24px; stroke: var(--coral); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .card h2 { font-family: var(--sans); font-weight: 500; font-size: 20px; letter-spacing: -0.01em; color: var(--text); margin-bottom: 8px; white-space: nowrap; }
+  .card .mono { white-space: nowrap; letter-spacing: 0.12em; }
+  .card .num { position: absolute; top: 10px; right: 12px; color: var(--coral); font-size: 10px; }
 
   .opus {
-    left: 590px; top: 228px; width: 420px; height: 136px;
-    border: 1.5px solid var(--coral);
-    background: linear-gradient(180deg, rgba(255,122,92,0.12), rgba(255,122,92,0.04)), var(--card);
-    box-shadow: 0 0 0 6px rgba(255,122,92,0.06), 0 20px 60px -20px rgba(255,122,92,0.45);
-    display: flex; align-items: center; gap: 22px;
-    padding: 24px 28px;
-  }
-  .opus .icon { width: 72px; height: 72px; border-radius: 16px; border-color: rgba(255,122,92,0.5); background: var(--coral-soft); flex: none; }
-  .opus .icon svg { width: 38px; height: 38px; }
-  .opus .label { color: var(--coral); font-size: 12px; margin-bottom: 8px; }
-  .opus h2 { font-family: var(--serif); font-weight: 400; font-size: 46px; line-height: 1; }
-
-  .tag {
     position: absolute;
-    font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--muted);
-    background: var(--bg);
-    padding: 2px 8px;
+    left: 660px; top: 290px; width: 280px; height: 116px;
+    background: var(--cyan);
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
   }
+  .opus h2 { font-family: var(--serif); font-weight: 400; font-size: 50px; line-height: 1; margin-bottom: 12px; }
+  .opus .mono { color: var(--ink); }
 
-  footer { position: absolute; left: 84px; right: 84px; bottom: 44px; display: flex; justify-content: space-between; }
+  .tag { position: absolute; color: var(--coral); }
 </style>
 </head>
 <body>
@@ -126,114 +107,76 @@
 <div class="stage" id="stage">
 
   <header>
-    <div>
-      <div class="label">Technical workflow · 5 steps</div>
-      <h1>AI-assisted <em>video editing</em></h1>
-    </div>
-    <div class="meta label">Orchestrated by Claude<br>Drive → Remotion → Drive</div>
+    <div class="kicker">AI-assisted video editing,</div>
+    <h1>END TO END</h1>
   </header>
 
-  <!-- Connectors -->
   <svg class="wires" viewBox="0 0 1600 900" aria-hidden="true">
     <defs>
       <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-        <path d="M1 1 L9 5 L1 9" fill="none" stroke="#ff7a5c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 1 L9 5 L1 9" fill="none" stroke="#f2666a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       </marker>
     </defs>
-    <g fill="none" stroke="rgba(196,210,235,0.38)" stroke-width="1.5" stroke-dasharray="5 6">
-      <!-- Orchestration bus: Opus → every step -->
-      <path d="M800 364 V440"/>
-      <path d="M208 440 H1392"/>
-      <path d="M208 440 V520"/>
-      <path d="M504 440 V520"/>
-      <path d="M800 440 V520"/>
-      <path d="M1096 440 V520"/>
-      <path d="M1392 440 V520"/>
-    </g>
-    <g fill="#0a1325" stroke="rgba(196,210,235,0.5)" stroke-width="1.5">
-      <circle cx="800" cy="440" r="4"/>
-      <circle cx="208" cy="440" r="3"/><circle cx="504" cy="440" r="3"/>
-      <circle cx="1096" cy="440" r="3"/><circle cx="1392" cy="440" r="3"/>
+    <!-- Opus orchestrates every step -->
+    <g fill="none" stroke="#f2666a" stroke-width="1.6" stroke-dasharray="5 5">
+      <path d="M800 406 C800 500, 208 500, 208 600"/>
+      <path d="M800 406 C800 500, 504 510, 504 600"/>
+      <path d="M800 406 V600"/>
+      <path d="M800 406 C800 500, 1096 510, 1096 600"/>
+      <path d="M800 406 C800 500, 1392 500, 1392 600"/>
     </g>
     <!-- Step flow, left → right -->
-    <g fill="none" stroke="#ff7a5c" stroke-width="1.6" stroke-dasharray="5 6" marker-end="url(#arrow)">
-      <path d="M338 630 H374"/>
-      <path d="M634 630 H670"/>
-      <path d="M930 630 H966"/>
-      <path d="M1226 630 H1262"/>
+    <g fill="none" stroke="#f2666a" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#arrow)">
+      <path d="M342 652 H370"/>
+      <path d="M638 652 H666"/>
+      <path d="M934 652 H962"/>
+      <path d="M1230 652 H1258"/>
     </g>
-    <!-- Review loop: back from step 4 into Remotion -->
-    <path d="M1096 742 C1096 800, 800 800, 800 748" fill="none" stroke="#ff7a5c" stroke-width="1.6" stroke-dasharray="5 6" marker-end="url(#arrow)"/>
+    <!-- Review loop: step 4 feeds changes back into Remotion -->
+    <path d="M1096 704 C1096 784, 800 784, 800 708" fill="none" stroke="#f2666a" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
   </svg>
 
-  <span class="tag" style="left:1110px; top:430px;">orchestrates</span>
-  <span class="tag" style="left:868px; top:800px; color:#ff7a5c;">iterate until approved</span>
+  <div class="tag mono" style="left:870px; top:780px;">↻ Iterate until approved</div>
 
-  <!-- Central node -->
-  <div class="node opus">
-    <div class="icon">
-      <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/><circle cx="12" cy="12" r="2.2"/></svg>
-    </div>
-    <div>
-      <div class="label">Orchestrator</div>
-      <h2>Claude Opus 5.5</h2>
-    </div>
+  <div class="opus">
+    <h2>Opus 5.5</h2>
+    <div class="mono">→ Orchestrates every step</div>
   </div>
 
   <!-- 1 -->
-  <div class="node card" style="left:84px;">
-    <div class="top">
-      <span class="num">01</span>
-      <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m10.5 11 4 2.5-4 2.5z"/></svg></div>
-    </div>
-    <h2>Raw footage</h2>
-    <div class="label">Stored in Google Drive</div>
+  <div class="card" style="left:78px;">
+    <span class="num mono">01</span>
+    <svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m10.5 11 4 2.5-4 2.5z"/></svg>
+    <div><h2>Raw footage</h2><div class="mono">Google Drive</div></div>
   </div>
 
   <!-- 2 -->
-  <div class="node card" style="left:380px;">
-    <div class="top">
-      <span class="num">02</span>
-      <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.25 4.25 0 0 1-.5 8.5"/><path d="M12 11v9m-3-3 3 3 3-3"/></svg></div>
-    </div>
-    <h2>Cloud workspace</h2>
-    <div class="label">~31GB per chat</div>
+  <div class="card" style="left:374px;">
+    <span class="num mono">02</span>
+    <svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.25 4.25 0 0 1-.5 8.5"/><path d="M12 11v9m-3-3 3 3 3-3"/></svg>
+    <div><h2>Cloud workspace</h2><div class="mono">~31GB per chat</div></div>
   </div>
 
   <!-- 3 -->
-  <div class="node card" style="left:676px;">
-    <div class="top">
-      <span class="num">03</span>
-      <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="m10.5 7.5 4 2.5-4 2.5z"/><path d="M3 20h5m3 0h4m3 0h3"/></svg></div>
-    </div>
-    <h2>Edit in Remotion</h2>
-    <div class="label">Pre-installed</div>
+  <div class="card" style="left:670px;">
+    <span class="num mono">03</span>
+    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="m10.5 7.5 4 2.5-4 2.5z"/><path d="M3 20h5m3 0h4m3 0h3"/></svg>
+    <div><h2>Edit in Remotion</h2><div class="mono">Pre-installed</div></div>
   </div>
 
   <!-- 4 -->
-  <div class="node card loop" style="left:972px;">
-    <div class="top">
-      <span class="num">04</span>
-      <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14.3 4.9"/><path d="M4 12a8 8 0 0 1 14.3-4.9"/><path d="M18.5 3.5v3.8h-3.8"/><path d="M5.5 20.5v-3.8h3.8"/></svg></div>
-    </div>
-    <h2>Review loop</h2>
-    <div class="label">Suggest → flag → apply</div>
+  <div class="card" style="left:966px;">
+    <span class="num mono">04</span>
+    <svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14.3 4.9"/><path d="M4 12a8 8 0 0 1 14.3-4.9"/><path d="M18.5 3.5v3.8h-3.8"/><path d="M5.5 20.5v-3.8h3.8"/></svg>
+    <div><h2>Review loop</h2><div class="mono">Suggest → flag → apply</div></div>
   </div>
 
   <!-- 5 -->
-  <div class="node card" style="left:1268px;">
-    <div class="top">
-      <span class="num">05</span>
-      <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 15V4m-4 4 4-4 4 4"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></div>
-    </div>
-    <h2>Polished export</h2>
-    <div class="label">Render → Drive</div>
+  <div class="card" style="left:1262px;">
+    <span class="num mono">05</span>
+    <svg viewBox="0 0 24 24"><path d="M12 15V4m-4 4 4-4 4 4"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
+    <div><h2>Polished export</h2><div class="mono">Render → Drive</div></div>
   </div>
-
-  <footer class="label">
-    <span>You direct · Claude executes</span>
-    <span>Raw in · polished out · same Drive</span>
-  </footer>
 
 </div>
 </div>
