@@ -11,6 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "@remotion/cli": "^4.0.534",
+    "@remotion/google-fonts": "^4.0.534",
+    "@remotion/media": "^4.0.534",
+    "@remotion/media-utils": "^4.0.534",
+    "lucide-react": "^1.54.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "remotion": "^4.0.534"
