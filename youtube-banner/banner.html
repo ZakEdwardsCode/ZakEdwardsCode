@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Plasmo Banner</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  :root{
+    --bg:#090c0f; --bg2:#11171b; --ink:#e9f3f8; --muted:#8aa0ad;
+    --teal:#22b0d2; --teal-d:#1F869E; --sky:#8fc3e6; --lilac:#c9a3d6; --mint:#45e0a6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:2560px;height:1440px;overflow:hidden;background:var(--bg)}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);position:relative}
+
+  /* ---------- background ---------- */
+  .bg{position:absolute;inset:0;
+    background:
+      radial-gradient(900px 520px at 50% 52%, rgba(34,176,210,.30), transparent 70%),
+      radial-gradient(700px 500px at 82% 30%, rgba(201,163,214,.16), transparent 70%),
+      radial-gradient(800px 600px at 14% 75%, rgba(31,134,158,.22), transparent 70%),
+      radial-gradient(1600px 900px at 50% 50%, #0f171c, var(--bg) 75%);}
+  .floor{position:absolute;left:-600px;right:-600px;top:880px;height:1100px;
+    transform-origin:50% 0; transform:perspective(900px) rotateX(72deg);
+    background-image:
+      linear-gradient(rgba(34,176,210,.22) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(34,176,210,.22) 2px, transparent 2px);
+    background-size:120px 120px;
+    -webkit-mask-image:linear-gradient(to bottom, transparent, #000 25%, #000 50%, transparent 95%);}
+  .ceil{position:absolute;left:-600px;right:-600px;bottom:880px;height:1000px;
+    transform-origin:50% 100%; transform:perspective(900px) rotateX(-72deg);
+    background-image:
+      linear-gradient(rgba(143,195,230,.10) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(143,195,230,.10) 2px, transparent 2px);
+    background-size:120px 120px;
+    -webkit-mask-image:linear-gradient(to top, transparent, #000 30%, transparent 90%);}
+  .horizon{position:absolute;left:0;right:0;top:878px;height:3px;
+    background:linear-gradient(90deg,transparent,rgba(34,176,210,.7) 30%,rgba(201,163,214,.7) 70%,transparent);
+    filter:blur(1px);box-shadow:0 0 40px 6px rgba(34,176,210,.35)}
+
+  canvas#gl{position:absolute;inset:0;width:2560px;height:1440px}
+
+  .grain{position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;pointer-events:none}
+
+  /* ---------- big outline type (TV-only area) ---------- */
+  .marquee{position:absolute;left:-200px;white-space:nowrap;font-family:"Bricolage Grotesque";font-weight:800;
+    letter-spacing:-.02em;line-height:1;color:transparent}
+  .marquee.top{top:120px;font-size:200px;-webkit-text-stroke:2px rgba(143,195,230,.16);transform:rotate(-4deg)}
+  .marquee.top b{color:rgba(34,176,210,.14);-webkit-text-stroke:0}
+
+  .subjects{position:absolute;left:0;right:0;top:1185px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;
+    padding:0 330px; perspective:1200px}
+  .subjects span{font:600 34px/1 Inter;padding:18px 30px;border-radius:999px;color:#cfe4ee;
+    background:rgba(255,255,255,.04);border:1.5px solid rgba(143,195,230,.18);backdrop-filter:blur(6px)}
+  .subjects span.hot{background:rgba(34,176,210,.16);border-color:rgba(34,176,210,.55);color:#e9fbff}
+
+  /* ---------- safe area ---------- */
+  .safe{position:absolute;left:507px;top:508px;width:1546px;height:423px}
+  .guide{position:absolute;left:507px;top:508px;width:1546px;height:423px;outline:3px dashed #ff3b6b;z-index:99;display:none}
+  body.guides .guide{display:block}
+
+  .mascot-wrap{position:absolute;left:0;top:-14px;width:430px;height:440px}
+  .mascot-glow{position:absolute;left:30px;top:40px;width:380px;height:360px;border-radius:50%;
+    background:radial-gradient(closest-side, rgba(34,176,210,.55), rgba(34,176,210,.15) 60%, transparent);filter:blur(20px)}
+  .mascot-ring{position:absolute;left:50%;bottom:6px;width:400px;height:86px;transform:translateX(-50%);
+    border-radius:50%;border:3px solid rgba(34,176,210,.6);
+    box-shadow:0 0 40px rgba(34,176,210,.55), inset 0 0 30px rgba(34,176,210,.35);
+    background:radial-gradient(closest-side, rgba(34,176,210,.25), transparent)}
+  .mascot{position:absolute;left:50%;bottom:34px;height:372px;transform:translateX(-50%);
+    filter:drop-shadow(0 30px 30px rgba(0,0,0,.55)) drop-shadow(0 0 1px rgba(143,195,230,.4))}
+
+  .copy{position:absolute;left:452px;top:22px;width:720px}
+  .eyebrow{display:inline-flex;align-items:center;gap:14px;font:600 25px/1 Inter;letter-spacing:.02em;color:#bfe3f0;
+    padding:13px 22px 13px 16px;border-radius:999px;background:rgba(34,176,210,.12);border:1.5px solid rgba(34,176,210,.45)}
+  .eyebrow i{width:14px;height:14px;border-radius:50%;background:var(--mint);box-shadow:0 0 14px var(--mint)}
+  .word{font-family:"Bricolage Grotesque";font-weight:800;font-size:212px;line-height:.86;letter-spacing:-.045em;
+    margin:18px 0 0 -8px;
+    background:linear-gradient(180deg,#ffffff 0%,#dff4fb 45%,#7fd3ea 78%,#22b0d2 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 8px 0 rgba(10,60,80,.55)) drop-shadow(0 18px 30px rgba(0,0,0,.5));}
+  .tag{font-family:"Bricolage Grotesque";font-weight:600;font-size:50px;line-height:1.05;letter-spacing:-.02em;margin-top:22px;color:#e9f3f8}
+  .tag em{font-style:normal;color:var(--teal)}
+  .meta{display:flex;gap:14px;margin-top:24px;align-items:center}
+  .meta span{font:600 24px/1 Inter;color:#cfe0e8;padding:12px 18px;border-radius:12px;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.10)}
+  .meta .url{font-family:"JetBrains Mono";font-weight:700;color:#06131a;background:linear-gradient(180deg,#5fd2ec,#22b0d2);border-color:transparent;
+    box-shadow:0 8px 24px rgba(34,176,210,.4)}
+
+  /* ---------- 3D cards ---------- */
+  .stage{position:absolute;perspective:1600px;transform-style:preserve-3d}
+  .card{position:absolute;border-radius:28px;transform-style:preserve-3d;
+    background:linear-gradient(160deg,rgba(32,40,46,.92),rgba(18,24,28,.92));
+    border:1.5px solid rgba(143,195,230,.20);
+    box-shadow:0 50px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.08)}
+  .card.paper{background:linear-gradient(170deg,#f6f8fa,#e3e9ee);border-color:rgba(255,255,255,.6);color:#1a2328}
+
+  .row{display:flex;align-items:center;justify-content:space-between}
+  .lbl{font:700 20px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:#7d8f9c}
+  .score{font:800 40px/1 "Bricolage Grotesque";color:#06131a;background:var(--mint);padding:10px 18px;border-radius:14px;
+    box-shadow:0 10px 30px rgba(69,224,166,.45)}
+  .line{height:12px;border-radius:6px;background:rgba(143,195,230,.18);margin-top:16px}
+  .paper .line{background:#cfd8df}
+  .tick{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--mint);color:#04231a;font:900 24px/1 Inter;flex:none}
+  .fb{margin-top:22px;padding:18px 20px;border-radius:18px;background:rgba(34,176,210,.12);border:1.5px solid rgba(34,176,210,.35);
+    font:500 23px/1.35 Inter;color:#d6eef6}
+  .fb b{color:#fff}
+
+  /* hand-written red pen on paper */
+  .pen{font-family:"Bricolage Grotesque";font-weight:800;color:#e0475e}
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="ceil"></div>
+  <div class="floor"></div>
+  <div class="horizon"></div>
+
+  <div class="marquee top">PAST PAPERS <b>MARKED BY AI</b> · INSTANT FEEDBACK · <b>PREDICTED GRADES</b> ·</div>
+
+  <canvas id="gl" width="2560" height="1440"></canvas>
+
+  <!-- LEFT desktop band: exam paper being marked -->
+  <div class="stage" style="left:70px;top:470px;width:420px;height:500px">
+    <div class="card paper" style="left:30px;top:40px;width:340px;height:420px;padding:30px;
+         transform:rotateY(28deg) rotateX(8deg) rotateZ(-6deg) translateZ(-60px);opacity:.55"></div>
+    <div class="card paper" style="left:10px;top:20px;width:360px;height:440px;padding:32px;
+         transform:rotateY(24deg) rotateX(6deg) rotateZ(-3deg)">
+      <div class="row"><div class="lbl" style="color:#5b6b75">A-Level Maths · P1</div><div class="pen" style="font-size:44px">7/8</div></div>
+      <div style="font:700 26px/1.25 Inter;margin-top:22px">Q4. Differentiate<br>y = 3x² sin x</div>
+      <div class="line" style="width:92%"></div><div class="line" style="width:80%"></div><div class="line" style="width:86%"></div>
+      <div class="row" style="margin-top:22px;gap:12px;justify-content:flex-start">
+        <span class="tick">✓</span><span style="font:600 21px/1.3 Inter;color:#2b3a42">Product rule applied correctly</span></div>
+      <div class="row" style="margin-top:14px;gap:12px;justify-content:flex-start">
+        <span class="tick">✓</span><span style="font:600 21px/1.3 Inter;color:#2b3a42">Simplified final answer</span></div>
+      <div class="line" style="width:70%;margin-top:22px"></div><div class="line" style="width:55%"></div>
+    </div>
+  </div>
+
+  <!-- RIGHT desktop band: predicted grade -->
+  <div class="stage" style="left:2080px;top:520px;width:440px;height:420px">
+    <div class="card" style="left:10px;top:10px;width:400px;height:380px;padding:32px;
+         transform:rotateY(-26deg) rotateX(6deg) rotateZ(3deg)">
+      <div class="lbl">Predicted grade</div>
+      <div style="display:flex;align-items:flex-end;gap:18px;margin-top:10px">
+        <div style="font:800 150px/.9 'Bricolage Grotesque';letter-spacing:-.05em;background:linear-gradient(180deg,#fff,#7fd3ea);-webkit-background-clip:text;color:transparent">A*</div>
+        <div style="font:700 26px/1.2 Inter;color:var(--mint);padding-bottom:16px">▲ +1 grade<br><span style="color:#7d8f9c;font-weight:500;font-size:21px">this month</span></div>
+      </div>
+      <!-- mini bar chart -->
+      <div style="display:flex;align-items:flex-end;gap:12px;height:96px;margin-top:22px">
+        <i style="flex:1;height:38%;border-radius:8px;background:rgba(143,195,230,.25)"></i>
+        <i style="flex:1;height:52%;border-radius:8px;background:rgba(143,195,230,.25)"></i>
+        <i style="flex:1;height:47%;border-radius:8px;background:rgba(143,195,230,.25)"></i>
+        <i style="flex:1;height:68%;border-radius:8px;background:rgba(143,195,230,.35)"></i>
+        <i style="flex:1;height:80%;border-radius:8px;background:rgba(34,176,210,.6)"></i>
+        <i style="flex:1;height:100%;border-radius:8px;background:linear-gradient(180deg,#5fd2ec,#22b0d2);box-shadow:0 0 24px rgba(34,176,210,.6)"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAFE AREA -->
+  <div class="safe">
+    <div class="mascot-wrap">
+      <div class="mascot-glow"></div>
+      <div class="mascot-ring"></div>
+      <img class="mascot" src="mascot.png" alt="">
+    </div>
+
+    <div class="copy">
+      <div class="eyebrow"><i></i>AI marking for GCSE &amp; A-Level</div>
+      <div class="word">Plasmo</div>
+      <div class="tag">Past papers, <em>marked by AI.</em></div>
+      <div class="meta">
+        <span>Instant feedback</span><span>Predicted grades</span><span class="url">plasmo.uk</span>
+      </div>
+    </div>
+
+    <!-- marked-answer card inside safe zone -->
+    <div class="stage" style="left:1170px;top:0;width:380px;height:423px">
+      <div class="card" style="left:10px;top:22px;width:350px;height:368px;padding:24px;
+           transform:rotateY(-18deg) rotateX(4deg) rotateZ(2deg)">
+        <div class="row"><div class="lbl">Chemistry · Q3</div><div class="score">4/4</div></div>
+        <div style="font:600 23px/1.3 Inter;margin-top:18px;color:#e9f3f8">Why does rate increase with temperature?</div>
+        <div class="line" style="width:94%;margin-top:14px"></div><div class="line" style="width:72%;margin-top:12px"></div>
+        <div class="fb" style="font-size:21px;padding:14px 16px;margin-top:18px"><b>Full marks.</b> Collisions linked to activation energy.</div>
+        <div class="row" style="margin-top:14px;justify-content:flex-start;gap:10px">
+          <span style="font:600 19px/1 'JetBrains Mono';color:var(--teal)">● marked in 4s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TV-only bottom: subjects -->
+  <div class="subjects">
+    <span class="hot">Maths</span><span>Biology</span><span class="hot">Chemistry</span><span>Physics</span><span>Psychology</span>
+    <span>Economics</span><span>History</span><span class="hot">English</span><span>Geography</span><span>Computer Science</span>
+    <span>Business</span><span>Sociology</span><span>Politics</span><span>Law</span><span>PE</span>
+  </div>
+
+  <svg class="grain" width="2560" height="1440"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="guide"></div>
+
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+
+if (new URLSearchParams(location.search).has('guides')) document.body.classList.add('guides');
+
+const W=2560,H=1440;
+const canvas=document.getElementById('gl');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1); renderer.setSize(W,H,false);
+renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.05;
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+
+const scene=new THREE.Scene();
+const pmrem=new THREE.PMREMGenerator(renderer);
+scene.environment=pmrem.fromScene(new RoomEnvironment(),0.04).texture;
+
+const camera=new THREE.PerspectiveCamera(30,W/H,1,5000);
+camera.position.set(0,0,1600); camera.lookAt(0,0,0);
+
+const key=new THREE.DirectionalLight(0xffffff,2.2); key.position.set(-600,900,900); scene.add(key);
+const rim=new THREE.DirectionalLight(0x22b0d2,3.0); rim.position.set(800,-300,-400); scene.add(rim);
+const fill=new THREE.PointLight(0xc9a3d6,1.2e6,0,2); fill.position.set(900,500,600); scene.add(fill);
+
+// place an object at screen pixel (px,py) at world depth z
+function at(px,py,z=0){
+  const v=new THREE.Vector3((px/W)*2-1,-(py/H)*2+1,0.5).unproject(camera);
+  const dir=v.sub(camera.position).normalize();
+  const t=(z-camera.position.z)/dir.z;
+  return camera.position.clone().add(dir.multiplyScalar(t));
+}
+
+const M={
+  teal:new THREE.MeshPhysicalMaterial({color:0x22b0d2,metalness:.1,roughness:.18,clearcoat:1,clearcoatRoughness:.05}),
+  mint:new THREE.MeshPhysicalMaterial({color:0x45e0a6,metalness:.05,roughness:.2,clearcoat:1,clearcoatRoughness:.05,emissive:0x0b3a2a,emissiveIntensity:.4}),
+  sky:new THREE.MeshPhysicalMaterial({color:0x8fc3e6,metalness:0,roughness:.3,clearcoat:1,sheen:1,sheenColor:new THREE.Color(0xffffff)}),
+  lilac:new THREE.MeshPhysicalMaterial({color:0xc9a3d6,metalness:0,roughness:.25,clearcoat:1}),
+  chrome:new THREE.MeshPhysicalMaterial({color:0xdfefff,metalness:1,roughness:.12}),
+  irid:new THREE.MeshPhysicalMaterial({color:0x3f9fbf,metalness:.5,roughness:.15,iridescence:1,iridescenceIOR:1.6,iridescenceThicknessRange:[200,800],clearcoat:1}),
+  glass:new THREE.MeshPhysicalMaterial({color:0xbfefff,metalness:0,roughness:.05,transmission:1,thickness:60,ior:1.45,clearcoat:1,attenuationColor:new THREE.Color(0x22b0d2),attenuationDistance:220}),
+};
+
+// 3D tick: two capsules joined
+function tick(size,mat){
+  const g=new THREE.Group(), r=size*.16;
+  const a=new THREE.Mesh(new THREE.CapsuleGeometry(r,size*.45,12,32),mat);
+  const b=new THREE.Mesh(new THREE.CapsuleGeometry(r,size*1.0,12,32),mat);
+  a.rotation.z=Math.PI/4; a.position.set(-size*.22,-size*.05,0);
+  b.rotation.z=-Math.PI/5.2; b.position.set(size*.27,size*.26,0);
+  g.add(a,b); return g;
+}
+function add(obj,px,py,z,rot=[0,0,0]){const p=at(px,py,z);obj.position.copy(p);obj.rotation.set(...rot);scene.add(obj);return obj;}
+
+// ---- TV top area ----
+add(new THREE.Mesh(new THREE.TorusGeometry(120,46,64,160),M.irid), 360,250,-200,[0.9,0.4,0.2]);
+add(tick(150,M.mint), 1520,270,0,[0.25,-0.5,0.08]);
+add(new THREE.Mesh(new THREE.SphereGeometry(62,64,64),M.sky), 1080,330,-100);
+add(new THREE.Mesh(new THREE.SphereGeometry(34,64,64),M.lilac), 2210,180,-50);
+add(new THREE.Mesh(new RoundedBoxGeometry(130,130,130,8,26),M.glass), 2050,370,-150,[0.5,0.7,0.2]);
+add(new THREE.Mesh(new THREE.IcosahedronGeometry(52,0),M.chrome), 820,170,-300,[0.3,0.6,0]);
+
+// ---- desktop band edges (beside cards) ----
+add(tick(80,M.teal), 455,455,100,[0.2,0.6,-0.1]);
+add(new THREE.Mesh(new THREE.SphereGeometry(24,48,48),M.mint), 2075,1000,60);
+add(new THREE.Mesh(new THREE.TorusGeometry(34,13,48,96),M.lilac), 560,1040,0,[1.2,0.3,0.4]);
+
+// ---- TV bottom ----
+add(new THREE.Mesh(new THREE.TorusKnotGeometry(42,14,220,32,2,3),M.teal), 2440,1360,-100,[0.4,0.3,0]);
+add(new THREE.Mesh(new THREE.SphereGeometry(40,64,64),M.irid), 150,1330,-80);
+add(new THREE.Mesh(new THREE.CapsuleGeometry(22,80,16,32),M.sky), 1280,1080,0,[0,0,1.2]);
+
+new FontLoader().load('vendor/helvetiker_bold.json',(font)=>{
+  const geo=new TextGeometry('A*',{font,size:105,height:34,curveSegments:16,bevelEnabled:true,bevelThickness:10,bevelSize:6,bevelSegments:8});
+  geo.center();
+  add(new THREE.Mesh(geo,M.teal), 2350,1120,-60,[0.15,-0.55,0.08]);
+  const g2=new TextGeometry('4/4',{font,size:64,height:22,curveSegments:12,bevelEnabled:true,bevelThickness:6,bevelSize:4,bevelSegments:6});
+  g2.center();
+  add(new THREE.Mesh(g2,M.mint), 250,1150,-60,[0.1,0.5,-0.08]);
+  document.fonts.ready.then(()=>{
+    renderer.render(scene,camera);
+    requestAnimationFrame(()=>{renderer.render(scene,camera);window.__done=true;});
+  });
+});
+</script>
+</body>
+</html>
