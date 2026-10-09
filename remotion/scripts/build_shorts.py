@@ -65,6 +65,7 @@ SHORTS = [
             (60.35, 65.4, {"kind": "gfx", "icon": "BrainCircuit", "title": "Already forgotten"}),
             (67.85, 70.3, {"kind": "gfx", "icon": "Frown", "title": "How did it even go?"}),
             (77.2, 80.75, {"kind": "gfx", "icon": "Hourglass", "title": "Weeks to mark", "cross": True}),
+            (80.75, 84.0, {"kind": "gfx", "icon": "Frown", "title": "Guilt on both sides"}),
             (135.25, 137.55, {"kind": "gfx", "icon": "Sparkles", "title": "So I built Plasmo", "accent": True}),
             (623.2, 624.6, {"kind": "screen", "crop": CARD}),
             (632.8, 633.8, {"kind": "screen", "crop": CARD}),

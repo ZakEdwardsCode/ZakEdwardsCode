@@ -167,14 +167,18 @@ def write(name, sections, total):
     return f"music/{name}.wav"
 
 
+import sys
+ONLY_SHORTS = "--shorts" in sys.argv
+
 # ---------- long form ----------
 e = json.load(open(f"{REMOTION}/src/plasmo/edit.json"))
 ch = {c["title"].replace("\n", " "): c["t"] for c in e["chapters"]}
 co = {c["title"]: c["t"] for c in e["callouts"]}
 long_sections = [(0.0, "tension"), (ch["PLASMO"] - 0.6, "lift"), (co["Paper is outdated"], "tension"),
                  (ch["ZAK EDWARDS"], "lift")]
-e["music"] = write("score_long", long_sections, e["duration"])
-json.dump(e, open(f"{REMOTION}/src/plasmo/edit.json", "w"), indent=1)
+if not ONLY_SHORTS:
+    e["music"] = write("score_long", long_sections, e["duration"])
+    json.dump(e, open(f"{REMOTION}/src/plasmo/edit.json", "w"), indent=1)
 print("long-form:", [(round(t, 1), m) for t, m in long_sections])
 
 # ---------- shorts ----------
