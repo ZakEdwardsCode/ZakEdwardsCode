@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opus Orchestrator Diagram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    --bg-centre: #1e2a6b;
+    --bg-edge: #141c4a;
+    --navy: #141c4a;
+    --title-blue: #8fc4ff;
+    --label-blue: #6ab4f5;
+    --centre-fill: #7fd6f2;
+    --node-fill: #1f2b66;
+    --node-border: rgba(143, 196, 255, 0.35);
+    --node-title: #a9d1ff;
+    --node-sub: #c9d6ff;
+    --icon: #ff6b6b;
+    --line: #ff7a8a;
+    --serif: "Instrument Serif", Georgia, serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background: radial-gradient(ellipse at center, var(--bg-centre) 0%, var(--bg-edge) 75%);
+    background-color: var(--bg-edge);
+  }
+
+  /* Fixed 1600x900 stage, scaled to fit the window */
+  .stage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1600px;
+    height: 900px;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(var(--scale, 1));
+  }
+
+  /* Title */
+  .title {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    opacity: 0;
+    animation: fadeUp 700ms ease-out 100ms forwards;
+  }
+  .title-line1 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 32px;
+    line-height: 1.1;
+    color: var(--title-blue);
+    margin-bottom: 8px;
+  }
+  .title-line2 {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: 64px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--label-blue);
+    padding: 4px 16px;
+  }
+
+  /* Connectors */
+  .links {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .links .dash {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 2;
+    stroke-dasharray: 6 6;
+    animation: flow 1.6s linear infinite;
+  }
+  .links .reveal {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 8;
+  }
+
+  /* Nodes */
+  .node {
+    position: absolute;
+    opacity: 0;
+    animation: fadeUp 600ms ease-out forwards;
+  }
+
+  .centre {
+    left: 670px;
+    top: 505px;
+    width: 260px;
+    height: 110px;
+    background: var(--centre-fill);
+    color: var(--navy);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    animation-delay: 450ms;
+  }
+  .centre-title {
+    font-family: var(--serif);
+    font-size: 44px;
+    line-height: 1;
+  }
+  .centre-sub {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .outer {
+    width: 300px;
+    height: 85px;
+    background: var(--node-fill);
+    border: 1px solid var(--node-border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 22px;
+  }
+  .outer .icon {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    color: var(--icon);
+  }
+  .outer .icon svg { width: 24px; height: 24px; display: block; }
+  .outer-title {
+    font-family: var(--serif);
+    font-size: 26px;
+    line-height: 1.05;
+    color: var(--node-title);
+  }
+  .outer-sub {
+    margin-top: 5px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--node-sub);
+  }
+
+  .n-top    { left: 650px;  top: 330px; }
+  .n-left   { left: 200px;  top: 517.5px; }
+  .n-right  { left: 1100px; top: 517.5px; }
+  .n-bl     { left: 370px;  top: 740px; }
+  .n-br     { left: 930px;  top: 740px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes flow {
+    to { stroke-dashoffset: -12; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .title, .node { animation: none; opacity: 1; }
+    .links .dash { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <svg class="links" viewBox="0 0 1600 900" aria-hidden="true">
+      <defs>
+        <mask id="reveal" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="900">
+          <g id="reveal-paths"></g>
+        </mask>
+      </defs>
+      <!-- All paths start at the centre node so dashes flow outward -->
+      <g id="dash-paths" mask="url(#reveal)">
+        <path class="dash" d="M800 505 L800 415" />
+        <path class="dash" d="M670 560 L500 560" />
+        <path class="dash" d="M930 560 L1100 560" />
+        <path class="dash" d="M800 615 C800 682, 520 673, 520 740" />
+        <path class="dash" d="M800 615 C800 682, 1080 673, 1080 740" />
+      </g>
+    </svg>
+
+    <div class="title">
+      <div class="title-line1">Make Opus 5.5 the</div>
+      <div class="title-line2">Orchestrator</div>
+    </div>
+
+    <div class="node centre">
+      <div class="centre-title">Opus 5.5</div>
+      <div class="centre-sub">→ Orchestrates the tools</div>
+    </div>
+
+    <div class="node outer n-top">
+      <span class="icon"><i data-lucide="square-play"></i></span>
+      <div><div class="outer-title">Video generation</div><div class="outer-sub">Clips + B-roll</div></div>
+    </div>
+    <div class="node outer n-left">
+      <span class="icon"><i data-lucide="box"></i></span>
+      <div><div class="outer-title">3D in Blender</div><div class="outer-sub">Models, scenes, renders</div></div>
+    </div>
+    <div class="node outer n-right">
+      <span class="icon"><i data-lucide="image"></i></span>
+      <div><div class="outer-title">Image generation</div><div class="outer-sub">Stills, storyboards, textures</div></div>
+    </div>
+    <div class="node outer n-bl">
+      <span class="icon"><i data-lucide="music"></i></span>
+      <div><div class="outer-title">Music generation</div><div class="outer-sub">Score + soundtrack</div></div>
+    </div>
+    <div class="node outer n-br">
+      <span class="icon"><i data-lucide="mic"></i></span>
+      <div><div class="outer-title">Voice generation</div><div class="outer-sub">Narration + voiceover</div></div>
+    </div>
+  </div>
+
+<script>
+  // Scale the 1600x900 stage to fit the window
+  const stage = document.getElementById('stage');
+  function fit() {
+    const s = Math.min(window.innerWidth / 1600, window.innerHeight / 900);
+    stage.style.setProperty('--scale', s);
+  }
+  window.addEventListener('resize', fit);
+  fit();
+
+  // Icons
+  if (window.lucide) {
+    lucide.createIcons({ attrs: { width: 24, height: 24, 'stroke-width': 1.75 } });
+  }
+
+  // Stagger outer nodes 120ms apart after the centre node
+  document.querySelectorAll('.outer').forEach((el, i) => {
+    el.style.animationDelay = (700 + i * 120) + 'ms';
+  });
+
+  // Line draw-in: a solid mask path per connector reveals the flowing dashed line
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ns = 'http://www.w3.org/2000/svg';
+  const maskGroup = document.getElementById('reveal-paths');
+  document.querySelectorAll('#dash-paths .dash').forEach((p, i) => {
+    const m = document.createElementNS(ns, 'path');
+    m.setAttribute('d', p.getAttribute('d'));
+    m.setAttribute('class', 'reveal');
+    const len = p.getTotalLength();
+    m.style.strokeDasharray = len + ' ' + len;
+    m.style.strokeDashoffset = reduce ? 0 : len;
+    maskGroup.appendChild(m);
+    if (!reduce) {
+      m.getBoundingClientRect();
+      m.style.transition = 'stroke-dashoffset 900ms cubic-bezier(.4,0,.2,1) ' + (650 + i * 120) + 'ms';
+      requestAnimationFrame(() => { m.style.strokeDashoffset = 0; });
+    }
+  });
+</script>
+</body>
+</html>
