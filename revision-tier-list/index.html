@@ -39,7 +39,7 @@
   .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
 
   .board { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); }
-  .tier { display: flex; min-height: 92px; border-top: 1px solid var(--line); }
+  .tier { display: flex; min-height: 132px; border-top: 1px solid var(--line); }
   .tier:first-child { border-top: 0; }
   .label {
     flex: 0 0 96px; display: grid; place-items: center;
@@ -49,15 +49,17 @@
   .drop.over { background: #14424a; }
 
   .card {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 10px 14px; border-radius: 10px;
+    width: 128px; display: flex; flex-direction: column;
+    border-radius: 10px; overflow: hidden;
     background: #123a40; border: 1px solid #1e5560;
-    font-weight: 700; font-size: 16px; line-height: 1.15;
+    font-weight: 700; font-size: 13px; line-height: 1.15;
     cursor: grab; user-select: none; touch-action: none;
     box-shadow: 0 2px 0 rgba(0,0,0,.25);
   }
-  .card .emo { font-size: 20px; }
-  .card small { display: block; font-weight: 600; font-size: 11px; color: var(--muted); }
+  .card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; pointer-events: none; -webkit-user-drag: none; background: #0b2326; }
+  .card .ph { display: grid; place-items: center; aspect-ratio: 4 / 3; background: #0b2326; color: var(--muted); font-size: 28px; }
+  .card .txt { padding: 6px 8px 7px; }
+  .card small { display: block; font-weight: 600; font-size: 11px; color: var(--muted); margin-top: 1px; }
   .card.ppp { border-color: var(--cyan); box-shadow: 0 0 0 1px rgba(34,211,238,.25), 0 0 16px rgba(34,211,238,.18); }
   .card.dragging { opacity: .35; }
   body.is-dragging { user-select: none; -webkit-user-select: none; cursor: grabbing; }
@@ -77,13 +79,18 @@
   .add input::placeholder { color: var(--muted); }
   #pool { min-height: 80px; border: 1px dashed var(--line); border-radius: 14px; background: rgba(15,47,51,.5); }
 
-  footer { margin-top: 26px; text-align: center; color: var(--muted); font-size: 13px; }
+  .credits { margin-top: 26px; color: var(--muted); font-size: 12px; }
+  .credits summary { cursor: pointer; width: max-content; }
+  .credits ul { margin: 8px 0 0; padding-left: 18px; line-height: 1.6; }
+  .credits a { color: var(--muted); }
+  footer { margin-top: 18px; text-align: center; color: var(--muted); font-size: 13px; }
   footer a { color: var(--cyan); text-decoration: none; font-weight: 700; }
 
   @media (max-width: 600px) {
     .label { flex-basis: 56px; font-size: 26px; }
-    .tier { min-height: 70px; }
-    .card { font-size: 14px; padding: 8px 10px; }
+    .tier { min-height: 110px; }
+    .card { width: 104px; font-size: 12px; }
+    .card small { font-size: 10px; }
     .add input { width: 130px; }
   }
 </style>
@@ -109,23 +116,37 @@
   </div>
   <div class="drop" id="pool" data-tier="pool"></div>
 
+
+  <details class="credits"><summary>Photo credits</summary><ul>
+    <li>PPP Method: <a href="https://www.rawpixel.com/image/3338154/free-photo-image-exam-cc0-creative-commons" target="_blank" rel="noopener">photo</a> by unknown (CC0)</li>
+    <li>Blurting: <a href="https://stocksnap.io/photo/journal-notepad-DPKNIIN5X3" target="_blank" rel="noopener">photo</a> by Cathryn Lavery (CC0)</li>
+    <li>Flashcards: <a href="https://www.flickr.com/photos/94168846@N00/6631656713" target="_blank" rel="noopener">photo</a> by jimmiehomeschoolmom (CC BY 2.0)</li>
+    <li>2-3-5-7 Method: <a href="https://www.flickr.com/photos/38307206@N02/3841956436" target="_blank" rel="noopener">photo</a> by Search Engine People Blog (CC BY 2.0)</li>
+    <li>Feynman Technique: <a href="https://stocksnap.io/photo/whiteboard-planning-NQQ2PJW1JM" target="_blank" rel="noopener">photo</a> by Startup Stock Photos (CC0)</li>
+    <li>Pomodoro: <a href="https://www.flickr.com/photos/21372046@N00/6332067642" target="_blank" rel="noopener">photo</a> by AndyRobertsPhotos (CC BY 2.0)</li>
+    <li>Mind Maps: <a href="https://www.flickr.com/photos/57806312@N05/6012639844" target="_blank" rel="noopener">photo</a> by seeincolors (CC BY 2.0)</li>
+    <li>Highlighting: <a href="https://stocksnap.io/photo/pens-highlighters-30TRQTXKWJ" target="_blank" rel="noopener">photo</a> by Jeffrey Betts (CC0)</li>
+    <li>Rewriting Notes: <a href="https://stocksnap.io/photo/office-work-E4PSRGAB8Y" target="_blank" rel="noopener">photo</a> by energepic.com (CC0)</li>
+    <li>YouTube Videos: <a href="https://www.flickr.com/photos/9106303@N05/3495321482" target="_blank" rel="noopener">photo</a> by Mike Licht, NotionsCapital.com (CC BY 2.0)</li>
+    <li>Study With Me: <a href="https://stocksnap.io/photo/laptop-mac-AQNKPDGKR8" target="_blank" rel="noopener">photo</a> by Matthew Henry (CC0)</li>
+  </ul></details>
   <footer>Made by <a href="https://plasmo.uk" target="_blank" rel="noopener">plasmo.uk</a></footer>
 </div>
 
 <script>
 const TIERS = ["S", "A", "B", "C", "D", "F"];
 const METHODS = [
-  { id: "ppp", name: "PPP Method", sub: "Past Paper Practice", emo: "📝" },
-  { id: "blurting", name: "Blurting", emo: "🧠" },
-  { id: "flashcards", name: "Flashcards / Anki", emo: "🗂️" },
-  { id: "2357", name: "2-3-5-7 Method", sub: "Spaced repetition", emo: "📅" },
-  { id: "feynman", name: "Feynman Technique", sub: "Teach it back", emo: "🗣️" },
-  { id: "pomodoro", name: "Pomodoro", sub: "25 on, 5 off", emo: "🍅" },
-  { id: "mindmaps", name: "Mind Maps", emo: "🕸️" },
-  { id: "highlighting", name: "Highlighting", emo: "🖍️" },
-  { id: "rewriting", name: "Rewriting Notes", emo: "✍️" },
-  { id: "youtube", name: "YouTube Videos", emo: "▶️" },
-  { id: "studywithme", name: "Study With Me", emo: "🕯️" },
+  { id: "ppp", img: "images/ppp.jpg", name: "PPP Method", sub: "Past Paper Practice" },
+  { id: "blurting", img: "images/blurting.jpg", name: "Blurting" },
+  { id: "flashcards", img: "images/flashcards.jpg", name: "Flashcards / Anki" },
+  { id: "2357", img: "images/2357.jpg", name: "2-3-5-7 Method", sub: "Spaced repetition" },
+  { id: "feynman", img: "images/feynman.jpg", name: "Feynman Technique", sub: "Teach it back" },
+  { id: "pomodoro", img: "images/pomodoro.jpg", name: "Pomodoro", sub: "25 on, 5 off" },
+  { id: "mindmaps", img: "images/mindmaps.jpg", name: "Mind Maps" },
+  { id: "highlighting", img: "images/highlighting.jpg", name: "Highlighting" },
+  { id: "rewriting", img: "images/rewriting.jpg", name: "Rewriting Notes" },
+  { id: "youtube", img: "images/youtube.jpg", name: "YouTube Videos" },
+  { id: "studywithme", img: "images/studywithme.jpg", name: "Study With Me" },
 ];
 const KEY = "revision-tier-list-v1";
 
@@ -156,7 +177,8 @@ function makeCard(m) {
   const el = document.createElement("div");
   el.className = "card" + (m.id === "ppp" ? " ppp" : "");
   el.dataset.id = m.id;
-  el.innerHTML = `<span class="emo">${m.emo || "⭐"}</span><span>${escapeHtml(m.name)}${m.sub ? `<small>${escapeHtml(m.sub)}</small>` : ""}</span>`;
+  const pic = m.img ? `<img src="${m.img}" alt="">` : `<div class="ph">?</div>`;
+  el.innerHTML = `${pic}<div class="txt">${escapeHtml(m.name)}${m.sub ? `<small>${escapeHtml(m.sub)}</small>` : ""}</div>`;
   el.addEventListener("pointerdown", startDrag);
   return el;
 }
