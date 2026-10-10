@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revision Method Tier List</title>
+<meta name="description" content="Rank every revision method, from past papers to blurting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #071a1d;
+    --panel: #0c2629;
+    --row: #0f2f33;
+    --line: #17434a;
+    --text: #e6f6f7;
+    --muted: #7fa9ad;
+    --cyan: #22d3ee;
+    --teal: #0f766e;
+    --S: #ff7a7a; --A: #ffb86b; --B: #ffe07a; --C: #b8ef7d; --D: #7fd6ff; --F: #c4a5ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: radial-gradient(1200px 600px at 50% -10%, #0e3a3f 0%, var(--bg) 60%);
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 16px 40px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+  h1 { margin: 0; font-size: clamp(26px, 4.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; }
+  h1 span { color: var(--cyan); }
+  .brand { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: 0.01em; white-space: nowrap; }
+  .brand:hover { color: var(--cyan); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
+
+  .board { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); }
+  .tier { display: flex; min-height: 92px; border-top: 1px solid var(--line); }
+  .tier:first-child { border-top: 0; }
+  .label {
+    flex: 0 0 96px; display: grid; place-items: center;
+    font-size: 38px; font-weight: 800; color: #0b1f22;
+  }
+  .drop { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 10px; padding: 12px; background: var(--row); transition: background .15s; }
+  .drop.over { background: #14424a; }
+
+  .card {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 14px; border-radius: 10px;
+    background: #123a40; border: 1px solid #1e5560;
+    font-weight: 700; font-size: 16px; line-height: 1.15;
+    cursor: grab; user-select: none; touch-action: none;
+    box-shadow: 0 2px 0 rgba(0,0,0,.25);
+  }
+  .card .emo { font-size: 20px; }
+  .card small { display: block; font-weight: 600; font-size: 11px; color: var(--muted); }
+  .card.ppp { border-color: var(--cyan); box-shadow: 0 0 0 1px rgba(34,211,238,.25), 0 0 16px rgba(34,211,238,.18); }
+  .card.dragging { opacity: .35; }
+  body.is-dragging { user-select: none; -webkit-user-select: none; cursor: grabbing; }
+  .ghost { position: fixed; pointer-events: none; z-index: 50; transform: rotate(-2deg) scale(1.05); cursor: grabbing; box-shadow: 0 12px 30px rgba(0,0,0,.45); }
+
+  .pool-head { display: flex; justify-content: space-between; align-items: center; margin: 22px 0 10px; gap: 10px; flex-wrap: wrap; }
+  .pool-head h2 { margin: 0; font-size: 15px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .tools { display: flex; gap: 8px; flex-wrap: wrap; }
+  button, .add input {
+    font: inherit; font-size: 14px; font-weight: 600; color: var(--text);
+    background: #0f2f33; border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px;
+  }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--cyan); }
+  .add { display: flex; gap: 6px; }
+  .add input { width: 170px; }
+  .add input::placeholder { color: var(--muted); }
+  #pool { min-height: 80px; border: 1px dashed var(--line); border-radius: 14px; background: rgba(15,47,51,.5); }
+
+  footer { margin-top: 26px; text-align: center; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--cyan); text-decoration: none; font-weight: 700; }
+
+  @media (max-width: 600px) {
+    .label { flex-basis: 56px; font-size: 26px; }
+    .tier { min-height: 70px; }
+    .card { font-size: 14px; padding: 8px 10px; }
+    .add input { width: 130px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Revision Method <span>Tier List</span></h1>
+    <a class="brand" href="https://plasmo.uk" target="_blank" rel="noopener"><span class="dot"></span>plasmo</a>
+  </header>
+
+  <div class="board" id="board"></div>
+
+  <div class="pool-head">
+    <h2>Drag to rank</h2>
+    <div class="tools">
+      <form class="add" id="addForm">
+        <input id="addInput" maxlength="32" placeholder="Add a method" aria-label="Add a method">
+        <button type="submit">Add</button>
+      </form>
+      <button id="reset" type="button">Reset</button>
+    </div>
+  </div>
+  <div class="drop" id="pool" data-tier="pool"></div>
+
+  <footer>Made by <a href="https://plasmo.uk" target="_blank" rel="noopener">plasmo.uk</a></footer>
+</div>
+
+<script>
+const TIERS = ["S", "A", "B", "C", "D", "F"];
+const METHODS = [
+  { id: "ppp", name: "PPP Method", sub: "Past Paper Practice", emo: "📝" },
+  { id: "blurting", name: "Blurting", emo: "🧠" },
+  { id: "flashcards", name: "Flashcards / Anki", emo: "🗂️" },
+  { id: "2357", name: "2-3-5-7 Method", sub: "Spaced repetition", emo: "📅" },
+  { id: "feynman", name: "Feynman Technique", sub: "Teach it back", emo: "🗣️" },
+  { id: "pomodoro", name: "Pomodoro", sub: "25 on, 5 off", emo: "🍅" },
+  { id: "mindmaps", name: "Mind Maps", emo: "🕸️" },
+  { id: "highlighting", name: "Highlighting", emo: "🖍️" },
+  { id: "rewriting", name: "Rewriting Notes", emo: "✍️" },
+  { id: "youtube", name: "YouTube Videos", emo: "▶️" },
+  { id: "studywithme", name: "Study With Me", emo: "🕯️" },
+];
+const KEY = "revision-tier-list-v1";
+
+function loadState() {
+  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.items) return s; } catch (e) {}
+  return null;
+}
+function saveState() {
+  const state = { items: {}, custom: custom };
+  document.querySelectorAll(".drop").forEach(d => {
+    state.items[d.dataset.tier] = [...d.querySelectorAll(".card")].map(c => c.dataset.id);
+  });
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+}
+
+let custom = [];
+const board = document.getElementById("board");
+const pool = document.getElementById("pool");
+
+TIERS.forEach(t => {
+  const row = document.createElement("div");
+  row.className = "tier";
+  row.innerHTML = `<div class="label" style="background:var(--${t})">${t}</div><div class="drop" data-tier="${t}"></div>`;
+  board.appendChild(row);
+});
+
+function makeCard(m) {
+  const el = document.createElement("div");
+  el.className = "card" + (m.id === "ppp" ? " ppp" : "");
+  el.dataset.id = m.id;
+  el.innerHTML = `<span class="emo">${m.emo || "⭐"}</span><span>${escapeHtml(m.name)}${m.sub ? `<small>${escapeHtml(m.sub)}</small>` : ""}</span>`;
+  el.addEventListener("pointerdown", startDrag);
+  return el;
+}
+function escapeHtml(s) { return s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+function allMethods() { return METHODS.concat(custom); }
+
+function render(state) {
+  document.querySelectorAll(".drop").forEach(d => d.innerHTML = "");
+  const byId = Object.fromEntries(allMethods().map(m => [m.id, m]));
+  const placed = new Set();
+  if (state) {
+    for (const [tier, ids] of Object.entries(state.items)) {
+      const zone = document.querySelector(`.drop[data-tier="${tier}"]`);
+      if (!zone) continue;
+      ids.forEach(id => { if (byId[id] && !placed.has(id)) { zone.appendChild(makeCard(byId[id])); placed.add(id); } });
+    }
+  }
+  allMethods().forEach(m => { if (!placed.has(m.id)) pool.appendChild(makeCard(m)); });
+}
+
+// Pointer-based drag and drop (works with mouse and touch)
+let drag = null;
+function startDrag(e) {
+  if (e.button !== undefined && e.button !== 0) return;
+  const card = e.currentTarget;
+  const r = card.getBoundingClientRect();
+  const ghost = card.cloneNode(true);
+  ghost.classList.add("ghost");
+  ghost.style.width = r.width + "px";
+  document.body.appendChild(ghost);
+  card.classList.add("dragging");
+  document.body.classList.add("is-dragging");
+  drag = { card, ghost, dx: e.clientX - r.left, dy: e.clientY - r.top };
+  moveGhost(e);
+  window.addEventListener("pointermove", onMove);
+  window.addEventListener("pointerup", endDrag, { once: true });
+  window.addEventListener("pointercancel", endDrag, { once: true });
+  e.preventDefault();
+}
+function moveGhost(e) {
+  drag.ghost.style.left = (e.clientX - drag.dx) + "px";
+  drag.ghost.style.top = (e.clientY - drag.dy) + "px";
+}
+function zoneAt(x, y) {
+  const el = document.elementFromPoint(x, y);
+  if (!el) return null;
+  const label = el.closest(".label");
+  if (label) return label.nextElementSibling;
+  return el.closest(".drop");
+}
+function onMove(e) {
+  if (!drag) return;
+  moveGhost(e);
+  document.querySelectorAll(".drop.over").forEach(d => d.classList.remove("over"));
+  const zone = zoneAt(e.clientX, e.clientY);
+  if (!zone) return;
+  zone.classList.add("over");
+  // place the card at the pointer position within the zone
+  const others = [...zone.querySelectorAll(".card:not(.dragging)")];
+  const before = others.find(c => {
+    const r = c.getBoundingClientRect();
+    return e.clientY < r.top + r.height / 2 || (e.clientY < r.bottom && e.clientX < r.left + r.width / 2);
+  });
+  if (before) zone.insertBefore(drag.card, before); else zone.appendChild(drag.card);
+}
+function endDrag() {
+  if (!drag) return;
+  window.removeEventListener("pointermove", onMove);
+  drag.card.classList.remove("dragging");
+  document.body.classList.remove("is-dragging");
+  drag.ghost.remove();
+  document.querySelectorAll(".drop.over").forEach(d => d.classList.remove("over"));
+  drag = null;
+  saveState();
+}
+
+document.getElementById("addForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const input = document.getElementById("addInput");
+  const name = input.value.trim();
+  if (!name) return;
+  const m = { id: "c" + Date.now(), name };
+  custom.push(m);
+  pool.appendChild(makeCard(m));
+  input.value = "";
+  saveState();
+});
+document.getElementById("reset").addEventListener("click", () => {
+  custom = [];
+  try { localStorage.removeItem(KEY); } catch (e) {}
+  render(null);
+});
+
+const saved = loadState();
+if (saved && Array.isArray(saved.custom)) custom = saved.custom;
+render(saved);
+</script>
+</body>
+</html>
