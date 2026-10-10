@@ -30,8 +30,8 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 16px 40px; }
-  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 20px 16px 32px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
   h1 { margin: 0; font-size: clamp(26px, 4.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; }
   h1 span { color: var(--cyan); }
   .brand { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: 0.01em; white-space: nowrap; }
@@ -39,7 +39,7 @@
   .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
 
   .board { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); }
-  .tier { display: flex; min-height: 132px; border-top: 1px solid var(--line); }
+  .tier { display: flex; min-height: 112px; border-top: 1px solid var(--line); }
   .tier:first-child { border-top: 0; }
   .label {
     flex: 0 0 96px; display: grid; place-items: center;
@@ -49,17 +49,17 @@
   .drop.over { background: #14424a; }
 
   .card {
-    width: 128px; display: flex; flex-direction: column;
+    width: 150px; display: flex; flex-direction: column;
     border-radius: 10px; overflow: hidden;
     background: #123a40; border: 1px solid #1e5560;
-    font-weight: 700; font-size: 13px; line-height: 1.15;
+    font-weight: 700; font-size: 15px; line-height: 1.15;
     cursor: grab; user-select: none; touch-action: none;
     box-shadow: 0 2px 0 rgba(0,0,0,.25);
   }
-  .card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; pointer-events: none; -webkit-user-drag: none; background: #0b2326; }
-  .card .ph { display: grid; place-items: center; aspect-ratio: 4 / 3; background: #0b2326; color: var(--muted); font-size: 28px; }
-  .card .txt { padding: 6px 8px 7px; }
-  .card small { display: block; font-weight: 600; font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .card img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; pointer-events: none; -webkit-user-drag: none; background: #0b2326; }
+  .card .ph { display: grid; place-items: center; aspect-ratio: 3 / 2; background: #0b2326; color: var(--muted); font-size: 28px; }
+  .card .txt { padding: 8px 10px 9px; }
+  .card small { display: block; font-weight: 600; font-size: 12px; color: var(--muted); margin-top: 1px; }
   .card.ppp { border-color: var(--cyan); box-shadow: 0 0 0 1px rgba(34,211,238,.25), 0 0 16px rgba(34,211,238,.18); }
   .card.dragging { opacity: .35; }
   body.is-dragging { user-select: none; -webkit-user-select: none; cursor: grabbing; }
@@ -121,14 +121,9 @@
     <li>PPP Method: <a href="https://www.rawpixel.com/image/3338154/free-photo-image-exam-cc0-creative-commons" target="_blank" rel="noopener">photo</a> by unknown (CC0)</li>
     <li>Blurting: <a href="https://stocksnap.io/photo/journal-notepad-DPKNIIN5X3" target="_blank" rel="noopener">photo</a> by Cathryn Lavery (CC0)</li>
     <li>Flashcards: <a href="https://www.flickr.com/photos/94168846@N00/6631656713" target="_blank" rel="noopener">photo</a> by jimmiehomeschoolmom (CC BY 2.0)</li>
-    <li>2-3-5-7 Method: <a href="https://www.flickr.com/photos/38307206@N02/3841956436" target="_blank" rel="noopener">photo</a> by Search Engine People Blog (CC BY 2.0)</li>
-    <li>Feynman Technique: <a href="https://stocksnap.io/photo/whiteboard-planning-NQQ2PJW1JM" target="_blank" rel="noopener">photo</a> by Startup Stock Photos (CC0)</li>
-    <li>Pomodoro: <a href="https://www.flickr.com/photos/21372046@N00/6332067642" target="_blank" rel="noopener">photo</a> by AndyRobertsPhotos (CC BY 2.0)</li>
     <li>Mind Maps: <a href="https://www.flickr.com/photos/57806312@N05/6012639844" target="_blank" rel="noopener">photo</a> by seeincolors (CC BY 2.0)</li>
-    <li>Highlighting: <a href="https://stocksnap.io/photo/pens-highlighters-30TRQTXKWJ" target="_blank" rel="noopener">photo</a> by Jeffrey Betts (CC0)</li>
-    <li>Rewriting Notes: <a href="https://stocksnap.io/photo/office-work-E4PSRGAB8Y" target="_blank" rel="noopener">photo</a> by energepic.com (CC0)</li>
+    <li>Reading &amp; Highlighting: <a href="https://stocksnap.io/photo/man-male-J7YRJBKV9D" target="_blank" rel="noopener">photo</a> by Jazmin Quaynor (CC0)</li>
     <li>YouTube Videos: <a href="https://www.flickr.com/photos/9106303@N05/3495321482" target="_blank" rel="noopener">photo</a> by Mike Licht, NotionsCapital.com (CC BY 2.0)</li>
-    <li>Study With Me: <a href="https://stocksnap.io/photo/laptop-mac-AQNKPDGKR8" target="_blank" rel="noopener">photo</a> by Matthew Henry (CC0)</li>
   </ul></details>
   <footer>Made by <a href="https://plasmo.uk" target="_blank" rel="noopener">plasmo.uk</a></footer>
 </div>
@@ -138,17 +133,12 @@ const TIERS = ["S", "A", "B", "C", "D", "F"];
 const METHODS = [
   { id: "ppp", img: "images/ppp.jpg", name: "PPP Method", sub: "Past Paper Practice" },
   { id: "blurting", img: "images/blurting.jpg", name: "Blurting" },
-  { id: "flashcards", img: "images/flashcards.jpg", name: "Flashcards / Anki" },
-  { id: "2357", img: "images/2357.jpg", name: "2-3-5-7 Method", sub: "Spaced repetition" },
-  { id: "feynman", img: "images/feynman.jpg", name: "Feynman Technique", sub: "Teach it back" },
-  { id: "pomodoro", img: "images/pomodoro.jpg", name: "Pomodoro", sub: "25 on, 5 off" },
-  { id: "mindmaps", img: "images/mindmaps.jpg", name: "Mind Maps" },
-  { id: "highlighting", img: "images/highlighting.jpg", name: "Highlighting" },
-  { id: "rewriting", img: "images/rewriting.jpg", name: "Rewriting Notes" },
   { id: "youtube", img: "images/youtube.jpg", name: "YouTube Videos" },
-  { id: "studywithme", img: "images/studywithme.jpg", name: "Study With Me" },
+  { id: "flashcards", img: "images/flashcards.jpg", name: "Flashcards" },
+  { id: "mindmaps", img: "images/mindmaps.jpg", name: "Mind Maps" },
+  { id: "reading", img: "images/reading.jpg", name: "Reading & Highlighting" },
 ];
-const KEY = "revision-tier-list-v1";
+const KEY = "revision-tier-list-v2";
 
 function loadState() {
   try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.items) return s; } catch (e) {}
