@@ -1,94 +1,738 @@
 {
  "qualification": "Pearson Edexcel A-Level Mathematics (9MA0)",
  "modules": [
-  {"id": "M1", "title": "Core Foundation & Coordinate Geometry", "papers": "Paper 1 & 2 (Pure)", "subtopics": [
-   {"id": "1.1", "title": "Algebraic Expressions", "skills": [
-     ["Index laws", "laws of indices"], ["Expanding brackets", "expanding brackets"], ["Factorising", "factorising"],
-     ["Negative and fractional indices", "fractional indices"], ["Surds", "simplifying surds"], ["Rationalising denominators", "rationalising the denominator"]]},
-   {"id": "1.2", "title": "Quadratics", "skills": [
-     ["Solving by factorising", "solving quadratics factorising"], ["Quadratic formula", "quadratic formula"],
-     ["Completing the square", "completing the square"], ["The discriminant", "discriminant"],
-     ["Quadratic functions and graphs", "sketching quadratic graphs"], ["Hidden quadratics", "quadratics in disguise"]]},
-   {"id": "1.3", "title": "Equations and Inequalities", "skills": [
-     ["Linear simultaneous equations", "linear simultaneous equations"], ["Linear and quadratic simultaneous equations", "simultaneous equations one linear one quadratic"],
-     ["Linear inequalities", "linear inequalities"], ["Quadratic inequalities", "quadratic inequalities"],
-     ["Inequalities on graphs and regions", "inequalities regions graphs"], ["Set notation for solutions", "inequalities set notation"]]},
-   {"id": "1.4", "title": "Straight Line Graphs", "skills": [
-     ["Gradient and y = mx + c", "equation of a straight line"], ["y - y1 = m(x - x1) and ax + by + c = 0", "y - y1 = m(x - x1)"],
-     ["Parallel and perpendicular lines", "perpendicular lines"], ["Length and midpoint", "length of a line segment midpoint"],
-     ["Modelling with straight lines", "modelling with straight lines"]]},
-   {"id": "1.5", "title": "Circles", "skills": [
-     ["Equation of a circle", "equation of a circle"], ["Completing the square to find centre and radius", "circle completing the square centre radius"],
-     ["Tangents and normals to circles", "tangent to a circle"], ["Chords and perpendicular bisectors", "circle chord perpendicular bisector"],
-     ["Intersections of lines and circles", "line intersect circle discriminant"], ["Circle theorems in coordinate geometry", "circle theorems coordinate geometry"]]}
-  ]},
-  {"id": "M2", "title": "Functions, Expansions & Advanced Algebra", "papers": "Paper 1 & 2 (Pure)", "subtopics": [
-   {"id": "2.1", "title": "Algebraic Methods", "skills": [
-     ["Proof by deduction", "proof by deduction"], ["Proof by exhaustion", "proof by exhaustion"], ["Proof by contradiction", "proof by contradiction"],
-     ["Disproof by counter-example", "counter example"], ["Algebraic fractions", "simplifying algebraic fractions"], ["Polynomial division", "algebraic division"],
-     ["Factor theorem", "factor theorem"], ["Partial fractions", "partial fractions"], ["Partial fractions with repeated factors", "partial fractions repeated factor"]]},
-   {"id": "2.2", "title": "Functions and Graphs", "skills": [
-     ["Modulus function y = |x|", "modulus function"], ["Solving modulus equations and inequalities", "modulus equations"], ["Mappings and functions, domain and range", "domain and range"],
-     ["Composite functions", "composite functions"], ["Inverse functions", "inverse functions"], ["Transformations y = af(x), f(x)+a, f(x+a), f(ax)", "graph transformations"],
-     ["Modulus graphs y = |f(x)| and y = f(|x|)", "y = |f(x)| y = f(|x|)"], ["Combining transformations", "combinations of transformations"]]},
-   {"id": "2.3", "title": "Binomial Expansion", "skills": [
-     ["(a + b)^n for positive integer n", "binomial expansion positive integer"], ["(1 + x)^n for rational n", "binomial expansion negative fractional"],
-     ["(a + bx)^n for rational n", "binomial expansion (a+bx)^n"], ["Range of validity", "binomial expansion validity"],
-     ["Using partial fractions with expansions", "binomial expansion partial fractions"], ["Approximations using expansions", "binomial approximation"]]},
-   {"id": "2.4", "title": "Exponentials and Logarithms", "skills": [
-     ["Exponential functions and graphs", "exponential graphs"], ["e^x and ln x", "natural logarithm"], ["Laws of logarithms", "laws of logarithms"],
-     ["Solving exponential equations", "solving exponential equations"], ["Exponential growth and decay models", "exponential modelling"],
-     ["Non-linear data: log y against x and log y against log x", "logarithms reducing to linear form"], ["Gradient of e^kx", "gradient of e^kx"]]}
-  ]},
-  {"id": "M3", "title": "Sequences & Trigonometry", "papers": "Paper 1 & 2 (Pure)", "subtopics": [
-   {"id": "3.1", "title": "Sequences and Series", "skills": [
-     ["Arithmetic sequences", "arithmetic sequences"], ["Arithmetic series", "arithmetic series sum"], ["Geometric sequences", "geometric sequences"],
-     ["Geometric series", "geometric series sum"], ["Sum to infinity", "sum to infinity"], ["Sigma notation", "sigma notation"],
-     ["Recurrence relations, increasing / decreasing / periodic", "recurrence relations"], ["Modelling with series", "modelling with series"]]},
-   {"id": "3.2", "title": "Radians & Trigonometry", "skills": [
-     ["Radian measure", "radians"], ["Arc length", "arc length"], ["Sector and segment areas", "area of a sector"],
-     ["Small angle approximations", "small angle approximations"], ["sec, cosec and cot", "secant cosecant cotangent"],
-     ["Identities 1 + tan^2 = sec^2 and 1 + cot^2 = cosec^2", "sec^2 identity"], ["Inverse trig functions arcsin, arccos, arctan", "arcsin arccos arctan"]]},
-   {"id": "3.3", "title": "Advanced Trigonometry & Modelling", "skills": [
-     ["Addition formulae", "addition formulae"], ["Double-angle formulae", "double angle formulae"], ["Solving trig equations", "solving trigonometric equations"],
-     ["Harmonic form R cos(x ± a), R sin(x ± a)", "Rcos(x+a)"], ["Proving trig identities", "proving trigonometric identities"], ["Modelling with trig functions", "modelling with trigonometric functions"]]},
-   {"id": "3.4", "title": "Parametric Equations", "skills": [
-     ["Parametric to Cartesian", "parametric to cartesian"], ["Trig parametric conversions", "parametric equations trigonometric identities cartesian"],
-     ["Sketching parametric curves", "sketching parametric curves"], ["Intersections with parametric curves", "parametric equations intersection"],
-     ["Modelling with parametric equations", "modelling parametric equations"]]}
-  ]},
-  {"id": "M4", "title": "Calculus & Vectors", "papers": "Paper 1 & 2 (Pure)", "subtopics": [
-   {"id": "4.1", "title": "Differentiation", "skills": [
-     ["Differentiation from first principles", "differentiation from first principles"], ["Derivatives of sin x and cos x", "differentiating sin x first principles"],
-     ["Exponentials and logarithms", "differentiating e^x ln x"], ["Chain rule", "chain rule"], ["Product rule", "product rule"], ["Quotient rule", "quotient rule"],
-     ["Parametric differentiation", "parametric differentiation"], ["Implicit differentiation", "implicit differentiation"],
-     ["Second derivatives, stationary points, convex / concave, inflection", "points of inflection"], ["Tangents and normals", "tangents and normals"],
-     ["Optimisation", "optimisation problems"], ["Connected rates of change", "rates of change"]]},
-   {"id": "4.2", "title": "Integration", "skills": [
-     ["Standard integrals", "integrating standard functions"], ["Integrating f(ax + b)", "integrating f(ax+b)"], ["Reverse chain rule", "reverse chain rule"],
-     ["Using trig identities in integration", "integration trigonometric identities"], ["Integration by substitution", "integration by substitution"],
-     ["Integration by parts", "integration by parts"], ["Integration with partial fractions", "integration partial fractions"], ["Areas under curves and between curves", "area between two curves"],
-     ["Integration as the limit of a sum", "integration as the limit of a sum"], ["Trapezium rule", "trapezium rule"], ["Separable differential equations", "differential equations separating variables"], ["Modelling with differential equations", "modelling with differential equations"]]},
-   {"id": "4.3", "title": "Numerical Methods", "skills": [
-     ["Locating roots by change of sign", "change of sign"], ["When change of sign fails", "change of sign fails"], ["Fixed-point iteration x = g(x)", "iteration"],
-     ["Staircase and cobweb diagrams", "cobweb diagrams"], ["Newton-Raphson method", "Newton-Raphson"], ["Applications to modelling", "numerical methods modelling"]]},
-   {"id": "4.4", "title": "Vectors (3D)", "skills": [
-     ["3D coordinates and i, j, k notation", "3D vectors"], ["Magnitude and direction", "magnitude of a vector"], ["Position vectors and distance", "position vectors"],
-     ["Angles with axes", "vector angle with axes"], ["Geometric problems with vectors", "vectors geometric problems"], ["Vectors in mechanics", "vectors in mechanics"]]}
-  ]},
-  {"id": "M5", "title": "Applied: Statistics & Mechanics", "papers": "Paper 3", "subtopics": [
-   {"id": "5.1", "title": "Statistics", "skills": [
-     ["Populations and sampling methods", "sampling methods"], ["Measures of location and spread, coding", "measures of location and spread"],
-     ["Histograms, box plots, cumulative frequency, outliers", "histograms"], ["Correlation and regression", "correlation and regression"],
-     ["The large data set", "large data set"], ["Probability: Venn diagrams and set notation", "venn diagrams set notation probability"],
-     ["Conditional probability and tree diagrams", "conditional probability"], ["Binomial distribution", "binomial distribution"],
-     ["Hypothesis testing: critical regions and p-values", "hypothesis testing binomial critical region"], ["Normal distribution", "normal distribution"],
-     ["Normal approximation to binomial", "normal approximation to the binomial"], ["Hypothesis testing: normal mean and correlation", "hypothesis testing normal distribution mean"]]},
-   {"id": "5.2", "title": "Mechanics", "skills": [
-     ["Quantities and units, modelling assumptions", "modelling in mechanics"], ["Constant acceleration: suvat", "suvat"], ["Motion graphs", "velocity time graphs"],
-     ["Variable acceleration with calculus", "variable acceleration"], ["2D motion with vectors", "vectors kinematics"], ["Newton's laws and resolving forces", "resolving forces"],
-     ["Friction", "friction"], ["Connected particles and pulleys", "connected particles pulleys"], ["Inclined planes", "inclined plane"],
-     ["Moments, equilibrium and centre of mass", "moments"], ["Projectiles", "projectiles"]]}
-  ]}
+  {
+   "id": "M1",
+   "title": "Core Foundation & Coordinate Geometry",
+   "papers": "Paper 1 & 2 (Pure)",
+   "subtopics": [
+    {
+     "id": "1.1",
+     "title": "Algebraic Expressions",
+     "skills": [
+      [
+       "Index laws",
+       "laws of indices"
+      ],
+      [
+       "Expanding brackets",
+       "expanding brackets"
+      ],
+      [
+       "Factorising",
+       "factorising"
+      ],
+      [
+       "Negative and fractional indices",
+       "fractional indices"
+      ],
+      [
+       "Surds",
+       "simplifying surds"
+      ],
+      [
+       "Rationalising denominators",
+       "rationalising the denominator"
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "title": "Quadratics",
+     "skills": [
+      [
+       "Solving by factorising",
+       "solving quadratics factorising"
+      ],
+      [
+       "Quadratic formula",
+       "quadratic formula"
+      ],
+      [
+       "Completing the square",
+       "completing the square"
+      ],
+      [
+       "The discriminant",
+       "discriminant"
+      ],
+      [
+       "Quadratic functions and graphs",
+       "sketching quadratic graphs"
+      ],
+      [
+       "Hidden quadratics",
+       "quadratics in disguise"
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "title": "Equations and Inequalities",
+     "skills": [
+      [
+       "Linear simultaneous equations",
+       "linear simultaneous equations"
+      ],
+      [
+       "Linear and quadratic simultaneous equations",
+       "simultaneous equations one linear one quadratic"
+      ],
+      [
+       "Linear inequalities",
+       "linear inequalities"
+      ],
+      [
+       "Quadratic inequalities",
+       "quadratic inequalities"
+      ],
+      [
+       "Inequalities on graphs and regions",
+       "inequalities regions graphs"
+      ],
+      [
+       "Set notation for solutions",
+       "inequalities set notation"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "title": "Straight Line Graphs",
+     "skills": [
+      [
+       "Gradient and y = mx + c",
+       "equation of a straight line"
+      ],
+      [
+       "y - y1 = m(x - x1) and ax + by + c = 0",
+       "y - y1 = m(x - x1)"
+      ],
+      [
+       "Parallel and perpendicular lines",
+       "perpendicular lines"
+      ],
+      [
+       "Length and midpoint",
+       "length of a line segment midpoint"
+      ],
+      [
+       "Modelling with straight lines",
+       "modelling with straight lines"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "title": "Circles",
+     "skills": [
+      [
+       "Equation of a circle",
+       "equation of a circle"
+      ],
+      [
+       "Completing the square to find centre and radius",
+       "circle completing the square centre radius"
+      ],
+      [
+       "Tangents and normals to circles",
+       "tangent to a circle"
+      ],
+      [
+       "Chords and perpendicular bisectors",
+       "circle chord perpendicular bisector"
+      ],
+      [
+       "Intersections of lines and circles",
+       "line intersect circle discriminant"
+      ],
+      [
+       "Circle theorems in coordinate geometry",
+       "circle theorems coordinate geometry"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "title": "Functions, Expansions & Advanced Algebra",
+   "papers": "Paper 1 & 2 (Pure)",
+   "subtopics": [
+    {
+     "id": "2.1",
+     "title": "Algebraic Methods",
+     "skills": [
+      [
+       "Proof by deduction",
+       "proof by deduction"
+      ],
+      [
+       "Proof by exhaustion",
+       "proof by exhaustion"
+      ],
+      [
+       "Proof by contradiction",
+       "proof by contradiction"
+      ],
+      [
+       "Disproof by counter-example",
+       "counter example"
+      ],
+      [
+       "Algebraic fractions",
+       "simplifying algebraic fractions"
+      ],
+      [
+       "Polynomial division",
+       "algebraic division"
+      ],
+      [
+       "Factor theorem",
+       "factor theorem"
+      ],
+      [
+       "Partial fractions",
+       "partial fractions"
+      ],
+      [
+       "Partial fractions with repeated factors",
+       "partial fractions repeated factor"
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "title": "Functions and Graphs",
+     "skills": [
+      [
+       "Modulus function y = |x|",
+       "modulus function"
+      ],
+      [
+       "Solving modulus equations and inequalities",
+       "modulus equations"
+      ],
+      [
+       "Mappings and functions, domain and range",
+       "domain and range"
+      ],
+      [
+       "Composite functions",
+       "composite functions"
+      ],
+      [
+       "Inverse functions",
+       "inverse functions"
+      ],
+      [
+       "Transformations y = af(x), f(x)+a, f(x+a), f(ax)",
+       "graph transformations"
+      ],
+      [
+       "Modulus graphs y = |f(x)| and y = f(|x|)",
+       "y = |f(x)| y = f(|x|)"
+      ],
+      [
+       "Combining transformations",
+       "combinations of transformations"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "title": "Binomial Expansion",
+     "skills": [
+      [
+       "(a + b)^n for positive integer n",
+       "binomial expansion positive integer"
+      ],
+      [
+       "(1 + x)^n for rational n",
+       "binomial expansion negative fractional"
+      ],
+      [
+       "(a + bx)^n for rational n",
+       "binomial expansion (a+bx)^n"
+      ],
+      [
+       "Range of validity",
+       "binomial expansion validity"
+      ],
+      [
+       "Using partial fractions with expansions",
+       "binomial expansion partial fractions"
+      ],
+      [
+       "Approximations using expansions",
+       "binomial approximation"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "title": "Exponentials and Logarithms",
+     "skills": [
+      [
+       "Exponential functions and graphs",
+       "exponential graphs"
+      ],
+      [
+       "e^x and ln x",
+       "natural logarithm"
+      ],
+      [
+       "Laws of logarithms",
+       "laws of logarithms"
+      ],
+      [
+       "Solving exponential equations",
+       "solving exponential equations"
+      ],
+      [
+       "Exponential growth and decay models",
+       "exponential modelling"
+      ],
+      [
+       "Non-linear data: log y against x and log y against log x",
+       "logarithms reducing to linear form"
+      ],
+      [
+       "Gradient of e^kx",
+       "gradient of e^kx"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M3",
+   "title": "Sequences & Trigonometry",
+   "papers": "Paper 1 & 2 (Pure)",
+   "subtopics": [
+    {
+     "id": "3.1",
+     "title": "Sequences and Series",
+     "skills": [
+      [
+       "Arithmetic sequences",
+       "arithmetic sequences"
+      ],
+      [
+       "Arithmetic series",
+       "arithmetic series sum"
+      ],
+      [
+       "Geometric sequences",
+       "geometric sequences"
+      ],
+      [
+       "Geometric series",
+       "geometric series sum"
+      ],
+      [
+       "Sum to infinity",
+       "sum to infinity"
+      ],
+      [
+       "Sigma notation",
+       "sigma notation"
+      ],
+      [
+       "Recurrence relations, increasing / decreasing / periodic",
+       "recurrence relations"
+      ],
+      [
+       "Modelling with series",
+       "modelling with series"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "title": "Radians & Trigonometry",
+     "skills": [
+      [
+       "Radian measure",
+       "radians"
+      ],
+      [
+       "Arc length",
+       "arc length"
+      ],
+      [
+       "Sector and segment areas",
+       "area of a sector"
+      ],
+      [
+       "Small angle approximations",
+       "small angle approximations"
+      ],
+      [
+       "sec, cosec and cot",
+       "secant cosecant cotangent"
+      ],
+      [
+       "Identities 1 + tan^2 = sec^2 and 1 + cot^2 = cosec^2",
+       "sec^2 identity"
+      ],
+      [
+       "Inverse trig functions arcsin, arccos, arctan",
+       "arcsin arccos arctan"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "title": "Advanced Trigonometry & Modelling",
+     "skills": [
+      [
+       "Addition formulae",
+       "addition formulae"
+      ],
+      [
+       "Double-angle formulae",
+       "double angle formulae"
+      ],
+      [
+       "Solving trig equations",
+       "solving trigonometric equations"
+      ],
+      [
+       "Harmonic form R cos(x ± a), R sin(x ± a)",
+       "Rcos(x+a)"
+      ],
+      [
+       "Proving trig identities",
+       "proving trigonometric identities"
+      ],
+      [
+       "Modelling with trig functions",
+       "modelling with trigonometric functions"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "title": "Parametric Equations",
+     "skills": [
+      [
+       "Parametric to Cartesian",
+       "parametric to cartesian"
+      ],
+      [
+       "Trig parametric conversions",
+       "parametric equations trigonometric identities cartesian"
+      ],
+      [
+       "Sketching parametric curves",
+       "sketching parametric curves"
+      ],
+      [
+       "Intersections with parametric curves",
+       "parametric equations intersection"
+      ],
+      [
+       "Modelling with parametric equations",
+       "modelling parametric equations"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M4",
+   "title": "Calculus & Vectors",
+   "papers": "Paper 1 & 2 (Pure)",
+   "subtopics": [
+    {
+     "id": "4.1",
+     "title": "Differentiation",
+     "skills": [
+      [
+       "Differentiation from first principles",
+       "differentiation from first principles"
+      ],
+      [
+       "Derivatives of sin x and cos x",
+       "differentiating sin x first principles"
+      ],
+      [
+       "Exponentials and logarithms",
+       "differentiating e^x ln x"
+      ],
+      [
+       "Chain rule",
+       "chain rule"
+      ],
+      [
+       "Product rule",
+       "product rule"
+      ],
+      [
+       "Quotient rule",
+       "quotient rule"
+      ],
+      [
+       "Parametric differentiation",
+       "parametric differentiation"
+      ],
+      [
+       "Implicit differentiation",
+       "implicit differentiation"
+      ],
+      [
+       "Second derivatives, stationary points, convex / concave, inflection",
+       "points of inflection"
+      ],
+      [
+       "Tangents and normals",
+       "tangents and normals"
+      ],
+      [
+       "Optimisation",
+       "optimisation problems"
+      ],
+      [
+       "Connected rates of change",
+       "rates of change"
+      ],
+      [
+       "Differentiating powers of x and polynomials",
+       "differentiate x^n, polynomials, dy/dx of sums of powers"
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "title": "Integration",
+     "skills": [
+      [
+       "Standard integrals",
+       "integrating standard functions"
+      ],
+      [
+       "Integrating f(ax + b)",
+       "integrating f(ax+b)"
+      ],
+      [
+       "Reverse chain rule",
+       "reverse chain rule"
+      ],
+      [
+       "Using trig identities in integration",
+       "integration trigonometric identities"
+      ],
+      [
+       "Integration by substitution",
+       "integration by substitution"
+      ],
+      [
+       "Integration by parts",
+       "integration by parts"
+      ],
+      [
+       "Integration with partial fractions",
+       "integration partial fractions"
+      ],
+      [
+       "Areas under curves and between curves",
+       "area between two curves"
+      ],
+      [
+       "Integration as the limit of a sum",
+       "integration as the limit of a sum"
+      ],
+      [
+       "Trapezium rule",
+       "trapezium rule"
+      ],
+      [
+       "Separable differential equations",
+       "differential equations separating variables"
+      ],
+      [
+       "Modelling with differential equations",
+       "modelling with differential equations"
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "title": "Numerical Methods",
+     "skills": [
+      [
+       "Locating roots by change of sign",
+       "change of sign"
+      ],
+      [
+       "When change of sign fails",
+       "change of sign fails"
+      ],
+      [
+       "Fixed-point iteration x = g(x)",
+       "iteration"
+      ],
+      [
+       "Staircase and cobweb diagrams",
+       "cobweb diagrams"
+      ],
+      [
+       "Newton-Raphson method",
+       "Newton-Raphson"
+      ],
+      [
+       "Applications to modelling",
+       "numerical methods modelling"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "title": "Vectors (3D)",
+     "skills": [
+      [
+       "3D coordinates and i, j, k notation",
+       "3D vectors"
+      ],
+      [
+       "Magnitude and direction",
+       "magnitude of a vector"
+      ],
+      [
+       "Position vectors and distance",
+       "position vectors"
+      ],
+      [
+       "Angles with axes",
+       "vector angle with axes"
+      ],
+      [
+       "Geometric problems with vectors",
+       "vectors geometric problems"
+      ],
+      [
+       "Vectors in mechanics",
+       "vectors in mechanics"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M5",
+   "title": "Applied: Statistics & Mechanics",
+   "papers": "Paper 3",
+   "subtopics": [
+    {
+     "id": "5.1",
+     "title": "Statistics",
+     "skills": [
+      [
+       "Populations and sampling methods",
+       "sampling methods"
+      ],
+      [
+       "Measures of location and spread, coding",
+       "measures of location and spread"
+      ],
+      [
+       "Histograms, box plots, cumulative frequency, outliers",
+       "histograms"
+      ],
+      [
+       "Correlation and regression",
+       "correlation and regression"
+      ],
+      [
+       "The large data set",
+       "large data set"
+      ],
+      [
+       "Probability: Venn diagrams and set notation",
+       "venn diagrams set notation probability"
+      ],
+      [
+       "Conditional probability and tree diagrams",
+       "conditional probability"
+      ],
+      [
+       "Binomial distribution",
+       "binomial distribution"
+      ],
+      [
+       "Hypothesis testing: critical regions and p-values",
+       "hypothesis testing binomial critical region"
+      ],
+      [
+       "Normal distribution",
+       "normal distribution"
+      ],
+      [
+       "Normal approximation to binomial",
+       "normal approximation to the binomial"
+      ],
+      [
+       "Hypothesis testing: normal mean and correlation",
+       "hypothesis testing normal distribution mean"
+      ],
+      [
+       "Discrete probability distributions",
+       "discrete random variables, probability distribution tables, uniform distribution"
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "title": "Mechanics",
+     "skills": [
+      [
+       "Quantities and units, modelling assumptions",
+       "modelling in mechanics"
+      ],
+      [
+       "Constant acceleration: suvat",
+       "suvat"
+      ],
+      [
+       "Motion graphs",
+       "velocity time graphs"
+      ],
+      [
+       "Variable acceleration with calculus",
+       "variable acceleration"
+      ],
+      [
+       "2D motion with vectors",
+       "vectors kinematics"
+      ],
+      [
+       "Newton's laws and resolving forces",
+       "resolving forces"
+      ],
+      [
+       "Friction",
+       "friction"
+      ],
+      [
+       "Connected particles and pulleys",
+       "connected particles pulleys"
+      ],
+      [
+       "Inclined planes",
+       "inclined plane"
+      ],
+      [
+       "Moments, equilibrium and centre of mass",
+       "moments"
+      ],
+      [
+       "Projectiles",
+       "projectiles"
+      ]
+     ]
+    }
+   ]
+  }
  ]
 }

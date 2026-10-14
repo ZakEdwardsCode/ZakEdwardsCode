@@ -17,7 +17,7 @@ def run(a):
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     tax = load_json("taxonomy.json")
-    titles = {s["id"]: s["title"] for m in tax["modules"] for s in m["subtopics"]}
+    titles = pp.titles()
     filters = dict(years=a.years, papers=a.papers, primary_only=a.primary_only)
     include_ms, inline = a.ms != "none", a.ms == "inline"
     jobs = []

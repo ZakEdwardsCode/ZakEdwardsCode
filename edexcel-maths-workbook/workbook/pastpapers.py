@@ -1,4 +1,4 @@
-"""Real Pearson Edexcel 9MA0 past-paper questions: download, select by topic, stamp, print.
+"""Real Pearson Edexcel past-paper questions (9MA0, IAL P1-P4, legacy C1-C4): download, select by topic, stamp, print.
 
 The papers themselves are not stored in this repository. `fetch()` downloads the official question
 papers and mark schemes (as published by Pearson, mirrored by Physics & Maths Tutor) into a local
@@ -75,7 +75,7 @@ def url(rel):
 def fetch(cache="papers_cache", quiet=False):
     """Download every question paper and mark scheme that is not already cached."""
     cache = Path(cache)
-    todo = [rel for s in SOURCES for rel in (s["qp"], s["ms"])]
+    todo = list(dict.fromkeys(rel for p in index() for rel in (p["qp"], p["ms"])))
     for rel in todo:
         dest = cache_path(cache, rel)
         if dest.exists() and dest.stat().st_size > 10_000:
@@ -115,35 +115,64 @@ def _short(p_label, n):
     return f"{p_label} Q{n}"
 
 
-def select(topics=None, modules=None, skills=None, years=None, papers=None, primary_only=False):
-    """Group matching questions into {subtopic_id: [questions]} in syllabus order.
+def titles():
+    """Section titles for subtopic ids ("1.2") and skill codes ("1.2.3")."""
+    out = {}
+    for m in load_json("taxonomy.json")["modules"]:
+        for s in m["subtopics"]:
+            out[s["id"]] = s["title"]
+            for i, k in enumerate(s["skills"]):
+                out[f"{s['id']}.{i}"] = f"{s['title']}: {k[0]}"
+    return out
 
-    A question can carry several topic tags (main topic first). In one booklet it appears once, under
-    the first of its tags you selected; with primary_only it is only picked up by its main topic.
-    Skill queries (e.g. "projectile") match the Paper 3 skill tags by substring.
+
+def select(topics=None, modules=None, skills=None, years=None, papers=None, primary_only=False):
+    """Group matching questions into {section_id: [questions]} in syllabus order.
+
+    Every question carries skill codes "S.T.I" (main skill first). Modules and topics give one
+    section per subtopic; skills ("1.2.3" exact codes, or words matched against skill names) give
+    one section per skill. A question appears once per booklet, under the first of its tags you
+    selected; with primary_only it is only picked up by its main skill.
     """
     tax = load_json("taxonomy.json")
-    order = [s["id"] for m in tax["modules"] for s in m["subtopics"]]
-    wanted = set()
+    names = titles()
+    order = []
+    for m in tax["modules"]:
+        for s in m["subtopics"]:
+            order.append(s["id"])
+            order += [f"{s['id']}.{i}" for i in range(len(s["skills"]))]
+    codes = [c for c in order if c.count(".") == 2]
+    by_topic = set()
     for m in tax["modules"]:
         for s in m["subtopics"]:
             if (modules and int(m["id"][1:]) in modules) or (topics and s["id"] in topics):
-                wanted.add(s["id"])
+                by_topic.add(s["id"])
     if not (topics or modules or skills):
-        wanted = set(order)
-    sq = [k.lower() for k in (skills or [])]
+        by_topic = {c for c in order if c.count(".") == 1}
+    by_skill = set()
+    for k in skills or []:
+        if k in codes:
+            by_skill.add(k)
+        elif k.count(".") == 1 and k + ".0" in codes:
+            by_skill |= {c for c in codes if c.startswith(k + ".")}
+        else:
+            by_skill |= {c for c in codes if k.lower() in names[c].lower()}
+
+    def home(code):
+        if code in by_skill:
+            return code
+        topic = code.rsplit(".", 1)[0]
+        return topic if topic in by_topic else None
+
     sections: dict[str, list] = {}
     for q in sorted(all_questions(), key=lambda q: (-q["year"], q["paper"], q["n"])):
-        if years and q["year"] not in years:
+        if not q["skills"] or (years and q["year"] not in years):
             continue
-        if papers and not any(q["paper"].startswith(str(p)) for p in papers):
+        if papers and not any(q["paper"].upper().startswith(str(p).upper()) for p in papers):
             continue
-        tags = q["topics"][:1] if primary_only else q["topics"]
-        home = next((t for t in tags if t in wanted), None)
-        if home is None and sq and any(k in s.lower() for k in sq for s in q["skills"]):
-            home = q["topics"][0]
-        if home:
-            sections.setdefault(home, []).append(q)
+        sid = next((h for h in map(home, q["skills"][:1] if primary_only else q["skills"]) if h), None)
+        if sid:
+            sections.setdefault(sid, []).append(q)
     return {sid: sections[sid] for sid in order if sid in sections}
 
 
@@ -197,8 +226,7 @@ def build_booklet(path, title, sections, cache="papers_cache", include_ms=True, 
     from reportlab.platypus import PageBreak, Paragraph, Spacer, Table, TableStyle
     from xml.sax.saxutils import escape
 
-    tax = load_json("taxonomy.json")
-    titles = {s["id"]: s["title"] for m in tax["modules"] for s in m["subtopics"]}
+    names = titles()
     readers: dict[str, PdfReader] = {}
 
     def reader(rel):
@@ -209,7 +237,7 @@ def build_booklet(path, title, sections, cache="papers_cache", include_ms=True, 
     # front matter: cover + checklist, rendered with reportlab
     total_q = sum(len(v) for v in sections.values())
     total_m = sum(q["marks"] for v in sections.values() for q in v)
-    story = [Spacer(1, 18 * mm), Paragraph("Pearson Edexcel A-Level Mathematics (9MA0) · real past-paper questions", layout.ST["label"]),
+    story = [Spacer(1, 18 * mm), Paragraph("Pearson Edexcel A-Level Mathematics · real past-paper questions (9MA0, IAL and legacy papers)", layout.ST["label"]),
              Spacer(1, 4), Paragraph(escape(title), layout.ST["h1"])]
     if subtitle:
         story.append(Paragraph(escape(subtitle), layout.ST["small"]))
@@ -217,9 +245,9 @@ def build_booklet(path, title, sections, cache="papers_cache", include_ms=True, 
                                       + (" · mark schemes " + ("after each question" if ms_inline else "at the back") if include_ms else ""), layout.ST["small"]),
               Spacer(1, 10)]
     for sid, qs in sections.items():
-        rows = [[Paragraph(f"<b>{sid} {escape(titles[sid])}</b>", layout.ST["small"]), Paragraph("Marks", layout.ST["label"]), Paragraph("Todo", layout.ST["label"]), Paragraph("Mastered", layout.ST["label"])]]
+        rows = [[Paragraph(f"<b>{sid} {escape(names[sid])}</b>", layout.ST["small"]), Paragraph("Marks", layout.ST["label"]), Paragraph("Todo", layout.ST["label"]), Paragraph("Mastered", layout.ST["label"])]]
         for q in qs:
-            extra = (" — " + ", ".join(q["skills"])) if q["skills"] else ""
+            extra = " — " + names[q["skills"][0]].split(": ", 1)[1]
             rows.append([Paragraph(escape(_short(q["paper_label"], q["n"]) + extra), layout.ST["small"]), Paragraph(str(q["marks"]), layout.ST["small"]),
                          Paragraph(layout.BOX, layout.ST["center"]), Paragraph(layout.BOX, layout.ST["center"])])
         t = Table(rows, colWidths=[None, 14 * mm, 14 * mm, 18 * mm], repeatRows=1)
@@ -229,7 +257,7 @@ def build_booklet(path, title, sections, cache="papers_cache", include_ms=True, 
     story += [Spacer(1, 6), Paragraph(f"Built {date.today():%d %b %Y}. Questions © Pearson Education Ltd, for personal revision only.", layout.ST["tiny"])]
 
     # front matter and every divider page in ONE reportlab document, so fonts are embedded once
-    dividers = [(f"{sid} {titles[sid]}", f"{len(qs)} questions \u00b7 {sum(q['marks'] for q in qs)} marks") for sid, qs in sections.items()]
+    dividers = [(f"{sid} {names[sid]}", f"{len(qs)} questions \u00b7 {sum(q['marks'] for q in qs)} marks") for sid, qs in sections.items()]
     if include_ms and not ms_inline:
         dividers.append(("Mark schemes", "In the same order as the questions. Each page is labelled with the question it belongs to."))
     marks_at: dict = {}
@@ -237,7 +265,7 @@ def build_booklet(path, title, sections, cache="papers_cache", include_ms=True, 
     for k, (text, sub) in enumerate(dividers):
         flow += [PageBreak(), layout.Marker(marks_at, k), Spacer(1, 90 * mm), Paragraph(escape(text), layout.ST["h1"]), Paragraph(escape(sub), layout.ST["small"])]
     front = io.BytesIO()
-    layout.Doc(front, title, f"9MA0 past papers \u00b7 {title}").build(flow)
+    layout.Doc(front, title, f"Edexcel past papers \u00b7 {title}").build(flow)
     front.seek(0)
     fr = PdfReader(front)
     n_front = marks_at[0] - 1 if dividers else len(fr.pages)
@@ -257,9 +285,9 @@ def build_booklet(path, title, sections, cache="papers_cache", include_ms=True, 
                 writer.add_page(_stamped(r.pages[p - 1], left, right))
 
     for sid, qs in sections.items():
-        add_divider(f"{sid} {titles[sid]}", f"{len(qs)} questions · {sum(q['marks'] for q in qs)} marks")
+        add_divider(f"{sid} {names[sid]}", f"{len(qs)} questions · {sum(q['marks'] for q in qs)} marks")
         for q in qs:
-            label = f"{sid} {titles[sid]}  |  {_short(q['paper_label'], q['n'])}  |  {q['marks']} marks"
+            label = f"{sid} {names[sid]}  |  {_short(q['paper_label'], q['n'])}  |  {q['marks']} marks"
             add_pages(q["qp"], q["pages"], label, ["Todo", "Mastered", "Score ____ / " + str(q["marks"])])
             if include_ms and ms_inline:
                 a, b = q["ms_pages"]
@@ -271,7 +299,7 @@ def build_booklet(path, title, sections, cache="papers_cache", include_ms=True, 
         for sid, qs in sections.items():
             for q in qs:
                 a, b = q["ms_pages"]
-                add_pages(q["ms"], range(a, b + 1), f"Mark scheme  |  {_short(q['paper_label'], q['n'])}", f"{sid} {titles[sid]}  |  rows for Q{q['n']}")
+                add_pages(q["ms"], range(a, b + 1), f"Mark scheme  |  {_short(q['paper_label'], q['n'])}", f"{sid} {names[sid]}  |  rows for Q{q['n']}")
     with open(path, "wb") as fh:
         writer.write(fh)
     _optimise(path)

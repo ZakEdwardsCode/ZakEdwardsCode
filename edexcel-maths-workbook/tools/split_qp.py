@@ -2,7 +2,7 @@ import re, glob, json, sys
 from pypdf import PdfReader
 CONT = re.compile(r"Question\s+(\d{1,2})\s+continued", re.I)
 START = re.compile(r"(?:^|\n)\s*(\d{1,2})\s*\.(?!\d)")
-TOTAL = re.compile(r"\(Total\s+for\s+Question\s+(\d{1,2})\s+is\s+(\d{1,2})\s+marks?\)", re.I)
+TOTAL = re.compile(r"\(Total\s+for\s+Question\s+(\d{1,2})\s+is\s+(\d{1,2})\s+marks?\)|Q\s?(\d{1,2})\s*\|?\s*\(Total\s+(\d{1,2})\s+marks?\)", re.I)
 
 def split_qp(path):
     r = PdfReader(path)
@@ -14,7 +14,7 @@ def split_qp(path):
         if i == 1:
             continue
         c = CONT.search(t)
-        totals = TOTAL.findall(t)
+        totals = [(a or c, b or d) for a, b, c, d in TOTAL.findall(t.replace("\n", " | "))]
         started = None
         if not c:
             body = t.split("DO NOT WRITE IN THIS AREA")[-1]
@@ -44,6 +44,16 @@ def split_qp(path):
                 if q["n"] == int(qn):
                     q["marks"] = int(mk)
                     break
+    # fallback: add up the part marks "(n)" printed on their own line
+    if any(q["marks"] is None for q in qs):
+        for q in qs:
+            if q["marks"] is None:
+                tot = 0
+                for pg in q["pages"]:
+                    t = r.pages[pg - 1].extract_text() or ""
+                    tot += sum(int(m) for m in re.findall(r"(?:^|\n)\s*\((\d{1,2})\)\s*(?=\n|$)", t))
+                q["marks"] = tot or None
+                q["marks_from_parts"] = True
     return qs
 
 if __name__ == "__main__":

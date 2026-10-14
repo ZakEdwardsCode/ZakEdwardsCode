@@ -1940,6 +1940,32 @@
        "channel": "ExamSolutions"
       }
      ]
+    },
+    {
+     "name": "Differentiating powers of x and polynomials",
+     "videos": [
+      {
+       "id": "UIa3bdYeRxE",
+       "title": "A-Level Maths: G2-01 [Differentiation: Differentiate x^n, n a positive integer]",
+       "views": "46,006 views",
+       "len": "4:38",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "JbHC0D-DCsc",
+       "title": "A-Level Maths: G1-04 [Differentiation: Differentiating Polynomials]",
+       "views": "62,148 views",
+       "len": "2:30",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "NpsAg7nR-3Y",
+       "title": "Differentiation: ax^n terms containing Fractional and Negative powers",
+       "views": "95,603 views",
+       "len": "8:31",
+       "channel": "ExamSolutions"
+      }
+     ]
     }
    ]
   },
@@ -2628,6 +2654,32 @@
        "title": "Introduction to Hypothesis testing for Normal distribution",
        "views": "65,027 views",
        "len": "13:12",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Discrete probability distributions",
+     "videos": [
+      {
+       "id": "GKE_IIEO8sE",
+       "title": "A-Level Maths: N1-01 [DRV: Introducing Discrete Random Variables]",
+       "views": "125,016 views",
+       "len": "7:55",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "bdW3-y33fZ0",
+       "title": "A-Level Maths N1-11 [DRV: Discrete Uniform Distributions]",
+       "views": "56,778 views",
+       "len": "2:03",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "bxrudsvTUsg",
+       "title": "Constructing a Probability Distribution Table",
+       "views": "422,629 views",
+       "len": "11:56",
        "channel": "ExamSolutions"
       }
      ]
