@@ -1,0 +1,7889 @@
+[
+ {
+  "id": "P1-SP",
+  "label": "Specimen Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "Specimen",
+  "year": 2017,
+  "qp": "Paper-1/QP/Specimen QP.pdf",
+  "ms": "Paper-1/MS/Specimen MS.pdf",
+  "questions": [
+   {
+    "id": "P1-SP-Q1",
+    "n": 1,
+    "marks": 6,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     1,
+     1
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q2",
+    "n": 2,
+    "marks": 8,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     2,
+     3
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q3",
+    "n": 3,
+    "marks": 4,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     4,
+     4
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q4",
+    "n": 4,
+    "marks": 5,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     5,
+     5
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q5",
+    "n": 5,
+    "marks": 10,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "2.1",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q7",
+    "n": 7,
+    "marks": 5,
+    "pages": [
+     14,
+     15
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q8",
+    "n": 8,
+    "marks": 5,
+    "pages": [
+     16,
+     17
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q9",
+    "n": 9,
+    "marks": 5,
+    "pages": [
+     18,
+     19
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q10",
+    "n": 10,
+    "marks": 13,
+    "pages": [
+     20,
+     21
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q11",
+    "n": 11,
+    "marks": 10,
+    "pages": [
+     22,
+     23
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q12",
+    "n": 12,
+    "marks": 7,
+    "pages": [
+     24,
+     25
+    ],
+    "ms_pages": [
+     18,
+     19
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q13",
+    "n": 13,
+    "marks": 11,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     20,
+     22
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-SP-Q14",
+    "n": 14,
+    "marks": 5,
+    "pages": [
+     30,
+     31,
+     32
+    ],
+    "ms_pages": [
+     23,
+     24
+    ],
+    "topics": [
+     "3.4"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-SP",
+  "label": "Specimen Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "Specimen",
+  "year": 2017,
+  "qp": "Paper-2/QP/Specimen QP.pdf",
+  "ms": "Paper-2/MS/Specimen MS.pdf",
+  "questions": [
+   {
+    "id": "P2-SP-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     1,
+     1
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     2,
+     2
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q3",
+    "n": 3,
+    "marks": 4,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     3,
+     3
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q4",
+    "n": 4,
+    "marks": 6,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     4,
+     5
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q5",
+    "n": 5,
+    "marks": 5,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "1.2",
+     "1.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q6",
+    "n": 6,
+    "marks": 9,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "4.1",
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q7",
+    "n": 7,
+    "marks": 12,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "4.2",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q8",
+    "n": 8,
+    "marks": 7,
+    "pages": [
+     18,
+     19
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q9",
+    "n": 9,
+    "marks": 9,
+    "pages": [
+     20,
+     21
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q10",
+    "n": 10,
+    "marks": 9,
+    "pages": [
+     22,
+     23
+    ],
+    "ms_pages": [
+     15,
+     17
+    ],
+    "topics": [
+     "4.2",
+     "3.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q11",
+    "n": 11,
+    "marks": 5,
+    "pages": [
+     24,
+     25
+    ],
+    "ms_pages": [
+     18,
+     18
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q12",
+    "n": 12,
+    "marks": 7,
+    "pages": [
+     26,
+     27
+    ],
+    "ms_pages": [
+     19,
+     19
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q13",
+    "n": 13,
+    "marks": 10,
+    "pages": [
+     28,
+     29
+    ],
+    "ms_pages": [
+     20,
+     21
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-SP-Q14",
+    "n": 14,
+    "marks": 8,
+    "pages": [
+     30,
+     31,
+     32
+    ],
+    "ms_pages": [
+     22,
+     23
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P1-J18",
+  "label": "June 2018 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "June 2018",
+  "year": 2018,
+  "qp": "Paper-1/QP/June 2018 QP.pdf",
+  "ms": "Paper-1/MS/June 2018 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-J18-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q2",
+    "n": 2,
+    "marks": 7,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q3",
+    "n": 3,
+    "marks": 4,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q4",
+    "n": 4,
+    "marks": 4,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "4.3",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q5",
+    "n": 5,
+    "marks": 5,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "4.1",
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q6",
+    "n": 6,
+    "marks": 10,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "1.5",
+     "1.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q7",
+    "n": 7,
+    "marks": 7,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     14,
+     14
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q8",
+    "n": 8,
+    "marks": 5,
+    "pages": [
+     20,
+     21
+    ],
+    "ms_pages": [
+     15,
+     15
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q9",
+    "n": 9,
+    "marks": 10,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q10",
+    "n": 10,
+    "marks": 8,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     18,
+     19
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q11",
+    "n": 11,
+    "marks": 10,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     20,
+     21
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q12",
+    "n": 12,
+    "marks": 10,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     22,
+     22
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q13",
+    "n": 13,
+    "marks": 7,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     22,
+     25
+    ],
+    "topics": [
+     "4.2",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J18-Q14",
+    "n": 14,
+    "marks": 10,
+    "pages": [
+     42,
+     43,
+     44
+    ],
+    "ms_pages": [
+     26,
+     27
+    ],
+    "topics": [
+     "3.4"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-J18",
+  "label": "June 2018 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "June 2018",
+  "year": 2018,
+  "qp": "Paper-2/QP/June 2018 QP.pdf",
+  "ms": "Paper-2/MS/June 2018 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-J18-Q1",
+    "n": 1,
+    "marks": 6,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q3",
+    "n": 3,
+    "marks": 5,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "2.1",
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q4",
+    "n": 4,
+    "marks": 7,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q5",
+    "n": 5,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     18,
+     19
+    ],
+    "topics": [
+     "2.1",
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q7",
+    "n": 7,
+    "marks": 9,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     20,
+     23
+    ],
+    "topics": [
+     "3.3",
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q8",
+    "n": 8,
+    "marks": 7,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     24,
+     25
+    ],
+    "topics": [
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q9",
+    "n": 9,
+    "marks": 5,
+    "pages": [
+     24,
+     25
+    ],
+    "ms_pages": [
+     26,
+     27
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q10",
+    "n": 10,
+    "marks": 8,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     28,
+     29
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q11",
+    "n": 11,
+    "marks": 7,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     30,
+     33
+    ],
+    "topics": [
+     "2.1",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q12",
+    "n": 12,
+    "marks": 9,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     34,
+     35
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q13",
+    "n": 13,
+    "marks": 10,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     36,
+     38
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J18-Q14",
+    "n": 14,
+    "marks": 10,
+    "pages": [
+     42,
+     43,
+     44
+    ],
+    "ms_pages": [
+     38,
+     41
+    ],
+    "topics": [
+     "2.4",
+     "4.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3-J18",
+  "label": "June 2018 Paper 3 (Statistics & Mechanics)",
+  "paper": "3",
+  "series": "June 2018",
+  "year": 2018,
+  "qp": "Paper-3/QP/June 2018 QP.pdf",
+  "ms": "Paper-3/MS/June 2018 MS.pdf",
+  "questions": [
+   {
+    "id": "P3-J18-Q1",
+    "n": 1,
+    "marks": 5,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "The large data set",
+     "Discrete probability distributions"
+    ]
+   },
+   {
+    "id": "P3-J18-Q2",
+    "n": 2,
+    "marks": 7,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Hypothesis testing: normal mean and correlation",
+     "Correlation and regression"
+    ]
+   },
+   {
+    "id": "P3-J18-Q3",
+    "n": 3,
+    "marks": 11,
+    "pages": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Binomial distribution",
+     "Hypothesis testing: critical regions and p-values"
+    ]
+   },
+   {
+    "id": "P3-J18-Q4",
+    "n": 4,
+    "marks": 13,
+    "pages": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Populations and sampling methods",
+     "Measures of location and spread, coding"
+    ]
+   },
+   {
+    "id": "P3-J18-Q5",
+    "n": 5,
+    "marks": 14,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution"
+    ]
+   },
+   {
+    "id": "P3-J18-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     18,
+     19
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Variable acceleration with calculus",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3-J18-Q7",
+    "n": 7,
+    "marks": 8,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Friction",
+     "Newton's laws and resolving forces"
+    ]
+   },
+   {
+    "id": "P3-J18-Q8",
+    "n": 8,
+    "marks": 8,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3-J18-Q9",
+    "n": 9,
+    "marks": 13,
+    "pages": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   },
+   {
+    "id": "P3-J18-Q10",
+    "n": 10,
+    "marks": 15,
+    "pages": [
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "ms_pages": [
+     18,
+     21
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P1-J19",
+  "label": "June 2019 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "June 2019",
+  "year": 2019,
+  "qp": "Paper-1/QP/June 2019 QP.pdf",
+  "ms": "Paper-1/MS/June 2019 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-J19-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q3",
+    "n": 3,
+    "marks": 5,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q4",
+    "n": 4,
+    "marks": 6,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     8,
+     11
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q5",
+    "n": 5,
+    "marks": 10,
+    "pages": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "1.2",
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q6",
+    "n": 6,
+    "marks": 8,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     14,
+     14
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q7",
+    "n": 7,
+    "marks": 7,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q8",
+    "n": 8,
+    "marks": 10,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     17,
+     18
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q9",
+    "n": 9,
+    "marks": 5,
+    "pages": [
+     26,
+     27
+    ],
+    "ms_pages": [
+     19,
+     19
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q10",
+    "n": 10,
+    "marks": 6,
+    "pages": [
+     28,
+     29
+    ],
+    "ms_pages": [
+     19,
+     23
+    ],
+    "topics": [
+     "2.1",
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q11",
+    "n": 11,
+    "marks": 7,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     24,
+     25
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q12",
+    "n": 12,
+    "marks": 10,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     26,
+     27
+    ],
+    "topics": [
+     "4.1",
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q13",
+    "n": 13,
+    "marks": 11,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     28,
+     29
+    ],
+    "topics": [
+     "4.2",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J19-Q14",
+    "n": 14,
+    "marks": 7,
+    "pages": [
+     42,
+     43,
+     44
+    ],
+    "ms_pages": [
+     30,
+     31
+    ],
+    "topics": [
+     "4.1",
+     "3.2"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-J19",
+  "label": "June 2019 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "June 2019",
+  "year": 2019,
+  "qp": "Paper-2/QP/June 2019 QP.pdf",
+  "ms": "Paper-2/MS/June 2019 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-J19-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "1.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q2",
+    "n": 2,
+    "marks": 4,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q3",
+    "n": 3,
+    "marks": 3,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q4",
+    "n": 4,
+    "marks": 6,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     12,
+     14
+    ],
+    "topics": [
+     "3.4",
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q5",
+    "n": 5,
+    "marks": 3,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q6",
+    "n": 6,
+    "marks": 10,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     17,
+     18
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q7",
+    "n": 7,
+    "marks": 7,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     19,
+     21
+    ],
+    "topics": [
+     "1.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q8",
+    "n": 8,
+    "marks": 6,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     22,
+     24
+    ],
+    "topics": [
+     "3.1",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q9",
+    "n": 9,
+    "marks": 9,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     25,
+     26
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q10",
+    "n": 10,
+    "marks": 6,
+    "pages": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "ms_pages": [
+     27,
+     29
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q11",
+    "n": 11,
+    "marks": 11,
+    "pages": [
+     32,
+     33,
+     34,
+     35
+    ],
+    "ms_pages": [
+     30,
+     32
+    ],
+    "topics": [
+     "4.1",
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q12",
+    "n": 12,
+    "marks": 7,
+    "pages": [
+     36,
+     37,
+     38,
+     39
+    ],
+    "ms_pages": [
+     33,
+     35
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q13",
+    "n": 13,
+    "marks": 10,
+    "pages": [
+     40,
+     41,
+     42,
+     43
+    ],
+    "ms_pages": [
+     36,
+     37
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J19-Q14",
+    "n": 14,
+    "marks": 15,
+    "pages": [
+     44,
+     45,
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     38,
+     40
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3S-J19",
+  "label": "June 2019 Paper 3 Statistics",
+  "paper": "3S",
+  "series": "June 2019",
+  "year": 2019,
+  "qp": "Paper-3/QP/June 2019 QP (Stats).pdf",
+  "ms": "Paper-3/MS/June 2019 MS (Stats).pdf",
+  "questions": [
+   {
+    "id": "P3S-J19-Q1",
+    "n": 1,
+    "marks": 8,
+    "pages": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Conditional probability and tree diagrams"
+    ]
+   },
+   {
+    "id": "P3S-J19-Q2",
+    "n": 2,
+    "marks": 11,
+    "pages": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Histograms, box plots, cumulative frequency, outliers",
+     "The large data set"
+    ]
+   },
+   {
+    "id": "P3S-J19-Q3",
+    "n": 3,
+    "marks": 9,
+    "pages": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Correlation and regression",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   },
+   {
+    "id": "P3S-J19-Q4",
+    "n": 4,
+    "marks": 9,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Binomial distribution",
+     "The large data set"
+    ]
+   },
+   {
+    "id": "P3S-J19-Q5",
+    "n": 5,
+    "marks": 13,
+    "pages": [
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution",
+     "Normal approximation to binomial",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P3M-J19",
+  "label": "June 2019 Paper 3 Mechanics",
+  "paper": "3M",
+  "series": "June 2019",
+  "year": 2019,
+  "qp": "Paper-3/QP/June 2019 QP (Mech).pdf",
+  "ms": "Paper-3/MS/June 2019 MS (Mech).pdf",
+  "questions": [
+   {
+    "id": "P3M-J19-Q1",
+    "n": 1,
+    "marks": 6,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Variable acceleration with calculus",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J19-Q2",
+    "n": 2,
+    "marks": 8,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J19-Q3",
+    "n": 3,
+    "marks": 12,
+    "pages": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Connected particles and pulleys",
+     "Inclined planes",
+     "Friction"
+    ]
+   },
+   {
+    "id": "P3M-J19-Q4",
+    "n": 4,
+    "marks": 11,
+    "pages": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "ms_pages": [
+     11,
+     14
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   },
+   {
+    "id": "P3M-J19-Q5",
+    "n": 5,
+    "marks": 13,
+    "pages": [
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P1-O20",
+  "label": "October 2020 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "October 2020",
+  "year": 2020,
+  "qp": "Paper-1/QP/October 2020 QP.pdf",
+  "ms": "Paper-1/MS/October 2020 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-O20-Q1",
+    "n": 1,
+    "marks": 5,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q2",
+    "n": 2,
+    "marks": 3,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q3",
+    "n": 3,
+    "marks": 4,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q4",
+    "n": 4,
+    "marks": 5,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q5",
+    "n": 5,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q7",
+    "n": 7,
+    "marks": 5,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q8",
+    "n": 8,
+    "marks": 2,
+    "pages": [
+     20,
+     21
+    ],
+    "ms_pages": [
+     13,
+     13
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q9",
+    "n": 9,
+    "marks": 9,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "4.1",
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q10",
+    "n": 10,
+    "marks": 10,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     16,
+     16
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q11",
+    "n": 11,
+    "marks": 8,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     17,
+     18
+    ],
+    "topics": [
+     "3.2",
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q12",
+    "n": 12,
+    "marks": 8,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     19,
+     20
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q13",
+    "n": 13,
+    "marks": 7,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     21,
+     22
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q14",
+    "n": 14,
+    "marks": 10,
+    "pages": [
+     42,
+     43,
+     44,
+     45
+    ],
+    "ms_pages": [
+     23,
+     24
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q15",
+    "n": 15,
+    "marks": 7,
+    "pages": [
+     46,
+     47,
+     48,
+     49
+    ],
+    "ms_pages": [
+     25,
+     26
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O20-Q16",
+    "n": 16,
+    "marks": 4,
+    "pages": [
+     50,
+     51,
+     52
+    ],
+    "ms_pages": [
+     27,
+     28
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-O20",
+  "label": "October 2020 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "October 2020",
+  "year": 2020,
+  "qp": "Paper-2/QP/October 2020 QP.pdf",
+  "ms": "Paper-2/MS/October 2020 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-O20-Q1",
+    "n": 1,
+    "marks": 5,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q2",
+    "n": 2,
+    "marks": 3,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q3",
+    "n": 3,
+    "marks": 5,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q4",
+    "n": 4,
+    "marks": 3,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q5",
+    "n": 5,
+    "marks": 4,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "4.2",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q7",
+    "n": 7,
+    "marks": 10,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     13,
+     15
+    ],
+    "topics": [
+     "4.1",
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q8",
+    "n": 8,
+    "marks": 6,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     16,
+     16
+    ],
+    "topics": [
+     "4.2",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q9",
+    "n": 9,
+    "marks": 6,
+    "pages": [
+     24,
+     25
+    ],
+    "ms_pages": [
+     17,
+     17
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q10",
+    "n": 10,
+    "marks": 8,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     18,
+     19
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q11",
+    "n": 11,
+    "marks": 7,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     20,
+     21
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q12",
+    "n": 12,
+    "marks": 11,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     21,
+     22
+    ],
+    "topics": [
+     "4.2",
+     "3.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q13",
+    "n": 13,
+    "marks": 6,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     23,
+     24
+    ],
+    "topics": [
+     "2.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q14",
+    "n": 14,
+    "marks": 7,
+    "pages": [
+     42,
+     43,
+     44,
+     45
+    ],
+    "ms_pages": [
+     25,
+     26
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q15",
+    "n": 15,
+    "marks": 8,
+    "pages": [
+     46,
+     47,
+     48,
+     49
+    ],
+    "ms_pages": [
+     26,
+     27
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O20-Q16",
+    "n": 16,
+    "marks": 4,
+    "pages": [
+     50,
+     51,
+     52
+    ],
+    "ms_pages": [
+     28,
+     29
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3S-O20",
+  "label": "October 2020 Paper 3 Statistics",
+  "paper": "3S",
+  "series": "October 2020",
+  "year": 2020,
+  "qp": "Paper-3/QP/October 2020 QP (Stats).pdf",
+  "ms": "Paper-3/MS/October 2020 MS (Stats).pdf",
+  "questions": [
+   {
+    "id": "P3S-O20-Q1",
+    "n": 1,
+    "marks": 8,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Probability: Venn diagrams and set notation"
+    ]
+   },
+   {
+    "id": "P3S-O20-Q2",
+    "n": 2,
+    "marks": 7,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Correlation and regression",
+     "The large data set"
+    ]
+   },
+   {
+    "id": "P3S-O20-Q3",
+    "n": 3,
+    "marks": 10,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Histograms, box plots, cumulative frequency, outliers",
+     "Measures of location and spread, coding"
+    ]
+   },
+   {
+    "id": "P3S-O20-Q4",
+    "n": 4,
+    "marks": 10,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Discrete probability distributions"
+    ]
+   },
+   {
+    "id": "P3S-O20-Q5",
+    "n": 5,
+    "marks": 15,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P3M-O20",
+  "label": "October 2020 Paper 3 Mechanics",
+  "paper": "3M",
+  "series": "October 2020",
+  "year": 2020,
+  "qp": "Paper-3/QP/October 2020 QP (Mech).pdf",
+  "ms": "Paper-3/MS/October 2020 MS (Mech).pdf",
+  "questions": [
+   {
+    "id": "P3M-O20-Q1",
+    "n": 1,
+    "marks": 9,
+    "pages": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Inclined planes",
+     "Friction"
+    ]
+   },
+   {
+    "id": "P3M-O20-Q2",
+    "n": 2,
+    "marks": 8,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-O20-Q3",
+    "n": 3,
+    "marks": 12,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Variable acceleration with calculus",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-O20-Q4",
+    "n": 4,
+    "marks": 10,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   },
+   {
+    "id": "P3M-O20-Q5",
+    "n": 5,
+    "marks": 11,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P1-O21",
+  "label": "October 2021 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "October 2021",
+  "year": 2021,
+  "qp": "Paper-1/QP/October 2021 QP.pdf",
+  "ms": "Paper-1/MS/October 2021 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-O21-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q2",
+    "n": 2,
+    "marks": 4,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q3",
+    "n": 3,
+    "marks": 6,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q4",
+    "n": 4,
+    "marks": 9,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "4.3",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q5",
+    "n": 5,
+    "marks": 6,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q6",
+    "n": 6,
+    "marks": 5,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     14,
+     14
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q7",
+    "n": 7,
+    "marks": 9,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q8",
+    "n": 8,
+    "marks": 9,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     17,
+     17
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q9",
+    "n": 9,
+    "marks": 11,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     18,
+     19
+    ],
+    "topics": [
+     "2.3",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q10",
+    "n": 10,
+    "marks": 8,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     20,
+     21
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q11",
+    "n": 11,
+    "marks": 8,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     22,
+     22
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q12",
+    "n": 12,
+    "marks": 9,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     23,
+     24
+    ],
+    "topics": [
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q13",
+    "n": 13,
+    "marks": 3,
+    "pages": [
+     42,
+     43
+    ],
+    "ms_pages": [
+     25,
+     25
+    ],
+    "topics": [
+     "3.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q14",
+    "n": 14,
+    "marks": 4,
+    "pages": [
+     44,
+     45,
+     46,
+     47
+    ],
+    "ms_pages": [
+     26,
+     26
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-O21-Q15",
+    "n": 15,
+    "marks": 6,
+    "pages": [
+     48,
+     49,
+     50,
+     51,
+     52
+    ],
+    "ms_pages": [
+     27,
+     27
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-O21",
+  "label": "October 2021 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "October 2021",
+  "year": 2021,
+  "qp": "Paper-2/QP/October 2021 QP.pdf",
+  "ms": "Paper-2/MS/October 2021 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-O21-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q3",
+    "n": 3,
+    "marks": 3,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q4",
+    "n": 4,
+    "marks": 3,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q5",
+    "n": 5,
+    "marks": 7,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q6",
+    "n": 6,
+    "marks": 5,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q7",
+    "n": 7,
+    "marks": 9,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q8",
+    "n": 8,
+    "marks": 9,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q9",
+    "n": 9,
+    "marks": 3,
+    "pages": [
+     24,
+     25
+    ],
+    "ms_pages": [
+     17,
+     18
+    ],
+    "topics": [
+     "3.1",
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q10",
+    "n": 10,
+    "marks": 6,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     19,
+     19
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q11",
+    "n": 11,
+    "marks": 10,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     20,
+     21
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q12",
+    "n": 12,
+    "marks": 7,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     22,
+     23
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q13",
+    "n": 13,
+    "marks": 6,
+    "pages": [
+     38,
+     39
+    ],
+    "ms_pages": [
+     24,
+     24
+    ],
+    "topics": [
+     "4.1",
+     "3.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q14",
+    "n": 14,
+    "marks": 12,
+    "pages": [
+     40,
+     41,
+     42,
+     43
+    ],
+    "ms_pages": [
+     25,
+     26
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-O21-Q15",
+    "n": 15,
+    "marks": 11,
+    "pages": [
+     44,
+     45,
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     27,
+     28
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3S-O21",
+  "label": "October 2021 Paper 3 Statistics",
+  "paper": "3S",
+  "series": "October 2021",
+  "year": 2021,
+  "qp": "Paper-3/QP/October 2021 QP (Stats).pdf",
+  "ms": "Paper-3/MS/October 2021 MS (Stats).pdf",
+  "questions": [
+   {
+    "id": "P3S-O21-Q1",
+    "n": 1,
+    "marks": 7,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Binomial distribution",
+     "Hypothesis testing: critical regions and p-values",
+     "Populations and sampling methods"
+    ]
+   },
+   {
+    "id": "P3S-O21-Q2",
+    "n": 2,
+    "marks": 6,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Correlation and regression",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   },
+   {
+    "id": "P3S-O21-Q3",
+    "n": 3,
+    "marks": 8,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "The large data set",
+     "Measures of location and spread, coding"
+    ]
+   },
+   {
+    "id": "P3S-O21-Q4",
+    "n": 4,
+    "marks": 11,
+    "pages": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Probability: Venn diagrams and set notation",
+     "Conditional probability and tree diagrams"
+    ]
+   },
+   {
+    "id": "P3S-O21-Q5",
+    "n": 5,
+    "marks": 11,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution"
+    ]
+   },
+   {
+    "id": "P3S-O21-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Discrete probability distributions"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P3M-O21",
+  "label": "October 2021 Paper 3 Mechanics",
+  "paper": "3M",
+  "series": "October 2021",
+  "year": 2021,
+  "qp": "Paper-3/QP/October 2021 QP (Mech).pdf",
+  "ms": "Paper-3/MS/October 2021 MS (Mech).pdf",
+  "questions": [
+   {
+    "id": "P3M-O21-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-O21-Q2",
+    "n": 2,
+    "marks": 12,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Connected particles and pulleys",
+     "Inclined planes",
+     "Friction"
+    ]
+   },
+   {
+    "id": "P3M-O21-Q3",
+    "n": 3,
+    "marks": 10,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     12
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   },
+   {
+    "id": "P3M-O21-Q4",
+    "n": 4,
+    "marks": 10,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   },
+   {
+    "id": "P3M-O21-Q5",
+    "n": 5,
+    "marks": 14,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     13,
+     15
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Variable acceleration with calculus",
+     "2D motion with vectors"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P1-J22",
+  "label": "June 2022 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "June 2022",
+  "year": 2022,
+  "qp": "Paper-1/QP/June 2022 QP.pdf",
+  "ms": "Paper-1/MS/June 2022 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-J22-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q2",
+    "n": 2,
+    "marks": 3,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q3",
+    "n": 3,
+    "marks": 5,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q4",
+    "n": 4,
+    "marks": 3,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q5",
+    "n": 5,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "1.4",
+     "1.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "2.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q7",
+    "n": 7,
+    "marks": 5,
+    "pages": [
+     14,
+     15
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q8",
+    "n": 8,
+    "marks": 8,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     17,
+     18
+    ],
+    "topics": [
+     "4.1",
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q9",
+    "n": 9,
+    "marks": 6,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     19,
+     20
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q10",
+    "n": 10,
+    "marks": 8,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     21,
+     22
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q11",
+    "n": 11,
+    "marks": 7,
+    "pages": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "ms_pages": [
+     23,
+     24
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q12",
+    "n": 12,
+    "marks": 5,
+    "pages": [
+     32,
+     33
+    ],
+    "ms_pages": [
+     25,
+     25
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q13",
+    "n": 13,
+    "marks": 7,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     26,
+     27
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q14",
+    "n": 14,
+    "marks": 8,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     28,
+     29
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q15",
+    "n": 15,
+    "marks": 10,
+    "pages": [
+     42,
+     43,
+     44,
+     45
+    ],
+    "ms_pages": [
+     30,
+     31
+    ],
+    "topics": [
+     "4.1",
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J22-Q16",
+    "n": 16,
+    "marks": 9,
+    "pages": [
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     32,
+     33
+    ],
+    "topics": [
+     "4.2",
+     "3.4"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-J22",
+  "label": "June 2022 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "June 2022",
+  "year": 2022,
+  "qp": "Paper-2/QP/June 2022 QP.pdf",
+  "ms": "Paper-2/MS/June 2022 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-J22-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q2",
+    "n": 2,
+    "marks": 4,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q3",
+    "n": 3,
+    "marks": 4,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q4",
+    "n": 4,
+    "marks": 3,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q5",
+    "n": 5,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "4.2",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "4.1",
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q7",
+    "n": 7,
+    "marks": 5,
+    "pages": [
+     16,
+     17
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q8",
+    "n": 8,
+    "marks": 6,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     18,
+     21
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q9",
+    "n": 9,
+    "marks": 5,
+    "pages": [
+     22,
+     23
+    ],
+    "ms_pages": [
+     22,
+     22
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q10",
+    "n": 10,
+    "marks": 8,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     23,
+     25
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q11",
+    "n": 11,
+    "marks": 4,
+    "pages": [
+     28,
+     29
+    ],
+    "ms_pages": [
+     26,
+     27
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q12",
+    "n": 12,
+    "marks": 6,
+    "pages": [
+     30,
+     31
+    ],
+    "ms_pages": [
+     28,
+     29
+    ],
+    "topics": [
+     "4.1",
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q13",
+    "n": 13,
+    "marks": 6,
+    "pages": [
+     32,
+     33,
+     34,
+     35
+    ],
+    "ms_pages": [
+     30,
+     32
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q14",
+    "n": 14,
+    "marks": 10,
+    "pages": [
+     36,
+     37,
+     38,
+     39
+    ],
+    "ms_pages": [
+     33,
+     35
+    ],
+    "topics": [
+     "4.2",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q15",
+    "n": 15,
+    "marks": 10,
+    "pages": [
+     40,
+     41,
+     42,
+     43
+    ],
+    "ms_pages": [
+     36,
+     39
+    ],
+    "topics": [
+     "3.1",
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J22-Q16",
+    "n": 16,
+    "marks": 12,
+    "pages": [
+     44,
+     45,
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     40,
+     43
+    ],
+    "topics": [
+     "3.4",
+     "4.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3S-J22",
+  "label": "June 2022 Paper 3 Statistics",
+  "paper": "3S",
+  "series": "June 2022",
+  "year": 2022,
+  "qp": "Paper-3/QP/June 2022 QP (Stats).pdf",
+  "ms": "Paper-3/MS/June 2022 MS (Stats).pdf",
+  "questions": [
+   {
+    "id": "P3S-J22-Q1",
+    "n": 1,
+    "marks": 6,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Binomial distribution"
+    ]
+   },
+   {
+    "id": "P3S-J22-Q2",
+    "n": 2,
+    "marks": 12,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   },
+   {
+    "id": "P3S-J22-Q3",
+    "n": 3,
+    "marks": 7,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "The large data set",
+     "Measures of location and spread, coding"
+    ]
+   },
+   {
+    "id": "P3S-J22-Q4",
+    "n": 4,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Hypothesis testing: critical regions and p-values"
+    ]
+   },
+   {
+    "id": "P3S-J22-Q5",
+    "n": 5,
+    "marks": 10,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Conditional probability and tree diagrams"
+    ]
+   },
+   {
+    "id": "P3S-J22-Q6",
+    "n": 6,
+    "marks": 9,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Correlation and regression",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P3M-J22",
+  "label": "June 2022 Paper 3 Mechanics",
+  "paper": "3M",
+  "series": "June 2022",
+  "year": 2022,
+  "qp": "Paper-3/QP/June 2022 QP (Mech).pdf",
+  "ms": "Paper-3/MS/June 2022 MS (Mech).pdf",
+  "questions": [
+   {
+    "id": "P3M-J22-Q1",
+    "n": 1,
+    "marks": 8,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Variable acceleration with calculus",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J22-Q2",
+    "n": 2,
+    "marks": 10,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Inclined planes",
+     "Friction",
+     "Newton's laws and resolving forces"
+    ]
+   },
+   {
+    "id": "P3M-J22-Q3",
+    "n": 3,
+    "marks": 9,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Newton's laws and resolving forces",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J22-Q4",
+    "n": 4,
+    "marks": 11,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   },
+   {
+    "id": "P3M-J22-Q5",
+    "n": 5,
+    "marks": 12,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P1-J23",
+  "label": "June 2023 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "June 2023",
+  "year": 2023,
+  "qp": "Paper-1/QP/June 2023 QP.pdf",
+  "ms": "Paper-1/MS/June 2023 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-J23-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q2",
+    "n": 2,
+    "marks": 6,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q3",
+    "n": 3,
+    "marks": 3,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q4",
+    "n": 4,
+    "marks": 5,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "3.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q5",
+    "n": 5,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     13,
+     13
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     14,
+     14
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q7",
+    "n": 7,
+    "marks": 8,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q8",
+    "n": 8,
+    "marks": 10,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     17,
+     19
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q9",
+    "n": 9,
+    "marks": 7,
+    "pages": [
+     22,
+     23
+    ],
+    "ms_pages": [
+     20,
+     21
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q10",
+    "n": 10,
+    "marks": 9,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     22,
+     23
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q11",
+    "n": 11,
+    "marks": 7,
+    "pages": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "ms_pages": [
+     24,
+     25
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q12",
+    "n": 12,
+    "marks": 5,
+    "pages": [
+     32,
+     33
+    ],
+    "ms_pages": [
+     26,
+     27
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q13",
+    "n": 13,
+    "marks": 7,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     28,
+     28
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q14",
+    "n": 14,
+    "marks": 4,
+    "pages": [
+     38,
+     39
+    ],
+    "ms_pages": [
+     29,
+     31
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J23-Q15",
+    "n": 15,
+    "marks": 13,
+    "pages": [
+     40,
+     41,
+     42,
+     43,
+     44
+    ],
+    "ms_pages": [
+     32,
+     34
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-J23",
+  "label": "June 2023 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "June 2023",
+  "year": 2023,
+  "qp": "Paper-2/QP/June 2023 QP.pdf",
+  "ms": "Paper-2/MS/June 2023 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-J23-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q2",
+    "n": 2,
+    "marks": 6,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q3",
+    "n": 3,
+    "marks": 5,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q4",
+    "n": 4,
+    "marks": 4,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "2.4",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q5",
+    "n": 5,
+    "marks": 5,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q7",
+    "n": 7,
+    "marks": 7,
+    "pages": [
+     16,
+     17
+    ],
+    "ms_pages": [
+     17,
+     18
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q8",
+    "n": 8,
+    "marks": 6,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     19,
+     19
+    ],
+    "topics": [
+     "3.3",
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q9",
+    "n": 9,
+    "marks": 7,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     20,
+     22
+    ],
+    "topics": [
+     "3.4",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q10",
+    "n": 10,
+    "marks": 7,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     23,
+     25
+    ],
+    "topics": [
+     "2.1",
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q11",
+    "n": 11,
+    "marks": 10,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     26,
+     28
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q12",
+    "n": 12,
+    "marks": 10,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     29,
+     32
+    ],
+    "topics": [
+     "2.2",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q13",
+    "n": 13,
+    "marks": 13,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     33,
+     37
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q14",
+    "n": 14,
+    "marks": 7,
+    "pages": [
+     42,
+     43,
+     44,
+     45
+    ],
+    "ms_pages": [
+     38,
+     38
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J23-Q15",
+    "n": 15,
+    "marks": 3,
+    "pages": [
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     39,
+     39
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3S-J23",
+  "label": "June 2023 Paper 3 Statistics",
+  "paper": "3S",
+  "series": "June 2023",
+  "year": 2023,
+  "qp": "Paper-3/QP/June 2023 QP (Stats).pdf",
+  "ms": "Paper-3/MS/June 2023 MS (Stats).pdf",
+  "questions": [
+   {
+    "id": "P3S-J23-Q1",
+    "n": 1,
+    "marks": 6,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Probability: Venn diagrams and set notation"
+    ]
+   },
+   {
+    "id": "P3S-J23-Q2",
+    "n": 2,
+    "marks": 9,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Binomial distribution",
+     "Hypothesis testing: critical regions and p-values"
+    ]
+   },
+   {
+    "id": "P3S-J23-Q3",
+    "n": 3,
+    "marks": 7,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "The large data set",
+     "Measures of location and spread, coding"
+    ]
+   },
+   {
+    "id": "P3S-J23-Q4",
+    "n": 4,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   },
+   {
+    "id": "P3S-J23-Q5",
+    "n": 5,
+    "marks": 8,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Discrete probability distributions"
+    ]
+   },
+   {
+    "id": "P3S-J23-Q6",
+    "n": 6,
+    "marks": 14,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     11,
+     13
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Histograms, box plots, cumulative frequency, outliers",
+     "Normal distribution"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P3M-J23",
+  "label": "June 2023 Paper 3 Mechanics",
+  "paper": "3M",
+  "series": "June 2023",
+  "year": 2023,
+  "qp": "Paper-3/QP/June 2023 QP (Mech).pdf",
+  "ms": "Paper-3/MS/June 2023 MS (Mech).pdf",
+  "questions": [
+   {
+    "id": "P3M-J23-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Constant acceleration: suvat"
+    ]
+   },
+   {
+    "id": "P3M-J23-Q2",
+    "n": 2,
+    "marks": 4,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Friction",
+     "Newton's laws and resolving forces"
+    ]
+   },
+   {
+    "id": "P3M-J23-Q3",
+    "n": 3,
+    "marks": 9,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Variable acceleration with calculus",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J23-Q4",
+    "n": 4,
+    "marks": 10,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     12
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J23-Q5",
+    "n": 5,
+    "marks": 11,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     13,
+     15
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   },
+   {
+    "id": "P3M-J23-Q6",
+    "n": 6,
+    "marks": 13,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     16,
+     18
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P1-J24",
+  "label": "June 2024 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "June 2024",
+  "year": 2024,
+  "qp": "Paper-1/QP/June 2024 QP.pdf",
+  "ms": "Paper-1/MS/June 2024 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-J24-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q2",
+    "n": 2,
+    "marks": 4,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q3",
+    "n": 3,
+    "marks": 6,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q4",
+    "n": 4,
+    "marks": 3,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q5",
+    "n": 5,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q7",
+    "n": 7,
+    "marks": 8,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     17,
+     18
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q8",
+    "n": 8,
+    "marks": 11,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     19,
+     20
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q9",
+    "n": 9,
+    "marks": 6,
+    "pages": [
+     22,
+     23
+    ],
+    "ms_pages": [
+     21,
+     22
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q10",
+    "n": 10,
+    "marks": 9,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     23,
+     24
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q11",
+    "n": 11,
+    "marks": 4,
+    "pages": [
+     28,
+     29
+    ],
+    "ms_pages": [
+     25,
+     26
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q12",
+    "n": 12,
+    "marks": 11,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     27,
+     28
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q13",
+    "n": 13,
+    "marks": 8,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     29,
+     32
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q14",
+    "n": 14,
+    "marks": 9,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     33,
+     34
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J24-Q15",
+    "n": 15,
+    "marks": 6,
+    "pages": [
+     42,
+     43,
+     44
+    ],
+    "ms_pages": [
+     35,
+     37
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-J24",
+  "label": "June 2024 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "June 2024",
+  "year": 2024,
+  "qp": "Paper-2/QP/June 2024 QP.pdf",
+  "ms": "Paper-2/MS/June 2024 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-J24-Q1",
+    "n": 1,
+    "marks": 5,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q3",
+    "n": 3,
+    "marks": 4,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q4",
+    "n": 4,
+    "marks": 5,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q5",
+    "n": 5,
+    "marks": 3,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     13,
+     15
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "4.3",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q7",
+    "n": 7,
+    "marks": 5,
+    "pages": [
+     16,
+     17
+    ],
+    "ms_pages": [
+     18,
+     21
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q8",
+    "n": 8,
+    "marks": 7,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     22,
+     26
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q9",
+    "n": 9,
+    "marks": 7,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     27,
+     30
+    ],
+    "topics": [
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q10",
+    "n": 10,
+    "marks": 6,
+    "pages": [
+     26,
+     27
+    ],
+    "ms_pages": [
+     31,
+     32
+    ],
+    "topics": [
+     "3.4",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q11",
+    "n": 11,
+    "marks": 5,
+    "pages": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "ms_pages": [
+     33,
+     34
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q12",
+    "n": 12,
+    "marks": 12,
+    "pages": [
+     32,
+     33,
+     34,
+     35
+    ],
+    "ms_pages": [
+     35,
+     38
+    ],
+    "topics": [
+     "4.2",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q13",
+    "n": 13,
+    "marks": 9,
+    "pages": [
+     36,
+     37,
+     38,
+     39
+    ],
+    "ms_pages": [
+     39,
+     40
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q14",
+    "n": 14,
+    "marks": 8,
+    "pages": [
+     40,
+     41,
+     42,
+     43
+    ],
+    "ms_pages": [
+     41,
+     44
+    ],
+    "topics": [
+     "1.5",
+     "1.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J24-Q15",
+    "n": 15,
+    "marks": 12,
+    "pages": [
+     44,
+     45,
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     45,
+     52
+    ],
+    "topics": [
+     "4.1",
+     "2.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3S-J24",
+  "label": "June 2024 Paper 3 Statistics",
+  "paper": "3S",
+  "series": "June 2024",
+  "year": 2024,
+  "qp": "Paper-3/QP/June 2024 QP (Stats).pdf",
+  "ms": "Paper-3/MS/June 2024 MS (Stats).pdf",
+  "questions": [
+   {
+    "id": "P3S-J24-Q1",
+    "n": 1,
+    "marks": 11,
+    "pages": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Binomial distribution"
+    ]
+   },
+   {
+    "id": "P3S-J24-Q2",
+    "n": 2,
+    "marks": 6,
+    "pages": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "ms_pages": [
+     6,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Correlation and regression",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   },
+   {
+    "id": "P3S-J24-Q3",
+    "n": 3,
+    "marks": 6,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "The large data set",
+     "Measures of location and spread, coding"
+    ]
+   },
+   {
+    "id": "P3S-J24-Q4",
+    "n": 4,
+    "marks": 6,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Hypothesis testing: critical regions and p-values"
+    ]
+   },
+   {
+    "id": "P3S-J24-Q5",
+    "n": 5,
+    "marks": 10,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   },
+   {
+    "id": "P3S-J24-Q6",
+    "n": 6,
+    "marks": 11,
+    "pages": [
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Probability: Venn diagrams and set notation",
+     "Conditional probability and tree diagrams"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P3M-J24",
+  "label": "June 2024 Paper 3 Mechanics",
+  "paper": "3M",
+  "series": "June 2024",
+  "year": 2024,
+  "qp": "Paper-3/QP/June 2024 QP (Mech).pdf",
+  "ms": "Paper-3/MS/June 2024 MS (Mech).pdf",
+  "questions": [
+   {
+    "id": "P3M-J24-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Friction"
+    ]
+   },
+   {
+    "id": "P3M-J24-Q2",
+    "n": 2,
+    "marks": 8,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Motion graphs"
+    ]
+   },
+   {
+    "id": "P3M-J24-Q3",
+    "n": 3,
+    "marks": 7,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Inclined planes",
+     "Friction"
+    ]
+   },
+   {
+    "id": "P3M-J24-Q4",
+    "n": 4,
+    "marks": 11,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     10,
+     13
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "2D motion with vectors",
+     "Variable acceleration with calculus"
+    ]
+   },
+   {
+    "id": "P3M-J24-Q5",
+    "n": 5,
+    "marks": 12,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     14,
+     16
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   },
+   {
+    "id": "P3M-J24-Q6",
+    "n": 6,
+    "marks": 9,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     16,
+     19
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P1-J25",
+  "label": "June 2025 Paper 1 (Pure 1)",
+  "paper": "1",
+  "series": "June 2025",
+  "year": 2025,
+  "qp": "Paper-1/QP/June 2025 QP.pdf",
+  "ms": "Paper-1/MS/June 2025 MS.pdf",
+  "questions": [
+   {
+    "id": "P1-J25-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q3",
+    "n": 3,
+    "marks": 5,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q4",
+    "n": 4,
+    "marks": 5,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q5",
+    "n": 5,
+    "marks": 3,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     13,
+     13
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "1.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q7",
+    "n": 7,
+    "marks": 7,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     16,
+     18
+    ],
+    "topics": [
+     "2.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q8",
+    "n": 8,
+    "marks": 5,
+    "pages": [
+     20,
+     21
+    ],
+    "ms_pages": [
+     19,
+     20
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q9",
+    "n": 9,
+    "marks": 9,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     21,
+     22
+    ],
+    "topics": [
+     "4.1",
+     "4.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q10",
+    "n": 10,
+    "marks": 6,
+    "pages": [
+     26,
+     27
+    ],
+    "ms_pages": [
+     23,
+     26
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q11",
+    "n": 11,
+    "marks": 8,
+    "pages": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "ms_pages": [
+     27,
+     29
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q12",
+    "n": 12,
+    "marks": 8,
+    "pages": [
+     32,
+     33,
+     34,
+     35
+    ],
+    "ms_pages": [
+     30,
+     31
+    ],
+    "topics": [
+     "2.1",
+     "1.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q13",
+    "n": 13,
+    "marks": 5,
+    "pages": [
+     36,
+     37
+    ],
+    "ms_pages": [
+     32,
+     33
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q14",
+    "n": 14,
+    "marks": 7,
+    "pages": [
+     38,
+     39,
+     40,
+     41
+    ],
+    "ms_pages": [
+     34,
+     35
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q15",
+    "n": 15,
+    "marks": 9,
+    "pages": [
+     42,
+     43,
+     44,
+     45
+    ],
+    "ms_pages": [
+     36,
+     37
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P1-J25-Q16",
+    "n": 16,
+    "marks": 7,
+    "pages": [
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     38,
+     39
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P2-J25",
+  "label": "June 2025 Paper 2 (Pure 2)",
+  "paper": "2",
+  "series": "June 2025",
+  "year": 2025,
+  "qp": "Paper-2/QP/June 2025 QP.pdf",
+  "ms": "Paper-2/MS/June 2025 MS.pdf",
+  "questions": [
+   {
+    "id": "P2-J25-Q1",
+    "n": 1,
+    "marks": 3,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "1.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q2",
+    "n": 2,
+    "marks": 4,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q3",
+    "n": 3,
+    "marks": 2,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q4",
+    "n": 4,
+    "marks": 5,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q5",
+    "n": 5,
+    "marks": 7,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "3.4",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     14,
+     15
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q7",
+    "n": 7,
+    "marks": 4,
+    "pages": [
+     16,
+     17
+    ],
+    "ms_pages": [
+     15,
+     17
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q8",
+    "n": 8,
+    "marks": 9,
+    "pages": [
+     18,
+     19,
+     20,
+     21
+    ],
+    "ms_pages": [
+     18,
+     21
+    ],
+    "topics": [
+     "4.1",
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q9",
+    "n": 9,
+    "marks": 8,
+    "pages": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "ms_pages": [
+     22,
+     23
+    ],
+    "topics": [
+     "2.4",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q10",
+    "n": 10,
+    "marks": 9,
+    "pages": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "ms_pages": [
+     24,
+     26
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q11",
+    "n": 11,
+    "marks": 11,
+    "pages": [
+     30,
+     31,
+     32,
+     33
+    ],
+    "ms_pages": [
+     27,
+     29
+    ],
+    "topics": [
+     "4.1",
+     "1.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q12",
+    "n": 12,
+    "marks": 8,
+    "pages": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "ms_pages": [
+     30,
+     31
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q13",
+    "n": 13,
+    "marks": 3,
+    "pages": [
+     38,
+     39
+    ],
+    "ms_pages": [
+     32,
+     33
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q14",
+    "n": 14,
+    "marks": 8,
+    "pages": [
+     40,
+     41,
+     42,
+     43
+    ],
+    "ms_pages": [
+     34,
+     37
+    ],
+    "topics": [
+     "4.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "P2-J25-Q15",
+    "n": 15,
+    "marks": 13,
+    "pages": [
+     44,
+     45,
+     46,
+     47,
+     48
+    ],
+    "ms_pages": [
+     38,
+     42
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "P3S-J25",
+  "label": "June 2025 Paper 3 Statistics",
+  "paper": "3S",
+  "series": "June 2025",
+  "year": 2025,
+  "qp": "Paper-3/QP/June 2025 QP (Stats).pdf",
+  "ms": "Paper-3/MS/June 2025 MS (Stats).pdf",
+  "questions": [
+   {
+    "id": "P3S-J25-Q1",
+    "n": 1,
+    "marks": 9,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Conditional probability and tree diagrams"
+    ]
+   },
+   {
+    "id": "P3S-J25-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     7,
+     7
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Measures of location and spread, coding"
+    ]
+   },
+   {
+    "id": "P3S-J25-Q3",
+    "n": 3,
+    "marks": 6,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     8,
+     8
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Binomial distribution"
+    ]
+   },
+   {
+    "id": "P3S-J25-Q4",
+    "n": 4,
+    "marks": 9,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Populations and sampling methods",
+     "Correlation and regression",
+     "The large data set"
+    ]
+   },
+   {
+    "id": "P3S-J25-Q5",
+    "n": 5,
+    "marks": 10,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Normal distribution",
+     "Hypothesis testing: normal mean and correlation"
+    ]
+   },
+   {
+    "id": "P3S-J25-Q6",
+    "n": 6,
+    "marks": 11,
+    "pages": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "5.1"
+    ],
+    "skills": [
+     "Discrete probability distributions"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "P3M-J25",
+  "label": "June 2025 Paper 3 Mechanics",
+  "paper": "3M",
+  "series": "June 2025",
+  "year": 2025,
+  "qp": "Paper-3/QP/June 2025 QP (Mech).pdf",
+  "ms": "Paper-3/MS/June 2025 MS (Mech).pdf",
+  "questions": [
+   {
+    "id": "P3M-J25-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     6,
+     6
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Constant acceleration: suvat"
+    ]
+   },
+   {
+    "id": "P3M-J25-Q2",
+    "n": 2,
+    "marks": 10,
+    "pages": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "ms_pages": [
+     6,
+     8
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Friction",
+     "Newton's laws and resolving forces"
+    ]
+   },
+   {
+    "id": "P3M-J25-Q3",
+    "n": 3,
+    "marks": 8,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Newton's laws and resolving forces",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J25-Q4",
+    "n": 4,
+    "marks": 9,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Variable acceleration with calculus",
+     "2D motion with vectors"
+    ]
+   },
+   {
+    "id": "P3M-J25-Q5",
+    "n": 5,
+    "marks": 8,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     13,
+     14
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Projectiles"
+    ]
+   },
+   {
+    "id": "P3M-J25-Q6",
+    "n": 6,
+    "marks": 11,
+    "pages": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "ms_pages": [
+     15,
+     18
+    ],
+    "topics": [
+     "5.2"
+    ],
+    "skills": [
+     "Moments, equilibrium and centre of mass"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "C1-J17",
+  "label": "June 2017 C1 (legacy)",
+  "paper": "C1",
+  "series": "June 2017",
+  "year": 2017,
+  "qp": "legacy/C1/Papers-Edexcel/QP/June 2017 QP.pdf",
+  "ms": "legacy/C1/Papers-Edexcel/MS/June 2017 MS.pdf",
+  "questions": [
+   {
+    "id": "C1-J17-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "4.2",
+     "1.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q2",
+    "n": 2,
+    "marks": 5,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "4.1",
+     "1.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q3",
+    "n": 3,
+    "marks": 6,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q4",
+    "n": 4,
+    "marks": 7,
+    "pages": [
+     8,
+     9
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q5",
+    "n": 5,
+    "marks": 8,
+    "pages": [
+     10,
+     11
+    ],
+    "ms_pages": [
+     13,
+     15
+    ],
+    "topics": [
+     "1.2",
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q6",
+    "n": 6,
+    "marks": 6,
+    "pages": [
+     12,
+     13
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "1.2",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q7",
+    "n": 7,
+    "marks": 9,
+    "pages": [
+     14,
+     15
+    ],
+    "ms_pages": [
+     18,
+     18
+    ],
+    "topics": [
+     "4.1",
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q8",
+    "n": 8,
+    "marks": 8,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     19,
+     20
+    ],
+    "topics": [
+     "1.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q9",
+    "n": 9,
+    "marks": 11,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     21,
+     23
+    ],
+    "topics": [
+     "2.2",
+     "1.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J17-Q10",
+    "n": 10,
+    "marks": 11,
+    "pages": [
+     24,
+     25,
+     26,
+     27,
+     28
+    ],
+    "ms_pages": [
+     24,
+     25
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "C1-J18",
+  "label": "June 2018 C1 (legacy)",
+  "paper": "C1",
+  "series": "June 2018",
+  "year": 2018,
+  "qp": "legacy/C1/Papers-Edexcel/QP/June 2018 QP.pdf",
+  "ms": "legacy/C1/Papers-Edexcel/MS/June 2018 MS.pdf",
+  "questions": [
+   {
+    "id": "C1-J18-Q1",
+    "n": 1,
+    "marks": 5,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     9,
+     9
+    ],
+    "topics": [
+     "1.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q2",
+    "n": 2,
+    "marks": 7,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     10,
+     10
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q3",
+    "n": 3,
+    "marks": 6,
+    "pages": [
+     6,
+     7
+    ],
+    "ms_pages": [
+     11,
+     11
+    ],
+    "topics": [
+     "1.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q4",
+    "n": 4,
+    "marks": 7,
+    "pages": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "ms_pages": [
+     12,
+     12
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q5",
+    "n": 5,
+    "marks": 5,
+    "pages": [
+     12,
+     13,
+     14,
+     15
+    ],
+    "ms_pages": [
+     12,
+     13
+    ],
+    "topics": [
+     "2.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     16,
+     17
+    ],
+    "ms_pages": [
+     14,
+     14
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q7",
+    "n": 7,
+    "marks": 8,
+    "pages": [
+     18,
+     19
+    ],
+    "ms_pages": [
+     15,
+     15
+    ],
+    "topics": [
+     "1.2",
+     "1.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q8",
+    "n": 8,
+    "marks": 8,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "1.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q9",
+    "n": 9,
+    "marks": 12,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     18,
+     19
+    ],
+    "topics": [
+     "4.2",
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C1-J18-Q10",
+    "n": 10,
+    "marks": 10,
+    "pages": [
+     28,
+     29,
+     30,
+     31,
+     32
+    ],
+    "ms_pages": [
+     20,
+     20
+    ],
+    "topics": [
+     "4.1",
+     "1.4"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "C2-J17",
+  "label": "June 2017 C2 (legacy)",
+  "paper": "C2",
+  "series": "June 2017",
+  "year": 2017,
+  "qp": "legacy/C2/Papers-Edexcel/QP/June 2017 QP.pdf",
+  "ms": "legacy/C2/Papers-Edexcel/MS/June 2017 MS.pdf",
+  "questions": [
+   {
+    "id": "C2-J17-Q1",
+    "n": 1,
+    "marks": 4,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q2",
+    "n": 2,
+    "marks": 4,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q3",
+    "n": 3,
+    "marks": 6,
+    "pages": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "4.2",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q4",
+    "n": 4,
+    "marks": 8,
+    "pages": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q5",
+    "n": 5,
+    "marks": 7,
+    "pages": [
+     14,
+     15
+    ],
+    "ms_pages": [
+     11,
+     13
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q6",
+    "n": 6,
+    "marks": 9,
+    "pages": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "ms_pages": [
+     12,
+     14
+    ],
+    "topics": [
+     "2.1",
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q7",
+    "n": 7,
+    "marks": 7,
+    "pages": [
+     20,
+     21
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q8",
+    "n": 8,
+    "marks": 8,
+    "pages": [
+     22,
+     23
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q9",
+    "n": 9,
+    "marks": 12,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     16,
+     17
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J17-Q10",
+    "n": 10,
+    "marks": 10,
+    "pages": [
+     28,
+     29,
+     30,
+     31,
+     32
+    ],
+    "ms_pages": [
+     17,
+     19
+    ],
+    "topics": [
+     "4.2",
+     "4.1"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ {
+  "id": "C2-J18",
+  "label": "June 2018 C2 (legacy)",
+  "paper": "C2",
+  "series": "June 2018",
+  "year": 2018,
+  "qp": "legacy/C2/Papers-Edexcel/QP/June 2018 QP.pdf",
+  "ms": "legacy/C2/Papers-Edexcel/MS/June 2018 MS.pdf",
+  "questions": [
+   {
+    "id": "C2-J18-Q1",
+    "n": 1,
+    "marks": 5,
+    "pages": [
+     2,
+     3
+    ],
+    "ms_pages": [
+     7,
+     8
+    ],
+    "topics": [
+     "4.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q2",
+    "n": 2,
+    "marks": 7,
+    "pages": [
+     4,
+     5
+    ],
+    "ms_pages": [
+     8,
+     9
+    ],
+    "topics": [
+     "2.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q3",
+    "n": 3,
+    "marks": 8,
+    "pages": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "ms_pages": [
+     9,
+     10
+    ],
+    "topics": [
+     "2.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q4",
+    "n": 4,
+    "marks": 9,
+    "pages": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "ms_pages": [
+     10,
+     11
+    ],
+    "topics": [
+     "3.2"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q5",
+    "n": 5,
+    "marks": 10,
+    "pages": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "ms_pages": [
+     11,
+     12
+    ],
+    "topics": [
+     "1.5"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q6",
+    "n": 6,
+    "marks": 7,
+    "pages": [
+     18,
+     19
+    ],
+    "ms_pages": [
+     12,
+     14
+    ],
+    "topics": [
+     "3.1"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q7",
+    "n": 7,
+    "marks": 8,
+    "pages": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "ms_pages": [
+     14,
+     15
+    ],
+    "topics": [
+     "2.4"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q8",
+    "n": 8,
+    "marks": 9,
+    "pages": [
+     24,
+     25,
+     26,
+     27
+    ],
+    "ms_pages": [
+     15,
+     16
+    ],
+    "topics": [
+     "3.3"
+    ],
+    "skills": []
+   },
+   {
+    "id": "C2-J18-Q9",
+    "n": 9,
+    "marks": 12,
+    "pages": [
+     28,
+     29,
+     30,
+     31,
+     32
+    ],
+    "ms_pages": [
+     16,
+     18
+    ],
+    "topics": [
+     "4.1",
+     "4.2"
+    ],
+    "skills": []
+   }
+  ]
+ }
+]
