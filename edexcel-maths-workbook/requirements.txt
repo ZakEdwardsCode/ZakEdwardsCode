@@ -1,0 +1,4 @@
+reportlab>=4.0
+matplotlib>=3.7
+sympy>=1.12
+pypdf>=4.0

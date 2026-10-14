@@ -1,0 +1,2874 @@
+{
+ "channels": {
+  "TLMaths": {
+   "subs": "176k",
+   "url": "https://www.youtube.com/@TLMaths",
+   "role": "Short lesson for each spec point (Edexcel-aligned)"
+  },
+  "ExamSolutions": {
+   "subs": "289k",
+   "url": "https://www.youtube.com/@ExamSolutions_Maths",
+   "role": "Worked examples and real exam questions"
+  },
+  "Bicen Maths": {
+   "subs": "126k",
+   "url": "https://www.youtube.com/@BicenMaths",
+   "role": "Whole-chapter recaps following the Pearson Edexcel textbook"
+  }
+ },
+ "subtopics": {
+  "1.1": {
+   "recap": [
+    {
+     "id": "iBtJyBIGRMc",
+     "title": "Algebraic Expressions in less than 20 minutes • A-Level Maths, Pure Year 1, Chapter 1",
+     "views": "197,299 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Index laws",
+     "videos": [
+      {
+       "id": "HlPnLOPmapE",
+       "title": "Indices: The Laws of Indices",
+       "views": "86,342 views",
+       "len": "16:24",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "UQqJo5XchKA",
+       "title": "All you need to know about Indices (Summary)",
+       "views": "53,381 views",
+       "len": "10:22",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Expanding brackets",
+     "videos": [
+      {
+       "id": "u-PVo-YZ_Sg",
+       "title": "Polynomials: Expanding Three or More Brackets",
+       "views": "27,784 views",
+       "len": "5:19",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "xjKYGaJ6z80",
+       "title": "Expanding Brackets Example",
+       "views": "415 views",
+       "len": "3:30",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Factorising",
+     "videos": [
+      {
+       "id": "g1a6yIuNJSM",
+       "title": "Quadratics: Factorising Quadratics of the form ax^2 + bx + c",
+       "views": "55,823 views",
+       "len": "13:08",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "ExGagW-EKbs",
+       "title": "Factorising - Highest Common Factor Types",
+       "views": "163,250 views",
+       "len": "13:16",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Negative and fractional indices",
+     "videos": [
+      {
+       "id": "4W3JJCG8wIM",
+       "title": "Indices: Examples of Negative Indices",
+       "views": "45,271 views",
+       "len": "3:12",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "qlWGKSxT2AM",
+       "title": "Indices (Exponents) - Fractions to Negative Powers",
+       "views": "61,410 views",
+       "len": "6:26",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Surds",
+     "videos": [
+      {
+       "id": "mXhqvQybskw",
+       "title": "Surds: Introducing Surds and Simplifying Surds",
+       "views": "62,835 views",
+       "len": "6:55",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Fi2O5o8n3Iw",
+       "title": "Simplifying Surds",
+       "views": "74,226 views",
+       "len": "10:20",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Rationalising denominators",
+     "videos": [
+      {
+       "id": "x25DsjbilsM",
+       "title": "Surds: Introducing Rationalising the Denominator Part 1",
+       "views": "27,861 views",
+       "len": "5:23",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "lPMeUVqwGj8",
+       "title": "Surds: rationalising tutorial",
+       "views": "67,457 views",
+       "len": "9:13",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "1.2": {
+   "recap": [
+    {
+     "id": "HssHkcd68e8",
+     "title": "Quadratics in less than 28 minutes • A-Level Maths, Pure Year 1, Chapter 2",
+     "views": "91,111 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Solving by factorising",
+     "videos": [
+      {
+       "id": "JXcP1RAVdzU",
+       "title": "Quadratics: Factorising Quadratics using the Difference of Two Squares",
+       "views": "69,672 views",
+       "len": "4:30",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "i7XSuQTqWfQ",
+       "title": "Quadratic Equations - Solution by Factorising (Exercise)",
+       "views": "12,139 views",
+       "len": "7:47",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Quadratic formula",
+     "videos": [
+      {
+       "id": "PVqs6EGr7w0",
+       "title": "Quadratics: Where the Quadratic Formula Comes From",
+       "views": "25,137 views",
+       "len": "7:07",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "zcKERKOuILk",
+       "title": "How to derive the Quadratic Formula",
+       "views": "11,805 views",
+       "len": "9:25",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Completing the square",
+     "videos": [
+      {
+       "id": "5pky5iTXFXg",
+       "title": "Quadratics: Examples of Completing the Square with the form ax^2 + bx + c",
+       "views": "77,238 views",
+       "len": "9:01",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "UQoQC-V9bcA",
+       "title": "How to Complete the Square",
+       "views": "48,031 views",
+       "len": "8:00",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "The discriminant",
+     "videos": [
+      {
+       "id": "PUo0zoEdHl8",
+       "title": "Quadratics: Using the Discriminant to Find How Many Roots a Quadratic Has",
+       "views": "59,666 views",
+       "len": "6:48",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "HhXtu6JRQc4",
+       "title": "Nature of Roots for a Quadratic Equation (Discriminant)",
+       "views": "89,361 views",
+       "len": "9:13",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Quadratic functions and graphs",
+     "videos": [
+      {
+       "id": "pRu31H6qG4k",
+       "title": "Graphs: Sketching Quadratics, Cubics, Quartics and Quintics",
+       "views": "53,281 views",
+       "len": "5:54",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "5xp6-nqQXz8",
+       "title": "Sketching Quadratic Graphs",
+       "views": "270,530 views",
+       "len": "14:57",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Hidden quadratics",
+     "videos": [
+      {
+       "id": "pG94-O2UuPE",
+       "title": "Exponential Equations: Spotting Hidden Quadratics",
+       "views": "11,880 views",
+       "len": "5:14",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "53r1j0QTNCs",
+       "title": "Logs - Solving quadratic equations in a^x",
+       "views": "65,813 views",
+       "len": "6:39",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "1.3": {
+   "recap": [
+    {
+     "id": "fdKMpPw52ms",
+     "title": "Equations & Inequalities in less than 20 minutes • A-Level Maths, Pure Year 1, Chapter 3",
+     "views": "68,493 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Linear simultaneous equations",
+     "videos": [
+      {
+       "id": "Vw5_LV2n-GI",
+       "title": "Simultaneous Equations: Examples of Using the Elimination Method",
+       "views": "28,292 views",
+       "len": "11:03",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Linear and quadratic simultaneous equations",
+     "videos": [
+      {
+       "id": "aSId_Kgjzfg",
+       "title": "Simultaneous Equations: Examples of One Linear and One Quadratic Equation",
+       "views": "27,396 views",
+       "len": "14:38",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Linear inequalities",
+     "videos": [
+      {
+       "id": "lJ43D9Nvbbw",
+       "title": "Inequalities: Solving Linear Inequalities Graphically",
+       "views": "28,220 views",
+       "len": "9:01",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "VQd2FwB16fM",
+       "title": "Solving Linear Inequalities",
+       "views": "52,166 views",
+       "len": "6:53",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Quadratic inequalities",
+     "videos": [
+      {
+       "id": "Hpv9Y5S5rOw",
+       "title": "Inequalities: Examples of Solving Quadratic Inequalities",
+       "views": "21,611 views",
+       "len": "10:57",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "FsX_7epmmrs",
+       "title": "Quadratic Inequalities - tutorial 1",
+       "views": "36,629 views",
+       "len": "5:12",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Inequalities on graphs and regions",
+     "videos": [
+      {
+       "id": "3lDUKqp9RFI",
+       "title": "Inequalities: Draw and Shade a Region",
+       "views": "18,732 views",
+       "len": "2:21",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "bl80NxS17ZI",
+       "title": "Inequalities | Shading regions for a linear inequality in two variables",
+       "views": "18,578 views",
+       "len": "14:38",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Set notation for solutions",
+     "videos": [
+      {
+       "id": "_ODyxUiPUW0",
+       "title": "Inequalities: Introducing Inequalities, Set Notation and Interval Notation",
+       "views": "80,303 views",
+       "len": "12:11",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "YC3p_dAePYs",
+       "title": "Solving simultaneous inequalities - Edexcel C1 June 2014 Q3c",
+       "views": "34,306 views",
+       "len": "2:39",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "1.4": {
+   "recap": [
+    {
+     "id": "QUM7VzuffyQ",
+     "title": "Straight Line Graphs in less than 22 minutes • A-Level Maths, Pure Year 1, Chapter 5",
+     "views": "48,329 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Gradient and y = mx + c",
+     "videos": [
+      {
+       "id": "DkHrJXCDB8o",
+       "title": "Coordinate Geometry: Finding the Equation of a Line in the form ax+by+c=0",
+       "views": "50,314 views",
+       "len": "3:11",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "BekcPu_3Bqw",
+       "title": "How to find the Equation of a straight line y=mx+c",
+       "views": "262,309 views",
+       "len": "15:04",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "y - y1 = m(x - x1) and ax + by + c = 0",
+     "videos": [
+      {
+       "id": "gPx1PilBTwQ",
+       "title": "Coordinate Geometry: The Equation of a Line in the form y-y1 = m(x - x1)",
+       "views": "46,482 views",
+       "len": "5:39",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "07Hq737Q6pk",
+       "title": "Equation of a line (alternative form)",
+       "views": "32,857 views",
+       "len": "12:28",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Parallel and perpendicular lines",
+     "videos": [
+      {
+       "id": "WKFovATgmMg",
+       "title": "Coordinate Geometry: Parallel and Perpendicular Lines",
+       "views": "49,117 views",
+       "len": "8:06",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "3rV0OXNErpE",
+       "title": "Perpendicular lines",
+       "views": "61,544 views",
+       "len": "5:54",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Length and midpoint",
+     "videos": [
+      {
+       "id": "xLgcoJ2lYWY",
+       "title": "Coordinate Geometry: Examples of Finding the Midpoint between Two Points",
+       "views": "45,881 views",
+       "len": "3:04",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "7Ft_VGeoVs0",
+       "title": "Mid-point of a line segment : C1 OCR January 2013 Q6(ii)",
+       "views": "958 views",
+       "len": "2:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Modelling with straight lines",
+     "videos": [
+      {
+       "id": "RMBxdmTAAew",
+       "title": "Coordinate geometry (straight lines) : C1 Edexcel January 2011 Q9",
+       "views": "31,700 views",
+       "len": "11:02",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "1.5": {
+   "recap": [
+    {
+     "id": "-SZG9b_ubQs",
+     "title": "Circles in less than 22 minutes • A-Level Maths, Pure Year 1, Chapter 6",
+     "views": "74,237 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Equation of a circle",
+     "videos": [
+      {
+       "id": "G6C0lbELl2Y",
+       "title": "Circles: Introducing the Equation of the Circle",
+       "views": "95,379 views",
+       "len": "3:54",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "bCY0bZKEXOI",
+       "title": "Equation of a Circle (Alternative form)",
+       "views": "9,535 views",
+       "len": "7:16",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Completing the square to find centre and radius",
+     "videos": [
+      {
+       "id": "uPp59i5m4xE",
+       "title": "Circles: Using Completing the Square to find the Centre & Radius",
+       "views": "52,415 views",
+       "len": "6:11",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "qCunDwizbOI",
+       "title": "Centre, Radius of a Circle example : OCR C1 June 2013 Q6(i)",
+       "views": "1,372 views",
+       "len": "3:24",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Tangents and normals to circles",
+     "videos": [
+      {
+       "id": "yL1SjHHp1vc",
+       "title": "Circles: Finding Tangents & Normals",
+       "views": "59,257 views",
+       "len": "7:36",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "GO5IBXWfACw",
+       "title": "Equation of a Tangent to a Circle",
+       "views": "45,219 views",
+       "len": "7:40",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Chords and perpendicular bisectors",
+     "videos": [
+      {
+       "id": "7VPFDN7svg0",
+       "title": "Circles: Perpendicular Bisector of Two Points on a Circle",
+       "views": "45,721 views",
+       "len": "2:25",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "zGMa_FGhFIA",
+       "title": "Equation of a Circle passing through 3 points",
+       "views": "168,728 views",
+       "len": "13:15",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Intersections of lines and circles",
+     "videos": [
+      {
+       "id": "_JUQerO3G_w",
+       "title": "Circles: Finding where a Line Intersects a Circle",
+       "views": "64,094 views",
+       "len": "9:21",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "G0nq8KX0DxI",
+       "title": "Intersecting Curves Revision",
+       "views": "35,966 views",
+       "len": "5:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Circle theorems in coordinate geometry",
+     "videos": [
+      {
+       "id": "ZfiMMk6MpSE",
+       "title": "Circles: The Angle in a Semicircle is a Right Angle",
+       "views": "38,433 views",
+       "len": "2:33",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "iWAB0aVgKbo",
+       "title": "Coordinate Geometry : Equation of a circle",
+       "views": "121,090 views",
+       "len": "4:28",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "2.1": {
+   "recap": [
+    {
+     "id": "1Sbs7Dc3pc4",
+     "title": "Proof (Year 1) in less than 18 minutes • A-Level Maths, Pure Year 1, Chapter 7b",
+     "views": "73,488 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "MfTmjQnGOA8",
+     "title": "Proof by Contradiction in less than 18 minutes • A-Level Maths, Pure Year 2, Chapter 1a",
+     "views": "154,382 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "dbqqrGmDqSc",
+     "title": "Factor Theorem in less than 18 minutes • A-Level Maths, Pure Year 1, Chapter 7a",
+     "views": "42,208 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Proof by deduction",
+     "videos": [
+      {
+       "id": "_REBwAie_Tk",
+       "title": "Introducing Proof by Deduction",
+       "views": "109,638 views",
+       "len": "4:45",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "HY2Si3CfKvI",
+       "title": "Proof by Exhaustion and Deduction",
+       "views": "31,839 views",
+       "len": "4:58",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Proof by exhaustion",
+     "videos": [
+      {
+       "id": "1amtOenZEwU",
+       "title": "Introducing Proof by Exhaustion",
+       "views": "154,001 views",
+       "len": "9:07",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "HY2Si3CfKvI",
+       "title": "Proof by Exhaustion and Deduction",
+       "views": "31,839 views",
+       "len": "4:58",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Proof by contradiction",
+     "videos": [
+      {
+       "id": "67vevv_5PTM",
+       "title": "Introducing Proof by Contradiction",
+       "views": "87,932 views",
+       "len": "1:13",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "8QVWVACNDpU",
+       "title": "Proof by Contradiction",
+       "views": "56,494 views",
+       "len": "14:08",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Disproof by counter-example",
+     "videos": [
+      {
+       "id": "0chb7lDnmts",
+       "title": "Disproof by Counter Example Examples",
+       "views": "73,320 views",
+       "len": "5:33",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "mxcGpNji4ik",
+       "title": "Proof by using a Counter-Example",
+       "views": "39,953 views",
+       "len": "6:03",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Algebraic fractions",
+     "videos": [
+      {
+       "id": "RY7UP_3spZo",
+       "title": "Rational Expressions: Examples of Simplifying Algebraic Fractions",
+       "views": "23,368 views",
+       "len": "11:56",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Polynomial division",
+     "videos": [
+      {
+       "id": "Q3Kbp-NWe4Y",
+       "title": "Polynomials: Polynomial Division using the Long Division Method",
+       "views": "107,014 views",
+       "len": "4:24",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Factor theorem",
+     "videos": [
+      {
+       "id": "lyMwX8_QZIc",
+       "title": "Polynomials: Introducing the Factor Theorem",
+       "views": "93,456 views",
+       "len": "4:32",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "6G3iAgpK4kA",
+       "title": "The Factor Theorem",
+       "views": "245,685 views",
+       "len": "7:51",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Partial fractions",
+     "videos": [
+      {
+       "id": "0Qdf8lYpWng",
+       "title": "Algebraic Fractions: Introducing Partial Fractions via Substitution",
+       "views": "88,842 views",
+       "len": "8:55",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "oouQ8u9G9BU",
+       "title": "Partial fractions (1) : Examsolutions",
+       "views": "161,458 views",
+       "len": "5:50",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Partial fractions with repeated factors",
+     "videos": [
+      {
+       "id": "vwo8-_OIyKQ",
+       "title": "Algebraic Fractions: How we deal with Repeated Factors in the Denominator",
+       "views": "56,429 views",
+       "len": "11:36",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "NvjUEruAVbw",
+       "title": "Partial Fractions - Repeated Linear Factors",
+       "views": "86,234 views",
+       "len": "10:36",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "2.2": {
+   "recap": [
+    {
+     "id": "v4L2ztR9y44",
+     "title": "Graphs & Transformations in less than 22 minutes • A-Level Maths, Pure Year 1, Chapter 4",
+     "views": "93,203 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "D0MktIanHus",
+     "title": "Functions & Graphs in less than 26 minutes • A-Level Maths, Pure Year 2, Chapter 2",
+     "views": "114,792 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Modulus function y = |x|",
+     "videos": [
+      {
+       "id": "sWlo7qZPFsw",
+       "title": "Graphs: Introducing the Modulus Function",
+       "views": "74,740 views",
+       "len": "2:59",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "z5J2gBf6o9o",
+       "title": "The Modulus Function, |x",
+       "views": "238,061 views",
+       "len": "6:31",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Solving modulus equations and inequalities",
+     "videos": [
+      {
+       "id": "5q0dkBShi7Y",
+       "title": "Graphs: Introducing Solving Modulus Equations",
+       "views": "68,597 views",
+       "len": "9:38",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "FIv6ltCtsSE",
+       "title": "Mod Equations : How to solve |3x+9|=|2x+1",
+       "views": "212,460 views",
+       "len": "11:23",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Mappings and functions, domain and range",
+     "videos": [
+      {
+       "id": "Ty4P3mJ5h8g",
+       "title": "Functions: Examples of Finding the Domain and Range",
+       "views": "258,195 views",
+       "len": "14:34",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "uz0fgAbLLjg",
+       "title": "Functions : Domain and Range : tutorial 1",
+       "views": "514,262 views",
+       "len": "10:11",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Composite functions",
+     "videos": [
+      {
+       "id": "O_vTJGFGWd4",
+       "title": "Functions: The Domain of a Composite Function",
+       "views": "89,888 views",
+       "len": "5:51",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "DAGUNSLNa4s",
+       "title": "Combining functions : Introduction",
+       "views": "155,855 views",
+       "len": "10:03",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Inverse functions",
+     "videos": [
+      {
+       "id": "_j_l9-YflWc",
+       "title": "Functions: Finding an Inverse Function",
+       "views": "66,868 views",
+       "len": "5:01",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "vgwPqKkZd_0",
+       "title": "Inverse functions : Introduction",
+       "views": "177,988 views",
+       "len": "7:40",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Transformations y = af(x), f(x)+a, f(x+a), f(ax)",
+     "videos": [
+      {
+       "id": "dKL6Tw6X4Io",
+       "title": "Graph Transformations: Beginning an Investigation into Transformations",
+       "views": "66,848 views",
+       "len": "1:34",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "5Dm4rW96CO4",
+       "title": "Transformations of Graphs (stretches)",
+       "views": "285,468 views",
+       "len": "9:01",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Modulus graphs y = |f(x)| and y = f(|x|)",
+     "videos": [
+      {
+       "id": "KgfwepvSm0k",
+       "title": "Graphs: EDEXCEL Sketching y=f(|x|)",
+       "views": "20,327 views",
+       "len": "4:38",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Combining transformations",
+     "videos": [
+      {
+       "id": "5hdcS85CYQw",
+       "title": "Trigonometry | Combining Transformations of Trig Graphs y=f(ax+b) types",
+       "views": "22,369 views",
+       "len": "11:16",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "2.3": {
+   "recap": [
+    {
+     "id": "xSlaqfbbGAk",
+     "title": "Binomial Expansion (Year 1) in less than 20 minutes • A-Level Maths, Pure Year 1, Chapter 8",
+     "views": "82,460 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "8c0fUgxG4wM",
+     "title": "Binomial Expansion (Year 2) in less than 21 minutes • A-Level Maths, Pure Year 2, Chapter 4",
+     "views": "79,011 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "(a + b)^n for positive integer n",
+     "videos": [
+      {
+       "id": "wt1MYT7EPaU",
+       "title": "Binomial Expansion: Explaining where nCr comes from",
+       "views": "100,714 views",
+       "len": "7:12",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "6iUX1uYs774",
+       "title": "Binomial expansion formula for positive integer powers : tutorial 1",
+       "views": "51,045 views",
+       "len": "9:45",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "(1 + x)^n for rational n",
+     "videos": [
+      {
+       "id": "wbZQW3l3G0w",
+       "title": "Binomial Expansion (partial fractions type)",
+       "views": "144,628 views",
+       "len": "12:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "(a + bx)^n for rational n",
+     "videos": [
+      {
+       "id": "VKCWY8sZsNQ",
+       "title": "Binomial Expansion: Writing (a + bx)^n in the form p(1 + qx)^n",
+       "views": "53,625 views",
+       "len": "5:34",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "qVsYE_oq-zQ",
+       "title": "The Binomial Expansion",
+       "views": "129,549 views",
+       "len": "1:34:29",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Range of validity",
+     "videos": [
+      {
+       "id": "9jHo7X-_1As",
+       "title": "Binomial Expansion: Introducing the Range of Validity",
+       "views": "68,913 views",
+       "len": "6:43",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "_5CGSTLAjeQ",
+       "title": "Binomial Expansion | Validity for Rational Powers",
+       "views": "140,374 views",
+       "len": "6:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Using partial fractions with expansions",
+     "videos": [
+      {
+       "id": "1_otnM0GwTc",
+       "title": "Algebraic Fractions: Partial Fractions with Binomial Expansion",
+       "views": "40,194 views",
+       "len": "9:05",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "wbZQW3l3G0w",
+       "title": "Binomial Expansion (partial fractions type)",
+       "views": "144,628 views",
+       "len": "12:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Approximations using expansions",
+     "videos": [
+      {
+       "id": "7IXVTyFt8UI",
+       "title": "Binomial Expansion: Approximating 1.03^8 WITHOUT a calculator",
+       "views": "60,849 views",
+       "len": "9:59",
+       "channel": "TLMaths"
+      }
+     ]
+    }
+   ]
+  },
+  "2.4": {
+   "recap": [
+    {
+     "id": "EdN6irvBYqc",
+     "title": "Exponentials & Logarithms in less than 32 minutes • A-Level Maths, Pure Year 1, Chapter 14",
+     "views": "127,042 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Exponential functions and graphs",
+     "videos": [
+      {
+       "id": "PcLb9kB7ALw",
+       "title": "Exponentials: Sketching y = e^x",
+       "views": "28,252 views",
+       "len": "2:10",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "0uMBIDRv3bI",
+       "title": "Exponential Functions",
+       "views": "137,700 views",
+       "len": "7:19",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "e^x and ln x",
+     "videos": [
+      {
+       "id": "AZNOpZZZe_U",
+       "title": "Logarithms: Introducing The Natural Logarithm ln(x)",
+       "views": "76,661 views",
+       "len": "4:02",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Laws of logarithms",
+     "videos": [
+      {
+       "id": "M3TVZT05XOA",
+       "title": "Laws of Logarithms: Introducing the Laws of Logarithms",
+       "views": "33,834 views",
+       "len": "11:00",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "GJJUsvDOksQ",
+       "title": "Proofs of Logarithm rules",
+       "views": "67,014 views",
+       "len": "6:31",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Solving exponential equations",
+     "videos": [
+      {
+       "id": "s1MjOuATasM",
+       "title": "Exponential Equations: Solve 2^(x+3) = 3^(3-x)",
+       "views": "14,423 views",
+       "len": "5:55",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Z4jtwG-Esko",
+       "title": "Logs - How to solve equations where x is in the power",
+       "views": "147,182 views",
+       "len": "9:33",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Exponential growth and decay models",
+     "videos": [
+      {
+       "id": "PJAxQN9cxf4",
+       "title": "Exponential Growth & Decay: Long-Term Behaviour",
+       "views": "12,805 views",
+       "len": "4:47",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Vkf_7eEV6II",
+       "title": "Modelling exponential growth and decay | Introduction",
+       "views": "12,922 views",
+       "len": "11:21",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Non-linear data: log y against x and log y against log x",
+     "videos": [
+      {
+       "id": "3zQmAlqB2_Y",
+       "title": "Reduction to Linear Form: Reducing y = ax^n to Linear Form",
+       "views": "49,947 views",
+       "len": "4:37",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "xH_IWUPUO-g",
+       "title": "Modelling Curves using logarithms",
+       "views": "81,059 views",
+       "len": "14:05",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Gradient of e^kx",
+     "videos": [
+      {
+       "id": "AHI4PY2mf8s",
+       "title": "Exponential Model: The Gradient of e^(kx)",
+       "views": "34,885 views",
+       "len": "3:19",
+       "channel": "TLMaths"
+      }
+     ]
+    }
+   ]
+  },
+  "3.1": {
+   "recap": [
+    {
+     "id": "5G7VKXarees",
+     "title": "Sequences & Series in 23 minutes • A-Level Maths, Pure Year 2, Chapter 3",
+     "views": "107,676 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Arithmetic sequences",
+     "videos": [
+      {
+       "id": "A3_bVGyzoe4",
+       "title": "Arithmetic Sequences: Introducing Arithmetic Sequences",
+       "views": "89,346 views",
+       "len": "2:56",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "vlPHnGbKi9w",
+       "title": "Arithmetic Sequences and nth term | Introduction",
+       "views": "266,807 views",
+       "len": "9:07",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Arithmetic series",
+     "videos": [
+      {
+       "id": "7zDVw3DHXOA",
+       "title": "Arithmetic Sequences: Introducing Arithmetic Series",
+       "views": "103,124 views",
+       "len": "8:56",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "FLD5xrq0rvU",
+       "title": "How to Prove the Sum of an Arithmetic Progression",
+       "views": "149,225 views",
+       "len": "10:43",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Geometric sequences",
+     "videos": [
+      {
+       "id": "QX1QjCsdPug",
+       "title": "Geometric Sequences: Introducing Geometric Sequences",
+       "views": "63,093 views",
+       "len": "3:29",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "IYfoufW9RR0",
+       "title": "Geometric sequence and Series",
+       "views": "294,951 views",
+       "len": "9:05",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Geometric series",
+     "videos": [
+      {
+       "id": "XzxoPb7Fxv0",
+       "title": "Geometric Sequences: Introducing Geometric Series",
+       "views": "61,855 views",
+       "len": "5:10",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "SMOEaqznNXA",
+       "title": "Geometric Series - Proof of the Sum of n terms",
+       "views": "62,904 views",
+       "len": "7:19",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Sum to infinity",
+     "videos": [
+      {
+       "id": "Ud0vZp7RPx4",
+       "title": "Geometric Sequences: Introducing Summing to Infinity",
+       "views": "53,533 views",
+       "len": "12:40",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "MTOKAA8rRA0",
+       "title": "Geometric Series - Sum to Infinity",
+       "views": "244,456 views",
+       "len": "8:20",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Sigma notation",
+     "videos": [
+      {
+       "id": "wkdMcYfknw8",
+       "title": "Sigma Notation: Introducing Sigma Notation",
+       "views": "64,002 views",
+       "len": "3:58",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "iLMq1z8A28E",
+       "title": "Series : Sigma Notation",
+       "views": "185,474 views",
+       "len": "10:07",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Recurrence relations, increasing / decreasing / periodic",
+     "videos": [
+      {
+       "id": "TZbZtm-WT_o",
+       "title": "Sequences: Inductive Definitions and Recurrence Relations",
+       "views": "42,531 views",
+       "len": "5:52",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "odXPY0_na3w",
+       "title": "Sequences - Recurrence relationships",
+       "views": "69,809 views",
+       "len": "11:53",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Modelling with series",
+     "videos": [
+      {
+       "id": "bvx_0BIZdZ8",
+       "title": "Modelling with Sequences: The Gardener Problem",
+       "views": "16,310 views",
+       "len": "5:02",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "TwlfJNPvbIA",
+       "title": "Geometric Series modelling - How to handle Investment style problems",
+       "views": "40,956 views",
+       "len": "11:22",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "3.2": {
+   "recap": [
+    {
+     "id": "pQTn-lgT_ko",
+     "title": "Radians in less than 18 minutes • A-Level Maths, Pure Year 2, Chapter 5",
+     "views": "60,311 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "I4wYR72Duzg",
+     "title": "Trigonometry in 30 minutes • A-Level Maths, Pure Year 2, Chapters 6 & 7",
+     "views": "",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Radian measure",
+     "videos": [
+      {
+       "id": "nzGDeZS2FF0",
+       "title": "Trigonometry: Introducing Radians",
+       "views": "87,567 views",
+       "len": "8:32",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "iH0lK3Iy6pw",
+       "title": "Radians - What are they?",
+       "views": "80,473 views",
+       "len": "13:32",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Arc length",
+     "videos": [
+      {
+       "id": "vULd_UA2N_0",
+       "title": "Trigonometry: Using the Formula for Arc Length in Radians",
+       "views": "48,105 views",
+       "len": "1:27",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "w0fWMAj90Bw",
+       "title": "Area and arc length examples",
+       "views": "17,818 views",
+       "len": "9:31",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Sector and segment areas",
+     "videos": [
+      {
+       "id": "TEq-2fSDWvk",
+       "title": "Trigonometry: Using the Formula for Area of a Sector in Radians",
+       "views": "44,498 views",
+       "len": "1:30",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "zjla0LCuiCE",
+       "title": "Arc Length and Area of Sectors (radians)",
+       "views": "114,603 views",
+       "len": "8:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Small angle approximations",
+     "videos": [
+      {
+       "id": "I8WYe64BTQM",
+       "title": "Small-Angle Approximation: Geometrical Derivation",
+       "views": "84,674 views",
+       "len": "8:43",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "-IRHJmBPWw4",
+       "title": "Small angle approximations for sin(x), cos(x) and tan(x)",
+       "views": "72,312 views",
+       "len": "11:16",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "sec, cosec and cot",
+     "videos": [
+      {
+       "id": "zXRy32ahN94",
+       "title": "Trigonometry: Introducing cosec(x), sec(x) & cot(x)",
+       "views": "59,544 views",
+       "len": "1:43",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "ERogWYvsCts",
+       "title": "Trigonometry - sec, cosec and cot",
+       "views": "158,052 views",
+       "len": "3:31",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Identities 1 + tan^2 = sec^2 and 1 + cot^2 = cosec^2",
+     "videos": [
+      {
+       "id": "YXTAotqt2iI",
+       "title": "Trigonometric Identities: Proving 1 + cot^2 θ = cosec^2 θ",
+       "views": "39,946 views",
+       "len": "1:09",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Inverse trig functions arcsin, arccos, arctan",
+     "videos": [
+      {
+       "id": "YPgh0UVydR8",
+       "title": "Trigonometry: Introducing arcsin(x)",
+       "views": "47,187 views",
+       "len": "4:02",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "ZM52fcPp1yw",
+       "title": "Inverse Trig. Functions : arcsin(x)",
+       "views": "159,118 views",
+       "len": "7:41",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "3.3": {
+   "recap": [
+    {
+     "id": "8spZW7G6yV0",
+     "title": "Trigonometric Identities & Equations in less than 21 mins • A-Level Maths, Pure Year 1, Chapter 10",
+     "views": "75,910 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "I4wYR72Duzg",
+     "title": "Trigonometry in 30 minutes • A-Level Maths, Pure Year 2, Chapters 6 & 7",
+     "views": "",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Addition formulae",
+     "videos": [
+      {
+       "id": "KaxRZkO0aPY",
+       "title": "Compound Angles: Proving the Compound Angle Formulae",
+       "views": "78,699 views",
+       "len": "14:39",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "7LNUyeF9qYY",
+       "title": "Trigonometry - addition formulae (example question)",
+       "views": "1,455 views",
+       "len": "6:11",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Double-angle formulae",
+     "videos": [
+      {
+       "id": "9GmeJEPTXJo",
+       "title": "Compound Angles: Introducing the Double Angle Formulae",
+       "views": "56,275 views",
+       "len": "4:11",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Hb85hsPlbes",
+       "title": "Trigonometric Equations - Double Angle Types (3)",
+       "views": "33,016 views",
+       "len": "12:21",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Solving trig equations",
+     "videos": [
+      {
+       "id": "fZmT9DiEHKk",
+       "title": "Trig Equations: Solving Basic Trigonometric Equations in degrees",
+       "views": "67,697 views",
+       "len": "10:01",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "tFBQ2YMdfhU",
+       "title": "How to solve trigonometric equations using the Quadrant Rule",
+       "views": "185,676 views",
+       "len": "8:20",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Harmonic form R cos(x ± a), R sin(x ± a)",
+     "videos": [
+      {
+       "id": "Nfyfp0dP9io",
+       "title": "Equivalent Forms: Writing acosθ + bsinθ in the form rcos(θ±α) or rsin(θ±α)",
+       "views": "102,313 views",
+       "len": "8:11",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "ScWuqBCt50Y",
+       "title": "Trigonometry : Proof of A cos x - B sin x = R cos (x + a)",
+       "views": "11,626 views",
+       "len": "8:05",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Proving trig identities",
+     "videos": [
+      {
+       "id": "-HAJ7VnzRrc",
+       "title": "Proving Trigonometric Identities: The Methods",
+       "views": "28,239 views",
+       "len": "4:55",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "EhCAt7uwNwU",
+       "title": "Proving Trigonometric Identities",
+       "views": "291,964 views",
+       "len": "6:44",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Modelling with trig functions",
+     "videos": [
+      {
+       "id": "2c4-PvymsHM",
+       "title": "A level Edexcel June 2022 Paper 2 Q9 - Trigonometric functions - Modelling",
+       "views": "890 views",
+       "len": "5:27",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "3.4": {
+   "recap": [
+    {
+     "id": "q2Cmdn6gqWE",
+     "title": "Parametric Equations in less than 21 minutes • A-Level Maths, Pure Year 2, Chapter 8",
+     "views": "70,115 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Parametric to Cartesian",
+     "videos": [
+      {
+       "id": "bIigy1O5euE",
+       "title": "Parametric Equations: Parametric to Cartesian",
+       "views": "86,593 views",
+       "len": "13:53",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "DfjEdCIT8Ps",
+       "title": "Parametric Equations : Converting to Cartesian form (1)",
+       "views": "185,414 views",
+       "len": "7:02",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Trig parametric conversions",
+     "videos": []
+    },
+    {
+     "name": "Sketching parametric curves",
+     "videos": [
+      {
+       "id": "Y0egyRdVWL8",
+       "title": "Parametric Equations: Introducing Parametric Equations",
+       "views": "119,914 views",
+       "len": "7:42",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "0cv8CqEQhY4",
+       "title": "Parametric Equations : Curve Sketching (1)",
+       "views": "99,989 views",
+       "len": "10:20",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Intersections with parametric curves",
+     "videos": [
+      {
+       "id": "TZJzr4pCf8o",
+       "title": "Finding points of Intersection between Parametric and Cartesian Equations",
+       "views": "15,907 views",
+       "len": "5:29",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Modelling with parametric equations",
+     "videos": [
+      {
+       "id": "Igv-vlYwYHA",
+       "title": "Parametric Equation Modelling: A Projectiles Problem",
+       "views": "12,354 views",
+       "len": "4:47",
+       "channel": "TLMaths"
+      }
+     ]
+    }
+   ]
+  },
+  "4.1": {
+   "recap": [
+    {
+     "id": "5NPmPUeUe8o",
+     "title": "Differentiation (Year 1) in less than 30 minutes • A-Level Maths, Pure Year 1, Chapter 12",
+     "views": "73,556 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "taQ-cYbpwQs",
+     "title": "Differentiation (Year 2) in less than 42 minutes • A-Level Maths, Pure Year 2, Chapter 9",
+     "views": "94,573 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Differentiation from first principles",
+     "videos": [
+      {
+       "id": "nvDCkvc9Ldc",
+       "title": "Differentiation: Differentiation From First Principles",
+       "views": "157,864 views",
+       "len": "7:12",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Ayf9gKwjXlY",
+       "title": "Differentiation from 1st Principles | Calculus by",
+       "views": "220,981 views",
+       "len": "14:03",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Derivatives of sin x and cos x",
+     "videos": [
+      {
+       "id": "1fsvZBy0m3Q",
+       "title": "Differentiation: Differentiate sin(x) from First Principles",
+       "views": "77,327 views",
+       "len": "4:53",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "9Bq7kJS_tfQ",
+       "title": "How to differentiate Sin θ from first principles",
+       "views": "25,107 views",
+       "len": "5:47",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Exponentials and logarithms",
+     "videos": [
+      {
+       "id": "975NSDtkqoE",
+       "title": "Differentiation: Differentiating ln(kx)",
+       "views": "51,160 views",
+       "len": "2:32",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "e7KtgWNnMg0",
+       "title": "Differentiation : Using the formulae book e^x, ln x, sin x, cos x, tan x",
+       "views": "37,549 views",
+       "len": "5:41",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Chain rule",
+     "videos": [
+      {
+       "id": "BIu0m2DObAA",
+       "title": "Differentiation: Introducing the Chain Rule",
+       "views": "154,836 views",
+       "len": "4:26",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "KKaRHdZ-Qus",
+       "title": "How to differentiate using The Chain Rule",
+       "views": "77,837 views",
+       "len": "12:11",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Product rule",
+     "videos": [
+      {
+       "id": "eeXTgSniNiI",
+       "title": "Differentiation: Introducing the Product Rule",
+       "views": "78,162 views",
+       "len": "2:12",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "iOHYuBoWwTY",
+       "title": "Differentiation - The Product Rule",
+       "views": "116,499 views",
+       "len": "13:59",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Quotient rule",
+     "videos": [
+      {
+       "id": "GoxqlIrWNAY",
+       "title": "Differentiation: Introducing the Quotient Rule",
+       "views": "64,099 views",
+       "len": "7:19",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "frOJXB0oKrQ",
+       "title": "Differentiation - The Quotient Rule",
+       "views": "80,370 views",
+       "len": "16:08",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Parametric differentiation",
+     "videos": [
+      {
+       "id": "UD-jviVsfO4",
+       "title": "Differentiation: Introducing Parametric Differentiation",
+       "views": "49,090 views",
+       "len": "9:09",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "iMkSyXl777I",
+       "title": "Parametric Differentiation - Second Differential",
+       "views": "76,849 views",
+       "len": "6:09",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Implicit differentiation",
+     "videos": [
+      {
+       "id": "x-_E9rX3SzY",
+       "title": "Differentiation: Introducing Implicit Differentiation",
+       "views": "126,709 views",
+       "len": "9:58",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Zo630jMysKk",
+       "title": "Differentiation : Implicit Equations",
+       "views": "212,627 views",
+       "len": "9:57",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Second derivatives, stationary points, convex / concave, inflection",
+     "videos": [
+      {
+       "id": "dCLROihqi2Q",
+       "title": "Gradients: Finding where a Curve is Convex & Concave",
+       "views": "11,143 views",
+       "len": "6:10",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "JawmTELoX2U",
+       "title": "Finding Stationary Points (Part 1)",
+       "views": "84,757 views",
+       "len": "8:36",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Tangents and normals",
+     "videos": [
+      {
+       "id": "4AQ2gTAUZqM",
+       "title": "Gradients: Introducing Tangents and Normals",
+       "views": "27,448 views",
+       "len": "2:42",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Iu67T-NcXvc",
+       "title": "Differentiation : Tangents and Normals",
+       "views": "168,329 views",
+       "len": "8:46",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Optimisation",
+     "videos": [
+      {
+       "id": "tJ5WbJMyMco",
+       "title": "Optimisation: Rectangular Fence Problem",
+       "views": "40,199 views",
+       "len": "5:45",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Connected rates of change",
+     "videos": [
+      {
+       "id": "ly_scx1YzVA",
+       "title": "Differentiation: Connected Rates of Change Example 1",
+       "views": "77,397 views",
+       "len": "3:47",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "BucbEKBz2dY",
+       "title": "Differentiation : Connected Rates of Change : Example 1",
+       "views": "234,250 views",
+       "len": "6:28",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "4.2": {
+   "recap": [
+    {
+     "id": "-DnyVWEzBhE",
+     "title": "Integration (Year 1) in less than 25 minutes • A-Level Maths, Pure Year 1, Chapter 13",
+     "views": "60,156 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Standard integrals",
+     "videos": [
+      {
+       "id": "h5kWi4IiYiE",
+       "title": "Integration: Introducing the Fundamental Theorem of Calculus",
+       "views": "58,515 views",
+       "len": "16:50",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Integrating f(ax + b)",
+     "videos": [
+      {
+       "id": "juNezhIyDp4",
+       "title": "Integration : (ax+b)ⁿ type functions",
+       "views": "243,973 views",
+       "len": "10:41",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Reverse chain rule",
+     "videos": [
+      {
+       "id": "juNezhIyDp4",
+       "title": "Integration : (ax+b)ⁿ type functions",
+       "views": "243,973 views",
+       "len": "10:41",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Using trig identities in integration",
+     "videos": [
+      {
+       "id": "mkgOwMD140Y",
+       "title": "Integration using trigonometric identities (1)",
+       "views": "114,790 views",
+       "len": "3:10",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Integration by substitution",
+     "videos": [
+      {
+       "id": "SgHewYUeAMY",
+       "title": "How to Integrate by substitution (1)",
+       "views": "193,171 views",
+       "len": "7:19",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Integration by parts",
+     "videos": [
+      {
+       "id": "lTgZ9T-intM",
+       "title": "Integration by Parts - example 1",
+       "views": "37,812 views",
+       "len": "4:25",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Integration with partial fractions",
+     "videos": [
+      {
+       "id": "VSJVe8gnAN4",
+       "title": "Integration of Partial Fractions: Example 1",
+       "views": "39,928 views",
+       "len": "3:16",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "D5uthjw0wps",
+       "title": "Integration : Partial Fraction types",
+       "views": "201,648 views",
+       "len": "10:21",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Areas under curves and between curves",
+     "videos": [
+      {
+       "id": "M2f-o3OK0W8",
+       "title": "Integration: Finding the Area between Two Curves Example 1",
+       "views": "39,547 views",
+       "len": "4:34",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "T3McJeGuAiw",
+       "title": "Area under and between Curves by Integration",
+       "views": "161,879 views",
+       "len": "26:45",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Integration as the limit of a sum",
+     "videos": [
+      {
+       "id": "5r6lBRh92tE",
+       "title": "Integration: Integration as the Limit of a Sum",
+       "views": "35,121 views",
+       "len": "9:24",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "PSg7JH_LEMQ",
+       "title": "A level Edexcel June 2022 Paper 1 Q4 - Reimann Sums and Integrals",
+       "views": "636 views",
+       "len": "3:15",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Trapezium rule",
+     "videos": [
+      {
+       "id": "3zueEN_CSOQ",
+       "title": "Numerical Integration: Introducing the Trapezium Rule",
+       "views": "59,781 views",
+       "len": "12:35",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "YAGSOh5Kw1A",
+       "title": "Trapezium Rule",
+       "views": "234,352 views",
+       "len": "9:22",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Separable differential equations",
+     "videos": [
+      {
+       "id": "5DkjYCd95ms",
+       "title": "Differential Equations: The Method of Separation of Variables",
+       "views": "81,363 views",
+       "len": "5:42",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "nlvr3UyMiQ4",
+       "title": "Solving a Differential Equation by separating the variables (1)",
+       "views": "240,367 views",
+       "len": "14:40",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Modelling with differential equations",
+     "videos": [
+      {
+       "id": "v66blKhKN4g",
+       "title": "Differential Equations: A Worded Example 1",
+       "views": "49,030 views",
+       "len": "5:10",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "aHe70bxX4SY",
+       "title": "A level Edexcel June 2022 Paper 1 Q10 - Modelling with Differential Equations",
+       "views": "275 views",
+       "len": "4:22",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "4.3": {
+   "recap": [
+    {
+     "id": "WwnSdkPXctk",
+     "title": "Numerical Methods in 21 minutes • A-Level Maths, Pure Year 2, Chapter 10",
+     "views": "48,586 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Locating roots by change of sign",
+     "videos": [
+      {
+       "id": "gjrOBrW5jAg",
+       "title": "Locating Roots: Introducing the Change of Sign Method",
+       "views": "34,160 views",
+       "len": "5:09",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "TPYMMgv4ePE",
+       "title": "Change of Sign Method to Locate a Root in an interval",
+       "views": "90,383 views",
+       "len": "8:47",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "When change of sign fails",
+     "videos": [
+      {
+       "id": "bfOpEoiUlnQ",
+       "title": "Locating Roots: Failure of the Change of Sign Method",
+       "views": "24,918 views",
+       "len": "3:54",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Fixed-point iteration x = g(x)",
+     "videos": [
+      {
+       "id": "KYzK6da04Oo",
+       "title": "Locating Roots: Introducing the x=g(x) Method",
+       "views": "91,040 views",
+       "len": "11:17",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "D4Bl1bZV9t8",
+       "title": "Iteration - Solving equations (1 of 2)",
+       "views": "134,435 views",
+       "len": "14:38",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Staircase and cobweb diagrams",
+     "videos": [
+      {
+       "id": "gfKu1ILeVdg",
+       "title": "Locating Roots: Cobweb and Staircase Diagrams",
+       "views": "72,930 views",
+       "len": "5:49",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "3v0X8cNejV0",
+       "title": "Edexcel | A-Level Pure Maths Specimen Paper 2 Q11(c)",
+       "views": "1,218 views",
+       "len": "2:22",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Newton-Raphson method",
+     "videos": [
+      {
+       "id": "ep8wI-p5Zbg",
+       "title": "Locating Roots: Introducing the Newton-Raphson Method",
+       "views": "78,471 views",
+       "len": "6:47",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "PIPiv6gn_Ls",
+       "title": "How to use the Newton Raphson method",
+       "views": "728,565 views",
+       "len": "12:24",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Applications to modelling",
+     "videos": [
+      {
+       "id": "gersaQznLcs",
+       "title": "Numerical Methods: Contextual Problem 2",
+       "views": "5,341 views",
+       "len": "6:36",
+       "channel": "TLMaths"
+      }
+     ]
+    }
+   ]
+  },
+  "4.4": {
+   "recap": [
+    {
+     "id": "EJ3dwJfmzpI",
+     "title": "Vectors (Year 1) in less than 21 minutes • A-Level Maths, Pure Year 1, Chapter 11",
+     "views": "93,249 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "OVSxCyNkKjw",
+     "title": "Vectors (Year 2) in less than 14 minutes • A-Level Maths, Pure Year 2, Chapter 12",
+     "views": "50,387 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "3D coordinates and i, j, k notation",
+     "videos": [
+      {
+       "id": "n-8x9wbCJj4",
+       "title": "Vectors: Introducing 3D Vectors",
+       "views": "55,185 views",
+       "len": "4:47",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "KoaRgrF44uk",
+       "title": "Unit Vectors  for 2D and 3D vectors",
+       "views": "54,816 views",
+       "len": "5:54",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Magnitude and direction",
+     "videos": [
+      {
+       "id": "qz5RxiP61Aw",
+       "title": "Vectors: Finding the Magnitude / Length of a 3D vector",
+       "views": "40,461 views",
+       "len": "4:29",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "nNYuTML4GIk",
+       "title": "Vectors : magnitude of a vector in 2D",
+       "views": "80,306 views",
+       "len": "4:09",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Position vectors and distance",
+     "videos": [
+      {
+       "id": "6JLjLaK0UG0",
+       "title": "Vectors: Introducing Position Vectors",
+       "views": "39,168 views",
+       "len": "1:18",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "mJ9FKBbAeto",
+       "title": "Vectors : Position Vectors",
+       "views": "261,572 views",
+       "len": "6:00",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Angles with axes",
+     "videos": [
+      {
+       "id": "XMgFw74_xMk",
+       "title": "Angle between a 3d vector and the positive axis",
+       "views": "1,627 views",
+       "len": "16:38",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Geometric problems with vectors",
+     "videos": [
+      {
+       "id": "NVm3pn1PGgk",
+       "title": "Vectors: Vectors Problem 1",
+       "views": "44,169 views",
+       "len": "3:39",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "TvK4DtOKTiQ",
+       "title": "Simple Hack to solving the HARD vector geometry problems",
+       "views": "67,457 views",
+       "len": "11:40",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Vectors in mechanics",
+     "videos": [
+      {
+       "id": "HUhAJoVlUus",
+       "title": "Vectors: Kinematics Problem",
+       "views": "37,604 views",
+       "len": "4:46",
+       "channel": "TLMaths"
+      }
+     ]
+    }
+   ]
+  },
+  "5.1": {
+   "recap": [
+    {
+     "id": "j6yMS-vkL6g",
+     "title": "Probability (Year 1) in less than 20 minutes • A-Level Maths, Statistics Year 1, Chapter 5",
+     "views": "108,764 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "T77mtUNbfCc",
+     "title": "Statistical Distributions (+ binomial) in 29 minutes • A-Level Maths, Statistics Year 1, Chapter 6",
+     "views": "",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "z4kccxhR53k",
+     "title": "Hypothesis Testing (Binomial) in 24 minutes • A-Level Maths, Statistics Year 1, Chapter 7",
+     "views": "",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "K1TihRcT0hU",
+     "title": "Conditional Probability in 29 minutes • A-Level Maths, Statistics Year 2, Chapter 2",
+     "views": "",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "JMxBXKsx6UA",
+     "title": "Regression & Correlation (Year 2) in 16 minutes • A-Level Maths, Statistics Year 2, Chapter 1",
+     "views": "",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "WwvVuP96Xjc",
+     "title": "Everything you NEED to memorise for A-Level Maths • Part 3: Statistics",
+     "views": "515,198 views",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Populations and sampling methods",
+     "videos": [
+      {
+       "id": "W702aS8eXuM",
+       "title": "Sampling: Population vs Sample",
+       "views": "114,854 views",
+       "len": "2:58",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "yGREJSLx0pc",
+       "title": "Random Sampling methods (A level)",
+       "views": "3,885 views",
+       "len": "11:46",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Measures of location and spread, coding",
+     "videos": [
+      {
+       "id": "eZB1TdtO7zQ",
+       "title": "Data: Introducing the Variance and Standard Deviation",
+       "views": "150,413 views",
+       "len": "12:55",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Histograms, box plots, cumulative frequency, outliers",
+     "videos": [
+      {
+       "id": "-mkWGFfq94w",
+       "title": "Data: Histograms",
+       "views": "125,886 views",
+       "len": "6:54",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "CD4iagtZTcA",
+       "title": "Histograms",
+       "views": "257,161 views",
+       "len": "8:51",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Correlation and regression",
+     "videos": [
+      {
+       "id": "hbvePCiu_wc",
+       "title": "Scatter Graphs: The Product Moment Correlation Coefficient",
+       "views": "73,724 views",
+       "len": "15:47",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Ch3rIk2VR4c",
+       "title": "A level Edexcel June 2024 Paper 31 Q2 | Correlation and linear regression",
+       "views": "106 views",
+       "len": "3:59",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "The large data set",
+     "videos": [
+      {
+       "id": "1RiKD-T8FME",
+       "title": "Edexcel Large Data Set - Weather",
+       "views": "79,611 views",
+       "len": "8:58",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "sqIJ5j3anoM",
+       "title": "A level Edexcel June 2024 Paper 31 Q3 | Large data set",
+       "views": "133 views",
+       "len": "3:21",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Probability: Venn diagrams and set notation",
+     "videos": [
+      {
+       "id": "44IaHMjKPIk",
+       "title": "Probability: Venn Diagrams - Union and Intersection",
+       "views": "108,199 views",
+       "len": "6:42",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "i90-2GwWoVE",
+       "title": "Venn diagrams - Notation and Symbols used",
+       "views": "94,783 views",
+       "len": "6:02",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Conditional probability and tree diagrams",
+     "videos": [
+      {
+       "id": "xU16N2kj0ko",
+       "title": "Probability: Introducing Conditional Probability",
+       "views": "95,934 views",
+       "len": "3:41",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "-Q3NCPW5mlA",
+       "title": "Calculating Conditional Probability in tree diagrams",
+       "views": "95,666 views",
+       "len": "9:41",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Binomial distribution",
+     "videos": [
+      {
+       "id": "yDIrj7_eCM0",
+       "title": "Binomial Distribution: Introducing the Binomial Distribution",
+       "views": "90,587 views",
+       "len": "7:25",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "_0tr8Iw0tjA",
+       "title": "Binomial Distribution examples",
+       "views": "477,185 views",
+       "len": "11:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Hypothesis testing: critical regions and p-values",
+     "videos": [
+      {
+       "id": "xwlkpT4LLmg",
+       "title": "Binomial Hypothesis Testing: Finding the Critical Region",
+       "views": "239,212 views",
+       "len": "19:32",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "ZJDfLb2zZCg",
+       "title": "Hypothesis Testing - Critical Values - Two Tail Test - Binomial Distribution",
+       "views": "136,887 views",
+       "len": "15:46",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Normal distribution",
+     "videos": [
+      {
+       "id": "x1tSnYQLv9I",
+       "title": "Normal Distribution: Introducing the Bell Curve",
+       "views": "182,095 views",
+       "len": "6:45",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "KEEvU9P--3c",
+       "title": "Normal Distribution | Finding the Standard Deviation using tables or calculator",
+       "views": "106,694 views",
+       "len": "7:28",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Normal approximation to binomial",
+     "videos": [
+      {
+       "id": "GREDEOsAO2A",
+       "title": "Normal Distribution: Approximating a Binomial Distribution",
+       "views": "95,653 views",
+       "len": "10:50",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "SmjepW2Mb28",
+       "title": "Normal Approximation to Binomial distribution (Continuity Corrections)",
+       "views": "116,378 views",
+       "len": "14:56",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Hypothesis testing: normal mean and correlation",
+     "videos": [
+      {
+       "id": "M13X5JYWgcc",
+       "title": "Introducing Sample Means Hypothesis Testing",
+       "views": "28,386 views",
+       "len": "23:08",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "ARnE7ND88K0",
+       "title": "Introduction to Hypothesis testing for Normal distribution",
+       "views": "65,027 views",
+       "len": "13:12",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  },
+  "5.2": {
+   "recap": [
+    {
+     "id": "19Yc4i5QSfA",
+     "title": "Constant Acceleration (SUVAT) in 31 minutes • A-Level Maths, Mechanics Year 1, Chapter 9",
+     "views": "",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "rpR8XiGEx1w",
+     "title": "Variable Acceleration in less than 12 minutes • A-Level Maths, Mechanics Year 1, Chapter 11",
+     "views": "55,180 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "OjCmuVK-KJo",
+     "title": "Forces & Motion (Year 1) in less than 37 minutes • A-Level Maths, Mechanics Year 1, Chapter 10",
+     "views": "99,821 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "dy8dAIvLnqM",
+     "title": "Forces (Year 2) in less than 45 minutes • A-Level Maths, Mechanics Year 2, Chapter 5/7",
+     "views": "60,811 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "Nb0J2MleIEM",
+     "title": "Moments/Rigid Bodies in less than 32 minutes • A-Level Maths, Mechanics Year 2, Chapter 4/7",
+     "views": "",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "1MdNSXzR0cM",
+     "title": "Projectiles in less than 25 minutes • A-Level Maths, Mechanics Year 2, Chapter 6",
+     "views": "55,574 views",
+     "channel": "Bicen Maths"
+    },
+    {
+     "id": "TW-iMkF5iJw",
+     "title": "Everything you NEED to memorise for A-Level Maths • Part 2: Mechanics",
+     "views": "",
+     "channel": "Bicen Maths"
+    }
+   ],
+   "skills": [
+    {
+     "name": "Quantities and units, modelling assumptions",
+     "videos": [
+      {
+       "id": "BLbR0SWFqdw",
+       "title": "Introduction to Modelling",
+       "views": "25,093 views",
+       "len": "2:22",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Constant acceleration: suvat",
+     "videos": [
+      {
+       "id": "EoPzhaLdSYo",
+       "title": "SUVAT: Deriving the Constant Acceleration Formulae",
+       "views": "87,090 views",
+       "len": "10:50",
+       "channel": "TLMaths"
+      }
+     ]
+    },
+    {
+     "name": "Motion graphs",
+     "videos": [
+      {
+       "id": "OVjpFtm8gCo",
+       "title": "Kinematics: Velocity / Time Graphs",
+       "views": "105,839 views",
+       "len": "8:05",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "kZkgJRyLW_k",
+       "title": "Velocity-Time Graphs",
+       "views": "119,673 views",
+       "len": "18:55",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Variable acceleration with calculus",
+     "videos": [
+      {
+       "id": "tw_Ss7vSE9E",
+       "title": "variable acceleration - calculus methods Example (1)",
+       "views": "24,824 views",
+       "len": "13:34",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "2D motion with vectors",
+     "videos": [
+      {
+       "id": "HUhAJoVlUus",
+       "title": "Vectors: Kinematics Problem",
+       "views": "37,604 views",
+       "len": "4:46",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "IK3I_lOWLuU",
+       "title": "Velocity Vectors (1) - Calculating Speed",
+       "views": "96,009 views",
+       "len": "7:03",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Newton's laws and resolving forces",
+     "videos": [
+      {
+       "id": "Y95r-6zWA8M",
+       "title": "Forces: Resolving Forces Example 1",
+       "views": "81,755 views",
+       "len": "3:48",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "ffYuVPo9a4w",
+       "title": "Resolving vectors - Splitting a Force into Components",
+       "views": "214,786 views",
+       "len": "12:03",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Friction",
+     "videos": [
+      {
+       "id": "nBBfgR_vIfw",
+       "title": "Forces: Introducing the Coefficient of Friction",
+       "views": "76,945 views",
+       "len": "5:16",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "OR4CjWKAKAU",
+       "title": "Friction and Limiting Equilibrium",
+       "views": "96,911 views",
+       "len": "7:45",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Connected particles and pulleys",
+     "videos": [
+      {
+       "id": "Gy_ph26QhZQ",
+       "title": "Forces: Pulley Example 1",
+       "views": "153,691 views",
+       "len": "3:36",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "G-h_HWqxgU4",
+       "title": "Connected Particles - Force on a pulley",
+       "views": "51,022 views",
+       "len": "5:15",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Inclined planes",
+     "videos": [
+      {
+       "id": "v6rEE_YPpyo",
+       "title": "Forces: Introducing Smooth Inclined Planes",
+       "views": "88,460 views",
+       "len": "6:56",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "RSIwqNonZL0",
+       "title": "Connected Particles on a rough inclined plane",
+       "views": "94,696 views",
+       "len": "16:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Moments, equilibrium and centre of mass",
+     "videos": [
+      {
+       "id": "0TFemygToUs",
+       "title": "Moments: What is a Moment?",
+       "views": "99,790 views",
+       "len": "6:03",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "wamyHAcPPII",
+       "title": "Moments of forces | Ladder leaning against a smooth wall and rough floor (2/2)",
+       "views": "106,192 views",
+       "len": "20:12",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Projectiles",
+     "videos": [
+      {
+       "id": "x65XXk7n4xU",
+       "title": "Projectiles: Introducing Projectiles",
+       "views": "112,538 views",
+       "len": "11:21",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "umJ3zAIF5JE",
+       "title": "Projectiles and the Suvat equation : Introduction : Tutorial 1",
+       "views": "110,588 views",
+       "len": "16:35",
+       "channel": "ExamSolutions"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
