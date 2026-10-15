@@ -7,7 +7,7 @@ or any mix, with the matching mark-scheme pages at the back.
 - **1,062 questions from 110 papers**: every 9MA0 paper from the Specimen to June 2025 (Papers 1, 2,
   3 Statistics and 3 Mechanics), every International A-Level Pure P1-P4 paper from 2019 to 2025, and
   legacy C1-C4 papers (2014-2018).
-- Every question is tagged by hand with the exact skills it tests (146 skills, e.g. `1.2.3` the
+- Every question is tagged by hand with the exact skills it tests (153 skills, e.g. `1.2.3` the
   discriminant, `3.3.3` R cos(x ± a)), main skill first, so you can print lots of questions on one
   narrow skill. `python build_workbook.py list` shows every skill code. 37 IAL/legacy questions on
   topics outside this taxonomy (vector equations of lines, volumes of revolution, ...) are never selected.

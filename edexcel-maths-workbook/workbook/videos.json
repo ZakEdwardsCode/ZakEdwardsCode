@@ -785,6 +785,32 @@
        "channel": "ExamSolutions"
       }
      ]
+    },
+    {
+     "name": "Remainder theorem",
+     "videos": [
+      {
+       "id": "3xetO7IT3lc",
+       "title": "Revisiting the Remainder Theorem",
+       "views": "35,900 views",
+       "len": "2:17",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "xtDuCGdxIMg",
+       "title": "Remainder Theorem",
+       "views": "158,749 views",
+       "len": "5:43",
+       "channel": "ExamSolutions"
+      },
+      {
+       "id": "9LkZ-lyroAg",
+       "title": "Remainder Theorem (Example 3)",
+       "views": "48,211 views",
+       "len": "5:37",
+       "channel": "ExamSolutions"
+      }
+     ]
     }
    ]
   },
@@ -938,6 +964,51 @@
        "title": "Trigonometry | Combining Transformations of Trig Graphs y=f(ax+b) types",
        "views": "22,369 views",
        "len": "11:16",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Sketching cubics and quartics from their roots",
+     "videos": [
+      {
+       "id": "pRu31H6qG4k",
+       "title": "A-Level Maths: B7-02 [Graphs: Sketching Quadratics, Cubics, Quartics and Quintics]",
+       "views": "53,309 views",
+       "len": "5:54",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "Sll6jbDkwhM",
+       "title": "A-Level Maths: B7-01 [Graphs: Introducing Cubic Graphs]",
+       "views": "46,434 views",
+       "len": "9:39",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "7DtbMGBO-vk",
+       "title": "How to Sketch Cubic Graphs",
+       "views": "225,716 views",
+       "len": "14:20",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Reciprocal graphs y = k/x and asymptotes",
+     "videos": [
+      {
+       "id": "0rNOJNW2qGI",
+       "title": "A-Level Maths: B7-18 [Graphs: Introducing Reciprocal Graphs of the form y = a/x]",
+       "views": "26,250 views",
+       "len": "6:01",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "9fpGSyFZUGM",
+       "title": "Sketching Reciprocal graphs of the form y=k/x",
+       "views": "94,857 views",
+       "len": "10:26",
        "channel": "ExamSolutions"
       }
      ]
@@ -1498,6 +1569,32 @@
        "channel": "ExamSolutions"
       }
      ]
+    },
+    {
+     "name": "Graphs of sin, cos and tan",
+     "videos": [
+      {
+       "id": "PHARBTwF89k",
+       "title": "A-Level Maths: E3-01 [Trig Graphs: Sketching sin(x), cos(x) & tan(x) from the Unit Circle]",
+       "views": "61,431 views",
+       "len": "18:22",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "zteBxrMZiCw",
+       "title": "A-Level Maths E3-05 [Trig Graphs: Period and Amplitude]",
+       "views": "17,677 views",
+       "len": "3:24",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "wqolIFxeFhQ",
+       "title": "Transformations of Trig. Graphs y=f(kx) type",
+       "views": "38,588 views",
+       "len": "16:34",
+       "channel": "ExamSolutions"
+      }
+     ]
     }
    ]
   },
@@ -1873,20 +1970,27 @@
      ]
     },
     {
-     "name": "Second derivatives, stationary points, convex / concave, inflection",
+     "name": "Stationary points and their nature",
      "videos": [
       {
-       "id": "dCLROihqi2Q",
-       "title": "Gradients: Finding where a Curve is Convex & Concave",
-       "views": "11,143 views",
-       "len": "6:10",
+       "id": "0u3ZEutUbe8",
+       "title": "A-Level Maths: G3-07 [Gradients: Introducing Stationary Points]",
+       "views": "24,807 views",
+       "len": "4:56",
        "channel": "TLMaths"
       },
       {
-       "id": "JawmTELoX2U",
-       "title": "Finding Stationary Points (Part 1)",
-       "views": "84,757 views",
-       "len": "8:36",
+       "id": "H-XDX7T0ADw",
+       "title": "Differentiation : How to Find Stationary Points",
+       "views": "337,361 views",
+       "len": "7:16",
+       "channel": "ExamSolutions"
+      },
+      {
+       "id": "osOepf7K1gM",
+       "title": "How to find stationary points and determine the nature (Example 2)",
+       "views": "257,003 views",
+       "len": "9:43",
        "channel": "ExamSolutions"
       }
      ]
@@ -1964,6 +2068,51 @@
        "views": "95,603 views",
        "len": "8:31",
        "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Increasing and decreasing functions",
+     "videos": [
+      {
+       "id": "yjAmwRP-Dkw",
+       "title": "A-Level Maths: G3-10 [Gradients: Where Functions are Increasing and Decreasing]",
+       "views": "52,363 views",
+       "len": "7:55",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "CA9eNbFW5SE",
+       "title": "Differentiation : Increasing & Decreasing Functions",
+       "views": "216,816 views",
+       "len": "8:29",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Second derivatives, convex / concave, points of inflection",
+     "videos": [
+      {
+       "id": "x5YidHm2uEU",
+       "title": "A-Level Maths: G1-20 Differentiation: Convex & Concave",
+       "views": "50,273 views",
+       "len": "4:03",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "dCLROihqi2Q",
+       "title": "A-Level Maths: G3-17 Gradients: Finding where a Curve is Convex & Concave",
+       "views": "11,146 views",
+       "len": "6:10",
+       "channel": "TLMaths"
+      },
+      {
+       "id": "eLtmyCOEzsU",
+       "title": "A-Level Maths: G3-19 Gradients: Finding Non-Stationary Points of Inflection Example 1",
+       "views": "49,270 views",
+       "len": "5:23",
+       "channel": "TLMaths"
       }
      ]
     }
@@ -2161,6 +2310,25 @@
        "title": "A level Edexcel June 2022 Paper 1 Q10 - Modelling with Differential Equations",
        "views": "275 views",
        "len": "4:22",
+       "channel": "ExamSolutions"
+      }
+     ]
+    },
+    {
+     "name": "Finding the curve y = f(x) from f'(x) and a point",
+     "videos": [
+      {
+       "id": "x_sQLLtkjIM",
+       "title": "Finding the equation of a curve from its gradient function | Tutorial 1",
+       "views": "132,096 views",
+       "len": "6:12",
+       "channel": "ExamSolutions"
+      },
+      {
+       "id": "gN0Zmw4kl_8",
+       "title": "Finding the equation of a curve from its gradient function | Tutorial 2",
+       "views": "44,145 views",
+       "len": "3:57",
        "channel": "ExamSolutions"
       }
      ]

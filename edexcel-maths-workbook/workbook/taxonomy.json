@@ -198,6 +198,10 @@
       [
        "Partial fractions with repeated factors",
        "partial fractions repeated factor"
+      ],
+      [
+       "Remainder theorem",
+       "remainder when divided by (x - a), finding unknown constants"
       ]
      ]
     },
@@ -236,6 +240,14 @@
       [
        "Combining transformations",
        "combinations of transformations"
+      ],
+      [
+       "Sketching cubics and quartics from their roots",
+       "curve sketching of polynomials, repeated roots, touching the x-axis"
+      ],
+      [
+       "Reciprocal graphs y = k/x and asymptotes",
+       "sketching k/x, k/x^2, horizontal and vertical asymptotes"
       ]
      ]
     },
@@ -379,6 +391,10 @@
       [
        "Inverse trig functions arcsin, arccos, arctan",
        "arcsin arccos arctan"
+      ],
+      [
+       "Graphs of sin, cos and tan",
+       "period, amplitude, max/min points and transformed trig graphs"
       ]
      ]
     },
@@ -482,7 +498,7 @@
        "implicit differentiation"
       ],
       [
-       "Second derivatives, stationary points, convex / concave, inflection",
+       "Stationary points and their nature",
        "points of inflection"
       ],
       [
@@ -500,6 +516,14 @@
       [
        "Differentiating powers of x and polynomials",
        "differentiate x^n, polynomials, dy/dx of sums of powers"
+      ],
+      [
+       "Increasing and decreasing functions",
+       "f'(x) > 0, f'(x) < 0, prove a function is increasing"
+      ],
+      [
+       "Second derivatives, convex / concave, points of inflection",
+       "f''(x), concave, convex, point of inflection"
       ]
      ]
     },
@@ -554,6 +578,10 @@
       [
        "Modelling with differential equations",
        "modelling with differential equations"
+      ],
+      [
+       "Finding the curve y = f(x) from f'(x) and a point",
+       "integrate dy/dx and use a point to find the constant"
       ]
      ]
     },
